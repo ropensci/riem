@@ -1,0 +1,45 @@
+---
+title: "Vignette for the riem package"
+author: "Maëlle Salmon"
+date: "`r Sys.Date()`"
+output:
+  md_document:
+    variant: markdown_github
+---
+riem
+=============
+
+This package allows to get weather data from ASOS stations (airports) via the awesome website of the [Iowa Environment Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS).
+
+This is a work in progress!
+
+# Installation
+
+To install the package, you will need the devtools package.
+
+```{r, eval = FALSE}
+library("devtools")
+install_github("masalmon/riem")
+
+```
+
+# Get available networks
+
+```{r, warnings = FALSE, message = FALSE}
+library("riem")
+library("dplyr")
+riem_networks() %>% head() %>% knitr::kable()
+```
+
+# Get available stations for one network
+
+```{r}
+riem_stations(network = "IN__ASOS") %>% head() %>% knitr::kable()
+```
+
+
+# Get measures for one station
+
+```{r}
+riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22") %>% head() %>% knitr::kable()
+```
