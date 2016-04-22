@@ -13,6 +13,6 @@ a data.frame (dplyr tbl_df) with the id, name, longitude (lon) and latitude (lat
 Function for getting stations of an ASOS network
 }
 \examples{
-riem_stations(network = "AE__ASOS")
+riem_stations(network = "IN__ASOS")
 }
 

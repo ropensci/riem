@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' riem_stations(network = "AE__ASOS")
+#' riem_stations(network = "IN__ASOS")
 riem_stations <- function(network = NULL){
 
   if(is.null(network)){
