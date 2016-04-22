@@ -15,7 +15,32 @@ riem_measures(station = "VOHY", date_start = "2014-01-01",
 \item{date_end}{date of end of the desired data, e.g. "2016-04-22"}
 }
 \value{
-a data.frame (dplyr tbl_df) with measures, the number of columns can vary from station to station.
+a data.frame (dplyr tbl_df) with measures, the number of columns can vary from station to station,
+but possible variables are
+\itemize{
+\item station: three or four character site identifier
+\item valid: timestamp of the observation
+\item tmpf: Air Temperature in Fahrenheit, typically @ 2 meters
+\item dwpf: Dew Point Temperature in Fahrenheit, typically @ 2 meters
+\item relh: Relative Humidity in %
+\item drct: Wind Direction in degrees from north
+\item sknt: Wind Speed in knots
+\item p01i: One hour precipitation for the period from the observation time to the time of the previous hourly precipitation reset. This varies slightly by site. Values are in inches. This value may or may not contain frozen precipitation melted by some device on the sensor or estimated by some other means. Unfortunately, we do not know of an authoritative database denoting which station has which sensor.
+\item alti: Pressure altimeter in inches
+\item mslp: Sea Level Pressure in millibar
+\item vsby: Visibility in miles
+\item gust: Wind Gust in knots
+\item skyc1: Sky Level 1 Coverage
+\item skyc2: Sky Level 2 Coverage
+\item skyc3: Sky Level 3 Coverage
+\item skyc4: Sky Level 4 Coverage
+\item skyl1: Sky Level 1 Altitude in feet
+\item skyl2: Sky Level 2 Altitude in feet
+\item skyl3: Sky Level 3 Altitude in feet
+\item skyl4: Sky Level 4 Altitude in feet
+\item presentwx: Present Weather Codes (space seperated)
+\item metar: unprocessed reported observation in METAR format
+}
 }
 \description{
 Function for getting weather data from one station
