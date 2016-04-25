@@ -1,9 +1,9 @@
 riem
 ====
 
-This package allows to get weather data from ASOS stations (airports) via the awesome website of the [Iowa Environment Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS).
+[![Travis-CI Build Status](https://travis-ci.org/masalmon/riem.svg?branch=master)](https://travis-ci.org/masalmon/riem) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/masalmon/riem?branch=master&svg=true)](https://ci.appveyor.com/project/masalmon/riem)
 
-This is a work in progress!
+This package allows to get weather data from ASOS stations (airports) via the awesome website of the [Iowa Environment Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS).
 
 Installation
 ============
