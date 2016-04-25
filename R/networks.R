@@ -9,10 +9,10 @@
 #' @examples
 #' riem_networks()
 riem_networks <- function(){
-  content <- fromJSON("http://mesonet.agron.iastate.edu/geojson/networks.geojson")
+  content <- fromJSON("http://mesonet.agron.iastate.edu/geojson/networks.geojson")# nolint
   names <- content$features$properties$name
   codes <- content$features$id
-  whichASOS <- grepl("ASOS", codes)|grepl("AWOS", codes)
+  whichASOS <- grepl("ASOS", codes) | grepl("AWOS", codes)
   codes <- codes[whichASOS]
   names <- names[whichASOS]
   tbl_df(data.frame(code = codes,

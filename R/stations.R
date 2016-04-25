@@ -17,7 +17,9 @@ riem_stations <- function(network = NULL){
   }
 
   if(!(network %in% riem_networks()$code)){
-    stop(paste0(network, " is not a valid network code. See riem_networks()"), call. = FALSE) # no lintr
+    stop(paste0(network,
+                " is not a valid network code. See riem_networks()"),
+         call. = FALSE) # nolint
   }
 
   link <- paste0("http://mesonet.agron.iastate.edu/json/network.php?network=",
@@ -29,5 +31,3 @@ riem_stations <- function(network = NULL){
     mutate_(lon = interp(~ as.numeric(lon))) %>%
     mutate_(lat = interp(~ as.numeric(lat)))
 }
-
-

@@ -55,17 +55,20 @@ riem_measures <- function(station = "VOHY",
   }
 
   if(ymd(date_end) < ymd(date_start)){
-    stop(call. = FALSE, "date_end has to be bigger than date_start")
+    stop(call. = FALSE,
+         "date_end has to be bigger than date_start")# nolint
   }
 
   date_start <- strsplit(date_start, "-")[[1]]
 
   if(length(date_start) != 3){
-    stop(call. = FALSE, "date_start has to be formatted like \"2014-12-14\", with hyphens.")
+    stop(call. = FALSE,
+         "date_start has to be formatted like \"2014-12-14\", with hyphens.") # nolint
   }
   date_end <- strsplit(date_end, "-")[[1]]
   if(length(date_end) != 3){
-    stop(call. = FALSE, "date_end has to be formatted like \"2014-12-14\", with hyphens.")
+    stop(call. = FALSE,
+         "date_end has to be formatted like \"2014-12-14\", with hyphens.")# nolint
   }
 
 
