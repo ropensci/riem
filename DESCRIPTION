@@ -2,9 +2,8 @@ Package: riem
 Type: Package
 Title: Accesses Data from the Iowa Environment Mesonet
 Version: 0.1.0
-Author: person("Maëlle", "Salmon", email = "maelle.salmon@yahoo.se", role =
+Authors@R: person("Maëlle", "Salmon", email = "maelle.salmon@yahoo.se", role =
     c("aut", "cre"))
-Maintainer: Who to complain to <yourfault@somewhere.net>
 Description: Allows to get weather data from ASOS stations (airports) in the
     whole world thanks to the Iowa Environment Mesonet website.
 License: GPL (>= 2)
