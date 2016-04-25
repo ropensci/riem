@@ -6,6 +6,9 @@
 \usage{
 riem_stations(network = NULL)
 }
+\arguments{
+\item{network}{network code, see riem_networks() for finding the code corresponding to a name.}
+}
 \value{
 a data.frame (dplyr tbl_df) with the id, name, longitude (lon) and latitude (lat) of each station in the network.
 }

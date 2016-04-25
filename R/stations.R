@@ -3,7 +3,7 @@
 #' @importFrom dplyr select_ "%>%" tbl_df mutate_
 #' @importFrom lazyeval interp
 #'
-#' @parameter network network code, see riem_networks() for finding the code corresponding to a name.
+#' @param network network code, see riem_networks() for finding the code corresponding to a name.
 #' @return a data.frame (dplyr tbl_df) with the id, name, longitude (lon) and latitude (lat) of each station in the network.
 #' @export
 #'
