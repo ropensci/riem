@@ -16,10 +16,14 @@ riem_stations <- function(network = NULL){
          call. = FALSE)
   }
 
+  if(!(network %in% riem_networks()$code)){
+    stop(paste0(network, " is not a valid network code. See riem_networks()"), call. = FALSE) # no lintr
+  }
+
   link <- paste0("http://mesonet.agron.iastate.edu/json/network.php?network=",
                  network)
 
-  content <- jsonlite::fromJSON(link)
+  content <- fromJSON(link)
   tbl_df(content$stations) %>%
     select_(quote(- combo)) %>%
     mutate_(lon = interp(~ as.numeric(lon))) %>%

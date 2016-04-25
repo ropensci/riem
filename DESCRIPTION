@@ -14,6 +14,7 @@ Imports:
     lubridate,
     dplyr,
     jsonlite,
-    tidyr,
+    readr,
     lazyeval
 RoxygenNote: 5.0.1
+Suggests: testthat

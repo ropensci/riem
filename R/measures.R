@@ -1,5 +1,8 @@
 #' Function for getting weather data from one station
 #'
+#' @importFrom lubridate ymd
+#' @importFrom readr read_tsv
+#' @importFrom httr GET content
 #' @param station station ID, see riem_stations()
 #' @param date_start date of start of the desired data, e.g. "2000-01-01"
 #' @param date_end date of end of the desired data, e.g. "2016-04-22"
@@ -40,10 +43,35 @@ riem_measures <- function(station = "VOHY",
 
   base_link <- "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py/"
 
-  date_start <- strsplit(date_start, "-")[[1]]
-  date_end <- strsplit(date_end, "-")[[1]]
 
-  page <- httr::GET(url = base_link,
+  # dates
+  if(is.na(ymd(date_start))){
+    stop(call. = FALSE, "date_start has to be formatted like \"2014-12-14\"")
+  }
+
+
+  if(is.na(ymd(date_end))){
+    stop(call. = FALSE, "date_end has to be formatted like \"2014-12-14\"")
+  }
+
+  if(ymd(date_end) < ymd(date_start)){
+    stop(call. = FALSE, "date_end has to be bigger than date_start")
+  }
+
+  date_start <- strsplit(date_start, "-")[[1]]
+
+  if(length(date_start) != 3){
+    stop(call. = FALSE, "date_start has to be formatted like \"2014-12-14\", with hyphens.")
+  }
+  date_end <- strsplit(date_end, "-")[[1]]
+  if(length(date_end) != 3){
+    stop(call. = FALSE, "date_end has to be formatted like \"2014-12-14\", with hyphens.")
+  }
+
+
+
+  # query
+  page <- GET(url = base_link,
                     query = list(station = station,
                                  data = "all",
                                  year1 = date_start[1],
@@ -54,7 +82,11 @@ riem_measures <- function(station = "VOHY",
                                  day2 = date_end[3],
                                  format = "tdf",
                                  latlon = "yes"))
-  content <- httr::content(page)
-  suppressWarnings(readr::read_tsv(content, skip = 5,
+  content <- content(page)
+  result <- suppressWarnings(read_tsv(content, skip = 5,
                                   na = c("", "NA", "M")))
+  if(nrow(result) == 0){
+    warning("No results for this query.", call. = FALSE)
+  }
+  return(result)
   }
