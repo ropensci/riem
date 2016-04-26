@@ -110,3 +110,5 @@ riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-2
 | VOHY    | 2011-08-23 05:40:00 |  78.4676|  17.4531|  84.2|  66.2|  54.80|   270|     9| NA   |  29.83| NA   |  3.73| NA   | SCT   | SCT   | NA    | NA    |   1500|   2500|     NA|     NA| NA        | VOHY 230540Z 27009KT 6000 SCT015 SCT025 29/19 Q1010 NOSIG    |
 | VOHY    | 2011-08-23 06:40:00 |  78.4676|  17.4531|  84.2|  68.0|  58.32|   260|     5| NA   |  29.83| NA   |  3.73| NA   | SCT   | SCT   | NA    | NA    |   1500|   2500|     NA|     NA| NA        | VOHY 230640Z 26005KT 6000 SCT015 SCT025 29/20 Q1010 NOSIG    |
 | VOHY    | 2011-08-23 07:40:00 |  78.4676|  17.4531|  84.2|  66.2|  54.80|   250|     7| NA   |  29.77| NA   |  3.73| NA   | SCT   | SCT   | NA    | NA    |   2000|   2500|     NA|     NA| NA        | VOHY 230740Z 25007KT 6000 SCT020 SCT025 29/19 Q1008 NOSIG    |
+
+For conversion of wind speed or temperature into other units, see [this package](https://github.com/geanders/weathermetrics/).
