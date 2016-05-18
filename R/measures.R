@@ -1,8 +1,4 @@
 #' Function for getting weather data from one station
-#'
-#' @importFrom lubridate ymd year month day
-#' @importFrom readr read_tsv
-#' @importFrom httr GET content
 #' @param station station ID, see riem_stations()
 #' @param date_start date of start of the desired data, e.g. "2000-01-01"
 #' @param date_end date of end of the desired data, e.g. "2016-04-22"
@@ -67,7 +63,7 @@ riem_measures <- function(station = "VOHY",
 
 
   # query
-  page <- GET(url = base_link,
+  page <- httr::GET(url = base_link,
                     query = list(station = station,
                                  data = "all",
                                  year1 = lubridate::year(date_start),
@@ -78,8 +74,8 @@ riem_measures <- function(station = "VOHY",
                                  day2 = lubridate::day(date_end),
                                  format = "tdf",
                                  latlon = "yes"))
-  content <- content(page)
-  result <- suppressWarnings(read_tsv(content, skip = 5,
+  content <- httr::content(page)
+  result <- suppressWarnings(readr::read_tsv(content, skip = 5,
                                   na = c("", "NA", "M")))
   if(nrow(result) == 0){
     warning("No results for this query.", call. = FALSE)

@@ -1,7 +1,7 @@
 riem
 ====
 
-[![Travis-CI Build Status](https://travis-ci.org/masalmon/riem.svg?branch=master)](https://travis-ci.org/masalmon/riem) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/masalmon/riem?branch=master&svg=true)](https://ci.appveyor.com/project/masalmon/riem)
+[![Travis-CI Build Status](https://travis-ci.org/masalmon/riem.svg?branch=master)](https://travis-ci.org/masalmon/riem) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/masalmon/riem?branch=master&svg=true)](https://ci.appveyor.com/project/masalmon/riem) [![codecov](https://codecov.io/gh/masalmon/riem/branch/master/graph/badge.svg)](https://codecov.io/gh/masalmon/riem)
 
 This package allows to get weather data from ASOS stations (airports) via the awesome website of the [Iowa Environment Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS).
 
@@ -56,13 +56,13 @@ Possible variables are
 
 -   station: three or four character site identifier
 
--   valid: timestamp of the observation
+-   valid: timestamp of the observation (UTC)
 
 -   tmpf: Air Temperature in Fahrenheit, typically @ 2 meters
 
 -   dwpf: Dew Point Temperature in Fahrenheit, typically @ 2 meters
 
--   relh: Relative Humidity in
+-   relh: Relative Humidity in %
 
 -   drct: Wind Direction in degrees from north
 
@@ -94,7 +94,7 @@ Possible variables are
 
 -   skyl4: Sky Level 4 Altitude in feet
 
--   presentwx: Present Weather Codes (space seperated)
+-   presentwx: Present Weather Codes (space seperated), see e.g. [this manual](http://www.ofcm.gov/fmh-1/pdf/H-CH8.pdf) for further explanations.
 
 -   metar: unprocessed reported observation in METAR format
 
