@@ -3,8 +3,9 @@
 #' @importFrom dplyr select_ "%>%" tbl_df mutate_
 #' @importFrom lazyeval interp
 #'
-#' @param network network code, see riem_networks() for finding the code corresponding to a name.
+#' @param network A single network code, see riem_networks() for finding the code corresponding to a name.
 #' @return a data.frame (dplyr tbl_df) with the id, name, longitude (lon) and latitude (lat) of each station in the network.
+#' @details You can see a map of stations in a network at \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
 #' @export
 #'
 #' @examples

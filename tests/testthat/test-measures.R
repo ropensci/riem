@@ -42,9 +42,9 @@ test_that("riem_measures checks dates",{
                "date_start has to be formatted")
   expect_error(riem_measures(date_end = "somethingelse"),
                "date_end has to be formatted like")
-  expect_error(riem_measures(date_start = "2015 12 01"),
+  expect_error(riem_measures(date_start = "2015 31 01"),
                "date_start has to be formatted like")
-  expect_error(riem_measures(date_end = "2015 12 01"),
+  expect_error(riem_measures(date_end = "2015 31 01"),
                "date_end has to be formatted like")
   expect_error(riem_measures(date_start = "2015-12-01",
                              date_end = "2013-12-01"),

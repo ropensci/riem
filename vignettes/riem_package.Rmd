@@ -39,17 +39,17 @@ riem_stations(network = "IN__ASOS") %>% head() %>% knitr::kable()
 
 # Get measures for one station
 
-Possible variables are
+Possible variables are, according the [IEM website](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS) and the [ASOS user guide](http://www.nws.noaa.gov/asos/pdfs/aum-toc.pdf),
 
 * station: three or four character site identifier
 
-* valid: timestamp of the observation
+* valid: timestamp of the observation (UTC)
 
 * tmpf: Air Temperature in Fahrenheit, typically @ 2 meters
 
 * dwpf: Dew Point Temperature in Fahrenheit, typically @ 2 meters
 
-* relh: Relative Humidity in
+* relh: Relative Humidity in \%
 
 * drct: Wind Direction in degrees from north
 
@@ -81,7 +81,7 @@ Possible variables are
 
 * skyl4: Sky Level 4 Altitude in feet
 
-* presentwx: Present Weather Codes (space seperated)
+* presentwx: Present Weather Codes (space seperated), see e.g. [this manual](http://www.ofcm.gov/fmh-1/pdf/H-CH8.pdf) for further explanations.
 
 * metar: unprocessed reported observation in METAR format
 

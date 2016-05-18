@@ -19,7 +19,7 @@ a data.frame (dplyr tbl_df) with measures, the number of columns can vary from s
 but possible variables are
 \itemize{
 \item station: three or four character site identifier
-\item valid: timestamp of the observation
+\item valid: timestamp of the observation (UTC)
 \item tmpf: Air Temperature in Fahrenheit, typically @ 2 meters
 \item dwpf: Dew Point Temperature in Fahrenheit, typically @ 2 meters
 \item relh: Relative Humidity in %
@@ -38,12 +38,16 @@ but possible variables are
 \item skyl2: Sky Level 2 Altitude in feet
 \item skyl3: Sky Level 3 Altitude in feet
 \item skyl4: Sky Level 4 Altitude in feet
-\item presentwx: Present Weather Codes (space seperated)
+\item presentwx: Present Weather Codes (space seperated),
+ see e.g. [this manual](http://www.ofcm.gov/fmh-1/pdf/H-CH8.pdf) for further explanations.
 \item metar: unprocessed reported observation in METAR format
 }
 }
 \description{
 Function for getting weather data from one station
+}
+\details{
+The data is queried through \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
 }
 \examples{
 riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22")

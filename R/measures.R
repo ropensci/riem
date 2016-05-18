@@ -1,6 +1,6 @@
 #' Function for getting weather data from one station
 #'
-#' @importFrom lubridate ymd
+#' @importFrom lubridate ymd year month day
 #' @importFrom readr read_tsv
 #' @importFrom httr GET content
 #' @param station station ID, see riem_stations()
@@ -11,7 +11,7 @@
 #' but possible variables are
 #' \itemize{
 #' \item station: three or four character site identifier
-#' \item valid: timestamp of the observation
+#' \item valid: timestamp of the observation (UTC)
 #' \item tmpf: Air Temperature in Fahrenheit, typically @ 2 meters
 #' \item dwpf: Dew Point Temperature in Fahrenheit, typically @ 2 meters
 #' \item relh: Relative Humidity in %
@@ -30,9 +30,11 @@
 #' \item skyl2: Sky Level 2 Altitude in feet
 #' \item skyl3: Sky Level 3 Altitude in feet
 #' \item skyl4: Sky Level 4 Altitude in feet
-#' \item presentwx: Present Weather Codes (space seperated)
+#' \item presentwx: Present Weather Codes (space seperated),
+#'  see e.g. [this manual](http://www.ofcm.gov/fmh-1/pdf/H-CH8.pdf) for further explanations.
 #' \item metar: unprocessed reported observation in METAR format
 #' }
+#' @details The data is queried through \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
 #' @export
 #'
 #' @examples
@@ -44,45 +46,36 @@ riem_measures <- function(station = "VOHY",
   base_link <- "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py/"
 
 
-  # dates
-  if(is.na(ymd(date_start))){
-    stop(call. = FALSE, "date_start has to be formatted like \"2014-12-14\"")
+
+
+  date_start <- lubridate::ymd(date_start)
+
+  if(is.na(date_start)){
+    stop(call. = FALSE,
+         "date_start has to be formatted like \"2014-12-14\", that is year-month-day.") # nolint
+  }
+  date_end <- lubridate::ymd(date_end)
+  if(is.na(date_end)){
+    stop(call. = FALSE,
+         "date_end has to be formatted like \"2014-12-14\", that is year-month-day.")# nolint
   }
 
-
-  if(is.na(ymd(date_end))){
-    stop(call. = FALSE, "date_end has to be formatted like \"2014-12-14\"")
-  }
-
-  if(ymd(date_end) < ymd(date_start)){
+  if(date_end < date_start){
     stop(call. = FALSE,
          "date_end has to be bigger than date_start")# nolint
   }
-
-  date_start <- strsplit(date_start, "-")[[1]]
-
-  if(length(date_start) != 3){
-    stop(call. = FALSE,
-         "date_start has to be formatted like \"2014-12-14\", with hyphens.") # nolint
-  }
-  date_end <- strsplit(date_end, "-")[[1]]
-  if(length(date_end) != 3){
-    stop(call. = FALSE,
-         "date_end has to be formatted like \"2014-12-14\", with hyphens.")# nolint
-  }
-
 
 
   # query
   page <- GET(url = base_link,
                     query = list(station = station,
                                  data = "all",
-                                 year1 = date_start[1],
-                                 month1 = date_start[2],
-                                 day1 = date_start[3],
-                                 year2 = date_end[1],
-                                 month2 = date_end[2],
-                                 day2 = date_end[3],
+                                 year1 = lubridate::year(date_start),
+                                 month1 = lubridate::month(date_start),
+                                 day1 = lubridate::day(date_start),
+                                 year2 = lubridate::year(date_end),
+                                 month2 = lubridate::month(date_end),
+                                 day2 = lubridate::day(date_end),
                                  format = "tdf",
                                  latlon = "yes"))
   content <- content(page)
