@@ -88,3 +88,7 @@ Possible variables are, according the [IEM website](https://mesonet.agron.iastat
 ```{r}
 riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22") %>% head() %>% knitr::kable()
 ```
+
+
+For conversion of wind speed or temperature into other units, see [this package](https://github.com/geanders/weathermetrics/).
+
