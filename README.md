@@ -52,7 +52,7 @@ riem_stations(network = "IN__ASOS") %>% head() %>% knitr::kable()
 Get measures for one station
 ============================
 
-Possible variables are
+Possible variables are (copied from [here](https://mesonet.agron.iastate.edu/request/download.phtml), see also the [ASOS user guide](http://www.nws.noaa.gov/asos/pdfs/aum-toc.pdf))
 
 -   station: three or four character site identifier
 
