@@ -10,7 +10,7 @@ riem
 =============
 
 [![Travis-CI Build Status](https://travis-ci.org/ropenscilabs/riem.svg?branch=master)](https://travis-ci.org/ropenscilabs/riem)
-[![Build status](https://ci.appveyor.com/api/projects/status/14jcuvaxvwk2r06w?svg=true)](https://ci.appveyor.com/project/masalmon/riem)
+[![Build status](https://ci.appveyor.com/api/projects/status/tlpycwpp0fkeivue?svg=true)](https://ci.appveyor.com/project/masalmon/riem)
 [![codecov](https://codecov.io/gh/ropenscilabs/riem/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/riem)
 
 
