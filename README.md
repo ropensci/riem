@@ -112,3 +112,13 @@ riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-2
 | VOHY    | 2011-08-23 07:40:00 |  78.4676|  17.4531|  84.2|  66.2|  54.80|   250|     7| NA   |  29.77| NA   |  3.73| NA   | SCT   | SCT   | NA    | NA    |   2000|   2500|     NA|     NA| NA        | VOHY 230740Z 25007KT 6000 SCT020 SCT025 29/19 Q1008 NOSIG    |
 
 For conversion of wind speed or temperature into other units, see [this package](https://github.com/geanders/weathermetrics/).
+
+Meta
+----
+
+-   Please [report any issues or bugs](https://github.com/ropenscilabs/riem/issues).
+-   License: GPL
+-   Get citation information for `ropenaq` in R doing `citation(package = 'riem')`
+-   Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+[![ropensci\_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
