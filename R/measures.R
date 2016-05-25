@@ -34,7 +34,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22")
+#' }
 riem_measures <- function(station = "VOHY",
                           date_start = "2014-01-01",
                           date_end = "2016-04-22"){

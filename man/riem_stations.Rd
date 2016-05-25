@@ -19,6 +19,8 @@ Function for getting stations of an ASOS network
 You can see a map of stations in a network at \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
 }
 \examples{
+\dontrun{
 riem_stations(network = "IN__ASOS")
+}
 }
 

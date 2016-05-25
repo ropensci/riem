@@ -4,7 +4,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' riem_networks()
+#' }
 riem_networks <- function(){
   content <- jsonlite::fromJSON("http://mesonet.agron.iastate.edu/geojson/networks.geojson")# nolint
   names <- content$features$properties$name

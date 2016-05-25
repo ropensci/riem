@@ -8,7 +8,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' riem_stations(network = "IN__ASOS")
+#' }
 riem_stations <- function(network = NULL){
 
   if(is.null(network)){

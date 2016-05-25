@@ -2,5 +2,7 @@
 ^\.Rproj\.user$
 ^\.travis\.yml$
 ^appveyor\.yml$
+^README\.md$
+^README\.Rmd$
 ^CONDUCT\.md$
 ^\.lintr$

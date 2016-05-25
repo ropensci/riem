@@ -13,6 +13,8 @@ a data.frame (dplyr tbl_df) with the names and codes of available networks.
 Function for getting ASOS and AWOS networks
 }
 \examples{
+\dontrun{
 riem_networks()
+}
 }
 
