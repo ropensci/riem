@@ -6,7 +6,9 @@
 ## R CMD check results
 
 R CMD check results
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 2 notes
+
+* This is actually not my first CRAN submission, I also maintain opencage.
 
 * Brooke Anderson reviewed the package for rOpenSci, therefore her role is "rev".
 
