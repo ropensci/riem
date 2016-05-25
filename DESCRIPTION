@@ -16,6 +16,8 @@ Imports:
     readr (>= 0.2.2),
     lazyeval (>= 0.1.10)
 RoxygenNote: 5.0.1
+URL: http://github.com/ropenscilabs/riem
+BugReports: http://github.com/ropenscilabs/riem/issues
 Suggests: testthat,
     knitr,
     rmarkdown

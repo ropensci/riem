@@ -25,7 +25,7 @@ To install the package, you will need the devtools package.
 
 ```{r, eval = FALSE}
 library("devtools")
-install_github("masalmon/riem")
+install_github("ropenscilabs/riem")
 
 ```
 
