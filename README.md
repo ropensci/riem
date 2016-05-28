@@ -1,14 +1,20 @@
 riem
 ====
 
-[![Travis-CI Build Status](https://travis-ci.org/ropenscilabs/riem.svg?branch=master)](https://travis-ci.org/ropenscilabs/riem) [![Build status](https://ci.appveyor.com/api/projects/status/tlpycwpp0fkeivue?svg=true)](https://ci.appveyor.com/project/masalmon/riem) [![codecov](https://codecov.io/gh/ropenscilabs/riem/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/riem)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/riem)](http://cran.r-project.org/package=riem) [![Travis-CI Build Status](https://travis-ci.org/ropenscilabs/riem.svg?branch=master)](https://travis-ci.org/ropenscilabs/riem) [![Build status](https://ci.appveyor.com/api/projects/status/tlpycwpp0fkeivue?svg=true)](https://ci.appveyor.com/project/masalmon/riem) [![codecov](https://codecov.io/gh/ropenscilabs/riem/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/riem)
 
 This package allows to get weather data from ASOS stations (airports) via the awesome website of the [Iowa Environment Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS).
 
 Installation
 ============
 
-To install the package, you will need the devtools package.
+Install the package with:
+
+``` r
+install.packages("riem")
+```
+
+Or install the development version using [devtools](https://github.com/hadley/devtools) with:
 
 ``` r
 library("devtools")
