@@ -1,5 +1,13 @@
+## Resubmission
+
+This is a re-submission. In this version I have
+
+* used R-devel for checking and building the package
+
+* added the meaning of ASOS in the DESCRIPTION
+
 ## Test environments
-* local Windows install
+* local Windows install (R-devel)
 * ubuntu 12.04 (on travis-ci)
 * win-builder (on appveyor-ci)
 
