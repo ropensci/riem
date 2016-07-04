@@ -11,6 +11,15 @@ install:
   ps: Bootstrap
 
 # Adapt as necessary starting from here
+environment:
+  matrix:
+  - R_VERSION: stable
+
+  - R_VERSION: patched
+
+  - R_VERSION: oldrel
+
+  - R_VERSION: devel
 
 build_script:
   - travis-tool.sh install_deps
