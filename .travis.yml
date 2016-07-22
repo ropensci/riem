@@ -1,6 +1,9 @@
 # Sample .travis.yml for R projects
 
 language: r
+os: 
+- linux
+- osx
 r:
   - oldrel
   - release
