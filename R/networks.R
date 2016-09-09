@@ -1,6 +1,6 @@
 #' Function for getting ASOS and AWOS networks
 #'
-#' @return a data.frame (dplyr tbl_df) with the names and codes of available networks.
+#' @return a data.frame (tibble tibble) with the names and codes of available networks.
 #' @export
 #'
 #' @examples
@@ -14,6 +14,6 @@ riem_networks <- function(){
   whichASOS <- grepl("ASOS", codes) | grepl("AWOS", codes)
   codes <- codes[whichASOS]
   names <- names[whichASOS]
-  dplyr::tbl_df(data.frame(code = codes,
-                           name = names))
+  tibble::tibble_(list(code = ~ codes,
+                           name = ~ names))
 }

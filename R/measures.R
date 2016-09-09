@@ -1,9 +1,12 @@
 #' Function for getting weather data from one station
+#'
+#' @importFrom utils read.table
+#'
 #' @param station station ID, see riem_stations()
 #' @param date_start date of start of the desired data, e.g. "2000-01-01"
 #' @param date_end date of end of the desired data, e.g. "2016-04-22"
 #'
-#' @return a data.frame (dplyr tbl_df) with measures, the number of columns can vary from station to station,
+#' @return a data.frame (tibble tibble) with measures, the number of columns can vary from station to station,
 #' but possible variables are
 #' \itemize{
 #' \item station: three or four character site identifier
@@ -39,7 +42,7 @@
 #' }
 riem_measures <- function(station = "VOHY",
                           date_start = "2014-01-01",
-                          date_end = "2016-04-22"){
+                          date_end = as.character(Sys.Date())){
 
   base_link <- "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py/"
 
@@ -77,10 +80,29 @@ riem_measures <- function(station = "VOHY",
                                  format = "tdf",
                                  latlon = "yes"))
   content <- httr::content(page)
-  result <- suppressWarnings(readr::read_tsv(content, skip = 5,
-                                  na = c("", "NA", "M")))
+
+  col.names <- t(suppressWarnings(read.table(text = content,
+                                           skip = 5,
+                                           nrows = 1,
+                                           na.strings = c("", "NA", "M"),
+                                           sep = "\t",
+                                           stringsAsFactors = FALSE)))
+  col.names <- as.character(col.names)
+
+  col.names <- gsub(" ", "", col.names)
+
+  result <- suppressWarnings(read.table(text = content,
+                                        skip = 6,
+                                        col.names = col.names,
+                                        na.strings = c("", "NA", "M"),
+                                        sep = "\t",
+                                        stringsAsFactors = FALSE,
+                                        fill = TRUE))
+
   if(nrow(result) == 0){
     warning("No results for this query.", call. = FALSE)
+  }else{
+    result$valid <- lubridate::ymd_hm(result$valid)
   }
-  return(result)
+  return(tibble::as_tibble(result))
   }

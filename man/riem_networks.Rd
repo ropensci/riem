@@ -7,7 +7,7 @@
 riem_networks()
 }
 \value{
-a data.frame (dplyr tbl_df) with the names and codes of available networks.
+a data.frame (tibble tibble) with the names and codes of available networks.
 }
 \description{
 Function for getting ASOS and AWOS networks

@@ -37,14 +37,13 @@ install_github("ropenscilabs/riem")
 
 ```{r, warning = FALSE, message = FALSE}
 library("riem")
-library("dplyr")
-riem_networks() %>% head() %>% knitr::kable()
+riem_networks() 
 ```
 
 # Get available stations for one network
 
 ```{r}
-riem_stations(network = "IN__ASOS") %>% head() %>% knitr::kable()
+riem_stations(network = "IN__ASOS") 
 ```
 
 
@@ -97,7 +96,8 @@ Possible variables are (copied from [here](https://mesonet.agron.iastate.edu/req
 * metar: unprocessed reported observation in METAR format
 
 ```{r}
-riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22") %>% head() %>% knitr::kable()
+measures <- riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22") 
+knitr::kable(head(measures))
 ```
 
 For conversion of wind speed or temperature into other units, see [this package](https://github.com/geanders/weathermetrics/).

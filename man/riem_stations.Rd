@@ -10,7 +10,7 @@ riem_stations(network = NULL)
 \item{network}{A single network code, see riem_networks() for finding the code corresponding to a name.}
 }
 \value{
-a data.frame (dplyr tbl_df) with the id, name, longitude (lon) and latitude (lat) of each station in the network.
+a data.frame (tibble tibble) with the id, name, longitude (lon) and latitude (lat) of each station in the network.
 }
 \description{
 Function for getting stations of an ASOS network

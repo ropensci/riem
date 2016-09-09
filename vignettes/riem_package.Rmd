@@ -21,7 +21,13 @@ This package allows to get weather data from ASOS stations (airports) via the aw
 
 # Installation
 
-To install the package, you will need the devtools package.
+Install the package with:
+
+```{r eval = FALSE}
+install.packages("riem")
+```
+
+Or install the development version using [devtools](https://github.com/hadley/devtools) with:
 
 ```{r, eval = FALSE}
 library("devtools")
@@ -33,20 +39,19 @@ install_github("ropenscilabs/riem")
 
 ```{r, warning = FALSE, message = FALSE}
 library("riem")
-library("dplyr")
-riem_networks() %>% head() %>% knitr::kable()
+riem_networks() 
 ```
 
 # Get available stations for one network
 
 ```{r}
-riem_stations(network = "IN__ASOS") %>% head() %>% knitr::kable()
+riem_stations(network = "IN__ASOS") 
 ```
 
 
 # Get measures for one station
 
-Possible variables are, according the [IEM website](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS) and the [ASOS user guide](http://www.nws.noaa.gov/asos/pdfs/aum-toc.pdf),
+Possible variables are (copied from [here](https://mesonet.agron.iastate.edu/request/download.phtml), see also the [ASOS user guide](http://www.nws.noaa.gov/asos/pdfs/aum-toc.pdf))
 
 * station: three or four character site identifier
 
@@ -93,9 +98,9 @@ Possible variables are, according the [IEM website](https://mesonet.agron.iastat
 * metar: unprocessed reported observation in METAR format
 
 ```{r}
-riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22") %>% head() %>% knitr::kable()
+measures <- riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22") 
+head(measures)
 ```
-
 
 For conversion of wind speed or temperature into other units, see [this package](https://github.com/geanders/weathermetrics/).
 

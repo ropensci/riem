@@ -1,9 +1,9 @@
 Package: riem
 Type: Package
 Title: Accesses Weather Data from the Iowa Environment Mesonet
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person("Maëlle", "Salmon", email = "maelle.salmon@yahoo.se", role =
-    c("aut", "cre")), person("Brooke", "Anderson", role = c("rev"), comment = "Brooke Anderson reviewed the package for rOpenSci, see https://github.com/ropensci/onboarding/issues/39."))
+    c("aut", "cre")), person("Brooke", "Anderson", role = c("ctb"), comment = "Brooke Anderson reviewed the package for rOpenSci, see https://github.com/ropensci/onboarding/issues/39."))
 Description: Allows to get weather data from Automated Surface Observing System (ASOS) stations (airports) in the
     whole world thanks to the Iowa Environment Mesonet website.
 License: GPL (>= 2)
@@ -11,10 +11,8 @@ LazyData: TRUE
 Imports:
     httr (>= 1.1.0),
     lubridate (>= 1.5.6),
-    dplyr (>= 0.4.3),
-    jsonlite (>= 0.9.19),
-    readr (>= 0.2.2),
-    lazyeval (>= 0.1.10)
+    tibble,
+    jsonlite (>= 0.9.19)
 RoxygenNote: 5.0.1
 URL: http://github.com/ropenscilabs/riem
 BugReports: http://github.com/ropenscilabs/riem/issues

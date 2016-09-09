@@ -1,9 +1,7 @@
 #' Function for getting stations of an ASOS network
 #'
-#' @importFrom dplyr "%>%"
-#'
 #' @param network A single network code, see riem_networks() for finding the code corresponding to a name.
-#' @return a data.frame (dplyr tbl_df) with the id, name, longitude (lon) and latitude (lat) of each station in the network.
+#' @return a data.frame (tibble tibble) with the id, name, longitude (lon) and latitude (lat) of each station in the network.
 #' @details You can see a map of stations in a network at \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
 #' @export
 #'
@@ -28,8 +26,10 @@ riem_stations <- function(network = NULL){
                  network)
 
   content <- jsonlite::fromJSON(link)
-  dplyr::tbl_df(content$stations) %>%
-    dplyr::select_(quote(- combo)) %>%
-    dplyr::mutate_(lon = lazyeval::interp(~ as.numeric(lon))) %>%
-    dplyr::mutate_(lat = lazyeval::interp(~ as.numeric(lat)))
+  results <- tibble::as_tibble(content$stations)
+  results <- results[, !names(results) == "combo"]
+  results$lon <- as.numeric(results$lon)
+  results$lat <- as.numeric(results$lat)
+
+  return(results)
 }

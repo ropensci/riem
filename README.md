@@ -26,34 +26,45 @@ Get available networks
 
 ``` r
 library("riem")
-library("dplyr")
-riem_networks() %>% head() %>% knitr::kable()
+riem_networks() 
 ```
 
-| code       | name                      |
-|:-----------|:--------------------------|
-| AE\_\_ASOS | United Arab Emirates ASOS |
-| AF\_\_ASOS | Afghanistan ASOS          |
-| AG\_\_ASOS | Antigua and Barbuda ASOS  |
-| AI\_\_ASOS | Anguilla ASOS             |
-| AK\_ASOS   | Alaska ASOS               |
-| AL\_ASOS   | Alabama ASOS              |
+    ## # A tibble: 266 × 2
+    ##        code                      name
+    ##       <chr>                     <chr>
+    ## 1  AE__ASOS United Arab Emirates ASOS
+    ## 2  AF__ASOS          Afghanistan ASOS
+    ## 3  AG__ASOS  Antigua and Barbuda ASOS
+    ## 4  AI__ASOS             Anguilla ASOS
+    ## 5   AK_ASOS               Alaska ASOS
+    ## 6   AL_ASOS              Alabama ASOS
+    ## 7  AL__ASOS              Albania ASOS
+    ## 8  AM__ASOS              Armenia ASOS
+    ## 9  AN__ASOS Netherlands Antilles ASOS
+    ## 10 AO__ASOS               Angola ASOS
+    ## # ... with 256 more rows
 
 Get available stations for one network
 ======================================
 
 ``` r
-riem_stations(network = "IN__ASOS") %>% head() %>% knitr::kable()
+riem_stations(network = "IN__ASOS") 
 ```
 
-| id   | name             |       lon|       lat|
-|:-----|:-----------------|---------:|---------:|
-| VEAT | AGARTALA         |  91.24045|  23.88698|
-| VIAG | AGRA (IN-AFB)    |  77.96089|  27.15583|
-| VAAH | AHMADABAD        |  72.63465|  23.07724|
-| VAAK | AKOLA AIRPORT    |  77.05863|  20.69901|
-| VIAH | ALIGARH          |  78.06667|  27.88333|
-| VIAL | ALLAHABAD (IN-AF |  81.73387|  25.44006|
+    ## # A tibble: 117 × 4
+    ##       id                   name      lon      lat
+    ##    <chr>                  <chr>    <dbl>    <dbl>
+    ## 1   VEAT       AGARTALA         91.24045 23.88698
+    ## 2   VIAG       AGRA (IN-AFB)    77.96089 27.15583
+    ## 3   VAAH       AHMADABAD        72.63465 23.07724
+    ## 4   VAAK       AKOLA AIRPORT    77.05863 20.69901
+    ## 5   VIAH       ALIGARH          78.06667 27.88333
+    ## 6   VIAL       ALLAHABAD (IN-AF 81.73387 25.44006
+    ## 7   VIAR       AMRITSAR         74.86667 31.63333
+    ## 8   VAOR                Arkonam 79.69120 13.07120
+    ## 9   VOAR                Arkonam 79.69120 13.07120
+    ## 10  VAAU Aurangabad Chikalthan  75.39810 19.86270
+    ## # ... with 107 more rows
 
 Get measures for one station
 ============================
@@ -105,17 +116,18 @@ Possible variables are (copied from [here](https://mesonet.agron.iastate.edu/req
 -   metar: unprocessed reported observation in METAR format
 
 ``` r
-riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22") %>% head() %>% knitr::kable()
+measures <- riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22") 
+knitr::kable(head(measures))
 ```
 
-| station | valid               |      lon|      lat|  tmpf|  dwpf|   relh|  drct|  sknt| p01i |   alti| mslp |  vsby| gust | skyc1 | skyc2 | skyc3 | skyc4 |  skyl1|  skyl2|  skyl3|  skyl4| presentwx | metar                                                        |
-|:--------|:--------------------|--------:|--------:|-----:|-----:|------:|-----:|-----:|:-----|------:|:-----|-----:|:-----|:------|:------|:------|:------|------:|------:|------:|------:|:----------|:-------------------------------------------------------------|
-| VOHY    | 2011-08-23 00:40:00 |  78.4676|  17.4531|  73.4|  69.8|  88.51|     0|     0| NA   |  29.83| NA   |  3.11| NA   | SCT   | BKN   | NA    | NA    |   1000|  20000|     NA|     NA| HZ        | VOHY 230040Z 00000KT 5000 HZ SCT010 BKN200 23/21 Q1010 NOSIG |
-| VOHY    | 2011-08-23 01:40:00 |  78.4676|  17.4531|  73.4|  69.8|  88.51|     0|     0| NA   |  29.83| NA   |  3.11| NA   | SCT   | BKN   | NA    | NA    |   2000|  20000|     NA|     NA| HZ        | VOHY 230140Z 00000KT 5000 HZ SCT020 BKN200 23/21 Q1010 NOSIG |
-| VOHY    | 2011-08-23 05:10:00 |  78.4676|  17.4531|  82.4|  68.0|  61.81|   270|     7| NA   |  29.85| NA   |  3.73| NA   | SCT   | SCT   | NA    | NA    |   1500|   2500|     NA|     NA| NA        | VOHY 230510Z 27007KT 6000 SCT015 SCT025 28/20 Q1011 NOSIG    |
-| VOHY    | 2011-08-23 05:40:00 |  78.4676|  17.4531|  84.2|  66.2|  54.80|   270|     9| NA   |  29.83| NA   |  3.73| NA   | SCT   | SCT   | NA    | NA    |   1500|   2500|     NA|     NA| NA        | VOHY 230540Z 27009KT 6000 SCT015 SCT025 29/19 Q1010 NOSIG    |
-| VOHY    | 2011-08-23 06:40:00 |  78.4676|  17.4531|  84.2|  68.0|  58.32|   260|     5| NA   |  29.83| NA   |  3.73| NA   | SCT   | SCT   | NA    | NA    |   1500|   2500|     NA|     NA| NA        | VOHY 230640Z 26005KT 6000 SCT015 SCT025 29/20 Q1010 NOSIG    |
-| VOHY    | 2011-08-23 07:40:00 |  78.4676|  17.4531|  84.2|  66.2|  54.80|   250|     7| NA   |  29.77| NA   |  3.73| NA   | SCT   | SCT   | NA    | NA    |   2000|   2500|     NA|     NA| NA        | VOHY 230740Z 25007KT 6000 SCT020 SCT025 29/19 Q1008 NOSIG    |
+| station | valid               |      lon|      lat|  tmpf|  dwpf|   relh|  drct|  sknt|  p01i|   alti| mslp |  vsby|  gust| skyc1 | skyc2 | skyc3 | skyc4 |  skyl1|  skyl2|  skyl3|  skyl4| presentwx | metar                                                        |
+|:--------|:--------------------|--------:|--------:|-----:|-----:|------:|-----:|-----:|-----:|------:|:-----|-----:|-----:|:------|:------|:------|:------|------:|------:|------:|------:|:----------|:-------------------------------------------------------------|
+| VOHY    | 2011-08-23 00:40:00 |  78.4676|  17.4531|  73.4|  69.8|  88.51|     0|     0|    NA|  29.83| NA   |  3.11|    NA| SCT   | BKN   |       |       |   1000|  20000|     NA|     NA| HZ        | VOHY 230040Z 00000KT 5000 HZ SCT010 BKN200 23/21 Q1010 NOSIG |
+| VOHY    | 2011-08-23 01:40:00 |  78.4676|  17.4531|  73.4|  69.8|  88.51|     0|     0|    NA|  29.83| NA   |  3.11|    NA| SCT   | BKN   |       |       |   2000|  20000|     NA|     NA| HZ        | VOHY 230140Z 00000KT 5000 HZ SCT020 BKN200 23/21 Q1010 NOSIG |
+| VOHY    | 2011-08-23 05:10:00 |  78.4676|  17.4531|  82.4|  68.0|  61.81|   270|     7|    NA|  29.85| NA   |  3.73|    NA| SCT   | SCT   |       |       |   1500|   2500|     NA|     NA| NA        | VOHY 230510Z 27007KT 6000 SCT015 SCT025 28/20 Q1011 NOSIG    |
+| VOHY    | 2011-08-23 05:40:00 |  78.4676|  17.4531|  84.2|  66.2|  54.80|   270|     9|    NA|  29.83| NA   |  3.73|    NA| SCT   | SCT   |       |       |   1500|   2500|     NA|     NA| NA        | VOHY 230540Z 27009KT 6000 SCT015 SCT025 29/19 Q1010 NOSIG    |
+| VOHY    | 2011-08-23 06:40:00 |  78.4676|  17.4531|  84.2|  68.0|  58.32|   260|     5|    NA|  29.83| NA   |  3.73|    NA| SCT   | SCT   |       |       |   1500|   2500|     NA|     NA| NA        | VOHY 230640Z 26005KT 6000 SCT015 SCT025 29/20 Q1010 NOSIG    |
+| VOHY    | 2011-08-23 07:40:00 |  78.4676|  17.4531|  84.2|  66.2|  54.80|   250|     7|    NA|  29.77| NA   |  3.73|    NA| SCT   | SCT   |       |       |   2000|   2500|     NA|     NA| NA        | VOHY 230740Z 25007KT 6000 SCT020 SCT025 29/19 Q1008 NOSIG    |
 
 For conversion of wind speed or temperature into other units, see [this package](https://github.com/geanders/weathermetrics/).
 

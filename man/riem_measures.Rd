@@ -5,7 +5,7 @@
 \title{Function for getting weather data from one station}
 \usage{
 riem_measures(station = "VOHY", date_start = "2014-01-01",
-  date_end = "2016-04-22")
+  date_end = as.character(Sys.Date()))
 }
 \arguments{
 \item{station}{station ID, see riem_stations()}
@@ -15,7 +15,7 @@ riem_measures(station = "VOHY", date_start = "2014-01-01",
 \item{date_end}{date of end of the desired data, e.g. "2016-04-22"}
 }
 \value{
-a data.frame (dplyr tbl_df) with measures, the number of columns can vary from station to station,
+a data.frame (tibble tibble) with measures, the number of columns can vary from station to station,
 but possible variables are
 \itemize{
 \item station: three or four character site identifier
