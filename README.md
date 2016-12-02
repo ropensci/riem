@@ -1,7 +1,7 @@
 riem
 ====
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/riem)](http://cran.r-project.org/package=riem) [![Travis-CI Build Status](https://travis-ci.org/ropenscilabs/riem.svg?branch=master)](https://travis-ci.org/ropenscilabs/riem) [![Build status](https://ci.appveyor.com/api/projects/status/jl8sxr77bi8jnqrm?svg=true)](https://ci.appveyor.com/project/ropenscilabs/riem) [![codecov](https://codecov.io/gh/ropenscilabs/riem/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/riem)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/riem)](http://cran.r-project.org/package=riem) [![Travis-CI Build Status](https://travis-ci.org/ropensci/riem.svg?branch=master)](https://travis-ci.org/ropensci/riem) [![Build status](https://ci.appveyor.com/api/projects/status/jl8sxr77bi8jnqrm?svg=true)](https://ci.appveyor.com/project/ropensci/riem) [![codecov](https://codecov.io/gh/ropensci/riem/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/riem)
 
 This package allows to get weather data from ASOS stations (airports) via the awesome website of the [Iowa Environment Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS).
 
@@ -18,7 +18,7 @@ Or install the development version using [devtools](https://github.com/hadley/de
 
 ``` r
 library("devtools")
-install_github("ropenscilabs/riem")
+install_github("ropensci/riem")
 ```
 
 Get available networks
