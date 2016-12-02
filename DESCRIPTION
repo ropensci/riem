@@ -14,8 +14,8 @@ Imports:
     tibble,
     jsonlite (>= 0.9.19)
 RoxygenNote: 5.0.1
-URL: http://github.com/ropenscilabs/riem
-BugReports: http://github.com/ropenscilabs/riem/issues
+URL: http://github.com/ropensci/riem
+BugReports: http://github.com/ropensci/riem/issues
 Suggests: testthat,
     knitr,
     rmarkdown
