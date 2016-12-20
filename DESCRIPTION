@@ -18,6 +18,11 @@ URL: http://github.com/ropensci/riem
 BugReports: http://github.com/ropensci/riem/issues
 Suggests: testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    ggplot2,
+    forecast,
+    xts,
+    weathermetrics,
+    dplyr
 VignetteBuilder: knitr
 Encoding: UTF-8

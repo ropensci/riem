@@ -1,0 +1,106 @@
+---
+title: "Forecasting temperature at your vacation destination"
+author: "M. Salmon"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+For Christmas I'll travel to Marseille. What temperatures should I expect there? I could of course open a weather app, but in this vignette I want to give an example using the `riem` and  `forecast` packages. 
+
+# Find airport for Marseille
+
+The name of the network for France is "FR__ASOS". I already know there's only one airport near the city.
+
+```{r, cache = FALSE}
+library("riem")
+library("dplyr")
+france_airports <- riem_stations(network = "FR__ASOS")
+marseilles_airport <- filter(france_airports, grepl("MARSEILLE", name))
+marseilles_airport
+
+```
+
+# Get time series of temperature for Marseille airport
+
+We'll transform it to daily average, and convert Fahrenheit to Celsius thanks to the `weathermetrics` package. We impute the missing values and remove outliers via the use of `forecast::tsclean`.
+
+
+```{r, cache = FALSE, fig.width=8, fig.height=6}
+marseille <- riem_measures(station = marseilles_airport$id,
+                           date_start = "2010 01 01")
+
+marseille <- group_by(marseille, day = as.Date(valid))
+marseille <- summarize(marseille, temperature = mean(tmpf))
+marseille <- mutate(marseille, temperature = weathermetrics::fahrenheit.to.celsius(temperature))
+library("ggplot2")
+
+
+library("forecast")
+marseille_ts = ts(as.vector(tsclean(marseille$temperature)), freq=365.25, start=c(2010, 1))
+autoplot(marseille_ts) +
+  ylab("Daily average temperature in Marseille airport (ºC)") +
+  xlab("Time (days)")
+
+```
+
+# Forecast for Marseille
+
+For this we use the `forecast` package. We use the `stlm` because our time series obviously present yearly seasonality.
+
+```{r, cache = FALSE, fig.width=8, fig.height=6}
+
+fit <- stlm(marseille_ts)
+pred <- forecast(fit, h = 7)
+# plot
+theme_set(theme_gray(base_size = 14))
+autoplot(pred) +
+  ylab("Daily average temperature in Marseille airport (ºC)") +
+  xlab("Time (days)") +
+  ggtitle("How cold will I be during the holidays?",
+          subtitle = "Data accessed via the rOpenSci riem package and forecasted with forecast")
+
+```
+
+Mmh I don't see anything, but `autoplot.forecast` has an `include` parameters, so I'll only plot the last 31 values.
+
+
+```{r, cache = FALSE, fig.width=8, fig.height=6}
+
+autoplot(pred, include = 31) +
+  ylab("Daily average temperature in Marseille airport (ºC)") +
+  xlab("Time (days)") +
+  ggtitle("How cold will I be during the holidays?",
+          subtitle = "Data accessed via the rOpenSci riem package and forecasted with forecast")
+```
+
+# What if I went somewhere else?
+
+Ok, what if I had travelled to, say, Hyderabad in India?
+
+```{r, echo = FALSE, cache = FALSE, fig.width=8, fig.height=6}
+
+hyderabad <- riem_measures(station = "VOHY",
+                           date_start = "2010 01 01")
+
+hyderabad <- group_by(hyderabad, day = as.Date(valid))
+hyderabad <- summarize(hyderabad, temperature = mean(tmpf))
+hyderabad <- mutate(hyderabad, temperature = weathermetrics::fahrenheit.to.celsius(temperature))
+
+hyderabad_ts = ts(as.vector(tsclean(hyderabad$temperature)), freq=365.25, start=c(2010, 1))
+fit <- stlm(hyderabad_ts)
+pred <- forecast(fit, h = 7)
+autoplot(pred, include = 31) +
+  ylab("Daily average temperature in Hyderabad airport (ºC)") +
+  xlab("Time (days)") +
+  ggtitle("Hyderabad forecasted temperatures in December 2016",
+          subtitle = "Data accessed via the rOpenSci riem package and forecasted with forecast")
+
+```
+
+Without surprise, we forecast I'd have enjoyed warmer weather. 
+
+I wouldn't advise you to really use such code to forecast temperature, but I'd recommend you to use `riem` for getting weather airport data quite easily and to dig more deeply into `forecast` functionalities if you're interested in time series forecasting. And stay warm!
