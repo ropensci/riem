@@ -15,7 +15,7 @@ For Christmas I'll travel to Marseille. What temperatures should I expect there?
 
 The name of the network for France is "FR__ASOS". I already know there's only one airport near the city.
 
-```{r, cache = FALSE}
+```{r, cache = FALSE, message = FALSE, warning = FALSE}
 library("riem")
 library("dplyr")
 france_airports <- riem_stations(network = "FR__ASOS")
@@ -29,7 +29,7 @@ marseilles_airport
 We'll transform it to daily average, and convert Fahrenheit to Celsius thanks to the `weathermetrics` package. We impute the missing values and remove outliers via the use of `forecast::tsclean`.
 
 
-```{r, cache = FALSE, fig.width=8, fig.height=6}
+```{r, cache = FALSE, fig.width=8, fig.height=6, message = FALSE, warning = FALSE}
 marseille <- riem_measures(station = marseilles_airport$id,
                            date_start = "2010 01 01")
 

@@ -52,16 +52,8 @@
 <h1 class="hasAnchor"><html><body><a href="#find-airport-for-marseille" class="anchor"> </a></body></html>Find airport for Marseille</h1>
 <p>The name of the network for France is &ldquo;FR__ASOS&ldquo;. I already know there&rsquo;s only one airport near the city.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">"riem"</span>)
-<span class="kw">library</span>(<span class="st">"dplyr"</span>)</code></pre></div>
-<pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">france_airports &lt;-<span class="st"> </span><span class="kw"><a href="../reference/riem_stations.html">riem_stations</a></span>(<span class="dt">network =</span> <span class="st">"FR__ASOS"</span>)
+<span class="kw">library</span>(<span class="st">"dplyr"</span>)
+france_airports &lt;-<span class="st"> </span><span class="kw"><a href="../reference/riem_stations.html">riem_stations</a></span>(<span class="dt">network =</span> <span class="st">"FR__ASOS"</span>)
 marseilles_airport &lt;-<span class="st"> </span><span class="kw">filter</span>(france_airports, <span class="kw">grepl</span>(<span class="st">"MARSEILLE"</span>, name))
 marseilles_airport</code></pre></div>
 <pre><code>## # A tibble: 1 &times; 4
@@ -78,21 +70,11 @@ marseilles_airport</code></pre></div>
 marseille &lt;-<span class="st"> </span><span class="kw">group_by</span>(marseille, <span class="dt">day =</span> <span class="kw">as.Date</span>(valid))
 marseille &lt;-<span class="st"> </span><span class="kw">summarize</span>(marseille, <span class="dt">temperature =</span> <span class="kw">mean</span>(tmpf))
 marseille &lt;-<span class="st"> </span><span class="kw">mutate</span>(marseille, <span class="dt">temperature =</span> weathermetrics::<span class="kw">fahrenheit.to.celsius</span>(temperature))
-<span class="kw">library</span>(<span class="st">"ggplot2"</span>)</code></pre></div>
-<pre><code>## Warning: package 'ggplot2' was built under R version 3.3.2</code></pre>
-<pre><code>## Want to understand how all the pieces fit together? Buy the
-## ggplot2 book: http://ggplot2.org/book/</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">"forecast"</span>)</code></pre></div>
-<pre><code>## Warning: package 'forecast' was built under R version 3.3.2</code></pre>
-<pre><code>## Loading required package: zoo</code></pre>
-<pre><code>## 
-## Attaching package: 'zoo'</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     as.Date, as.Date.numeric</code></pre>
-<pre><code>## Loading required package: timeDate</code></pre>
-<pre><code>## This is forecast 7.3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">marseille_ts =<span class="st"> </span><span class="kw">ts</span>(<span class="kw">as.vector</span>(<span class="kw">tsclean</span>(marseille$temperature)), <span class="dt">freq=</span><span class="fl">365.25</span>, <span class="dt">start=</span><span class="kw">c</span>(<span class="dv">2010</span>, <span class="dv">1</span>))
+<span class="kw">library</span>(<span class="st">"ggplot2"</span>)
+
+
+<span class="kw">library</span>(<span class="st">"forecast"</span>)
+marseille_ts =<span class="st"> </span><span class="kw">ts</span>(<span class="kw">as.vector</span>(<span class="kw">tsclean</span>(marseille$temperature)), <span class="dt">freq=</span><span class="fl">365.25</span>, <span class="dt">start=</span><span class="kw">c</span>(<span class="dv">2010</span>, <span class="dv">1</span>))
 <span class="kw">autoplot</span>(marseille_ts) +
 <span class="st">  </span><span class="kw">ylab</span>(<span class="st">"Daily average temperature in Marseille airport (&Acirc;&ordm;C)"</span>) +
 <span class="st">  </span><span class="kw">xlab</span>(<span class="st">"Time (days)"</span>)</code></pre></div>
