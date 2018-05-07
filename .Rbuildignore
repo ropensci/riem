@@ -8,3 +8,6 @@
 ^\.lintr$
 ^cran-comments\.md$
 ^codemeta\.json$
+
+^docs$
+^docs/$
