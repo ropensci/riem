@@ -7,3 +7,4 @@
 ^CONDUCT\.md$
 ^\.lintr$
 ^cran-comments\.md$
+^codemeta\.json$

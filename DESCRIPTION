@@ -2,8 +2,18 @@ Package: riem
 Type: Package
 Title: Accesses Weather Data from the Iowa Environment Mesonet
 Version: 0.1.1
-Authors@R: c(person("Maëlle", "Salmon", email = "maelle.salmon@yahoo.se", role =
-    c("aut", "cre"), comment = "The research leading to these results has received funding from the European Research Council under the ERC Grant Agreement number 336167– the CHAI Project"), person("Brooke", "Anderson", role = c("ctb"), comment = "Brooke Anderson reviewed the package for rOpenSci, see https://github.com/ropensci/onboarding/issues/39."))
+Authors@R: c(person(given = "Maëlle", 
+                    family = "Salmon", 
+                    email = "maelle.salmon@yahoo.se", 
+                    role = c("aut", "cre"), 
+                    comment = c(ORCID = "0000-0002-2815-0399")), 
+              person(given = "Brooke", 
+                     family = "Anderson", 
+                     role = c("rev"), 
+                     comment = "Brooke Anderson reviewed the package for rOpenSci, see https://github.com/ropensci/onboarding/issues/39."),
+              person(given = "CHAI Project",
+                     role = "fnd",
+                     comment = "The research leading to these results has received funding from the European Research Council under the ERC Grant Agreement number 336167– the CHAI Project"))
 Description: Allows to get weather data from Automated Surface Observing System (ASOS) stations (airports) in the
     whole world thanks to the Iowa Environment Mesonet website.
 License: GPL (>= 2)

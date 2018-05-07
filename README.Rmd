@@ -8,6 +8,7 @@ output:
 ---
 riem
 =============
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/riem)](http://cran.r-project.org/package=riem)
 [![Travis-CI Build Status](https://travis-ci.org/ropensci/riem.svg?branch=master)](https://travis-ci.org/ropensci/riem)
 [![Build status](https://ci.appveyor.com/api/projects/status/jl8sxr77bi8jnqrm?svg=true)](https://ci.appveyor.com/project/ropensci/riem)
