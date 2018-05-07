@@ -17,4 +17,3 @@ Function for getting ASOS and AWOS networks
 riem_networks()
 }
 }
-

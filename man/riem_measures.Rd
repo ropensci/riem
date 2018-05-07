@@ -54,4 +54,3 @@ The data is queried through \url{https://mesonet.agron.iastate.edu/request/downl
 riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22")
 }
 }
-

@@ -27,7 +27,7 @@ test_that("riem_measures returns the right output",{
   expect_is(output$skyl2, "numeric")
   expect_is(output$skyl3, "numeric")
   expect_is(output$skyl4, "numeric")
-  expect_is(output$presentwx, "character")
+  expect_is(output$wxcodes, "character")
   expect_is(output$metar, "character")})
 
 test_that("riem_measures outputs warning if no results",{

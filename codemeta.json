@@ -1,5 +1,8 @@
 {
-  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "riem",
   "description": "Allows to get weather data from Automated Surface Observing System (ASOS) stations (airports) in the\n    whole world thanks to the Iowa Environment Mesonet website.",
@@ -198,14 +201,26 @@
   ],
   "releaseNotes": "https://github.com/ropensci/riem/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/riem/blob/master/README.md",
-  "fileSize": "150.886KB",
-  "contIntegration": ["https://travis-ci.org/ropensci/riem", "https://ci.appveyor.com/project/ropensci/riem", "https://codecov.io/gh/ropensci/riem"],
+  "fileSize": "150.936KB",
+  "contIntegration": [
+    "https://travis-ci.org/ropensci/riem",
+    "https://ci.appveyor.com/project/ropensci/riem",
+    "https://codecov.io/gh/ropensci/riem"
+  ],
   "developmentStatus": "http://www.repostatus.org/#active",
   "review": {
     "@type": "Review",
     "url": "https://github.com/ropensci/onboarding/issues/39",
     "provider": "http://ropensci.org"
   },
-  "keywords": ["weather", "weather-api", "asos", "r", "airports", "temperature", "metar"],
+  "keywords": [
+    "weather",
+    "weather-api",
+    "asos",
+    "r",
+    "airports",
+    "temperature",
+    "metar"
+  ],
   "relatedLink": "https://CRAN.R-project.org/package=riem"
 }
