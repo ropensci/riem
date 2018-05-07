@@ -13,7 +13,10 @@ Authors@R: c(person(given = "Maëlle",
                      comment = "Brooke Anderson reviewed the package for rOpenSci, see https://github.com/ropensci/onboarding/issues/39."),
               person(given = "CHAI Project",
                      role = "fnd",
-                     comment = "The research leading to these results has received funding from the European Research Council under the ERC Grant Agreement number 336167– the CHAI Project"))
+                     comment = "The research leading to these results has received funding from the European Research Council under the ERC Grant Agreement number 336167– the CHAI Project"),
+              person(given = "rOpenSci",
+                     role = "fnd",
+                     comment = "https://ropensci.org/"))
 Description: Allows to get weather data from Automated Surface Observing System (ASOS) stations (airports) in the
     whole world thanks to the Iowa Environment Mesonet website.
 License: GPL (>= 2)

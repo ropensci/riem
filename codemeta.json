@@ -37,6 +37,10 @@
     {
       "@type": "Organization",
       "name": "CHAI Project"
+    },
+    {
+      "@type": "Organization",
+      "name": "rOpenSci"
     }
   ],
   "maintainer": [
@@ -201,7 +205,7 @@
   ],
   "releaseNotes": "https://github.com/ropensci/riem/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/riem/blob/master/README.md",
-  "fileSize": "10.973KB",
+  "fileSize": "10.998KB",
   "contIntegration": [
     "https://travis-ci.org/ropensci/riem",
     "https://ci.appveyor.com/project/ropensci/riem",
@@ -222,5 +226,8 @@
     "temperature",
     "metar"
   ],
-  "relatedLink": ["https://CRAN.R-project.org/package=riem", "http://ropensci.github.io/riem"]
+  "relatedLink": [
+    "https://CRAN.R-project.org/package=riem",
+    "http://ropensci.github.io/riem"
+  ]
 }
