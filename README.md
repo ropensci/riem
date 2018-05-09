@@ -13,7 +13,7 @@ status](https://ci.appveyor.com/api/projects/status/jl8sxr77bi8jnqrm?svg=true)](
 [![](https://badges.ropensci.org/39_status.svg)](https://github.com/ropensci/onboarding/issues/39)
 
 This package allows to get weather data from ASOS stations (airports)
-via the awesome website of the [Iowa Environment
+via the great website of the [Iowa Environment
 Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS).
 
 Installation
