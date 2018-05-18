@@ -96,7 +96,7 @@ Possible variables are (copied from [here](https://mesonet.agron.iastate.edu/req
 
 * skyl4: Sky Level 4 Altitude in feet
 
-* presentwx: Present Weather Codes (space seperated), see e.g. [this manual](http://www.ofcm.gov/fmh-1/pdf/H-CH8.pdf) for further explanations.
+* presentwx: Present Weather Codes (space seperated), see e.g. Chapter 8 of [this manual](https://www.ofcm.gov/publications/fmh/FMH1/FMH1.pdf) for further explanations.
 
 * metar: unprocessed reported observation in METAR format
 
