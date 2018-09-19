@@ -30,7 +30,7 @@
 #' \item skyl3: Sky Level 3 Altitude in feet
 #' \item skyl4: Sky Level 4 Altitude in feet
 #' \item presentwx: Present Weather Codes (space seperated),
-#'  see e.g. [this manual](http://www.ofcm.gov/fmh-1/pdf/H-CH8.pdf) for further explanations.
+#'  see e.g. Chapter 8 of [this manual](https://www.ofcm.gov/publications/fmh/FMH1/FMH1.pdf) for further explanations.
 #' \item metar: unprocessed reported observation in METAR format
 #' }
 #' @details The data is queried through \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
