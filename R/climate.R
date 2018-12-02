@@ -3,8 +3,9 @@
 #' @importFrom htmltab htmltab
 #'
 #' @param the_state two-letter abbreviation for U.S. state, such as "MA" for Massachusetts or "NY" for New York. See https://mesonet.agron.iastate.edu/COOP/extremes.php for available states and stations, since not all U.S. states are available.
-#' @param the_place Name of a city or town station name in the U.S. that has an available station ID. Leave as default "" to return entire state's results.
+#' @param the_place Name of a city or town station name in the U.S. that has an available station ID. Leave as default "" to return entire state's results. You can also look up by station ID by setting this argument to the ID and is_station_id to TRUE.
 #' @param the_date date of desired records in yyyy-mm-dd or mm-dd format, e.g. "2016-04-22" or "04-22".
+#' @param is_station_id logical, defaults to FALSE. If FALSE, look up by place name. If TRUE, look up by station ID. To see all station IDs for a state, run riem_climate() on a state, such as riem_climate("NY)
 #'
 #' @return a data.frame with 1 row of climate data for a specific date.
 #' \itemize{
@@ -34,7 +35,8 @@
 #' }
 riem_climate <- function(the_state = "MA",
                          the_place = "",
-                          the_date = as.character(Sys.Date())
+                          the_date = as.character(Sys.Date()),
+                         is_station_id = FALSE
                          ) {
 
    base_link <- "https://mesonet.agron.iastate.edu/COOP/extremes.php"
@@ -57,21 +59,35 @@ riem_climate <- function(the_state = "MA",
 baseurl <- "https://mesonet.agron.iastate.edu/COOP/extremes.php"
 queryurl <- paste0(baseurl,"?network=", the_state, "CLIMATE&month=", the_month, "&day=", the_day, "&tbl=climate" )
 
-all_results <- suppressWarnings(htmltab::htmltab(queryurl, 2))
-all_results$Place <- gsub("\\s\\(.+\\)", "", all_results$Station)
+ all_results <- suppressWarnings(htmltab::htmltab(queryurl, 2))
+ if(nrow(all_results) > 0){
+   resultsdf = TRUE
+   all_results$Place <- gsub("\\s\\(.+\\)", "", all_results$Station)
+   all_results$StationID <- gsub(".*\\s\\((.*?)\\)", "\\1", all_results$Station)
+ } else {
+   resultsdf = FALSE
+   warning("No results for this query.", call. = FALSE)
+ }
 
-if(the_place != ""){
-myresults <- dplyr::filter(all_results, toupper(Place) == toupper(the_place))
-} else{
-  myresults <- all_results
-}
-myresults <- dplyr::select(myresults, 16, 2:15)
-names(myresults) <- c("Place", "Years", "AvgHighTemp", "MaxHighTemp", "YearMaxHighTemp", "MinHighTemp", "YearMinHighTemp", "AvgLowTemp", "MaxLowTemp", "YearMaxLowTemp", "MinLowTemp", "YearMinLowTemp", "AvgPrecip", "MaxPrecip", "YearMaxPrecip")
+ if(the_place == "" & resultsdf == TRUE){
+    myresults <- all_results
+ } else if (is_station_id == FALSE & the_place != "" & resultsdf == TRUE){
+    myresults <- dplyr::filter(all_results, toupper(Place) == toupper(the_place))
+ } else if(is_station_id == TRUE & the_place != "" & resultsdf == TRUE){
+    myresults <- dplyr::filter(all_results, toupper(StationID) == toupper(the_place))
+ }
 
+ if(resultsdf == TRUE){
+    myresults <- dplyr::select(myresults, 16, 17, 2:15)
+    names(myresults) <- c("Place", "StationID", "Years", "AvgHighTemp", "MaxHighTemp", "YearMaxHighTemp", "MinHighTemp", "YearMinHighTemp", "AvgLowTemp", "MaxLowTemp", "YearMaxLowTemp", "MinLowTemp", "YearMinLowTemp", "AvgPrecip", "MaxPrecip", "YearMaxPrecip")
 
-  if(nrow(myresults) == 0){
-    warning("No results for this query.", call. = FALSE)
-  } else {
-  return(myresults)
-  }
+    if(nrow(myresults) == 0){
+     warning("No results for this query.", call. = FALSE)
+    } else {
+     return(myresults)
+    }
+ } else {
+    return(NA)
+ }
+
  }
