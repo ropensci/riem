@@ -2,7 +2,7 @@
 #'
 #' @importFrom htmltab htmltab
 #'
-#' @param the_state two-letter abbreviation for U.S. state, such as "MA". See https://mesonet.agron.iastate.edu/COOP/extremes.php for available states and stations, since not all U.S. states are available.
+#' @param the_state two-letter abbreviation for U.S. state, such as "MA" for Massachusetts or "NY" for New York. See https://mesonet.agron.iastate.edu/COOP/extremes.php for available states and stations, since not all U.S. states are available.
 #' @param the_place Name of a city or town station name in the U.S. that has an available station ID. Leave as default "" to return entire state's results.
 #' @param the_date date of desired records in yyyy-mm-dd or mm-dd format, e.g. "2016-04-22" or "04-22".
 #'
