@@ -80,6 +80,9 @@ queryurl <- paste0(baseurl,"?network=", the_state, "CLIMATE&month=", the_month, 
  if(resultsdf == TRUE){
     myresults <- dplyr::select(myresults, 16, 17, 2:15)
     names(myresults) <- c("Place", "StationID", "Years", "AvgHighTemp", "MaxHighTemp", "YearMaxHighTemp", "MinHighTemp", "YearMinHighTemp", "AvgLowTemp", "MaxLowTemp", "YearMaxLowTemp", "MinLowTemp", "YearMinLowTemp", "AvgPrecip", "MaxPrecip", "YearMaxPrecip")
+    # mydf[,2:3] <- lapply(mydf[,2:3], as.factor)
+    myresults$Years <- as.integer(myresults$Years)
+    myresults[,c(4,5,7,9,10,12,14,15)] <- lapply(myresults[,c(4,5,7,9,10,12,14,15)], as.numeric)
 
     if(nrow(myresults) == 0){
      warning("No results for this query.", call. = FALSE)
