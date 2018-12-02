@@ -4,24 +4,48 @@
 \alias{riem_climate}
 \title{Function for getting climate data from one place or state}
 \usage{
-riem_climate(the_state = "MA", the_place = "",
-  the_date = as.character(Sys.Date()))
+riem_climate(place = "", state = "",
+  the_date = as.character(Sys.Date()), is_station_id = TRUE)
 }
 \arguments{
-\item{the_state}{two-letter abbreviation for U.S. state, such as "MA" for Massachusetts or "NY" for New York. See https://mesonet.agron.iastate.edu/COOP/extremes.php for available states and stations, since not all U.S. states are available.}
-
-\item{the_place}{Name of a city or town station name in the U.S. that has an available station ID. Leave as default "" to return entire state's results.}
+\item{state}{two-letter abbreviation for U.S. state, such as "MA" for Massachusetts or "NY" for New York. See https://mesonet.agron.iastate.edu/COOP/extremes.php for available states and stations. Not all U.S. states are available. Can be left blank when looking up by station ID.}
 
 \item{the_date}{date of desired records in yyyy-mm-dd or mm-dd format, e.g. "2016-04-22" or "04-22".}
+
+\item{is_station_id}{logical, defaults to TRUE. If TRUE, look up by station ID. If FALSE, looks up by place name. To see all station IDs for a state, run riem_climate() on a state, such as riem_climate("NY").}
+}
+\value{
+a data.frame with 1 row of climate data for a specific date.
+\itemize{
+\item Place: Name of a city or town, character string
+\item StationID Station ID, character string
+\item Years: Number of years data available for that station, integer
+\item AvgHighTemp: Average high temperature in Fahrenheit over those years, numeric
+\item MaxHighTemp: Maximum high temperature in Fahrenheit over those years, numeric
+\item YearMaxHighTemp: Year maximum high temperature was recorded, character
+\item MinHighTemp: Minimum high temperature in Fahrenheit over those years, numeric
+\item YearMinHighTemp: Year that minimum high temperature was recorded, numeric
+\item AvgLowTemp: Average low temperature in Fahrenheit over those years, numeric
+\item MaxLowTemp: Maximum low temperature in Fahrenheit over those years, numeric
+\item YearMaxLowTemp: Year maximum low temperature was recorded, character
+\item MinLowTemp: Minimum low temperature in Fahrenheit over those years, numeric
+\item YearMinLowTemp: Year that minimum low temperature was recorded, numeric
+\item AvgPrecip: Average precipitation in inches over those years, numeric
+\item MaxPrecip: Maximum precipitation in inches over those years, numeric
+\item YearMaxPrecip: Year maximum precipitation was recorded, character
+\item Date: Day and Month of year for records table, character
+}
 }
 \description{
-Function for getting climate data from one place or state
+This function gets unofficial daily records from U.S. National Weather Service COOP stations. Note this is unofficial data.
 }
 \details{
+#' @param place COOP station ID. You can also look up by name of a city or town station nameby setting the is_station_id argument to FALSE. Leave as default "" to return entire state's results. See https://mesonet.agron.iastate.edu/COOP/extremes.php for available states and stations
+
 The data is queried through \url{https://mesonet.agron.iastate.edu/COOP/extremes.php}.
 }
 \examples{
 \dontrun{
-riem_climate(the_place = "Boston area", the_state = "MA")
+riem_climate(place = "Boston area", state = "MA", is_station_id = FALSE)
 }
 }
