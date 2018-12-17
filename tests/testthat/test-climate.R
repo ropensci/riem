@@ -1,8 +1,8 @@
 library("riem")
 context("climate")
-test_that("riem_climate returns the right output", {
+test_that("riem_climate_coop returns the right output", {
   skip_on_cran()
-  output <- riem_climate(state = "MA")
+  output <- riem_climate_coop(state = "MA")
   expect_is(output, "data.frame")
   expect_is(output$Place, "character")
   expect_is(output$StationID, "character")
@@ -22,7 +22,7 @@ test_that("riem_climate returns the right output", {
   expect_is(output$YearMaxPrecip, "character")
   expect_is(output$Date, "character")
 
-  output2 <- riem_climate("Barnard", "ME", is_station_id = FALSE)
+  output2 <- riem_climate_coop("Barnard", "ME", is_station_id = FALSE)
   expect_is(output2, "data.frame")
   expect_is(output2$Place, "character")
   expect_is(output2$StationID, "character")
@@ -44,7 +44,7 @@ test_that("riem_climate returns the right output", {
   expect_is(output2$Date, "character")
 
 
-  output3 <- riem_climate(state = "ID", the_date = "2018-07-04")
+  output3 <- riem_climate_coop(state = "ID", the_date = "2018-07-04")
   expect_is(output3, "data.frame")
   expect_is(output3$Place, "character")
   expect_is(output3$StationID, "character")
@@ -65,7 +65,7 @@ test_that("riem_climate returns the right output", {
   expect_is(output3$Date, "character")
   expect_equal(output3$Date[1], "Jul 04")
 
-  output4 <- riem_climate("NY5801", is_station_id = TRUE)
+  output4 <- riem_climate_coop("NY5801", is_station_id = TRUE)
   expect_is(output4, "data.frame")
   expect_is(output4$Place, "character")
   expect_is(output4$StationID, "character")
@@ -86,7 +86,7 @@ test_that("riem_climate returns the right output", {
   expect_equal(nrow(output4), 1)
   expect_is(output4$Date, "character")
 
-  output5 <- riem_climate("AZTPHX", "AZ", the_date = "05-01", is_station_id = TRUE)
+  output5 <- riem_climate_coop("AZTPHX", "AZ", the_date = "05-01", is_station_id = TRUE)
   expect_is(output5, "data.frame")
   expect_is(output5$Place, "character")
   expect_is(output5$StationID, "character")
@@ -108,7 +108,7 @@ test_that("riem_climate returns the right output", {
   expect_is(output5$Date, "character")
   expect_equal(output5$Date[1], "May 01")
 
-  output6 <- riem_climate("NY5801")
+  output6 <- riem_climate_coop("NY5801")
   expect_is(output6, "data.frame")
   expect_is(output6$Place, "character")
   expect_is(output6$StationID, "character")
@@ -132,14 +132,14 @@ test_that("riem_climate returns the right output", {
 }
 )
 
-test_that("riem_climate outputs warning if no results",{
+test_that("riem_climate_coop outputs warning if no results",{
   skip_on_cran()
-  expect_warning(riem_climate("AK"),
+  expect_warning(riem_climate_coop("AK"),
                  "No results for this query.")
-  expect_warning(riem_climate("Barnard", "ME",
+  expect_warning(riem_climate_coop("Barnard", "ME",
                   "No results for this query."))
-  expect_warning(riem_climate(place = "Stow"),
+  expect_warning(riem_climate_coop(place = "Stow"),
                  "No results for this query")
-  expect_warning(riem_climate(state = "FL", place = "testID", is_station_id = TRUE))
+  expect_warning(riem_climate_coop(state = "FL", place = "testID", is_station_id = TRUE))
 
 })

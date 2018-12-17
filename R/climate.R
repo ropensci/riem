@@ -5,7 +5,7 @@
 #'#' @param place COOP station ID. You can also look up by name of a city or town station nameby setting the is_station_id argument to FALSE. Leave as default "" to return entire state's results. See https://mesonet.agron.iastate.edu/COOP/extremes.php for available states and stations
 #' @param state two-letter abbreviation for U.S. state, such as "MA" for Massachusetts or "NY" for New York. See https://mesonet.agron.iastate.edu/COOP/extremes.php for available states and stations. Not all U.S. states are available. Can be left blank when looking up by station ID.
 #' @param the_date date of desired records in yyyy-mm-dd or mm-dd format, e.g. "2016-04-22" or "04-22".
-#' @param is_station_id logical, defaults to TRUE. If TRUE, look up by station ID. If FALSE, looks up by place name. To see all station IDs for a state, run riem_climate() on a state, such as riem_climate("NY").
+#' @param is_station_id logical, defaults to TRUE. If TRUE, look up by station ID. If FALSE, looks up by place name. To see all station IDs for a state, run riem_climate_coop_coop() on a state, such as riem_climate_coop_coop("NY").
 #'
 #' @return a data.frame with 1 row of climate data for a specific date.
 #' \itemize{
@@ -32,9 +32,9 @@
 #'
 #' @examples
 #' \dontrun{
-#' riem_climate(place = "Boston area", state = "MA", is_station_id = FALSE)
+#' riem_climate_coop(place = "Boston area", state = "MA", is_station_id = FALSE)
 #' }
-riem_climate <- function(place = "", state = "", the_date = as.character(Sys.Date()), is_station_id = TRUE) {
+riem_climate_coop <- function(place = "", state = "", the_date = as.character(Sys.Date()), is_station_id = TRUE) {
 
    base_link <- "https://mesonet.agron.iastate.edu/COOP/extremes.php"
 

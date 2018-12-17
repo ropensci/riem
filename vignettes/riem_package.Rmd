@@ -109,11 +109,11 @@ For conversion of wind speed or temperature into other units, see [this package]
 
 # Get climate records for a U.S. place
 
-You can also get  unofficial daily records from U.S. National Weather Service COOP stations for _some_ areas using the riem_climate() function. _Note this is unofficial data._ Data come from [Iowa State University's Iowa Environmental Mesonet National Weather Service COOP Climatology](https://mesonet.agron.iastate.edu/COOP/extremes.php).
+You can also get  unofficial daily records from U.S. National Weather Service COOP stations for _some_ areas using the riem_climate_coop() function. _Note this is unofficial data._ Data come from [Iowa State University's Iowa Environmental Mesonet National Weather Service COOP Climatology](https://mesonet.agron.iastate.edu/COOP/extremes.php).
 
-You can query for a place by name, state or station ID. The station IDs are different than for other riem functions. You can look them up when searching the [Iowa State University's Iowa Environmental Mesonet National Weather Service COOP Climatology](https://mesonet.agron.iastate.edu/COOP/extremes.php); or, riem_climate() returns station ID along with climate data if you search by place.
+You can query for a place by name, state or station ID. The station IDs are different than for other riem functions. You can look them up when searching the [Iowa State University's Iowa Environmental Mesonet National Weather Service COOP Climatology](https://mesonet.agron.iastate.edu/COOP/extremes.php); or, riem_climate_coop() returns station ID along with climate data if you search by place.
 
-If you leave the place name as "" and set a two-letter state abbreviation, you will get back available data for the entire state, such as `riem_climate("", "NY")`. That will also give you available station IDs in that state.
+If you leave the place name as "" and set a two-letter state abbreviation, you will get back available data for the entire state, such as `riem_climate_coop("", "NY")`. That will also give you available station IDs in that state.
 
 
 
