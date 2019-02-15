@@ -98,6 +98,16 @@ Possible variables are (copied from [here](https://mesonet.agron.iastate.edu/req
 
 * presentwx: Present Weather Codes (space seperated), see e.g. [this manual](http://www.ofcm.gov/fmh-1/pdf/H-CH8.pdf) for further explanations.
 
+* feel: Apparent Temperature (Wind Chill or Heat Index) in degF
+
+* ice_accretion_1hr: Ice Accretion over 1 Hour in inch
+
+* ice_accretion_3hr: Ice Accretion over 3 Hour in inch
+
+* ice_accretion_6hr: Ice Accretion over 6 Hour in inch
+
+* relh: Relative Humidity in % 
+
 * metar: unprocessed reported observation in METAR format
 
 ```{r}

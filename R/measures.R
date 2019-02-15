@@ -31,6 +31,11 @@
 #' \item skyl4: Sky Level 4 Altitude in feet
 #' \item presentwx: Present Weather Codes (space seperated),
 #'  see e.g. Chapter 8 of [this manual](https://www.ofcm.gov/publications/fmh/FMH1/FMH1.pdf) for further explanations.
+#' \item feel: Apparent Temperature (Wind Chill or Heat Index) in degF
+#' \item ice_accretion_1hr: Ice Accretion over 1 Hour in inch
+#' \item ice_accretion_3hr: Ice Accretion over 3 Hour in inch
+#' \item ice_accretion_6hr: Ice Accretion over 6 Hour in inch
+#' \item relh: Relative Humidity in %
 #' \item metar: unprocessed reported observation in METAR format
 #' }
 #' @details The data is queried through \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
