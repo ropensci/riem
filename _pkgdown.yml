@@ -1,0 +1,9 @@
+destination: docs
+
+authors:
+  rOpenSci:
+    href: "https://ropensci.org"
+    html: "<img src='https://github.com/ropensci.png' height=24>"
+
+  Maëlle Salmon:
+    href: "https://masalmon.eu"
