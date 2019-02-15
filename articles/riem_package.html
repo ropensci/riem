@@ -170,6 +170,11 @@
 <li><p>skyl3: Sky Level 3 Altitude in feet</p></li>
 <li><p>skyl4: Sky Level 4 Altitude in feet</p></li>
 <li><p>presentwx: Present Weather Codes (space seperated), see e.g. <a href="http://www.ofcm.gov/fmh-1/pdf/H-CH8.pdf">this manual</a> for further explanations.</p></li>
+<li><p>feel: Apparent Temperature (Wind Chill or Heat Index) in degF</p></li>
+<li><p>ice_accretion_1hr: Ice Accretion over 1 Hour in inch</p></li>
+<li><p>ice_accretion_3hr: Ice Accretion over 3 Hour in inch</p></li>
+<li><p>ice_accretion_6hr: Ice Accretion over 6 Hour in inch</p></li>
+<li><p>relh: Relative Humidity in %</p></li>
 <li><p>metar: unprocessed reported observation in METAR format</p></li>
 </ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">measures &lt;-<span class="st"> </span><span class="kw"><a href="../reference/riem_measures.html">riem_measures</a></span>(<span class="dt">station =</span> <span class="st">"VOHY"</span>, <span class="dt">date_start =</span> <span class="st">"2000-01-01"</span>, <span class="dt">date_end =</span> <span class="st">"2016-04-22"</span>) </a>
