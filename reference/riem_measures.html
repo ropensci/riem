@@ -180,6 +180,9 @@ but possible variables are</p><ul>
 <li><p>ice_accretion_6hr: Ice Accretion over 6 Hour in inch</p></li>
 <li><p>relh: Relative Humidity in <!-- % --></p></li>
 <li><p>metar: unprocessed reported observation in METAR format</p></li>
+<li><p>peak_wind_gust: Wind gust in knots from the METAR PK WND remark, this value may be different than the value found in the gust field. The gust field is derived from the standard METAR wind report.</p></li>
+<li><p>peak_wind_drct: The wind direction in degrees North denoted in the METAR PK WND remark.</p></li>
+<li><p>peak_wind_time: The timestamp of the PK WND value in the same timezone as the valid field and controlled by the tz parameter.</p></li>
 </ul>
 
     
