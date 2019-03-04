@@ -37,6 +37,10 @@
 #' \item ice_accretion_6hr: Ice Accretion over 6 Hour in inch
 #' \item relh: Relative Humidity in %
 #' \item metar: unprocessed reported observation in METAR format
+#' \item peak_wind_gust: Wind gust in knots from the METAR PK WND remark, this value may be different than the value found in the gust field. The gust field is derived from the standard METAR wind report.
+#' \item peak_wind_drct: The wind direction in degrees North denoted in the METAR PK WND remark.
+#' \item peak_wind_time: The timestamp of the PK WND value in the same timezone as the valid field and controlled by the tz parameter.
+
 #' }
 #' @details The data is queried through \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
 #' @export
