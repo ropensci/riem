@@ -5,7 +5,7 @@ language: r
 matrix:
   include:
    - r: release
-     before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
+     before_cache: Rscript -e 'remotes::install_cran("pkgdown");remotes::install_github("ropenscilabs/rotemplate")'
      deploy:
        provider: script
        script: Rscript -e 'pkgdown::deploy_site_github()'
