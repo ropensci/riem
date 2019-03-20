@@ -4,14 +4,35 @@ body {
   color: #333E50;
 }
 
-li {
-
+a {
+  color: #6faef5;
 }
+
+a:focus, a:hover {
+  color: #6faef5;
+  text-decoration: underline;
+}
+
+
 
 .h1, .h2, .h3, h1, h2, h3{
   color: #5c677e;
 }
 
+
+.btn-primary {
+
+    color: #c6deff;
+    background-color: #6faef5;
+    border-color: #6faef5;
+}
+
+.btn-primary:active, .btn-primary:hover, .btn-primary:focus{
+
+    color: #fff;
+    background-color: #6faef5;
+    border-color: #6faef5;
+}
 /* footer ----------------------------------------------- */
 
 /* https://github.com/tidyverse/tidytemplate/blob/27af8fd35dbba81d83e8b4a7e8677b8821fb8cc3/inst/pkgdown/assets/tidyverse-2.css#L15*/
@@ -20,12 +41,21 @@ li {
   background-color: #6faef5;
 }
 
-.navbar-default .navbar-toggle {
-  color: #c6deff;
-}
 
 .navbar .navbar-brand {
   color: #c6deff;
+}
+
+
+.version.label.label-default.version-default {
+   background-color: #dfe3eb;
+    color: #5c677e;
+    margin-bottom: 3px;
+    font-size: 100%;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #c6deff;
 }
 
 .navbar-brand{
@@ -40,9 +70,11 @@ li {
   float: left;
   height: 50px;
   width: 140px;
-  font-size: 80%;
+  font-size: 100%;
   position: relative;
   margin-left: 5px;
+  background-color: #6faef5;
+  box-shadow: unset;
 }
 
 .navbar .info .partof {
@@ -101,11 +133,8 @@ li {
 
 
 #sidebar .nav > li {
-  padding: 10px 0 0px 20px;
+  padding: 0px 0 0px 20px;
   display: list-item;
-  background-repeat: no-repeat;
-  background-size: 16px 280px;
-  background-position: left 0px;
-  padding-block-start: 0px;
+  line-height: 15px;
 }
 
