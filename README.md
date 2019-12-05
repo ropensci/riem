@@ -35,7 +35,7 @@ install_github("ropensci/riem")
 
 # Documentation
 
-Please refer to the [`pkgdown` website](http://ropensci.github.io/riem/) to read docs, in particular the [reference](http://ropensci.github.io/riem/reference/index.html) and the [vignettes](http://ropensci.github.io/riem/articles/index.html).
+Please refer to the [`pkgdown` website](http://docs.ropensci.org/riem/) to read docs, in particular the [reference](http://docs.ropensci.org/riem/reference/index.html) and the [vignettes](http://docs.ropensci.org/riem/articles/index.html).
 
 # Use cases in the wild
 
