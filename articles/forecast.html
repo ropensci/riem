@@ -6,19 +6,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Forecasting temperature at your vacation destination • riem</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous">
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/apple-touch-icon.png">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><!-- ropensci --><link href="../ropensci.css" rel="stylesheet">
+<script src="../pkgdown.js"></script><!-- ropensci --><link href="../ropensci.css?nocache=123" rel="stylesheet">
 <meta property="og:title" content="Forecasting temperature at your vacation destination">
-<meta property="og:description" content="">
+<meta property="og:description" content="riem">
 <meta name="twitter:card" content="summary">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-462421-8"></script><script>
   window.dataLayer = window.dataLayer || [];
@@ -28,7 +26,7 @@
   gtag('config', 'UA-462421-8');
 </script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -41,7 +39,7 @@
       </button>
 
       <div class="navbar-brand-container">
-        <a href="https://ropensci.org"><img src="../hexlogo.png" id="hexlogo" alt="rOpenSci"></a>
+        <a href="https://ropensci.org"><img src="https://ropensci.org/img/icon_short_white.svg" id="hexlogo" alt="rOpenSci"></a>
         <a class="navbar-brand" href="../index.html"><i>riem <small>v0.1.1</small></i></a>
       </div>
     </div>
@@ -75,7 +73,7 @@
   <a href="../news/index.html">Changelog</a>
 </li>
         <li>
-  <a href="https://github.com/ropensci/riem">
+  <a href="http://github.com/ropensci/riem/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -93,12 +91,12 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Forecasting temperature at your vacation destination</h1>
+      <h1 data-toc-skip>Forecasting temperature at your vacation destination</h1>
                         <h4 class="author">M. Salmon</h4>
             
-            <h4 class="date">2019-12-05</h4>
+            <h4 class="date">2020-04-22</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/ropensci/riem/blob/master/vignettes/forecast.Rmd"><code>vignettes/forecast.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="http://github.com/ropensci/riem/blob/master/vignettes/forecast.Rmd"><code>vignettes/forecast.Rmd</code></a></small>
       <div class="hidden name"><code>forecast.Rmd</code></div>
 
     </div>
@@ -110,11 +108,11 @@
 <h1 class="hasAnchor">
 <a href="#find-airport-for-marseille" class="anchor"></a>Find airport for Marseille</h1>
 <p>The name of the network for France is "FR__ASOS". I already know there’s only one airport near the city.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"riem"</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"dplyr"</span>)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">france_airports &lt;-<span class="st"> </span><span class="kw"><a href="../reference/riem_stations.html">riem_stations</a></span>(<span class="dt">network =</span> <span class="st">"FR__ASOS"</span>)</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">marseilles_airport &lt;-<span class="st"> </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(france_airports, <span class="kw"><a href="https://rdrr.io/r/base/grep.html">grepl</a></span>(<span class="st">"MARSEILLE"</span>, name))</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">marseilles_airport</a></code></pre></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"riem"</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"dplyr"</span>)
+<span class="no">france_airports</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/riem_stations.html">riem_stations</a></span>(<span class="kw">network</span> <span class="kw">=</span> <span class="st">"FR__ASOS"</span>)
+<span class="no">marseilles_airport</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="no">france_airports</span>, <span class="fu"><a href="https://rdrr.io/r/base/grep.html">grepl</a></span>(<span class="st">"MARSEILLE"</span>, <span class="no">name</span>))
+<span class="no">marseilles_airport</span></pre></body></html></div>
 <pre><code>## # A tibble: 1 x 4
 ##   id    name               lon   lat
 ##   &lt;chr&gt; &lt;chr&gt;            &lt;dbl&gt; &lt;dbl&gt;
@@ -124,42 +122,42 @@
 <h1 class="hasAnchor">
 <a href="#get-time-series-of-temperature-for-marseille-airport" class="anchor"></a>Get time series of temperature for Marseille airport</h1>
 <p>We’ll transform it to daily average, and convert Fahrenheit to Celsius thanks to the <code>weathermetrics</code> package. We impute the missing values and remove outliers via the use of <code><a href="https://rdrr.io/pkg/forecast/man/tsclean.html">forecast::tsclean</a></code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">marseille &lt;-<span class="st"> </span><span class="kw"><a href="../reference/riem_measures.html">riem_measures</a></span>(<span class="dt">station =</span> marseilles_airport<span class="op">$</span>id,</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">                           <span class="dt">date_start =</span> <span class="st">"2010 01 01"</span>)</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4">marseille &lt;-<span class="st"> </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span>(marseille, <span class="dt">day =</span> <span class="kw"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(valid))</a>
-<a class="sourceLine" id="cb3-5" data-line-number="5">marseille &lt;-<span class="st"> </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span>(marseille, <span class="dt">temperature =</span> <span class="kw"><a href="https://rdrr.io/r/base/mean.html">mean</a></span>(tmpf))</a>
-<a class="sourceLine" id="cb3-6" data-line-number="6">marseille &lt;-<span class="st"> </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(marseille, <span class="dt">temperature =</span> weathermetrics<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/weathermetrics/man/fahrenheit.to.celsius.html">fahrenheit.to.celsius</a></span>(temperature))</a>
-<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"ggplot2"</span>)</a>
-<a class="sourceLine" id="cb3-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb3-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"forecast"</span>)</a>
-<a class="sourceLine" id="cb3-11" data-line-number="11">marseille_ts =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/ts.html">ts</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/vector.html">as.vector</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/forecast/man/tsclean.html">tsclean</a></span>(marseille<span class="op">$</span>temperature)), <span class="dt">freq=</span><span class="fl">365.25</span>, <span class="dt">start=</span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">2010</span>, <span class="dv">1</span>))</a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/autoplot.html">autoplot</a></span>(marseille_ts) <span class="op">+</span></a>
-<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="st">  </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Daily average temperature in Marseille airport (ºC)"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="st">  </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (days)"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="no">marseille</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/riem_measures.html">riem_measures</a></span>(<span class="kw">station</span> <span class="kw">=</span> <span class="no">marseilles_airport</span>$<span class="no">id</span>,
+                           <span class="kw">date_start</span> <span class="kw">=</span> <span class="st">"2010 01 01"</span>)
+
+<span class="no">marseille</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span>(<span class="no">marseille</span>, <span class="kw">day</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span>(<span class="no">valid</span>))
+<span class="no">marseille</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span>(<span class="no">marseille</span>, <span class="kw">temperature</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span>(<span class="no">tmpf</span>))
+<span class="no">marseille</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="no">marseille</span>, <span class="kw">temperature</span> <span class="kw">=</span> <span class="kw pkg">weathermetrics</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/weathermetrics/man/fahrenheit.to.celsius.html">fahrenheit.to.celsius</a></span>(<span class="no">temperature</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"ggplot2"</span>)
+
+
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"forecast"</span>)
+<span class="no">marseille_ts</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/ts.html">ts</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/vector.html">as.vector</a></span>(<span class="fu"><a href="https://rdrr.io/pkg/forecast/man/tsclean.html">tsclean</a></span>(<span class="no">marseille</span>$<span class="no">temperature</span>)), <span class="kw">freq</span><span class="kw">=</span><span class="fl">365.25</span>, <span class="kw">start</span><span class="kw">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">2010</span>, <span class="fl">1</span>))
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/autoplot.html">autoplot</a></span>(<span class="no">marseille_ts</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Daily average temperature in Marseille airport (ºC)"</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (days)"</span>)</pre></body></html></div>
 <p><img src="forecast_files/figure-html/unnamed-chunk-2-1.png" width="768"></p>
 </div>
 <div id="forecast-for-marseille" class="section level1">
 <h1 class="hasAnchor">
 <a href="#forecast-for-marseille" class="anchor"></a>Forecast for Marseille</h1>
 <p>For this we use the <code>forecast</code> package. We use the <code>stlm</code> because our time series obviously present yearly seasonality.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">fit &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/forecast/man/forecast.stl.html">stlm</a></span>(marseille_ts)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">pred &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/forecast/man/forecast.html">forecast</a></span>(fit, <span class="dt">h =</span> <span class="dv">7</span>)</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># plot</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span>(<span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_gray</a></span>(<span class="dt">base_size =</span> <span class="dv">14</span>))</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/autoplot.html">autoplot</a></span>(pred) <span class="op">+</span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Daily average temperature in Marseille airport (ºC)"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="st">  </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (days)"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="st">  </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span>(<span class="st">"How cold will I be during the holidays?"</span>,</a>
-<a class="sourceLine" id="cb4-9" data-line-number="9">          <span class="dt">subtitle =</span> <span class="st">"Data accessed via the rOpenSci riem package and forecasted with forecast"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="no">fit</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/forecast/man/forecast.stl.html">stlm</a></span>(<span class="no">marseille_ts</span>)
+<span class="no">pred</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/forecast/man/forecast.html">forecast</a></span>(<span class="no">fit</span>, <span class="kw">h</span> <span class="kw">=</span> <span class="fl">7</span>)
+<span class="co"># plot</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_gray</a></span>(<span class="kw">base_size</span> <span class="kw">=</span> <span class="fl">14</span>))
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/autoplot.html">autoplot</a></span>(<span class="no">pred</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Daily average temperature in Marseille airport (ºC)"</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (days)"</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span>(<span class="st">"How cold will I be during the holidays?"</span>,
+          <span class="kw">subtitle</span> <span class="kw">=</span> <span class="st">"Data accessed via the rOpenSci riem package and forecasted with forecast"</span>)</pre></body></html></div>
 <p><img src="forecast_files/figure-html/unnamed-chunk-3-1.png" width="768"></p>
 <p>Mmh I don’t see anything, but <code>autoplot.forecast</code> has an <code>include</code> parameters, so I’ll only plot the last 31 values.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/autoplot.html">autoplot</a></span>(pred, <span class="dt">include =</span> <span class="dv">31</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Daily average temperature in Marseille airport (ºC)"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (days)"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span>(<span class="st">"How cold will I be during the holidays?"</span>,</a>
-<a class="sourceLine" id="cb5-5" data-line-number="5">          <span class="dt">subtitle =</span> <span class="st">"Data accessed via the rOpenSci riem package and forecasted with forecast"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/autoplot.html">autoplot</a></span>(<span class="no">pred</span>, <span class="kw">include</span> <span class="kw">=</span> <span class="fl">31</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Daily average temperature in Marseille airport (ºC)"</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (days)"</span>) +
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span>(<span class="st">"How cold will I be during the holidays?"</span>,
+          <span class="kw">subtitle</span> <span class="kw">=</span> <span class="st">"Data accessed via the rOpenSci riem package and forecasted with forecast"</span>)</pre></body></html></div>
 <p><img src="forecast_files/figure-html/unnamed-chunk-4-1.png" width="768"></p>
 </div>
 <div id="what-if-i-went-somewhere-else" class="section level1">
@@ -172,34 +170,76 @@
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <div id="tocnav">
-      <h2 class="hasAnchor">
-<a href="#tocnav" class="anchor"></a>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-<li><a href="#find-airport-for-marseille">Find airport for Marseille</a></li>
-      <li><a href="#get-time-series-of-temperature-for-marseille-airport">Get time series of temperature for Marseille airport</a></li>
-      <li><a href="#forecast-for-marseille">Forecast for Marseille</a></li>
-      <li><a href="#what-if-i-went-somewhere-else">What if I went somewhere else?</a></li>
-      </ul>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
 </div>
-      </div>
 
 </div>
 
 
 
-      <footer><div style="margin-top:-9px">
-  <p>riem is a part of <img src="https://github.com/ropensci/logos/raw/master/icon_lettering_color.png" height="40" alt="rOpenSci">. Learn more at <a href="https://ropensci.org">ropensci.org</a>.</p>
+      <footer><!-- begin footer --><div class="footer">
+    <div class="container">
+        <div class="row start bottom-8">
+            <div class="col-xs-2"> <img id="footerlogo" src="https://ropensci.org/img/icon_short_white.svg">
 </div>
+            <div class="col-xs-10">
+                <div class="row">
+                    <div class="col-md-4 col-xs-6">
+                        <a href="http://github.com/ropensci" target="_blank"><div class="icon fab fa-github"></div></a>
+                        <a href="http://github.com/ropenscilabs" target="_blank"><div class="icon fa fa-flask"></div></a>
+                        <a href="http://twitter.com/ropensci" target="_blank"><div class="icon fab fa-twitter"></div></a>
+                        <a href="http://vimeo.com/ropensci" target="_blank"><div class="icon fab fa-vimeo"></div></a>
+                    </div>
+                </div>
+                <div class="row top-4">
+                    <div class="col-md-2 col-sm-4">
+                        <ul>
+<h5 class="bottom-2">Info</h5>
+                            <li><a href="https://ropensci.org/about">Mission</a></li>
+                            <li><a href="https://ropensci.org/about#team">Team</a></li>
+                            <li><a href="https://ropensci.org/about#collaborators">Collaborators</a></li>
+                            <li><a href="https://ropensci.org/careers">Careers</a></li>
+                        </ul>
+</div>
+                    <div class="col-md-2 col-sm-4">
+                        <ul>
+<h5 class="bottom-2">Work</h5>
+                            <li><a href="https://ropensci.org/packages/">Packages</a></li>
+                            <li><a href="https://ropensci.org/blog/">Blog</a></li>
+                            <li><a href="https://ropensci.org/technotes/">Tech Notes</a></li>
+                            <li><a href="https://ropensci.org/tutorials/">Tutorials</a></li>
+                            <li><a href="https://ropensci.org/usecases/">Use Cases</a></li>
+                            <li><a href="https://ropensci.org/resources/">More Resources</a></li>
+                        </ul>
+</div>
+                    <div class="col-md-3 col-sm-4">
+                        <ul>
+<h5 class="bottom-2">Participate</h5>
+                            <li><a href="https://ropensci.org/contact/">Contact us</a></li>
+                            <li><a href="https://ropensci.org/community/">Community</a></li>
+                            <li><a href="https://ropensci.org/software-review/">Contribute software</a></li>
+                            <li><a href="https://ropensci.org/code-of-conduct">Code of conduct</a></li>
+                            <li><a href="https://ropensci.org/events/">Events</a></li>
+                            <li><a href="https://ropensci.org/commcalls/">Community calls</a></li>
+                            <li><a href="https://ropensci.org/donate/">Donate</a></li>
+                        </ul>
+</div>
+                    <div class="col-md-4 col-xs-12">
+                        <h5 class="bottom-2"></h5>
 
-<div class="author">
-  <p>
-    Developed by <a href="https://masalmon.eu">Maëlle Salmon</a>, CHAI Project, <a href="https://ropensci.org"><img src="https://github.com/ropensci.png" height="24"></a>.
-    Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a> &amp; <a href="https://docs.ropensci.org/rotemplate/">rotemplate</a>.
-  </p>
+                        <p>rOpenSci is a fiscally sponsored project of <a href="http://numfocus.org" target="_blank">NumFOCUS</a></p>
+                        <a href="http://numfocus.org" target="_blank"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- / end footer -->
 
       </footer>
 </div>
