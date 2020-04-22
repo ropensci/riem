@@ -42,7 +42,7 @@
 #' \item peak_wind_time: The timestamp of the PK WND value in the same timezone as the valid field and controlled by the tz parameter.
 
 #' }
-#' @details The data is queried through \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
+#' @details The data is queried via \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
 #' @export
 #'
 #' @examples
