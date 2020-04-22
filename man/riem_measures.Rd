@@ -4,8 +4,11 @@
 \alias{riem_measures}
 \title{Function for getting weather data from one station}
 \usage{
-riem_measures(station = "VOHY", date_start = "2014-01-01",
-  date_end = as.character(Sys.Date()))
+riem_measures(
+  station = "VOHY",
+  date_start = "2014-01-01",
+  date_end = as.character(Sys.Date())
+)
 }
 \arguments{
 \item{station}{station ID, see riem_stations()}
@@ -55,7 +58,7 @@ but possible variables are
 Function for getting weather data from one station
 }
 \details{
-The data is queried through \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
+The data is queried via \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
 }
 \examples{
 \dontrun{
