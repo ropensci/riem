@@ -5,6 +5,8 @@
 #' @param station station ID, see riem_stations()
 #' @param date_start date of start of the desired data, e.g. "2000-01-01"
 #' @param date_end date of end of the desired data, e.g. "2016-04-22"
+#' @param trace value to set for trace precipiation in variable p01i, default is 1e-04, alternatives are NA, "" and "T"
+#' @param missing value to set missing data do, default is NA, alternatives are "M" and ""
 #'
 #' @return a data.frame (tibble tibble) with measures, the number of columns can vary from station to station,
 #' but possible variables are
@@ -47,16 +49,26 @@
 #'
 #' @examples
 #' \dontrun{
-#' riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22")
+#' riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22", trace = 1e-4, missing = NA)
 #' }
 riem_measures <- function(station = "VOHY",
                           date_start = "2014-01-01",
-                          date_end = as.character(Sys.Date())){
+                          date_end = as.character(Sys.Date()),
+                          trace = .0001,
+                          missing = NA){
+
 
   base_link <- "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py/"
 
+  if(!is.na(trace) & !(trace %in% list("T", "", .0001))) {
+    stop(call. = FALSE,
+         "trace must be one of NA, 'T', '' or 0.0001.")  # nolint
+  }
 
-
+  if(!is.na(missing) & !(missing %in% list("M", ""))) {
+    stop(call. = FALSE,
+         "missing must be one of NA, 'M', ''")  # nolint
+  }
 
   date_start <- lubridate::ymd(date_start)
 
@@ -113,5 +125,9 @@ riem_measures <- function(station = "VOHY",
   }else{
     result$valid <- lubridate::ymd_hm(result$valid)
   }
+
+  result$p01i[result$p01i == 0.0001] <- trace
+  result[is.na(result)] <- missing
+
   return(tibble::as_tibble(result))
   }

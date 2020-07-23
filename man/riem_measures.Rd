@@ -4,8 +4,13 @@
 \alias{riem_measures}
 \title{Function for getting weather data from one station}
 \usage{
-riem_measures(station = "VOHY", date_start = "2014-01-01",
-  date_end = as.character(Sys.Date()))
+riem_measures(
+  station = "VOHY",
+  date_start = "2014-01-01",
+  date_end = as.character(Sys.Date()),
+  trace = 1e-04,
+  missing = NA
+)
 }
 \arguments{
 \item{station}{station ID, see riem_stations()}
@@ -13,6 +18,10 @@ riem_measures(station = "VOHY", date_start = "2014-01-01",
 \item{date_start}{date of start of the desired data, e.g. "2000-01-01"}
 
 \item{date_end}{date of end of the desired data, e.g. "2016-04-22"}
+
+\item{trace}{value to set for trace precipiation in variable p01i, default is 1e-04, alternatives are NA, "" and "T"}
+
+\item{missing}{value to set missing data do, default is NA, alternatives are "M" and ""}
 }
 \value{
 a data.frame (tibble tibble) with measures, the number of columns can vary from station to station,
@@ -59,6 +68,6 @@ The data is queried through \url{https://mesonet.agron.iastate.edu/request/downl
 }
 \examples{
 \dontrun{
-riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22")
+riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22", trace = 1e-4, missing = NA)
 }
 }
