@@ -1,3 +1,8 @@
+# riem 0.1.2
+
+* Handle the new 'missing' and 'trace' parameters made available by IEM
+  * Defaults are as current behaviour, but you can now return other values for missing data and trace preciptation
+
 # riem 0.1.1
 
 * Eliminates a few dependencies (dplyr, lazyeval, readr) to make installation easier.

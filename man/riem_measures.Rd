@@ -9,7 +9,7 @@ riem_measures(
   date_start = "2014-01-01",
   date_end = as.character(Sys.Date()),
   trace = 1e-04,
-  missing = NA
+  missing = "empty"
 )
 }
 \arguments{
@@ -19,9 +19,9 @@ riem_measures(
 
 \item{date_end}{date of end of the desired data, e.g. "2016-04-22"}
 
-\item{trace}{value to set for trace precipiation in variable p01i, default is 1e-04, alternatives are NA, "" and "T"}
+\item{trace}{value to set for trace precipitation in variable p01i, default is 1e-04, alternatives are "null", "empty" and "T"}
 
-\item{missing}{value to set missing data do, default is NA, alternatives are "M" and ""}
+\item{missing}{value to set missing data in any column to, default is "empty" (i.e NA) alternatives are "M" and "null"}
 }
 \value{
 a data.frame (tibble tibble) with measures, the number of columns can vary from station to station,
@@ -68,6 +68,6 @@ The data is queried through \url{https://mesonet.agron.iastate.edu/request/downl
 }
 \examples{
 \dontrun{
-riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22", trace = 1e-4, missing = NA)
+riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22", trace = 1e-4, missing = "empty")
 }
 }

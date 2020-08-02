@@ -51,3 +51,16 @@ test_that("riem_measures checks dates",{
                "date_end has to be bigger than date_start")
 })
 
+test_that("riem_measures returns correct values when alternate arguments to missing are passed",{
+  skip_on_cran()
+  output <- riem_measures(station = "VOHY", date_start = "2014-01-01",
+                          date_end = "2016-04-22", missing = "M")
+  expect_is(output$mslp, "character")
+})
+
+test_that("riem_measures returns correct values when alternate arguments to trace are passed, if possible",{
+  skip_on_cran()
+  output <- riem_measures(station = "KGTF", date_start = "2014-01-01",
+                          date_end = "2016-04-22", trace = "T")
+  expect_is(output$poli, "character")
+})

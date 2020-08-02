@@ -5,8 +5,8 @@
 #' @param station station ID, see riem_stations()
 #' @param date_start date of start of the desired data, e.g. "2000-01-01"
 #' @param date_end date of end of the desired data, e.g. "2016-04-22"
-#' @param trace value to set for trace precipiation in variable p01i, default is 1e-04, alternatives are NA, "" and "T"
-#' @param missing value to set missing data do, default is NA, alternatives are "M" and ""
+#' @param trace value to set for trace precipitation in variable p01i, default is 1e-04, alternatives are "null", "empty" and "T"
+#' @param missing value to set missing data in any column to, default is "empty" (i.e NA) alternatives are "M" and "null"
 #'
 #' @return a data.frame (tibble tibble) with measures, the number of columns can vary from station to station,
 #' but possible variables are
@@ -49,25 +49,25 @@
 #'
 #' @examples
 #' \dontrun{
-#' riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22", trace = 1e-4, missing = NA)
+#' riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22", trace = 1e-4, missing = "empty")
 #' }
 riem_measures <- function(station = "VOHY",
                           date_start = "2014-01-01",
                           date_end = as.character(Sys.Date()),
                           trace = .0001,
-                          missing = NA){
+                          missing = "empty"){
 
 
   base_link <- "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py/"
 
-  if(!is.na(trace) & !(trace %in% list("T", "", .0001))) {
+  if(!(trace %in% list("T", "null", "empty", .0001))) {
     stop(call. = FALSE,
-         "trace must be one of NA, 'T', '' or 0.0001.")  # nolint
+         "trace must be one of 'T', 'null', 'empty' or 0.0001.")  # nolint
   }
 
-  if(!is.na(missing) & !(missing %in% list("M", ""))) {
+  if(!(missing %in% list("M", "empty","null"))) {
     stop(call. = FALSE,
-         "missing must be one of NA, 'M', ''")  # nolint
+         "missing must be one of NA, 'null', 'M', 'empty'")  # nolint
   }
 
   date_start <- lubridate::ymd(date_start)
@@ -99,13 +99,15 @@ riem_measures <- function(station = "VOHY",
                                  month2 = lubridate::month(date_end),
                                  day2 = lubridate::day(date_end),
                                  format = "tdf",
-                                 latlon = "yes"))
+                                 latlon = "yes",
+                                 missing = missing,
+                                 trace = trace))
   content <- httr::content(page)
 
   col.names <- t(suppressWarnings(read.table(text = content,
                                            skip = 5,
                                            nrows = 1,
-                                           na.strings = c("", "NA", "M"),
+                                           na.strings = c("NA"),
                                            sep = "\t",
                                            stringsAsFactors = FALSE)))
   col.names <- as.character(col.names)
@@ -115,7 +117,7 @@ riem_measures <- function(station = "VOHY",
   result <- suppressWarnings(read.table(text = content,
                                         skip = 6,
                                         col.names = col.names,
-                                        na.strings = c("", "NA", "M"),
+                                        na.strings = c("NA"),
                                         sep = "\t",
                                         stringsAsFactors = FALSE,
                                         fill = TRUE))
@@ -125,9 +127,6 @@ riem_measures <- function(station = "VOHY",
   }else{
     result$valid <- lubridate::ymd_hm(result$valid)
   }
-
-  result$p01i[result$p01i == 0.0001] <- trace
-  result[is.na(result)] <- missing
 
   return(tibble::as_tibble(result))
   }
