@@ -11,3 +11,5 @@
 ^\.lintr$
 ^cran-comments\.md$
 ^codemeta\.json$
+^vignettes/articles$
+^\.github$

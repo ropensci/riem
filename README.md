@@ -1,16 +1,15 @@
 riem
 ====
-
+<!-- badges: start -->
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/riem)](http://cran.r-project.org/package=riem)
-[![Travis-CI Build
-Status](https://travis-ci.org/ropensci/riem.svg?branch=master)](https://travis-ci.org/ropensci/riem)
-[![Build
-status](https://ci.appveyor.com/api/projects/status/jl8sxr77bi8jnqrm?svg=true)](https://ci.appveyor.com/project/ropensci/riem)
 [![codecov](https://codecov.io/gh/ropensci/riem/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/riem)
 [![](https://badges.ropensci.org/39_status.svg)](https://github.com/ropensci/onboarding/issues/39)
+  [![R-CMD-check](https://github.com/ropensci/riem/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/riem/actions)
+  <!-- badges: end -->
+
 
 This package allows to get weather data from ASOS stations (airports)
 via the great website of the [Iowa Environment

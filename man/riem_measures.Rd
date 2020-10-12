@@ -4,8 +4,11 @@
 \alias{riem_measures}
 \title{Function for getting weather data from one station}
 \usage{
-riem_measures(station = "VOHY", date_start = "2014-01-01",
-  date_end = as.character(Sys.Date()))
+riem_measures(
+  station = "VOHY",
+  date_start = "2014-01-01",
+  date_end = as.character(Sys.Date())
+)
 }
 \arguments{
 \item{station}{station ID, see riem_stations()}

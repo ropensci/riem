@@ -1,12 +1,6 @@
 ---
 title: "Forecasting temperature at your vacation destination"
 author: "M. Salmon"
-date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Vignette Title}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 For Christmas I'll travel to Marseille. What temperatures should I expect there? I could of course open a weather app, but in this vignette I want to give an example using the `riem` and  `forecast` packages. 

@@ -1,25 +1,8 @@
 ---
-title: "R package riem"
-author: "M. Salmon"
-date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{riem intro}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+title: "riem"
 ---
 
-```{r, echo = FALSE}
-NOT_CRAN <- identical(tolower(Sys.getenv("NOT_CRAN")), "true")
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  purl = NOT_CRAN,
-  eval = NOT_CRAN
-)
-```
-
-This package allows to get weather data from ASOS stations (airports) via the awesome website of the [Iowa Environment Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS).
+The riem package allows to get weather data from ASOS stations (airports) via the awesome website of the [Iowa Environment Mesonet](https://mesonet.agron.iastate.edu/request/download.phtml?network=IN__ASOS).
 
 
 # Installation
@@ -35,7 +18,6 @@ Or install the development version using [devtools](https://github.com/hadley/de
 ```{r, eval = FALSE}
 library("devtools")
 install_github("ropenscilabs/riem")
-
 ```
 
 # Get available networks
@@ -96,9 +78,26 @@ Possible variables are (copied from [here](https://mesonet.agron.iastate.edu/req
 
 * skyl4: Sky Level 4 Altitude in feet
 
-* presentwx: Present Weather Codes (space seperated), see e.g. Chapter 8 of [this manual](https://www.ofcm.gov/publications/fmh/FMH1/FMH1.pdf) for further explanations.
+* presentwx: Present Weather Codes (space seperated), see e.g. [this manual](http://www.ofcm.gov/fmh-1/pdf/H-CH8.pdf) for further explanations.
+
+* feel: Apparent Temperature (Wind Chill or Heat Index) in degF
+
+* ice_accretion_1hr: Ice Accretion over 1 Hour in inch
+
+* ice_accretion_3hr: Ice Accretion over 3 Hour in inch
+
+* ice_accretion_6hr: Ice Accretion over 6 Hour in inch
+
+* relh: Relative Humidity in % 
 
 * metar: unprocessed reported observation in METAR format
+
+* peak_wind_gust: Wind gust in knots from the METAR PK WND remark, this value may be different than the value found in the gust field. The gust field is derived from the standard METAR wind report.
+
+* peak_wind_drct: The wind direction in degrees North denoted in the METAR PK WND remark.
+
+* peak_wind_time: The timestamp of the PK WND value in the same timezone as the valid field and controlled by the tz parameter.
+
 
 ```{r}
 measures <- riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22") 
