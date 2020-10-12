@@ -8,7 +8,15 @@
 #' riem_networks()
 #' }
 riem_networks <- function(){
-  content <- jsonlite::fromJSON("http://mesonet.agron.iastate.edu/geojson/networks.geojson")# nolint
+  resp <- httr::GET("http://mesonet.agron.iastate.edu/geojson/networks.geojson")# nolint
+  httr::stop_for_status(resp)
+
+  content <- jsonlite::fromJSON(
+    httr::content(
+      resp, as ="text"
+      )
+    )
+
   names <- content$features$properties$name
   codes <- content$features$id
   whichASOS <- grepl("ASOS", codes) | grepl("AWOS", codes)

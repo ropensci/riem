@@ -25,7 +25,15 @@ riem_stations <- function(network = NULL){
   link <- paste0("http://mesonet.agron.iastate.edu/json/network.php?network=",
                  network)
 
-  content <- jsonlite::fromJSON(link)
+  resp <- httr::GET(link)
+  httr::stop_for_status(resp)
+
+  content <- jsonlite::fromJSON(
+    httr::content(
+      resp, as ="text"
+    )
+  )
+
   results <- tibble::as_tibble(content$stations)
   results <- results[, !names(results) == "combo"]
   results$lon <- as.numeric(results$lon)

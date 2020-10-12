@@ -29,12 +29,14 @@ Imports:
 RoxygenNote: 7.1.1
 URL: https://docs.ropensci.org/riem, https://github.com/ropensci/riem
 BugReports: https://github.com/ropensci/riem/issues
-Suggests: testthat,
+Suggests: 
+    testthat,
     knitr,
     rmarkdown,
     ggplot2,
     forecast,
     xts,
     weathermetrics,
-    dplyr
+    dplyr,
+    vcr
 Encoding: UTF-8
