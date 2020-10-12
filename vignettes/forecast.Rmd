@@ -19,7 +19,7 @@ The name of the network for France is "FR__ASOS". I already know there's only on
 library("riem")
 library("dplyr")
 france_airports <- riem_stations(network = "FR__ASOS")
-marseilles_airport <- filter(france_airports, grepl("MARSEILLE", name))
+marseilles_airport <- filter(france_airports, grepl("MARSEILLE", name) | grepl("Marseille", name))
 marseilles_airport
 
 ```
