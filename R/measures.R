@@ -58,13 +58,18 @@ riem_measures <- function(station = "VOHY",
 
 
 
-  date_start <- lubridate::ymd(date_start)
+  date_start <- suppressWarnings(
+    lubridate::ymd(date_start)
+  )
 
   if(is.na(date_start)){
     stop(call. = FALSE,
          "date_start has to be formatted like \"2014-12-14\", that is year-month-day.") # nolint
   }
-  date_end <- lubridate::ymd(date_end)
+  date_end <- suppressWarnings(
+    lubridate::ymd(date_end)
+  )
+
   if(is.na(date_end)){
     stop(call. = FALSE,
          "date_end has to be formatted like \"2014-12-14\", that is year-month-day.")# nolint

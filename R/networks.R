@@ -14,6 +14,6 @@ riem_networks <- function(){
   whichASOS <- grepl("ASOS", codes) | grepl("AWOS", codes)
   codes <- codes[whichASOS]
   names <- names[whichASOS]
-  tibble::tibble_(list(code = ~ codes,
-                           name = ~ names))
+  tibble::tibble(code = codes,
+                 name = names)
 }
