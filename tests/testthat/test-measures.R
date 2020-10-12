@@ -2,8 +2,8 @@ library("riem")
 context("measures")
 test_that("riem_measures returns the right output",{
   vcr::use_cassette("measures", {
-  output <- riem_measures(station = "VOHY", date_start = "2014-01-01",
-                          date_end = "2016-04-22")
+  output <- riem_measures(station = "VOHY", date_start = "2014-03-01",
+                          date_end = "2014-04-05")
   })
   expect_is(output, "tbl_df")
   expect_is(output$station, "character")
@@ -19,7 +19,7 @@ test_that("riem_measures returns the right output",{
   expect_is(output$alti, "numeric")
   expect_true(class(output$mslp) %in% c("character", "logical"))
   expect_is(output$vsby, "numeric")
-  expect_true(class(output$gust) %in% c("character", "numeric"))
+  expect_true(class(output$gust) %in% c("character", "numeric", "logical"))
   expect_is(output$skyc1, "character")
   expect_is(output$skyc2, "character")
   expect_is(output$skyc3, "character")
