@@ -22,8 +22,7 @@ riem_stations <- function(network = NULL){
          call. = FALSE) # nolint
   }
 
-  link <- paste0("http://mesonet.agron.iastate.edu/json/network.php?network=",
-                 network)
+  link <- paste0("http://mesonet.agron.iastate.edu/api/1/network/", network, ".json")
 
   resp <- httr::GET(link)
   httr::stop_for_status(resp)
@@ -34,10 +33,10 @@ riem_stations <- function(network = NULL){
     )
   )
 
-  results <- tibble::as_tibble(content$stations)
+  results <- tibble::as_tibble(content$data)
   results <- results[, !names(results) == "combo"]
-  results$lon <- as.numeric(results$lon)
-  results$lat <- as.numeric(results$lat)
+  results$lon <- as.numeric(results$longitude)
+  results$lat <- as.numeric(results$latitude)
 
   return(results)
 }
