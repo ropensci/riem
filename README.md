@@ -57,7 +57,7 @@ Meta
 -   Get citation information for `ropenaq` in R doing
     `citation(package = 'riem')`
 -   Please note that this project is released with a [Contributor Code
-    of Conduct](CONDUCT.md). By participating in this project you agree
+    of Conduct](https://ropensci.org/code-of-conduct/). By participating in this project you agree
     to abide by its terms.
 
 [![ropensci\_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
