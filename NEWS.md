@@ -1,4 +1,4 @@
-# riem development version
+# riem 0.2.0
 
 * Switches to newer IEM metadata web services (#35, @akrherz)
 
