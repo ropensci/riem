@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://mesonet.agron.iastate.edu/geojson/networks.geojson
+    uri: http://mesonet.agron.iastate.edu/api/1/networks.json
     body:
       encoding: ''
       string: ''
@@ -14,1615 +14,392 @@ http_interactions:
       reason: OK
       message: 'Success: (200) OK'
     headers:
-      date: Mon, 12 Oct 2020 09:01:58 GMT
-      server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1c mod_fcgid/2.3.9
-        mod_wsgi/4.6.8 Python/3.8
+      date: Sun, 28 Feb 2021 13:41:58 GMT
+      server: uvicorn
+      content-length: '39233'
+      content-type: application/json
       x-iem-serverid: iemvs100.local
       access-control-allow-origin: '*'
-      transfer-encoding: chunked
-      content-type: application/vnd.geo+json
     body:
       encoding: UTF-8
       file: no
-      string: '{"type": "FeatureCollection", "features": [{"type": "Feature", "id":
-        "AE__ASOS", "properties": {"name": "United Arab Emirates ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[52.22, 23.4237], [52.22, 25.71348],
-        [56.42396, 25.71348], [56.42396, 23.4237], [52.22, 23.4237]]]}}, {"type":
-        "Feature", "id": "AF__ASOS", "properties": {"name": "Afghanistan ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[61.48333, 30.9], [61.48333, 38.5617],
-        [71.666666667, 38.5617], [71.666666667, 30.9], [61.48333, 30.9]]]}}, {"type":
-        "Feature", "id": "AG__ASOS", "properties": {"name": "Antigua and Barbuda ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-62.6899, 17.0167], [-62.6899,
-        17.3057], [-61.6833, 17.3057], [-61.6833, 17.0167], [-62.6899, 17.0167]]]}},
-        {"type": "Feature", "id": "AG__DCP", "properties": {"name": "Antigua and Barbuda
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-61.921, 17.491],
-        [-61.921, 17.691], [-61.721, 17.691], [-61.721, 17.491], [-61.921, 17.491]]]}},
-        {"type": "Feature", "id": "AI__ASOS", "properties": {"name": "Anguilla ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-63.1551, 18.1048], [-63.1551,
-        18.3048], [-62.9551, 18.3048], [-62.9551, 18.1048], [-63.1551, 18.1048]]]}},
-        {"type": "Feature", "id": "AK_ASOS", "properties": {"name": "Alaska ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-176.74603, 51.77796], [-176.74603,
-        71.38257], [174.21691, 71.38257], [174.21691, 51.77796], [-176.74603, 51.77796]]]}},
-        {"type": "Feature", "id": "AK_COOP", "properties": {"name": "Alaska COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-170.3119, 53.7522], [-170.3119,
-        71.4213], [-130.2375, 71.4213], [-130.2375, 53.7522], [-170.3119, 53.7522]]]}},
-        {"type": "Feature", "id": "AK_DCP", "properties": {"name": "Alaska DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-176.7317, 51.7633], [-176.7317,
-        71.4666], [-129.9653, 71.4666], [-129.9653, 51.7633], [-176.7317, 51.7633]]]}},
-        {"type": "Feature", "id": "AK_RWIS", "properties": {"name": "Alaska RWIS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-152.56, 55.358], [-152.56,
-        65.1503], [-132.442, 65.1503], [-132.442, 55.358], [-152.56, 55.358]]]}},
-        {"type": "Feature", "id": "AL__ASOS", "properties": {"name": "Albania ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[19.68333, 41.216666667],
-        [19.68333, 41.43333], [19.983333333, 41.43333], [19.983333333, 41.216666667],
-        [19.68333, 41.216666667]]]}}, {"type": "Feature", "id": "AL_ASOS", "properties":
-        {"name": "Alabama ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-88.34556,
-        28.95], [-88.34556, 34.96], [-85.0289, 34.96], [-85.0289, 28.95], [-88.34556,
-        28.95]]]}}, {"type": "Feature", "id": "ALCLIMATE", "properties": {"name":
-        "Alabama Long Term Climate Sites"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-88.34556, 30.446666667], [-88.34556, 35.078611111], [-85.35, 35.078611111],
-        [-85.35, 30.446666667], [-88.34556, 30.446666667]]]}}, {"type": "Feature",
-        "id": "AL_COOP", "properties": {"name": "Alabama COOP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-88.5581, 30.1511], [-88.5581, 35.0786], [-84.9858,
-        35.0786], [-84.9858, 30.1511], [-88.5581, 30.1511]]]}}, {"type": "Feature",
-        "id": "AL_DCP", "properties": {"name": "Alabama DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-88.4394, 30.0883], [-88.4394, 35.0608], [-84.915,
-        35.0608], [-84.915, 30.0883], [-88.4394, 30.0883]]]}}, {"type": "Feature",
-        "id": "AM__ASOS", "properties": {"name": "Armenia ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[43.75934, 40.03], [43.75934, 40.85037], [44.57,
-        40.85037], [44.57, 40.03], [43.75934, 40.03]]]}}, {"type": "Feature", "id":
-        "AN__ASOS", "properties": {"name": "Netherlands Antilles ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-69.0598, 12.03295], [-69.0598, 18.141],
-        [-62.87944, 18.141], [-62.87944, 12.03295], [-69.0598, 12.03295]]]}}, {"type":
-        "Feature", "id": "AO__ASOS", "properties": {"name": "Angola ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[12.05, -17.1435], [12.05, -5.45], [20.9185,
-        -5.45], [20.9185, -17.1435], [12.05, -17.1435]]]}}, {"type": "Feature", "id":
-        "AQ__ASOS", "properties": {"name": "Antarctica ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-68.227, -90.1], [-68.227, -64.877], [167.06667,
-        -64.877], [167.06667, -90.1], [-68.227, -90.1]]]}}, {"type": "Feature", "id":
-        "AR__ASOS", "properties": {"name": "Argentina ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-72.4, -54.9], [-72.4, -22], [-54.37344, -22],
-        [-54.37344, -54.9], [-72.4, -54.9]]]}}, {"type": "Feature", "id": "AR_ASOS",
-        "properties": {"name": "Arkansas ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-94.59, 33.12097], [-94.59, 36.5042314], [-89.73, 36.5042314], [-89.73,
-        33.12097], [-94.59, 33.12097]]]}}, {"type": "Feature", "id": "ARCLIMATE",
-        "properties": {"name": "Arkansas Long Term Climate Sites"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-94.633333333, 33.011111111], [-94.633333333,
-        36.594722222], [-89.804444444, 36.594722222], [-89.804444444, 33.011111111],
-        [-94.633333333, 33.011111111]]]}}, {"type": "Feature", "id": "AR_COOP", "properties":
-        {"name": "Arkansas COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-94.5175, 32.1941], [-94.5175, 36.5981], [-89.8044, 36.5981], [-89.8044,
-        32.1941], [-94.5175, 32.1941]]]}}, {"type": "Feature", "id": "AR_DCP", "properties":
-        {"name": "Arkansas DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-95.739444444,
-        32.9502], [-95.739444444, 36.5981], [-89.8331, 36.5981], [-89.8331, 32.9502],
-        [-95.739444444, 32.9502]]]}}, {"type": "Feature", "id": "AS__ASOS", "properties":
-        {"name": "American Samoa ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-170.8105, -14.431], [-170.8105, 14.38], [-170.588, 14.38], [-170.588,
-        -14.431], [-170.8105, -14.431]]]}}, {"type": "Feature", "id": "AT__ASOS",
-        "properties": {"name": "Austria ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-61.4483, 10.4933], [-61.4483, 48.61472], [16.67083, 48.61472], [16.67083,
-        10.4933], [-61.4483, 10.4933]]]}}, {"type": "Feature", "id": "AU__ASOS", "properties":
-        {"name": "Australia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[96.7344, -54.5994], [96.7344, -0.43333], [168.0408, -0.43333], [168.0408,
-        -54.5994], [96.7344, -54.5994]]]}}, {"type": "Feature", "id": "AW__ASOS",
-        "properties": {"name": "Aruba ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-70.115221, 12.401389], [-70.115221, 12.60139], [-69.91522, 12.60139],
-        [-69.91522, 12.401389], [-70.115221, 12.401389]]]}}, {"type": "Feature", "id":
-        "AWOS", "properties": {"name": "Iowa AWOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-96.29225, 40.361461111], [-96.29225, 43.375519444], [-90.232796,
-        43.375519444], [-90.232796, 40.361461111], [-96.29225, 40.361461111]]]}},
-        {"type": "Feature", "id": "AZ__ASOS", "properties": {"name": "Azerbaijan ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[45.35625, 38.6464], [45.35625,
-        41.66222], [50.166666667, 41.66222], [50.166666667, 38.6464], [45.35625, 38.6464]]]}},
-        {"type": "Feature", "id": "AZ_ASOS", "properties": {"name": "Arizona ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-114.70598, 31.32083], [-114.70598,
-        37.0599], [-108.96139, 37.0599], [-108.96139, 31.32083], [-114.70598, 31.32083]]]}},
-        {"type": "Feature", "id": "AZCLIMATE", "properties": {"name": "Arizona Long
-        Term Climate Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-114.70598,
-        31.345], [-114.70598, 37.095277778], [-108.99, 37.095277778], [-108.99, 31.345],
-        [-114.70598, 31.345]]]}}, {"type": "Feature", "id": "AZ_COOP", "properties":
-        {"name": "Arizona COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-114.7933,
-        31.245], [-114.7933, 37.0953], [-108.99, 37.0953], [-108.99, 31.245], [-114.7933,
-        31.245]]]}}, {"type": "Feature", "id": "AZ_DCP", "properties": {"name": "Arizona
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-114.8378, 31.2331],
-        [-114.8378, 37.0969], [-108.95711, 37.0969], [-108.95711, 31.2331], [-114.8378,
-        31.2331]]]}}, {"type": "Feature", "id": "BA__ASOS", "properties": {"name":
-        "Bosnia and Herzegovina ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[17.1167, 43.25], [17.1167, 44.8833], [17.9, 44.8833], [17.9, 43.25], [17.1167,
-        43.25]]]}}, {"type": "Feature", "id": "BB__ASOS", "properties": {"name": "Barbados
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-59.5925, 12.9746],
-        [-59.5925, 13.1746], [-59.3925, 13.1746], [-59.3925, 12.9746], [-59.5925,
-        12.9746]]]}}, {"type": "Feature", "id": "BD__ASOS", "properties": {"name":
-        "Bangladesh ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[88.3036,
-        22.166666667], [88.3036, 26.1164], [91.98333, 26.1164], [91.98333, 22.166666667],
-        [88.3036, 22.166666667]]]}}, {"type": "Feature", "id": "BE__ASOS", "properties":
-        {"name": "Belgium ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[2.55278,
-        49.79167], [2.55278, 51.516666667], [6.28194, 51.516666667], [6.28194, 49.79167],
-        [2.55278, 49.79167]]]}}, {"type": "Feature", "id": "BF__ASOS", "properties":
-        {"name": "Burkina Faso ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-4.4, 10.23333], [-4.4, 14.13333], [0.06667, 14.13333], [0.06667, 10.23333],
-        [-4.4, 10.23333]]]}}, {"type": "Feature", "id": "BG__ASOS", "properties":
-        {"name": "Bulgaria ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[23.28293, 42.033333333], [23.28293, 43.95], [28.2813, 43.95], [28.2813,
-        42.033333333], [23.28293, 42.033333333]]]}}, {"type": "Feature", "id": "BH__ASOS",
-        "properties": {"name": "Bahrain ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[50.53361, 26.17083], [50.53361, 26.37083], [50.73361, 26.37083], [50.73361,
-        26.17083], [50.53361, 26.17083]]]}}, {"type": "Feature", "id": "BI__ASOS",
-        "properties": {"name": "Burundi ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[29.2185, -3.424], [29.2185, -3.224], [29.4185, -3.224], [29.4185, -3.424],
-        [29.2185, -3.424]]]}}, {"type": "Feature", "id": "BJ__ASOS", "properties":
-        {"name": "Benin ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[1.28333,
-        6.25723], [1.28333, 11.23333], [3.03333, 11.23333], [3.03333, 6.25723], [1.28333,
-        6.25723]]]}}, {"type": "Feature", "id": "BM__ASOS", "properties": {"name":
-        "Bermuda ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-64.7787,
-        32.26404], [-64.7787, 32.46404], [-64.5787, 32.46404], [-64.5787, 32.26404],
-        [-64.7787, 32.26404]]]}}, {"type": "Feature", "id": "BM__DCP", "properties":
-        {"name": "Bermuda DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-64.801,
-        32.274], [-64.801, 32.474], [-64.601, 32.474], [-64.601, 32.274], [-64.801,
-        32.274]]]}}, {"type": "Feature", "id": "BO__ASOS", "properties": {"name":
-        "Bolivia ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-69.7,
-        -22.06092], [-69.7, -10.717], [-57.72059, -10.717], [-57.72059, -22.06092],
-        [-69.7, -22.06092]]]}}, {"type": "Feature", "id": "BR__ASOS", "properties":
-        {"name": "Brazil ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-72.76667,
-        -32.116666667], [-72.76667, 3.93333], [-32.32334, 3.93333], [-32.32334, -32.116666667],
-        [-72.76667, -32.116666667]]]}}, {"type": "Feature", "id": "BS__ASOS", "properties":
-        {"name": "Bahamas ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-79.4,
-        20.85], [-79.4, 26.7853], [-71.04231, 26.7853], [-71.04231, 20.85], [-79.4,
-        20.85]]]}}, {"type": "Feature", "id": "BT__ASOS", "properties": {"name": "Bhutan
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[89.3246, 27.3032],
-        [89.3246, 27.5032], [89.5246, 27.5032], [89.5246, 27.3032], [89.3246, 27.3032]]]}},
-        {"type": "Feature", "id": "BW__ASOS", "properties": {"name": "Botswana ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[21.5581, -26.15], [21.5581,
-        -17.73288], [27.92877, -17.73288], [27.92877, -26.15], [21.5581, -26.15]]]}},
-        {"type": "Feature", "id": "BY__ASOS", "properties": {"name": "Belarus ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[23.58583, 52.01667], [23.58583,
-        55.26667], [31.11669, 55.26667], [31.11669, 52.01667], [23.58583, 52.01667]]]}},
-        {"type": "Feature", "id": "BZ__ASOS", "properties": {"name": "Belize ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-88.4082, 17.43914], [-88.4082,
-        17.63914], [-88.2082, 17.63914], [-88.2082, 17.43914], [-88.4082, 17.43914]]]}},
-        {"type": "Feature", "id": "CA_AB_ASOS", "properties": {"name": "Alberta CA
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-119.845, 48.95],
-        [-119.845, 58.866666667], [-109.95, 58.866666667], [-109.95, 48.95], [-119.845,
-        48.95]]]}}, {"type": "Feature", "id": "CA_AB_DCP", "properties": {"name":
-        "Alberta CA DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-119.845,
-        45.2015], [-119.845, 57.073888889], [-73.15, 57.073888889], [-73.15, 45.2015],
-        [-119.845, 45.2015]]]}}, {"type": "Feature", "id": "CA_ASOS", "properties":
-        {"name": "California ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-124.338, 32.46306], [-124.338, 41.8837], [-114.52328, 41.8837], [-114.52328,
-        32.46306], [-124.338, 32.46306]]]}}, {"type": "Feature", "id": "CA_BC_ASOS",
-        "properties": {"name": "British Columbia CA ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-133.15835, 48.2], [-133.15835, 59.016666667], [-114.7828,
-        59.016666667], [-114.7828, 48.2], [-133.15835, 48.2]]]}}, {"type": "Feature",
-        "id": "CA_BC_DCP", "properties": {"name": "British Columbia CA DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-135.2437, 40.6625], [-135.2437, 59.8155],
-        [-18.0006, 59.8155], [-18.0006, 40.6625], [-135.2437, 40.6625]]]}}, {"type":
-        "Feature", "id": "CACLIMATE", "properties": {"name": "California Long Term
-        Climate Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-124.338,
-        32.523333333], [-124.338, 42.06], [-114.52328, 42.06], [-114.52328, 32.523333333],
-        [-124.338, 32.523333333]]]}}, {"type": "Feature", "id": "CA_COOP", "properties":
-        {"name": "California COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-124.3194, 32.4564], [-124.3194, 42.0992], [-114.0708, 42.0992], [-114.0708,
-        32.4564], [-124.3194, 32.4564]]]}}, {"type": "Feature", "id": "CA_DCP", "properties":
-        {"name": "California DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-124.3633, 32.4367], [-124.3633, 42.0992], [-114.0394, 42.0992], [-114.0394,
-        32.4367], [-124.3633, 32.4367]]]}}, {"type": "Feature", "id": "CA_MB_ASOS",
-        "properties": {"name": "Manitoba CA ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-101.78167, 48.9], [-101.78167, 58.83917], [-93.965, 58.83917],
-        [-93.965, 48.9], [-101.78167, 48.9]]]}}, {"type": "Feature", "id": "CA_MB_DCP",
-        "properties": {"name": "Manitoba CA DCP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-100.3792, 48.9], [-100.3792, 55.8542], [-96.8669, 55.8542],
-        [-96.8669, 48.9], [-100.3792, 48.9]]]}}, {"type": "Feature", "id": "CA_NB_ASOS",
-        "properties": {"name": "New Brunswick CA ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-68.42444, 44.61194], [-68.42444, 48.10889], [-64.39417,
-        48.10889], [-64.39417, 44.61194], [-68.42444, 44.61194]]]}}, {"type": "Feature",
-        "id": "CA_NB_DCP", "properties": {"name": "Canada New Brunswick DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-69.0569, 45.058], [-69.0569, 47.747],
-        [-64.7697, 47.747], [-64.7697, 45.058], [-69.0569, 45.058]]]}}, {"type": "Feature",
-        "id": "CA_NF_ASOS", "properties": {"name": "Newfoundland CA ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-66.97417, 46.56], [-66.97417, 60.085],
-        [-52.6428, 60.085], [-52.6428, 46.56], [-66.97417, 46.56]]]}}, {"type": "Feature",
-        "id": "CA_NS_ASOS", "properties": {"name": "Nova Scotia CA ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-66.44667, 43.63], [-66.44667, 47.33278],
-        [-59.9, 47.33278], [-59.9, 43.63], [-66.44667, 43.63]]]}}, {"type": "Feature",
-        "id": "CA_NT_ASOS", "properties": {"name": "Northwest Territories CA ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-135.54389, 59.92611], [-135.54389,
-        76.33333], [-110.516666667, 76.33333], [-110.516666667, 59.92611], [-135.54389,
-        59.92611]]]}}, {"type": "Feature", "id": "CA_NU_ASOS", "properties": {"name":
-        "Nunavut Canada ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-119.31889,
-        56.43606], [-119.31889, 82.61778], [-61.28333, 82.61778], [-61.28333, 56.43606],
-        [-119.31889, 56.43606]]]}}, {"type": "Feature", "id": "CA_ON_ASOS", "properties":
-        {"name": "Ontario CA ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-94.46528, 41.73333], [-94.46528, 56.11889], [-74.5142, 56.11889], [-74.5142,
-        41.73333], [-94.46528, 41.73333]]]}}, {"type": "Feature", "id": "CA_ON_DCP",
-        "properties": {"name": "Ontario CA DCP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-94.8824, 42.8303], [-94.8824, 56.1181], [-75.639444444,
-        56.1181], [-75.639444444, 42.8303], [-94.8824, 42.8303]]]}}, {"type": "Feature",
-        "id": "CA_PE_ASOS", "properties": {"name": "Prince Edward Island Canada ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-64.09861, 46.133333333],
-        [-64.09861, 47.15806], [-61.866666667, 47.15806], [-61.866666667, 46.133333333],
-        [-64.09861, 46.133333333]]]}}, {"type": "Feature", "id": "CA_PQ_DCP", "properties":
-        {"name": "Canada PQ DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-73.4256, 44.9397], [-73.4256, 47.6667], [-68.5333, 47.6667], [-68.5333,
-        44.9397], [-73.4256, 44.9397]]]}}, {"type": "Feature", "id": "CA_QC_ASOS",
-        "properties": {"name": "Quebec CA ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-79.3358, 44.916666667], [-79.3358, 62.51733], [-57.08528,
-        62.51733], [-57.08528, 44.916666667], [-79.3358, 44.916666667]]]}}, {"type":
-        "Feature", "id": "CA_SK_ASOS", "properties": {"name": "Saskatchewan CA ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-110.06667, 48.95], [-110.06667,
-        59.66667], [-102.21139, 59.66667], [-102.21139, 48.95], [-110.06667, 48.95]]]}},
-        {"type": "Feature", "id": "CA_SK_DCP", "properties": {"name": "Canada Saskatchewan
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-110.0847, 48.9003],
-        [-110.0847, 51.516111111], [-101.4577, 51.516111111], [-101.4577, 48.9003],
-        [-110.0847, 48.9003]]]}}, {"type": "Feature", "id": "CA_YT_ASOS", "properties":
-        {"name": "Yukon Canada ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-140.9675, 60.01639], [-140.9675, 69.69475], [-128.72194, 69.69475], [-128.72194,
-        60.01639], [-140.9675, 60.01639]]]}}, {"type": "Feature", "id": "CA_YT_DCP",
-        "properties": {"name": "Canada Yukon DCP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-140.9911, 59.95], [-140.9911, 69.2644], [-128.466666667,
-        69.2644], [-128.466666667, 59.95], [-140.9911, 59.95]]]}}, {"type": "Feature",
-        "id": "CD__ASOS", "properties": {"name": "Democratic Republic of the Congo
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[12.316666667, -11.76667],
-        [12.316666667, 4.129], [30.316666667, 4.129], [30.316666667, -11.76667], [12.316666667,
-        -11.76667]]]}}, {"type": "Feature", "id": "CF__ASOS", "properties": {"name":
-        "Central African Republic ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[15.53778, 4.15], [15.53778, 10.38333], [26.58722, 10.38333], [26.58722,
-        4.15], [15.53778, 4.15]]]}}, {"type": "Feature", "id": "CG__ASOS", "properties":
-        {"name": "Congo ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[11.7866,
-        -4.91603], [11.7866, 1.716666667], [18.166666667, 1.716666667], [18.166666667,
-        -4.91603], [11.7866, -4.91603]]]}}, {"type": "Feature", "id": "CH__ASOS",
-        "properties": {"name": "Switzerland ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[6.02778, 45.90154], [6.02778, 47.58503], [9.97889, 47.58503],
-        [9.97889, 45.90154], [6.02778, 45.90154]]]}}, {"type": "Feature", "id": "CI__ASOS",
-        "properties": {"name": "Ivory Coast ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-7.666666667, 4.3167], [-7.666666667, 9.7], [-2.68, 9.7],
-        [-2.68, 4.3167], [-7.666666667, 4.3167]]]}}, {"type": "Feature", "id": "CK__ASOS",
-        "properties": {"name": "Cook Islands ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-165.9454, -21.996], [-165.9454, -10.2767], [-157.2375,
-        -10.2767], [-157.2375, -21.996], [-165.9454, -21.996]]]}}, {"type": "Feature",
-        "id": "CL__ASOS", "properties": {"name": "Chile ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-109.52722, -63.416666667], [-109.52722, -18.25139],
-        [-56.583333333, -18.25139], [-56.583333333, -63.416666667], [-109.52722, -63.416666667]]]}},
-        {"type": "Feature", "id": "CM__ASOS", "properties": {"name": "Cameroon ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[9.18333, 2.8], [9.18333,
-        10.55139], [15.3372, 10.55139], [15.3372, 2.8], [9.18333, 2.8]]]}}, {"type":
-        "Feature", "id": "CN__ASOS", "properties": {"name": "China ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[75.88333, 18.20289], [75.88333, 50.2716],
-        [130.565, 50.2716], [130.565, 18.20289], [75.88333, 18.20289]]]}}, {"type":
-        "Feature", "id": "CO__ASOS", "properties": {"name": "Colombia ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-81.81119, -4.266666667], [-81.81119,
-        13.45694], [-67.4, 13.45694], [-67.4, -4.266666667], [-81.81119, -4.266666667]]]}},
-        {"type": "Feature", "id": "CO_ASOS", "properties": {"name": "Colorado ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-108.8593, 37.05152], [-108.8593,
-        40.8503], [-102.14096, 40.8503], [-102.14096, 37.05152], [-108.8593, 37.05152]]]}},
-        {"type": "Feature", "id": "COCLIMATE", "properties": {"name": "Colorado Long
-        Term Climate Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-109.110833333,
-        36.915833333], [-109.110833333, 41.086666667], [-102.019166667, 41.086666667],
-        [-102.019166667, 36.915833333], [-109.110833333, 36.915833333]]]}}, {"type":
-        "Feature", "id": "CO_COOP", "properties": {"name": "Colorado COOP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-109.1528, 36.9208], [-109.1528, 41.1019],
-        [-101.9829, 41.1019], [-101.9829, 36.9208], [-109.1528, 36.9208]]]}}, {"type":
-        "Feature", "id": "CO_DCP", "properties": {"name": "Colorado DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-109.1469, 36.8822], [-109.1469, 41.10289],
-        [-101.905, 41.10289], [-101.905, 36.8822], [-109.1469, 36.8822]]]}}, {"type":
-        "Feature", "id": "CO_RWIS", "properties": {"name": "Colorado RWIS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-109.117, 36.9869], [-109.117, 41.0877],
-        [-102.147, 41.0877], [-102.147, 36.9869], [-109.117, 36.9869]]]}}, {"type":
-        "Feature", "id": "CR__ASOS", "properties": {"name": "Costa Rica ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-85.64441, 8.85102], [-85.64441, 10.69329],
-        [-82.92201, 10.69329], [-82.92201, 8.85102], [-85.64441, 8.85102]]]}}, {"type":
-        "Feature", "id": "CT_ASOS", "properties": {"name": "Connecticut ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-73.58, 41.05833], [-73.58, 42.0381],
-        [-71.95, 42.0381], [-71.95, 41.05833], [-73.58, 41.05833]]]}}, {"type": "Feature",
-        "id": "CTCLIMATE", "properties": {"name": "Connecticut Long Term Climate Sites"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-73.6475, 41.016666667],
-        [-73.6475, 42.05], [-71.803055556, 42.05], [-71.803055556, 41.016666667],
-        [-73.6475, 41.016666667]]]}}, {"type": "Feature", "id": "CT_COOP", "properties":
-        {"name": "Connecticut COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-73.7386, 40.9825], [-73.7386, 42.15], [-71.8, 42.15], [-71.8, 40.9825],
-        [-73.7386, 40.9825]]]}}, {"type": "Feature", "id": "CT_DCP", "properties":
-        {"name": "Connecticut DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-73.6475, 40.9372], [-73.6475, 42.1222], [-71.7347, 42.1222], [-71.7347,
-        40.9372], [-73.6475, 40.9372]]]}}, {"type": "Feature", "id": "CU__ASOS", "properties":
-        {"name": "Cuba ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-84.252,
-        19.8], [-84.252, 23.1328], [-74.4062, 23.1328], [-74.4062, 19.8], [-84.252,
-        19.8]]]}}, {"type": "Feature", "id": "CV__ASOS", "properties": {"name": "Cape
-        Verde ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-25.1553,
-        14.81667], [-25.1553, 16.9332], [-22.7889, 16.9332], [-22.7889, 14.81667],
-        [-25.1553, 14.81667]]]}}, {"type": "Feature", "id": "CY__ASOS", "properties":
-        {"name": "Cyprus ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[32.38472,
-        34.483333333], [32.38472, 35.3526], [33.8358, 35.3526], [33.8358, 34.483333333],
-        [32.38472, 34.483333333]]]}}, {"type": "Feature", "id": "CZ__ASOS", "properties":
-        {"name": "Czech Republic ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[12.80979, 48.516666667], [12.80979, 50.86833], [21.366666667, 50.86833],
-        [21.366666667, 48.516666667], [12.80979, 48.516666667]]]}}, {"type": "Feature",
-        "id": "DC_COOP", "properties": {"name": "District of Columbia COOP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-77.2167, 38.8], [-77.2167, 39.0333],
-        [-76.8667, 39.0333], [-76.8667, 38.8], [-77.2167, 38.8]]]}}, {"type": "Feature",
-        "id": "DC_DCP", "properties": {"name": "District of Columbia DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-77.1631, 38.7519], [-77.1631, 39.0725],
-        [-76.8431, 39.0725], [-76.8431, 38.7519], [-77.1631, 38.7519]]]}}, {"type":
-        "Feature", "id": "DE__ASOS", "properties": {"name": "Germany ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[5.93227, 47.57132], [5.93227, 55.01325],
-        [14.39278, 55.01325], [14.39278, 47.57132], [5.93227, 47.57132]]]}}, {"type":
-        "Feature", "id": "DE_ASOS", "properties": {"name": "Delaware ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-75.70083, 38.58919], [-75.70083, 39.77278],
-        [-75.25889, 39.77278], [-75.25889, 38.58919], [-75.70083, 38.58919]]]}}, {"type":
-        "Feature", "id": "DECLIMATE", "properties": {"name": "Delaware Long Term Climate
-        Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-75.744721795,
-        38.533333333], [-75.744721795, 39.77278], [-75.038888889, 39.77278], [-75.038888889,
-        38.533333333], [-75.744721795, 38.533333333]]]}}, {"type": "Feature", "id":
-        "DE_COOP", "properties": {"name": "Delaware COOP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-75.8325, 38.4312], [-75.8325, 39.8667], [-75.0333, 39.8667],
-        [-75.0333, 38.4312], [-75.8325, 38.4312]]]}}, {"type": "Feature", "id": "DE_DCP",
-        "properties": {"name": "Delaware DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-75.848611111, 38.355], [-75.848611111, 39.9091], [-74.9333, 39.9091],
-        [-74.9333, 38.355], [-75.848611111, 38.355]]]}}, {"type": "Feature", "id":
-        "DE_RWIS", "properties": {"name": "Delaware RWIS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-75.8464, 38.5017], [-75.8464, 39.9287], [-74.9619, 39.9287],
-        [-74.9619, 38.5017], [-75.8464, 38.5017]]]}}, {"type": "Feature", "id": "DJ__ASOS",
-        "properties": {"name": "Djibouti ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[43.05948, 11.44733], [43.05948, 11.64733], [43.25948, 11.64733], [43.25948,
-        11.44733], [43.05948, 11.44733]]]}}, {"type": "Feature", "id": "DK__ASOS",
-        "properties": {"name": "Denmark ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-7.38472, 54.5993], [-7.38472, 62.16639], [14.85, 62.16639], [14.85, 54.5993],
-        [-7.38472, 54.5993]]]}}, {"type": "Feature", "id": "DM__ASOS", "properties":
-        {"name": "Dominica ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-61.61639, 14.491], [-61.61639, 16.36389], [-60.9032, 16.36389], [-60.9032,
-        14.491], [-61.61639, 14.491]]]}}, {"type": "Feature", "id": "DO__ASOS", "properties":
-        {"name": "Dominican Republic ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-71.75, 18.1517], [-71.75, 19.98333], [-68.26343, 19.98333], [-68.26343,
-        18.1517], [-71.75, 18.1517]]]}}, {"type": "Feature", "id": "DZ__ASOS", "properties":
-        {"name": "Algeria ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-8.2671,
-        6.043139], [-8.2671, 36.98333], [31.775611, 36.98333], [31.775611, 6.043139],
-        [-8.2671, 6.043139]]]}}, {"type": "Feature", "id": "EC__ASOS", "properties":
-        {"name": "Ecuador ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-90.36583,
-        -4.47823], [-90.36583, 1.366666667], [-75.4264, 1.366666667], [-75.4264, -4.47823],
-        [-90.36583, -4.47823]]]}}, {"type": "Feature", "id": "EE__ASOS", "properties":
-        {"name": "Estonia ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[22.4095,
-        58.1299], [22.4095, 59.51332], [26.7906, 59.51332], [26.7906, 58.1299], [22.4095,
-        58.1299]]]}}, {"type": "Feature", "id": "EG__ASOS", "properties": {"name":
-        "Egypt ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[27.12167,
-        22.27583], [27.12167, 31.42528], [34.87806, 31.42528], [34.87806, 22.27583],
-        [27.12167, 22.27583]]]}}, {"type": "Feature", "id": "ES__ASOS", "properties":
-        {"name": "Spain ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-17.98889,
-        27.71889], [-17.98889, 43.66694], [5.016666667, 43.66694], [5.016666667, 27.71889],
-        [-17.98889, 27.71889]]]}}, {"type": "Feature", "id": "ET__ASOS", "properties":
-        {"name": "Ethiopia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[34.43333, 5.23333], [34.43333, 15.716666667], [44.38333, 15.716666667],
-        [44.38333, 5.23333], [34.43333, 5.23333]]]}}, {"type": "Feature", "id": "FI__ASOS",
-        "properties": {"name": "Finland ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[19.79816, 60.0222], [19.79816, 68.70727], [29.73333, 68.70727], [29.73333,
-        60.0222], [19.79816, 60.0222]]]}}, {"type": "Feature", "id": "FJ__ASOS", "properties":
-        {"name": "Fiji ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-179.977,
-        -19.1581], [-179.977, 3.13333], [179.45, 3.13333], [179.45, -19.1581], [-179.977,
-        -19.1581]]]}}, {"type": "Feature", "id": "FK__ASOS", "properties": {"name":
-        "Falkland Islands ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-58.5484,
-        -51.91998], [-58.5484, -51.58567], [-57.67764, -51.58567], [-57.67764, -51.91998],
-        [-58.5484, -51.91998]]]}}, {"type": "Feature", "id": "FL_ASOS", "properties":
-        {"name": "Florida ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-87.41797,
-        24.4561111], [-87.41797, 30.9458], [-79.9848, 30.9458], [-79.9848, 24.4561111],
-        [-87.41797, 24.4561111]]]}}, {"type": "Feature", "id": "FLCLIMATE", "properties":
-        {"name": "Florida Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-87.286944444, 24.455], [-87.286944444, 30.883611111], [-79.9994,
-        30.883611111], [-79.9994, 24.455], [-87.286944444, 24.455]]]}}, {"type": "Feature",
-        "id": "FL_COOP", "properties": {"name": "Florida COOP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-87.2994, 24.4537], [-87.2994, 31.0539], [-78.894,
-        31.0539], [-78.894, 24.4537], [-87.2994, 24.4537]]]}}, {"type": "Feature",
-        "id": "FL_DCP", "properties": {"name": "Florida DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-87.6281, 24.456], [-87.6281, 31.0783], [-79.934,
-        31.0783], [-79.934, 24.456], [-87.6281, 24.456]]]}}, {"type": "Feature", "id":
-        "FM__ASOS", "properties": {"name": "Federated States of Micronesia ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[134.3768351, 5.2524], [134.3768351,
-        9.583333333], [163.0557, 9.583333333], [163.0557, 5.2524], [134.3768351, 5.2524]]]}},
-        {"type": "Feature", "id": "FR__ASOS", "properties": {"name": "France ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-56.27309, 41.40056], [-56.27309,
-        51.0621], [9.58528, 51.0621], [9.58528, 41.40056], [-56.27309, 41.40056]]]}},
-        {"type": "Feature", "id": "GA__ASOS", "properties": {"name": "Gabon ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[8.65438, -3.516666667],
-        [8.65438, 2.17564], [14.033, 2.17564], [14.033, -3.516666667], [8.65438, -3.516666667]]]}},
-        {"type": "Feature", "id": "GA_ASOS", "properties": {"name": "Georgia ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-85.3903, 30.6825], [-85.3903,
-        34.9544264], [-81.04599, 34.9544264], [-81.04599, 30.6825], [-85.3903, 30.6825]]]}},
-        {"type": "Feature", "id": "GACLIMATE", "properties": {"name": "Georgia Long
-        Term Climate Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-85.333888889,
-        30.64], [-85.333888889, 34.961944444], [-81.10214, 34.961944444], [-81.10214,
-        30.64], [-85.333888889, 30.64]]]}}, {"type": "Feature", "id": "GA_COOP", "properties":
-        {"name": "Georgia COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-85.4619,
-        30.64], [-85.4619, 35.0667], [-81.1811, 35.0667], [-81.1811, 30.64], [-85.4619,
-        30.64]]]}}, {"type": "Feature", "id": "GA_DCP", "properties": {"name": "Georgia
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-85.774722222, 30.4175],
-        [-85.774722222, 35.0689], [-80.803, 35.0689], [-80.803, 30.4175], [-85.774722222,
-        30.4175]]]}}, {"type": "Feature", "id": "GA_RWIS", "properties": {"name":
-        "Georgia RWIS"}, "geometry": {"type": "Polygon", "coordinates": [[[-85.6156,
-        30.653], [-85.6156, 35.0279], [-81.0717, 35.0279], [-81.0717, 30.653], [-85.6156,
-        30.653]]]}}, {"type": "Feature", "id": "GB__ASOS", "properties": {"name":
-        "Great Britain ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-7.46278,
-        49.10961], [-7.46278, 61.7167], [2.0833, 61.7167], [2.0833, 49.10961], [-7.46278,
-        49.10961]]]}}, {"type": "Feature", "id": "GD__ASOS", "properties": {"name":
-        "Grenada ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-61.88619,
-        11.90425], [-61.88619, 12.24368], [-61.51692, 12.24368], [-61.51692, 11.90425],
-        [-61.88619, 11.90425]]]}}, {"type": "Feature", "id": "GE__ASOS", "properties":
-        {"name": "Georgia (Country) ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[41.5, 41.53333], [41.5, 43.169], [45.0547, 43.169], [45.0547, 41.53333],
-        [41.5, 41.53333]]]}}, {"type": "Feature", "id": "GF__ASOS", "properties":
-        {"name": "French Guiana"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-54.1283, 3.5403], [-54.1283, 3.7403], [-53.9283, 3.7403], [-53.9283, 3.5403],
-        [-54.1283, 3.5403]]]}}, {"type": "Feature", "id": "GH__ASOS", "properties":
-        {"name": "Ghana ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-2.6,
-        4.76667], [-2.6, 11], [0.73333, 11], [0.73333, 4.76667], [-2.6, 4.76667]]]}},
-        {"type": "Feature", "id": "GI__ASOS", "properties": {"name": "Gibraltar ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-5.44966, 36.05122], [-5.44966,
-        36.25122], [-5.24966, 36.25122], [-5.24966, 36.05122], [-5.44966, 36.05122]]]}},
-        {"type": "Feature", "id": "GL__ASOS", "properties": {"name": "Greenland ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-69.316666667, 59.89111],
-        [-69.316666667, 77.566666667], [-18.56806, 77.566666667], [-18.56806, 59.89111],
-        [-69.316666667, 59.89111]]]}}, {"type": "Feature", "id": "GLDNWS", "properties":
-        {"name": "Goodland NWS AWOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-102.872003174, 38.339998627], [-102.872003174, 40.629998779], [-99.9,
-        40.629998779], [-99.9, 38.339998627], [-102.872003174, 38.339998627]]]}},
-        {"type": "Feature", "id": "GM__ASOS", "properties": {"name": "Gambia ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-16.73333, 13.1], [-16.73333,
-        13.3], [-16.53333, 13.3], [-16.53333, 13.1], [-16.73333, 13.1]]]}}, {"type":
-        "Feature", "id": "GN__ASOS", "properties": {"name": "Guinea ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-14.41667, 7.6333], [-14.41667, 11.53333],
-        [-8.733, 11.53333], [-8.733, 7.6333], [-14.41667, 7.6333]]]}}, {"type": "Feature",
-        "id": "GQ__ASOS", "properties": {"name": "Equatorial Guinea ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[8.666666667, 1.80547], [8.666666667,
-        3.85], [9.90568, 3.85], [9.90568, 1.80547], [8.666666667, 1.80547]]]}}, {"type":
-        "Feature", "id": "GR__ASOS", "properties": {"name": "Greece ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[19.81667, 34.9], [19.81667, 41.0133],
-        [29.6764, 41.0133], [29.6764, 34.9], [19.81667, 34.9]]]}}, {"type": "Feature",
-        "id": "GT__ASOS", "properties": {"name": "Guatemala ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-92.345941, 13.64547], [-92.345941, 17.37], [-88.48377,
-        17.37], [-88.48377, 13.64547], [-92.345941, 13.64547]]]}}, {"type": "Feature",
-        "id": "GT__DCP", "properties": {"name": "Guatemala DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-91.152777, 14.255555556], [-91.152777, 15.32],
-        [-89.613888889, 15.32], [-89.613888889, 14.255555556], [-91.152777, 14.255555556]]]}},
-        {"type": "Feature", "id": "GU__ASOS", "properties": {"name": "Guam ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[144.6971703, 13.3838738],
-        [144.6971703, 19.38], [166.74194, 19.38], [166.74194, 13.3838738], [144.6971703,
-        13.3838738]]]}}, {"type": "Feature", "id": "GU__DCP", "properties": {"name":
-        "Guam DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[144.557, 13.328],
-        [144.557, 13.544], [144.896, 13.544], [144.896, 13.328], [144.557, 13.328]]]}},
-        {"type": "Feature", "id": "GW__ASOS", "properties": {"name": "Guinea-Bissau
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-15.75368, 11.48333],
-        [-15.75368, 12.266666667], [-14.566666667, 12.266666667], [-14.566666667,
-        11.48333], [-15.75368, 11.48333]]]}}, {"type": "Feature", "id": "GY__ASOS",
-        "properties": {"name": "Guyana ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-60.6, 3.2728], [-60.6, 8.3], [-52.26528, 8.3], [-52.26528, 3.2728], [-60.6,
-        3.2728]]]}}, {"type": "Feature", "id": "HI_ASOS", "properties": {"name": "Hawaii
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-177.47564, 19.62026],
-        [-177.47564, 28.30819], [-154.94847, 28.30819], [-154.94847, 19.62026], [-177.47564,
-        19.62026]]]}}, {"type": "Feature", "id": "HI_COOP", "properties": {"name":
-        "Hawaii COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-170.7922,
-        -14.3728], [-170.7922, 22.2833], [-154.7167, 22.2833], [-154.7167, -14.3728],
-        [-170.7922, -14.3728]]]}}, {"type": "Feature", "id": "HI_DCP", "properties":
-        {"name": "Hawaii DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-160.035,
-        18.8928], [-160.035, 22.3181], [-154.8833, 22.3181], [-154.8833, 18.8928],
-        [-160.035, 18.8928]]]}}, {"type": "Feature", "id": "HK__ASOS", "properties":
-        {"name": "Hong Kong ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[113.82194, 22.1], [113.82194, 22.41188], [114.27266, 22.41188], [114.27266,
-        22.1], [113.82194, 22.1]]]}}, {"type": "Feature", "id": "HN__ASOS", "properties":
-        {"name": "Honduras ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-88.9, 13.0794], [-88.9, 17.5073], [-83.1972, 17.5073], [-83.1972, 13.0794],
-        [-88.9, 13.0794]]]}}, {"type": "Feature", "id": "HN__DCP", "properties": {"name":
-        "Hondurus DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-90.0425,
-        12.978611111], [-90.0425, 16.54], [-84.13583, 16.54], [-84.13583, 12.978611111],
-        [-90.0425, 12.978611111]]]}}, {"type": "Feature", "id": "HR__ASOS", "properties":
-        {"name": "Croatia ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[1.9,
-        42.46278], [1.9, 66.1], [18.91016, 66.1], [18.91016, 42.46278], [1.9, 42.46278]]]}},
-        {"type": "Feature", "id": "HT__ASOS", "properties": {"name": "Haiti ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-73.83333, 18.08333], [-73.83333,
-        19.8278], [-72.099, 19.8278], [-72.099, 18.08333], [-73.83333, 18.08333]]]}},
-        {"type": "Feature", "id": "HU__ASOS", "properties": {"name": "Hungary ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[17.0606, 45.89093], [17.0606,
-        47.7271], [21.71533, 47.7271], [21.71533, 45.89093], [17.0606, 45.89093]]]}},
-        {"type": "Feature", "id": "IA_ASOS", "properties": {"name": "Iowa ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-96.479478, 40.530636],
-        [-96.479478, 43.500849], [-90.494829, 43.500849], [-90.494829, 40.530636],
-        [-96.479478, 40.530636]]]}}, {"type": "Feature", "id": "IACLIMATE", "properties":
-        {"name": "Iowa Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-96.58, 40.29666], [-96.58, 43.55], [-90.17, 43.55], [-90.17,
-        40.29666], [-96.58, 40.29666]]]}}, {"type": "Feature", "id": "IACOCORAHS",
-        "properties": {"name": "Iowa CoCoRaHS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-96.604722, 40.299102], [-96.604722, 43.595556], [-90.080195, 43.595556],
-        [-90.080195, 40.299102], [-96.604722, 40.299102]]]}}, {"type": "Feature",
-        "id": "IA_COOP", "properties": {"name": "Iowa COOP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-96.65, 40.3], [-96.65, 43.5705], [-90.15, 43.5705],
-        [-90.15, 40.3], [-96.65, 40.3]]]}}, {"type": "Feature", "id": "IA_DCP", "properties":
-        {"name": "Iowa DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-96.68,
-        40.2975], [-96.68, 43.5996], [-90.0833, 43.5996], [-90.0833, 40.2975], [-96.68,
-        40.2975]]]}}, {"type": "Feature", "id": "IA_HPD", "properties": {"name": "Iowa
-        HPD Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-96.4833, 40.2968],
-        [-96.4833, 43.5144], [-90.3231, 43.5144], [-90.3231, 40.2968], [-96.4833,
-        40.2968]]]}}, {"type": "Feature", "id": "IA_RWIS", "properties": {"name":
-        "Iowa RWIS"}, "geometry": {"type": "Polygon", "coordinates": [[[-96.44786,
-        40.36477], [-96.44786, 43.5336], [-90.4131, 43.5336], [-90.4131, 40.36477],
-        [-96.44786, 40.36477]]]}}, {"type": "Feature", "id": "ID__ASOS", "properties":
-        {"name": "Indonesia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[100.180833333, -8.8573], [100.180833333, 3.4267], [140.4833, 3.4267], [140.4833,
-        -8.8573], [100.180833333, -8.8573]]]}}, {"type": "Feature", "id": "ID_ASOS",
-        "properties": {"name": "Idaho ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-117.11539, 42.06659], [-117.11539, 48.826], [-110.9978608, 48.826], [-110.9978608,
-        42.06659], [-117.11539, 42.06659]]]}}, {"type": "Feature", "id": "IDCLIMATE",
-        "properties": {"name": "Idaho Long Term Climate Sites"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-117.115555556, 41.993333333], [-117.115555556,
-        49.095833333], [-111.0125, 49.095833333], [-111.0125, 41.993333333], [-117.115555556,
-        41.993333333]]]}}, {"type": "Feature", "id": "ID_COOP", "properties": {"name":
-        "Idaho COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-117.2678,
-        41.918055556], [-117.2678, 49.0994], [-111.0125, 49.0994], [-111.0125, 41.918055556],
-        [-117.2678, 41.918055556]]]}}, {"type": "Feature", "id": "ID_DCP", "properties":
-        {"name": "Idaho DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-117.2678,
-        41.91257], [-117.2678, 49.099444444], [-111.0514, 49.099444444], [-111.0514,
-        41.91257], [-117.2678, 41.91257]]]}}, {"type": "Feature", "id": "IE__ASOS",
-        "properties": {"name": "Ireland ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-9.6238, 51.74813], [-9.6238, 55.1442], [-6.15, 55.1442], [-6.15, 51.74813],
-        [-9.6238, 51.74813]]]}}, {"type": "Feature", "id": "IL__ASOS", "properties":
-        {"name": "Israel ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[34.62295,
-        29.46128], [34.62295, 33.081], [35.6719, 33.081], [35.6719, 29.46128], [34.62295,
-        29.46128]]]}}, {"type": "Feature", "id": "IL_ASOS", "properties": {"name":
-        "Illinois ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-91.29458,
-        36.9647], [-91.29458, 42.52216], [-87.42953, 42.52216], [-87.42953, 36.9647],
-        [-91.29458, 36.9647]]]}}, {"type": "Feature", "id": "ILCLIMATE", "properties":
-        {"name": "Illinois Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-91.516666667, 36.9], [-91.516666667, 42.5], [-87.483333333,
-        42.5], [-87.483333333, 36.9], [-91.516666667, 36.9]]]}}, {"type": "Feature",
-        "id": "ILCOCORAHS", "properties": {"name": "Illinois CoCoRaHS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-91.50994, 37.06955], [-91.50994, 42.596067],
-        [-87.4285, 42.596067], [-87.4285, 37.06955], [-91.50994, 37.06955]]]}}, {"type":
-        "Feature", "id": "IL_COOP", "properties": {"name": "Illinois COOP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-91.7, 36.95], [-91.7, 42.5894], [-87.2083,
-        42.5894], [-87.2083, 36.95], [-91.7, 36.95]]]}}, {"type": "Feature", "id":
-        "IL_DCP", "properties": {"name": "Illinois DCP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-91.7, 36.9], [-91.7, 42.5894], [-87.42916666, 42.5894],
-        [-87.42916666, 36.9], [-91.7, 36.9]]]}}, {"type": "Feature", "id": "IL_RWIS",
-        "properties": {"name": "Illinois RWIS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-91.470697022, 37.19561944], [-91.470697022, 42.586099243], [-87.515699768,
-        42.586099243], [-87.515699768, 37.19561944], [-91.470697022, 37.19561944]]]}},
-        {"type": "Feature", "id": "IN__ASOS", "properties": {"name": "India ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[69.55722, 8.366666667],
-        [69.55722, 34.7526], [95.11692, 34.7526], [95.11692, 8.366666667], [69.55722,
-        8.366666667]]]}}, {"type": "Feature", "id": "IN_ASOS", "properties": {"name":
-        "Indiana ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-87.6205,
-        37.9441], [-87.6205, 41.82], [-84.7428, 41.82], [-84.7428, 37.9441], [-87.6205,
-        37.9441]]]}}, {"type": "Feature", "id": "INCLIMATE", "properties": {"name":
-        "Indiana Long Term Climate Sites"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-87.983333333, 37.816666667], [-87.983333333, 41.80722], [-84.816666667,
-        41.80722], [-84.816666667, 37.816666667], [-87.983333333, 37.816666667]]]}},
-        {"type": "Feature", "id": "IN_COOP", "properties": {"name": "Indiana COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-88.0833, 37.7], [-88.0833,
-        41.83], [-84.7, 41.83], [-84.7, 37.7], [-88.0833, 37.7]]]}}, {"type": "Feature",
-        "id": "IN_DCP", "properties": {"name": "Indiana DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-88.0644, 37.6928], [-88.0644, 41.8514], [-84.7,
-        41.8514], [-84.7, 37.6928], [-88.0644, 37.6928]]]}}, {"type": "Feature", "id":
-        "IN_RWIS", "properties": {"name": "Indiana RWIS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-87.9605, 37.933569336], [-87.9605, 41.84571228], [-84.903295898,
-        41.84571228], [-84.903295898, 37.933569336], [-87.9605, 37.933569336]]]}},
-        {"type": "Feature", "id": "IO__ASOS", "properties": {"name": "British Indian
-        Ocean Territory ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[95.216666667,
-        -10.83333], [95.216666667, 5.966666667], [140.58333, 5.966666667], [140.58333,
-        -10.83333], [95.216666667, -10.83333]]]}}, {"type": "Feature", "id": "IQ__ASOS",
-        "properties": {"name": "Iraq ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[40.883333333, 30.31667], [40.883333333, 36.40576], [47.88333, 36.40576],
-        [47.88333, 30.31667], [40.883333333, 30.31667]]]}}, {"type": "Feature", "id":
-        "IR__ASOS", "properties": {"name": "Iran ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[44.333333333, 25.18333], [44.333333333, 39.7036], [61.63946327,
-        39.7036], [61.63946327, 25.18333], [44.333333333, 25.18333]]]}}, {"type":
-        "Feature", "id": "IS__ASOS", "properties": {"name": "Iceland ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-23.6462, 63.29975], [-23.6462, 66.63333],
-        [-14.3025, 66.63333], [-14.3025, 63.29975], [-23.6462, 63.29975]]]}}, {"type":
-        "Feature", "id": "ISUAG", "properties": {"name": "Iowa State Univ Ag Climate"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-95.9814, 40.99969], [-95.9814,
-        43.263245], [-91.01819, 43.263245], [-91.01819, 40.99969], [-95.9814, 40.99969]]]}},
-        {"type": "Feature", "id": "ISUSM", "properties": {"name": "Iowa State Univ
-        Soil Moisture"}, "geometry": {"type": "Polygon", "coordinates": [[[-96.604251,
-        40.6641], [-96.604251, 43.465], [-90.814161, 43.465], [-90.814161, 40.6641],
-        [-96.604251, 40.6641]]]}}, {"type": "Feature", "id": "IT__ASOS", "properties":
-        {"name": "Italy ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[7.26872,
-        35.39806], [7.26872, 46.93333], [18.6333, 46.93333], [18.6333, 35.39806],
-        [7.26872, 35.39806]]]}}, {"type": "Feature", "id": "JM__ASOS", "properties":
-        {"name": "Jamaica ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-78.0125,
-        17.83567], [-78.0125, 18.604], [-76.6875, 18.604], [-76.6875, 17.83567], [-78.0125,
-        17.83567]]]}}, {"type": "Feature", "id": "JO__ASOS", "properties": {"name":
-        "Jordan ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[34.91807,
-        29.51162], [34.91807, 32.649], [36.35918, 32.649], [36.35918, 29.51162], [34.91807,
-        29.51162]]]}}, {"type": "Feature", "id": "JP__ASOS", "properties": {"name":
-        "Japan ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[122.878,
-        23.95833], [122.878, 45.555], [154.0791, 45.555], [154.0791, 23.95833], [122.878,
-        23.95833]]]}}, {"type": "Feature", "id": "KCCI", "properties": {"name": "KCCI-TV
-        SchoolNet"}, "geometry": {"type": "Polygon", "coordinates": [[[-95.195083333,
-        40.52535], [-95.195083333, 43.1706], [-92.3136, 43.1706], [-92.3136, 40.52535],
-        [-95.195083333, 40.52535]]]}}, {"type": "Feature", "id": "KE__ASOS", "properties":
-        {"name": "Kenya ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[34.6349,
-        -4.13333], [34.6349, 4.03861], [41.95444, 4.03861], [41.95444, -4.13333],
-        [34.6349, -4.13333]]]}}, {"type": "Feature", "id": "KELO", "properties": {"name":
-        "KELO-TV WeatherNet"}, "geometry": {"type": "Polygon", "coordinates": [[[-103.8756,
-        42.58917], [-103.8756, 45.89444], [-95.1633, 45.89444], [-95.1633, 42.58917],
-        [-103.8756, 42.58917]]]}}, {"type": "Feature", "id": "KH__ASOS", "properties":
-        {"name": "Cambodia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[103.1, 11.44656], [103.1, 13.616666667], [106.066666667, 13.616666667],
-        [106.066666667, 11.44656], [103.1, 11.44656]]]}}, {"type": "Feature", "id":
-        "KI__ASOS", "properties": {"name": "Kiribati ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[172.82, 1.25], [172.82, 1.45], [173.02, 1.45],
-        [173.02, 1.25], [172.82, 1.25]]]}}, {"type": "Feature", "id": "KIMT", "properties":
-        {"name": "KIMT-TV StormNet"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-94.13909, 42.6527], [-94.13909, 44.24], [-91.9, 44.24], [-91.9, 42.6527],
-        [-94.13909, 42.6527]]]}}, {"type": "Feature", "id": "KM__ASOS", "properties":
-        {"name": "Comoros ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[43.14526,
-        -25.13806], [43.14526, -11.43366], [55.62861, -11.43366], [55.62861, -25.13806],
-        [43.14526, -25.13806]]]}}, {"type": "Feature", "id": "KN__ASOS", "properties":
-        {"name": "Saint Kitts and Nevis ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-62.7833, 17.2], [-62.7833, 17.4], [-62.5833, 17.4], [-62.5833, 17.2],
-        [-62.7833, 17.2]]]}}, {"type": "Feature", "id": "KP__ASOS", "properties":
-        {"name": "North Korea"}, "geometry": {"type": "Polygon", "coordinates": [[[125.5702,
-        36.6041], [125.5702, 39.3241], [126.5862, 39.3241], [126.5862, 36.6041], [125.5702,
-        36.6041]]]}}, {"type": "Feature", "id": "KR__ASOS", "properties": {"name":
-        "South Korea ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[124.5667,
-        33.1939], [124.5667, 38.5667], [129.56166, 38.5667], [129.56166, 33.1939],
-        [124.5667, 33.1939]]]}}, {"type": "Feature", "id": "KS_ASOS", "properties":
-        {"name": "Kansas ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-101.98003,
-        36.90078], [-101.98003, 39.9553], [-94.6311389, 39.9553], [-94.6311389, 36.90078],
-        [-101.98003, 36.90078]]]}}, {"type": "Feature", "id": "KSCLIMATE", "properties":
-        {"name": "Kansas Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-102.05, 36.9], [-102.05, 40.066666667], [-94.533333333,
-        40.066666667], [-94.533333333, 36.9], [-102.05, 36.9]]]}}, {"type": "Feature",
-        "id": "KS_COOP", "properties": {"name": "Kansas COOP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-102.138333333, 36.9061], [-102.138333333, 40.0565],
-        [-94.5333, 40.0565], [-94.5333, 36.9061], [-102.138333333, 36.9061]]]}}, {"type":
-        "Feature", "id": "KS_DCP", "properties": {"name": "Kansas DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-102.1386, 36.9], [-102.1386, 40.1014],
-        [-94.5083, 40.1014], [-94.5083, 36.9], [-102.1386, 36.9]]]}}, {"type": "Feature",
-        "id": "KS_RWIS", "properties": {"name": "Kansas RWIS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-102.105897522, 36.909300232], [-102.105897522,
-        39.934300995], [-94.779096985, 39.934300995], [-94.779096985, 36.909300232],
-        [-102.105897522, 36.909300232]]]}}, {"type": "Feature", "id": "KW__ASOS",
-        "properties": {"name": "Kuwait ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[47.316666667, 28.8], [47.316666667, 29.766666667], [48.3, 29.766666667],
-        [48.3, 28.8], [47.316666667, 28.8]]]}}, {"type": "Feature", "id": "KY__ASOS",
-        "properties": {"name": "Grand Cayman ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-81.52, 19.15], [-81.52, 19.78698], [-79.78279, 19.78698],
-        [-79.78279, 19.15], [-81.52, 19.15]]]}}, {"type": "Feature", "id": "KY_ASOS",
-        "properties": {"name": "Kentucky ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-88.8744, 36.51064], [-88.8744, 39.14306], [-82.4674, 39.14306], [-82.4674,
-        36.51064], [-88.8744, 36.51064]]]}}, {"type": "Feature", "id": "KYCLIMATE",
-        "properties": {"name": "Kentucky Long Term Climate Sites"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-88.87444, 36.5], [-88.87444, 39.133333333],
-        [-82.5, 39.133333333], [-82.5, 36.5], [-88.87444, 36.5]]]}}, {"type": "Feature",
-        "id": "KY_COOP", "properties": {"name": "Kentucky COOP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-89.0667, 36.4761], [-89.0667, 39.1589], [-82.1333,
-        39.1589], [-82.1333, 36.4761], [-89.0667, 36.4761]]]}}, {"type": "Feature",
-        "id": "KY_DCP", "properties": {"name": "Kentucky DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-89.3, 36.4667], [-89.3, 39.1972], [-82.0528,
-        39.1972], [-82.0528, 36.4667], [-89.3, 36.4667]]]}}, {"type": "Feature", "id":
-        "KYMN", "properties": {"name": "Kentucky Mesonet"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-89.258643, 36.471046], [-89.258643, 39.11997], [-82.42473,
-        39.11997], [-82.42473, 36.471046], [-89.258643, 36.471046]]]}}, {"type": "Feature",
-        "id": "KY_RWIS", "properties": {"name": "Kentucky RWIS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-89.1956, 36.4468], [-89.1956, 39.1935], [-82.7102,
-        39.1935], [-82.7102, 36.4468], [-89.1956, 36.4468]]]}}, {"type": "Feature",
-        "id": "KZ__ASOS", "properties": {"name": "Kazakhstan ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[50.99198, 40.5083], [50.99198, 54.87444], [80.3344,
-        54.87444], [80.3344, 40.5083], [50.99198, 40.5083]]]}}, {"type": "Feature",
-        "id": "LA__ASOS", "properties": {"name": "Lao ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[100.33749, 9.9851], [100.33749, 21.15], [109.3194,
-        21.15], [109.3194, 9.9851], [100.33749, 9.9851]]]}}, {"type": "Feature", "id":
-        "LA_ASOS", "properties": {"name": "Louisiana ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-94.621, 26.83], [-94.621, 32.8560794], [-87.681,
-        32.8560794], [-87.681, 26.83], [-94.621, 26.83]]]}}, {"type": "Feature", "id":
-        "LACLIMATE", "properties": {"name": "Louisiana Long Term Climate Sites"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-93.924444444, 29.233055556],
-        [-93.924444444, 33.007777778], [-89.3075, 33.007777778], [-89.3075, 29.233055556],
-        [-93.924444444, 29.233055556]]]}}, {"type": "Feature", "id": "LA_COOP", "properties":
-        {"name": "Louisiana COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-94.1061, 29.1414], [-94.1061, 33.069], [-89.6697, 33.069], [-89.6697,
-        29.1414], [-94.1061, 29.1414]]]}}, {"type": "Feature", "id": "LA_DCP", "properties":
-        {"name": "Louisiana DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-94.1061, 28.8275], [-94.1061, 33.1038], [-89.0658, 33.1038], [-89.0658,
-        28.8275], [-94.1061, 28.8275]]]}}, {"type": "Feature", "id": "LB__ASOS", "properties":
-        {"name": "Lebanon ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[35.38839,
-        33.72093], [35.38839, 33.92093], [35.58839, 33.92093], [35.58839, 33.72093],
-        [35.38839, 33.72093]]]}}, {"type": "Feature", "id": "LC__ASOS", "properties":
-        {"name": "Saint Lucia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-61.0929, 13.65], [-61.0929, 14.1202], [-60.85, 14.1202], [-60.85, 13.65],
-        [-61.0929, 13.65]]]}}, {"type": "Feature", "id": "LK__ASOS", "properties":
-        {"name": "Sri Lanka ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[79.78412, 6.1845], [79.78412, 7.8167], [81.8, 7.8167], [81.8, 6.1845],
-        [79.78412, 6.1845]]]}}, {"type": "Feature", "id": "LR__ASOS", "properties":
-        {"name": "Liberia ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-10.85,
-        6.13379], [-10.85, 6.43333], [-10.26231, 6.43333], [-10.26231, 6.13379], [-10.85,
-        6.13379]]]}}, {"type": "Feature", "id": "LS__ASOS", "properties": {"name":
-        "Lesotho ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[27.45,
-        -29.56226], [27.45, -29.35], [27.6525, -29.35], [27.6525, -29.56226], [27.45,
-        -29.56226]]]}}, {"type": "Feature", "id": "LT__ASOS", "properties": {"name":
-        "Lithuania ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[20.99167,
-        54.533333333], [20.99167, 56.07306], [25.383333333, 56.07306], [25.383333333,
-        54.533333333], [20.99167, 54.533333333]]]}}, {"type": "Feature", "id": "LU__ASOS",
-        "properties": {"name": "Luxembourg ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[6.11152, 49.52658], [6.11152, 49.72658], [6.31152, 49.72658],
-        [6.31152, 49.52658], [6.11152, 49.52658]]]}}, {"type": "Feature", "id": "LV__ASOS",
-        "properties": {"name": "Latvia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[20.9969, 56.4175], [20.9969, 57.49556], [24.17, 57.49556], [24.17, 56.4175],
-        [20.9969, 56.4175]]]}}, {"type": "Feature", "id": "LY__ASOS", "properties":
-        {"name": "Libya ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[9.4,
-        24.116666667], [9.4, 32.99408], [23.4, 32.99408], [23.4, 24.116666667], [9.4,
-        24.116666667]]]}}, {"type": "Feature", "id": "MA__ASOS", "properties": {"name":
-        "Morocco ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-6.6947,
-        34.2003], [-6.6947, 34.4003], [-6.4947, 34.4003], [-6.4947, 34.2003], [-6.6947,
-        34.2003]]]}}, {"type": "Feature", "id": "MA_ASOS", "properties": {"name":
-        "Massachusetts ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-73.38917,
-        41.15311], [-73.38917, 42.81719], [-69.89333, 42.81719], [-69.89333, 41.15311],
-        [-73.38917, 41.15311]]]}}, {"type": "Feature", "id": "MACLIMATE", "properties":
-        {"name": "Massachusetts Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-73.517222222, 41.15], [-73.517222222, 42.859444444], [-69.858888889,
-        42.859444444], [-69.858888889, 41.15], [-73.517222222, 41.15]]]}}, {"type":
-        "Feature", "id": "MA_COOP", "properties": {"name": "Massachusetts COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-73.4553, 41.1736], [-73.4553,
-        42.9333], [-69.886, 42.9333], [-69.886, 41.1736], [-73.4553, 41.1736]]]}},
-        {"type": "Feature", "id": "MA_DCP", "properties": {"name": "Massachusetts
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-73.491111111, 41.185],
-        [-73.491111111, 42.9156], [-69.9242, 42.9156], [-69.9242, 41.185], [-73.491111111,
-        41.185]]]}}, {"type": "Feature", "id": "MA_RWIS", "properties": {"name": "Massachusetts
-        RWIS"}, "geometry": {"type": "Polygon", "coordinates": [[[-73.4751, 41.5868],
-        [-73.4751, 42.9694], [-70.1882, 42.9694], [-70.1882, 41.5868], [-73.4751,
-        41.5868]]]}}, {"type": "Feature", "id": "MC__ASOS", "properties": {"name":
-        "Monaco ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-16.033333333,
-        23.616666667], [-16.033333333, 35.82639], [-1.82399, 35.82639], [-1.82399,
-        23.616666667], [-16.033333333, 23.616666667]]]}}, {"type": "Feature", "id":
-        "MD__ASOS", "properties": {"name": "Moldova ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[27.68148, 45.7438], [27.68148, 47.9627], [29.03098, 47.9627],
-        [29.03098, 45.7438], [27.68148, 45.7438]]]}}, {"type": "Feature", "id": "MD_ASOS",
-        "properties": {"name": "Maryland ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-79.4394167, 38.046], [-79.4394167, 39.80778], [-75.02389, 39.80778], [-75.02389,
-        38.046], [-79.4394167, 38.046]]]}}, {"type": "Feature", "id": "MDCLIMATE",
-        "properties": {"name": "Maryland Long Term Climate Sites"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-79.5, 37.883333333], [-79.5, 39.819444444],
-        [-75.112777778, 39.819444444], [-75.112777778, 37.883333333], [-79.5, 37.883333333]]]}},
-        {"type": "Feature", "id": "MD_COOP", "properties": {"name": "Maryland COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-79.5242, 38.1133], [-79.5242,
-        39.8167], [-75.2953, 39.8167], [-75.2953, 38.1133], [-79.5242, 38.1133]]]}},
-        {"type": "Feature", "id": "MD_DCP", "properties": {"name": "Maryland DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-79.5242, 37.8783], [-79.5242,
-        39.8281], [-74.992, 39.8281], [-74.992, 37.8783], [-79.5242, 37.8783]]]}},
-        {"type": "Feature", "id": "MD_RWIS", "properties": {"name": "Maryland RWIS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-79.464967346, 38.22957077],
-        [-79.464967346, 39.819932556], [-75.437979126, 39.819932556], [-75.437979126,
-        38.22957077], [-79.464967346, 38.22957077]]]}}, {"type": "Feature", "id":
-        "ME_ASOS", "properties": {"name": "Maine ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-71.04787, 43.29386], [-71.04787, 47.3855], [-66.91269,
-        47.3855], [-66.91269, 43.29386], [-71.04787, 43.29386]]]}}, {"type": "Feature",
-        "id": "MECLIMATE", "properties": {"name": "Maine Long Term Climate Sites"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-71.016666667, 43.260555556],
-        [-71.016666667, 47.338611111], [-66.891944444, 47.338611111], [-66.891944444,
-        43.260555556], [-71.016666667, 43.260555556]]]}}, {"type": "Feature", "id":
-        "ME_COOP", "properties": {"name": "Maine COOP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-71.0978, 43], [-71.0978, 47.3777], [-66.8919, 47.3777],
-        [-66.8919, 43], [-71.0978, 43]]]}}, {"type": "Feature", "id": "ME_DCP", "properties":
-        {"name": "Maine DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-71.0833,
-        43.1092], [-71.0833, 47.5445], [-66.883, 47.5445], [-66.883, 43.1092], [-71.0833,
-        43.1092]]]}}, {"type": "Feature", "id": "ME_RWIS", "properties": {"name":
-        "Maine RWIS"}, "geometry": {"type": "Polygon", "coordinates": [[[-70.5878,
-        43.3997], [-70.5878, 47.0151], [-67.9708, 47.0151], [-67.9708, 43.3997], [-70.5878,
-        43.3997]]]}}, {"type": "Feature", "id": "MG__ASOS", "properties": {"name":
-        "Madagascar ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[43.8728,
-        -23.4517], [43.8728, -15.982], [47.719, -15.982], [47.719, -23.4517], [43.8728,
-        -23.4517]]]}}, {"type": "Feature", "id": "MH__ASOS", "properties": {"name":
-        "Marshall Islands ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[167.6316611,
-        6.98333], [167.6316611, 8.8201222], [171.49083, 8.8201222], [171.49083, 6.98333],
-        [167.6316611, 6.98333]]]}}, {"type": "Feature", "id": "MH__DCP", "properties":
-        {"name": "Marshall Islands DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[167.634, 8.632], [167.634, 8.832], [167.834, 8.832], [167.834, 8.632],
-        [167.634, 8.632]]]}}, {"type": "Feature", "id": "MI_ASOS", "properties": {"name":
-        "Michigan ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-90.2314,
-        41.63583], [-90.2314, 47.56694], [-82.42886, 47.56694], [-82.42886, 41.63583],
-        [-90.2314, 41.63583]]]}}, {"type": "Feature", "id": "MICLIMATE", "properties":
-        {"name": "Michigan Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-90.283333333, 41.733333333], [-90.283333333, 47.266666667],
-        [-82.316666667, 47.266666667], [-82.316666667, 41.733333333], [-90.283333333,
-        41.733333333]]]}}, {"type": "Feature", "id": "MI_COOP", "properties": {"name":
-        "Michigan COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-90.2833,
-        41.6167], [-90.2833, 48.2], [-82.3167, 48.2], [-82.3167, 41.6167], [-90.2833,
-        41.6167]]]}}, {"type": "Feature", "id": "MI_DCP", "properties": {"name": "Michigan
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-90.1744, 41.7008],
-        [-90.1744, 48.19], [-82.319, 48.19], [-82.319, 41.7008], [-90.1744, 41.7008]]]}},
-        {"type": "Feature", "id": "MI_RWIS", "properties": {"name": "Michigan RWIS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-90.05, 42.5788], [-90.05,
-        47.32], [-83.48, 47.32], [-83.48, 42.5788], [-90.05, 42.5788]]]}}, {"type":
-        "Feature", "id": "MK__ASOS", "properties": {"name": "Macedonia ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[20.7, 41.016666667], [20.7, 42.06667],
-        [21.75, 42.06667], [21.75, 41.016666667], [20.7, 41.016666667]]]}}, {"type":
-        "Feature", "id": "ML__ASOS", "properties": {"name": "Mali ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-17.1, 11.25], [-17.1, 47.1], [14.62,
-        47.1], [14.62, 11.25], [-17.1, 11.25]]]}}, {"type": "Feature", "id": "MM__ASOS",
-        "properties": {"name": "Myanmar ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[92.766666667, 12.33333], [92.766666667, 27.43333], [99.716666667, 27.43333],
-        [99.716666667, 12.33333], [92.766666667, 12.33333]]]}}, {"type": "Feature",
-        "id": "MN_ASOS", "properties": {"name": "Minnesota ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-97.043, 43.5211683], [-97.043, 49.41833], [-90.24566,
-        49.41833], [-90.24566, 43.5211683], [-97.043, 43.5211683]]]}}, {"type": "Feature",
-        "id": "MNCLIMATE", "properties": {"name": "Minnesota Long Term Climate Sites"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-97.033333333, 43.433333333],
-        [-97.033333333, 48.983333333], [-90.25, 48.983333333], [-90.25, 43.433333333],
-        [-97.033333333, 43.433333333]]]}}, {"type": "Feature", "id": "MN_COOP", "properties":
-        {"name": "Minnesota COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-97.1283, 43.4241], [-97.1283, 49.0553], [-89.59, 49.0553], [-89.59, 43.4241],
-        [-97.1283, 43.4241]]]}}, {"type": "Feature", "id": "MN_DCP", "properties":
-        {"name": "Minnesota DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-97.2408, 43.4139], [-97.2408, 49.0925], [-89.5161, 49.0925], [-89.5161,
-        43.4139], [-97.2408, 43.4139]]]}}, {"type": "Feature", "id": "MN_RWIS", "properties":
-        {"name": "Minnesota RWIS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-97.301698303, 43.408331299], [-97.301698303, 49.070851898], [-89.584967041,
-        49.070851898], [-89.584967041, 43.408331299], [-97.301698303, 43.408331299]]]}},
-        {"type": "Feature", "id": "MO_ASOS", "properties": {"name": "Missouri ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-95.015, 36.1258619], [-95.015,
-        40.4525], [-89.4577, 40.4525], [-89.4577, 36.1258619], [-95.015, 36.1258619]]]}},
-        {"type": "Feature", "id": "MOCLIMATE", "properties": {"name": "Missouri Long
-        Term Climate Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-95.483333333,
-        36.016666667], [-95.483333333, 40.566666667], [-89.516666667, 40.566666667],
-        [-89.516666667, 36.016666667], [-95.483333333, 36.016666667]]]}}, {"type":
-        "Feature", "id": "MO_COOP", "properties": {"name": "Missouri COOP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-95.62, 35.9517], [-95.62, 40.6811],
-        [-89.42, 40.6811], [-89.42, 35.9517], [-95.62, 35.9517]]]}}, {"type": "Feature",
-        "id": "MO_DCP", "properties": {"name": "Missouri DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-95.821388889, 36.0948], [-95.821388889, 40.6811],
-        [-89.05, 40.6811], [-89.05, 36.0948], [-95.821388889, 36.0948]]]}}, {"type":
-        "Feature", "id": "MO_RWIS", "properties": {"name": "Missouri RWIS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-94.9477, 36.9012], [-94.9477, 39.8489],
-        [-90.1237, 39.8489], [-90.1237, 36.9012], [-94.9477, 36.9012]]]}}, {"type":
-        "Feature", "id": "MP__ASOS", "properties": {"name": "Northern Mariana Islands
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[145.62936, 15.019],
-        [145.62936, 15.219], [145.82936, 15.219], [145.82936, 15.019], [145.62936,
-        15.019]]]}}, {"type": "Feature", "id": "MR__ASOS", "properties": {"name":
-        "Mauritania ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-62.2933,
-        16.05955], [-62.2933, 25.33333], [113.63259355, 25.33333], [113.63259355,
-        16.05955], [-62.2933, 16.05955]]]}}, {"type": "Feature", "id": "MS_ASOS",
-        "properties": {"name": "Mississippi ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-91.39734, 28.1206], [-91.39734, 35.07875], [-88.1011, 35.07875],
-        [-88.1011, 28.1206], [-91.39734, 28.1206]]]}}, {"type": "Feature", "id": "MSCLIMATE",
-        "properties": {"name": "Mississippi Climate Sites"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-91.440833333, 30.194722222], [-91.440833333,
-        34.979166667], [-88.284722222, 34.979166667], [-88.284722222, 30.194722222],
-        [-91.440833333, 30.194722222]]]}}, {"type": "Feature", "id": "MS_COOP", "properties":
-        {"name": "Mississippi COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-91.4408, 30.1208], [-91.4408, 35.0356], [-88.0908, 35.0356], [-88.0908,
-        30.1208], [-91.4408, 30.1208]]]}}, {"type": "Feature", "id": "MS_DCP", "properties":
-        {"name": "Mississippi DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-91.5422, 29.9], [-91.5422, 35.0416], [-88.1178, 35.0416], [-88.1178, 29.9],
-        [-91.5422, 29.9]]]}}, {"type": "Feature", "id": "MT_ASOS", "properties": {"name":
-        "Montana ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-115.5902,
-        44.55], [-115.5902, 49.0738], [-104.09256, 49.0738], [-104.09256, 44.55],
-        [-115.5902, 44.55]]]}}, {"type": "Feature", "id": "MTCLIMATE", "properties":
-        {"name": "Montana Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-116.101388889, 44.533055556], [-116.101388889, 49.099722222],
-        [-103.95, 49.099722222], [-103.95, 44.533055556], [-116.101388889, 44.533055556]]]}},
-        {"type": "Feature", "id": "MT_COOP", "properties": {"name": "Montana COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-116.1014, 44.5391], [-116.1014,
-        49.0997], [-103.95, 49.0997], [-103.95, 44.5391], [-116.1014, 44.5391]]]}},
-        {"type": "Feature", "id": "MT_DCP", "properties": {"name": "Montana DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-116.13, 44.365], [-116.13,
-        49.1219], [-103.9658, 49.1219], [-103.9658, 44.365], [-116.13, 44.365]]]}},
-        {"type": "Feature", "id": "MU__ASOS", "properties": {"name": "Mauritius ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[57.58361, -20.53444], [57.58361,
-        -7.21327], [72.51109, -7.21327], [72.51109, -20.53444], [57.58361, -20.53444]]]}},
-        {"type": "Feature", "id": "MV__ASOS", "properties": {"name": "Maldives ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[73.42917, 4.09167], [73.42917,
-        4.29167], [73.62917, 4.29167], [73.62917, 4.09167], [73.42917, 4.09167]]]}},
-        {"type": "Feature", "id": "MW__ASOS", "properties": {"name": "Malawi ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[33.16667, -15.77905], [33.16667,
-        -9.6], [35.35, -9.6], [35.35, -15.77905], [33.16667, -15.77905]]]}}, {"type":
-        "Feature", "id": "MX__ASOS", "properties": {"name": "Mexico ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-118.3934, 14.6943], [-118.3934, 32.73063],
-        [-86.77471924, 32.73063], [-86.77471924, 14.6943], [-118.3934, 14.6943]]]}},
-        {"type": "Feature", "id": "MX_BJ_DCP", "properties": {"name": "Mexico BJ DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-118.3931, 27.934444444],
-        [-118.3931, 32.7669], [-113.4603, 32.7669], [-113.4603, 27.934444444], [-118.3931,
-        27.934444444]]]}}, {"type": "Feature", "id": "MX_BR_DCP", "properties": {"name":
-        "Mexico BR DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-113.5575,
-        22.7811], [-113.5575, 27.7428], [-109.3245, 27.7428], [-109.3245, 22.7811],
-        [-113.5575, 22.7811]]]}}, {"type": "Feature", "id": "MX_CH_DCP", "properties":
-        {"name": "Mexico CH DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-108.6364, 26.1294], [-108.6364, 31.8589], [-104.119722222, 31.8589], [-104.119722222,
-        26.1294], [-108.6364, 26.1294]]]}}, {"type": "Feature", "id": "MX_CL_DCP",
-        "properties": {"name": "Mexico CL DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-102.625, 26.9022], [-102.625, 29.55], [-100.4058, 29.55], [-100.4058,
-        26.9022], [-102.625, 26.9022]]]}}, {"type": "Feature", "id": "MX_CM_DCP",
-        "properties": {"name": "Mexico Campeche DCP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-91.9225, 17.9569], [-91.9225, 20.0433], [-89.3619, 20.0433],
-        [-89.3619, 17.9569], [-91.9225, 17.9569]]]}}, {"type": "Feature", "id": "MX_CP_DCP",
-        "properties": {"name": "Mexico Chiapas DCP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-93.961944444, 14.598611111], [-93.961944444, 17.2784],
-        [-91.0083, 17.2784], [-91.0083, 14.598611111], [-93.961944444, 14.598611111]]]}},
-        {"type": "Feature", "id": "MX_DF_DCP", "properties": {"name": "Mexico Federal
-        District DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-99.3039,
-        19.1714], [-99.3039, 19.5986], [-98.9997, 19.5986], [-98.9997, 19.1714], [-99.3039,
-        19.1714]]]}}, {"type": "Feature", "id": "MX_DR_DCP", "properties": {"name":
-        "Mexico DR DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-105.6617,
-        23.287777778], [-105.6617, 26.786666667], [-102.6828, 26.786666667], [-102.6828,
-        23.287777778], [-105.6617, 23.287777778]]]}}, {"type": "Feature", "id": "MX_GJ_DCP",
-        "properties": {"name": "Mexico GJ DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-102.0969, 20.1828], [-102.0969, 21.3927], [-100.7247, 21.3927], [-100.7247,
-        20.1828], [-102.0969, 20.1828]]]}}, {"type": "Feature", "id": "MX_GR_DCP",
-        "properties": {"name": "Mexico GR DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-101.6547, 16.365], [-101.6547, 18.6906], [-98.2978, 18.6906], [-98.2978,
-        16.365], [-101.6547, 16.365]]]}}, {"type": "Feature", "id": "MX_HD_DCP", "properties":
-        {"name": "Mexico HD DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-100.0725, 19.7372], [-100.0725, 21.0856], [-98.1331, 21.0856], [-98.1331,
-        19.7372], [-100.0725, 19.7372]]]}}, {"type": "Feature", "id": "MX_JL_DCP",
-        "properties": {"name": "Mexico JL DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-105.144722222, 19.363333333], [-105.144722222, 20.8067], [-103.1017, 20.8067],
-        [-103.1017, 19.363333333], [-105.144722222, 19.363333333]]]}}, {"type": "Feature",
-        "id": "MX_MC_DCP", "properties": {"name": "Mexico MC DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-102.283888889, 17.839722222], [-102.283888889,
-        19.5903], [-100.1419, 19.5903], [-100.1419, 17.839722222], [-102.283888889,
-        17.839722222]]]}}, {"type": "Feature", "id": "MX_MR_DCP", "properties": {"name":
-        "Mexico MR DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-99.3486,
-        18.7822], [-99.3486, 19.1506], [-98.9789, 19.1506], [-98.9789, 18.7822], [-99.3486,
-        18.7822]]]}}, {"type": "Feature", "id": "MX_MX_DCP", "properties": {"name":
-        "Mexico MX DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-100.2431,
-        18.9956], [-100.2431, 19.9078], [-98.5403, 19.9078], [-98.5403, 18.9956],
-        [-100.2431, 18.9956]]]}}, {"type": "Feature", "id": "MX_NL_DCP", "properties":
-        {"name": "Mexico NL DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-100.716111111, 24.776388889], [-100.716111111, 27.7992], [-99.0967, 27.7992],
-        [-99.0967, 24.776388889], [-100.716111111, 24.776388889]]]}}, {"type": "Feature",
-        "id": "MX_NR_DCP", "properties": {"name": "Mexico Morelos DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-106.636944444, 20.9389], [-106.636944444,
-        22.5663], [-104.1981, 22.5663], [-104.1981, 20.9389], [-106.636944444, 20.9389]]]}},
-        {"type": "Feature", "id": "MX_OX_DCP", "properties": {"name": "Mexico OX DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-96.8833, 15.5711], [-96.8833,
-        17.4556], [-95.088611111, 17.4556], [-95.088611111, 15.5711], [-96.8833, 15.5711]]]}},
-        {"type": "Feature", "id": "MX_PB_DCP", "properties": {"name": "Mexico PB DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-98.5519, 18.5167], [-98.5519,
-        20.3439], [-97.2906, 20.3439], [-97.2906, 18.5167], [-98.5519, 18.5167]]]}},
-        {"type": "Feature", "id": "MX_QO_DCP", "properties": {"name": "Mexico QO DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-89.0239, 17.7969], [-89.0239,
-        21.3475], [-86.641388889, 21.3475], [-86.641388889, 17.7969], [-89.0239, 17.7969]]]}},
-        {"type": "Feature", "id": "MX_QR_DCP", "properties": {"name": "Mexico Quintana
-        Roo DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-100.3833, 20.29],
-        [-100.3833, 20.49], [-100.1833, 20.49], [-100.1833, 20.29], [-100.3833, 20.29]]]}},
-        {"type": "Feature", "id": "MX_SL_DCP", "properties": {"name": "Mexico San
-        Luis Potosi DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-99.1708,
-        21.3044], [-99.1708, 22.3192], [-98.8703, 22.3192], [-98.8703, 21.3044], [-99.1708,
-        21.3044]]]}}, {"type": "Feature", "id": "MX_SN_DCP", "properties": {"name":
-        "Mexico SN DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-109.162222222,
-        24.1511], [-109.162222222, 26.511388889], [-107.0881, 26.511388889], [-107.0881,
-        24.1511], [-109.162222222, 24.1511]]]}}, {"type": "Feature", "id": "MX_SO_DCP",
-        "properties": {"name": "Mexico SO DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-114.8978, 26.9217], [-114.8978, 32.5239], [-108.833333333, 32.5239], [-108.833333333,
-        26.9217], [-114.8978, 26.9217]]]}}, {"type": "Feature", "id": "MX_TL_DCP",
-        "properties": {"name": "Mexico Tiaxcala DCP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-98.5717, 19.2861], [-98.5717, 19.5903], [-97.8664, 19.5903],
-        [-97.8664, 19.2861], [-98.5717, 19.2861]]]}}, {"type": "Feature", "id": "MX_TP_DCP",
-        "properties": {"name": "Mexico TP DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-99.6483, 22.644444444], [-99.6483, 27.5356], [-97.053055556, 27.5356],
-        [-97.053055556, 22.644444444], [-99.6483, 22.644444444]]]}}, {"type": "Feature",
-        "id": "MX_VC_DCP", "properties": {"name": "Mexico Veracruz DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-97.9786, 17.8767], [-97.9786, 21.572222222],
-        [-94.2314, 21.572222222], [-94.2314, 17.8767], [-97.9786, 17.8767]]]}}, {"type":
-        "Feature", "id": "MX_YC_DCP", "properties": {"name": "Mexico Yucatan DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-91.498333333, 19.9302],
-        [-91.498333333, 22.484166667], [-87.8889, 22.484166667], [-87.8889, 19.9302],
-        [-91.498333333, 19.9302]]]}}, {"type": "Feature", "id": "MY__ASOS", "properties":
-        {"name": "Malaysia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[99.62867, 1.117], [99.62867, 7.0225], [118.15949, 7.0225], [118.15949,
-        1.117], [99.62867, 1.117]]]}}, {"type": "Feature", "id": "MZ__ASOS", "properties":
-        {"name": "Mozambique ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[32.47261, -26.02084], [32.47261, -11.2618], [40.8122, -11.2618], [40.8122,
-        -26.02084], [32.47261, -26.02084]]]}}, {"type": "Feature", "id": "NA__ASOS",
-        "properties": {"name": "Namibia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[12.9, -28.85], [12.9, -17.3206], [24.28, -17.3206], [24.28, -28.85], [12.9,
-        -28.85]]]}}, {"type": "Feature", "id": "NC__ASOS", "properties": {"name":
-        "New Caledonia ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[166.120555556,
-        -22.116666667], [166.120555556, -20.5428], [166.6728, -20.5428], [166.6728,
-        -22.116666667], [166.120555556, -22.116666667]]]}}, {"type": "Feature", "id":
-        "NC_ASOS", "properties": {"name": "North Carolina ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-83.96304, 33.82917], [-83.96304, 36.56], [-75.5225,
-        36.56], [-75.5225, 33.82917], [-83.96304, 33.82917]]]}}, {"type": "Feature",
-        "id": "NCCLIMATE", "properties": {"name": "North Carolina Long Term Climate
-        Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-84.123888889,
-        33.894722222], [-84.123888889, 36.599166667], [-75.521944444, 36.599166667],
-        [-75.521944444, 33.894722222], [-84.123888889, 33.894722222]]]}}, {"type":
-        "Feature", "id": "NC_COOP", "properties": {"name": "North Carolina COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-84.1072, 33.8275], [-84.1072,
-        37.0991], [-75.5055, 37.0991], [-75.5055, 33.8275], [-84.1072, 33.8275]]]}},
-        {"type": "Feature", "id": "NC_DCP", "properties": {"name": "North Carolina
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-84.2966, 33.7928],
-        [-84.2966, 36.647222222], [-75.45, 36.647222222], [-75.45, 33.7928], [-84.2966,
-        33.7928]]]}}, {"type": "Feature", "id": "ND_ASOS", "properties": {"name":
-        "North Dakota ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-104.0821,
-        45.91494], [-104.0821, 49.0406], [-96.5073608, 49.0406], [-96.5073608, 45.91494],
-        [-104.0821, 45.91494]]]}}, {"type": "Feature", "id": "NDCLIMATE", "properties":
-        {"name": "North Dakota Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-104.1, 45.9], [-104.1, 49.083333333], [-96.7, 49.083333333],
-        [-96.7, 45.9], [-104.1, 45.9]]]}}, {"type": "Feature", "id": "ND_COOP", "properties":
-        {"name": "North Dakota COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-104.1, 45.85], [-104.1, 49.1], [-96.6333, 49.1], [-96.6333, 45.85], [-104.1,
-        45.85]]]}}, {"type": "Feature", "id": "ND_DCP", "properties": {"name": "North
-        Dakota DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-104.1, 45.8361],
-        [-104.1, 49.1], [-96.5056, 49.1], [-96.5056, 45.8361], [-104.1, 45.8361]]]}},
-        {"type": "Feature", "id": "ND_RWIS", "properties": {"name": "North Dakota
-        RWIS"}, "geometry": {"type": "Polygon", "coordinates": [[[-103.534898376,
-        46.0169], [-103.534898376, 49.008748627], [-96.644003296, 49.008748627], [-96.644003296,
-        46.0169], [-103.534898376, 46.0169]]]}}, {"type": "Feature", "id": "NE__ASOS",
-        "properties": {"name": "Niger ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[1.35, 11.78333], [1.35, 18.7867], [13.0192, 18.7867], [13.0192, 11.78333],
-        [1.35, 11.78333]]]}}, {"type": "Feature", "id": "NE_ASOS", "properties": {"name":
-        "Nebraska ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-103.7773889,
-        39.97879], [-103.7773889, 42.95669], [-95.49199, 42.95669], [-95.49199, 39.97879],
-        [-103.7773889, 39.97879]]]}}, {"type": "Feature", "id": "NECLIMATE", "properties":
-        {"name": "Nebraska Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-104.05, 39.9], [-104.05, 43.016666667], [-95.633333333,
-        43.016666667], [-95.633333333, 39.9], [-104.05, 39.9]]]}}, {"type": "Feature",
-        "id": "NE_COOP", "properties": {"name": "Nebraska COOP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-104.15, 39.9], [-104.15, 43.0497], [-95.3522,
-        43.0497], [-95.3522, 39.9], [-104.15, 39.9]]]}}, {"type": "Feature", "id":
-        "NE_DCP", "properties": {"name": "Nebraska DCP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-104.1708, 39.9], [-104.1708, 43.023055556], [-95.3667,
-        43.023055556], [-95.3667, 39.9], [-104.1708, 39.9]]]}}, {"type": "Feature",
-        "id": "NE_RWIS", "properties": {"name": "Nebraska RWIS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-104.148500061, 39.930479431], [-104.148500061,
-        43.0902], [-95.7226, 43.0902], [-95.7226, 39.930479431], [-104.148500061,
-        39.930479431]]]}}, {"type": "Feature", "id": "NEXRAD", "properties": {"name":
-        "NWS NEXRAD WSR88D"}, "geometry": {"type": "Polygon", "coordinates": [[[-165.38,
-        13.35], [-165.38, 65.13], [144.9, 65.13], [144.9, 13.35], [-165.38, 13.35]]]}},
-        {"type": "Feature", "id": "NF__ASOS", "properties": {"name": "New Zealand
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-157.5833, -74.7875],
-        [-157.5833, 2.0833], [175.4806, 2.0833], [175.4806, -74.7875], [-157.5833,
-        -74.7875]]]}}, {"type": "Feature", "id": "NG__ASOS", "properties": {"name":
-        "Nigeria ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[3.22116,
-        4.75], [3.22116, 13.11667], [13.18095, 13.11667], [13.18095, 4.75], [3.22116,
-        4.75]]]}}, {"type": "Feature", "id": "NH_ASOS", "properties": {"name": "New
-        Hampshire ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-72.40419,
-        42.68175], [-72.40419, 44.67611], [-70.72328, 44.67611], [-70.72328, 42.68175],
-        [-72.40419, 42.68175]]]}}, {"type": "Feature", "id": "NHCLIMATE", "properties":
-        {"name": "New Hampshire Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-72.424722222, 42.691111111], [-72.424722222, 45.1875],
-        [-70.733333333, 45.1875], [-70.733333333, 42.691111111], [-72.424722222, 42.691111111]]]}},
-        {"type": "Feature", "id": "NH_COOP", "properties": {"name": "New Hampshire
-        COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-72.5372, 42.1833],
-        [-72.5372, 45.2889], [-70.7228, 45.2889], [-70.7228, 42.1833], [-72.5372,
-        42.1833]]]}}, {"type": "Feature", "id": "NH_DCP", "properties": {"name": "New
-        Hampshire DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-72.5867,
-        42.623611111], [-72.5867, 45.2418], [-70.5167, 45.2418], [-70.5167, 42.623611111],
-        [-72.5867, 42.623611111]]]}}, {"type": "Feature", "id": "NH_RWIS", "properties":
-        {"name": "New Hampshire RWIS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-72.469247436, 42.6318], [-72.469247436, 44.5548], [-70.7223, 44.5548],
-        [-70.7223, 42.6318], [-72.469247436, 42.6318]]]}}, {"type": "Feature", "id":
-        "NI__ASOS", "properties": {"name": "Nicaragua ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-87.23827, 11.3277], [-87.23827, 14.1472], [-83.2867,
-        14.1472], [-83.2867, 11.3277], [-87.23827, 11.3277]]]}}, {"type": "Feature",
-        "id": "NI__DCP", "properties": {"name": "Nicaraqua DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-86.569444444, 11.740277778], [-86.569444444,
-        13.711388889], [-84.107222222, 13.711388889], [-84.107222222, 11.740277778],
-        [-86.569444444, 11.740277778]]]}}, {"type": "Feature", "id": "NJ_ASOS", "properties":
-        {"name": "New Jersey ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-75.17833, 38.90851], [-75.17833, 41.30021], [-73.95616, 41.30021], [-73.95616,
-        38.90851], [-75.17833, 38.90851]]]}}, {"type": "Feature", "id": "NJCLIMATE",
-        "properties": {"name": "New Jersey Long Term Climate Sites"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-75.183611111, 38.853611111], [-75.183611111,
-        41.406111111], [-73.904722222, 41.406111111], [-73.904722222, 38.853611111],
-        [-75.183611111, 38.853611111]]]}}, {"type": "Feature", "id": "NJ_COOP", "properties":
-        {"name": "New Jersey COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-75.3333, 38.85], [-75.3333, 41.3839], [-73.8833, 41.3839], [-73.8833,
-        38.85], [-75.3333, 38.85]]]}}, {"type": "Feature", "id": "NJ_DCP", "properties":
-        {"name": "New Jersey DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-75.475, 38.8486], [-75.475, 41.4167], [-73.7536, 41.4167], [-73.7536,
-        38.8486], [-75.475, 38.8486]]]}}, {"type": "Feature", "id": "NL__ASOS", "properties":
-        {"name": "Netherlands ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[2.83583, 50.80528], [2.83583, 55.49917], [6.99083, 55.49917], [6.99083,
-        50.80528], [2.83583, 50.80528]]]}}, {"type": "Feature", "id": "NM_ASOS", "properties":
-        {"name": "New Mexico ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-108.88931, 31.7804444], [-108.88931, 37], [-102.97928, 37], [-102.97928,
-        31.7804444], [-108.88931, 31.7804444]]]}}, {"type": "Feature", "id": "NMCLIMATE",
-        "properties": {"name": "New Mexico Long Term Climate Sites"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-109.041666667, 31.729722222], [-109.041666667,
-        37.0825], [-103.031388889, 37.0825], [-103.031388889, 31.729722222], [-109.041666667,
-        31.729722222]]]}}, {"type": "Feature", "id": "NM_COOP", "properties": {"name":
-        "New Mexico COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-109.0333,
-        31.2333], [-109.0333, 37.0833], [-102.9842, 37.0833], [-102.9842, 31.2333],
-        [-109.0333, 31.2333]]]}}, {"type": "Feature", "id": "NM_DCP", "properties":
-        {"name": "New Mexico DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-109.1083, 31.6], [-109.1083, 37.09378], [-103.0238, 37.09378], [-103.0238,
-        31.6], [-109.1083, 31.6]]]}}, {"type": "Feature", "id": "NO__ASOS", "properties":
-        {"name": "Norway ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-8.76667,
-        11.266666667], [-8.76667, 79.01667], [162.466666667, 79.01667], [162.466666667,
-        11.266666667], [-8.76667, 11.266666667]]]}}, {"type": "Feature", "id": "NP__ASOS",
-        "properties": {"name": "Nepal ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[85.2591, 27.59658], [85.2591, 27.79658], [85.4591, 27.79658], [85.4591,
-        27.59658], [85.2591, 27.59658]]]}}, {"type": "Feature", "id": "NSTLFLUX",
-        "properties": {"name": "National Laboratory for Ag and Environment Flux Stations"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-94.7924, 41.45864938],
-        [-94.7924, 42.2654], [-93.19285516, 42.2654], [-93.19285516, 41.45864938],
-        [-94.7924, 41.45864938]]]}}, {"type": "Feature", "id": "NV_ASOS", "properties":
-        {"name": "Nevada ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-119.9764,
-        35.8474803], [-119.9764, 41.766], [-114.42639, 41.766], [-114.42639, 35.8474803],
-        [-119.9764, 35.8474803]]]}}, {"type": "Feature", "id": "NVCLIMATE", "properties":
-        {"name": "Nevada Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-119.983333333, 35.366111111], [-119.983333333, 42.089166667],
-        [-114.073888889, 42.089166667], [-114.073888889, 35.366111111], [-119.983333333,
-        35.366111111]]]}}, {"type": "Feature", "id": "NV_COOP", "properties": {"name":
-        "Nevada COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-120.06,
-        35.0692], [-120.06, 42.0954], [-113.9525, 42.0954], [-113.9525, 35.0692],
-        [-120.06, 35.0692]]]}}, {"type": "Feature", "id": "NV_DCP", "properties":
-        {"name": "Nevada DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-120.0944,
-        35.0328], [-120.0944, 42.0811], [-113.9342, 42.0811], [-113.9342, 35.0328],
-        [-120.0944, 35.0328]]]}}, {"type": "Feature", "id": "NV_RWIS", "properties":
-        {"name": "Nevada RWIS"}, "geometry": {"type": "Polygon", "coordinates": [[[-120.103,
-        35.915], [-120.103, 41.7189], [-114.072, 41.7189], [-114.072, 35.915], [-120.103,
-        35.915]]]}}, {"type": "Feature", "id": "NY_ASOS", "properties": {"name": "New
-        York ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-79.37204,
-        40.53861], [-79.37204, 45.03583], [-71.82333, 45.03583], [-71.82333, 40.53861],
-        [-79.37204, 40.53861]]]}}, {"type": "Feature", "id": "NYCLIMATE", "properties":
-        {"name": "New York Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-79.685555556, 40.493888889], [-79.685555556, 45.035833333],
-        [-72.206666667, 45.035833333], [-72.206666667, 40.493888889], [-79.685555556,
-        40.493888889]]]}}, {"type": "Feature", "id": "NY_COOP", "properties": {"name":
-        "New York COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-79.6956,
-        40.2746], [-79.6956, 45.0085], [-72.1584, 45.0085], [-72.1584, 40.2746], [-79.6956,
-        40.2746]]]}}, {"type": "Feature", "id": "NY_DCP", "properties": {"name": "New
-        York DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-79.8403, 40.2746],
-        [-79.8403, 45.1], [-71.859, 45.1], [-71.859, 40.2746], [-79.8403, 40.2746]]]}},
-        {"type": "Feature", "id": "OH_ASOS", "properties": {"name": "Ohio ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-84.8844, 38.740472], [-84.8844,
-        41.87797], [-80.57389, 41.87797], [-80.57389, 38.740472], [-84.8844, 38.740472]]]}},
-        {"type": "Feature", "id": "OHCLIMATE", "properties": {"name": "Ohio Long Term
-        Climate Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-84.75,
-        38.65], [-84.75, 41.85], [-80.516666667, 41.85], [-80.516666667, 38.65], [-84.75,
-        38.65]]]}}, {"type": "Feature", "id": "OH_COOP", "properties": {"name": "Ohio
-        COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-84.89, 38.3167],
-        [-84.89, 42.080555556], [-80.444166667, 42.080555556], [-80.444166667, 38.3167],
-        [-84.89, 38.3167]]]}}, {"type": "Feature", "id": "OH_DCP", "properties": {"name":
-        "Ohio DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-84.8892, 38.4319],
-        [-84.8892, 42.0806], [-80.4363, 42.0806], [-80.4363, 38.4319], [-84.8892,
-        38.4319]]]}}, {"type": "Feature", "id": "OH_RWIS", "properties": {"name":
-        "Ohio RWIS"}, "geometry": {"type": "Polygon", "coordinates": [[[-84.913598633,
-        38.4157], [-84.913598633, 42.037198639], [-80.41940155, 42.037198639], [-80.41940155,
-        38.4157], [-84.913598633, 38.4157]]]}}, {"type": "Feature", "id": "OK_ASOS",
-        "properties": {"name": "Oklahoma ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-101.60528, 33.8094], [-101.60528, 36.87317], [-94.52, 36.87317], [-94.52,
-        33.8094], [-101.60528, 33.8094]]]}}, {"type": "Feature", "id": "OKCLIMATE",
-        "properties": {"name": "Oklahoma Long Term Climate Sites"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-103.065, 33.776111111], [-103.065, 37.003055556],
-        [-94.542777778, 37.003055556], [-94.542777778, 33.776111111], [-103.065, 33.776111111]]]}},
-        {"type": "Feature", "id": "OK_COOP", "properties": {"name": "Oklahoma COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-102.5803, 33.7764], [-102.5803,
-        37.0871], [-94.4591, 37.0871], [-94.4591, 33.7764], [-102.5803, 33.7764]]]}},
-        {"type": "Feature", "id": "OK_DCP", "properties": {"name": "Oklahoma DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-103.065, 33.7333], [-103.065,
-        37.1125], [-94.3661, 37.1125], [-94.3661, 33.7333], [-103.065, 33.7333]]]}},
-        {"type": "Feature", "id": "OM__ASOS", "properties": {"name": "Oman ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[53.916666667, 16.93872],
-        [53.916666667, 26.32], [59.56667, 26.32], [59.56667, 16.93872], [53.916666667,
-        16.93872]]]}}, {"type": "Feature", "id": "OR_ASOS", "properties": {"name":
-        "Oregon ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-124.5249223,
-        41.95], [-124.5249223, 46.2569], [-116.91278, 46.2569], [-116.91278, 41.95],
-        [-124.5249223, 41.95]]]}}, {"type": "Feature", "id": "ORCLIMATE", "properties":
-        {"name": "Oregon Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-124.601111111, 41.93], [-124.601111111, 46.256944444],
-        [-116.871666667, 46.256944444], [-116.871666667, 41.93], [-124.601111111,
-        41.93]]]}}, {"type": "Feature", "id": "OR_COOP", "properties": {"name": "Oregon
-        COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-124.6011, 41.9667],
-        [-124.6011, 46.2564], [-116.7675, 46.2564], [-116.7675, 41.9667], [-124.6011,
-        41.9667]]]}}, {"type": "Feature", "id": "OR_DCP", "properties": {"name": "Oregon
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-124.598, 41.9],
-        [-124.598, 46.33], [-116.4544, 46.33], [-116.4544, 41.9], [-124.598, 41.9]]]}},
-        {"type": "Feature", "id": "OT", "properties": {"name": "Other / Misc"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-96.6819, 40.5475], [-96.6819, 43.2739],
-        [-90.8618, 43.2739], [-90.8618, 40.5475], [-96.6819, 40.5475]]]}}, {"type":
-        "Feature", "id": "P1_DCP", "properties": {"name": "P1 DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-177.461, -14.382777778], [-177.461, 28.315],
-        [172.2014, 28.315], [172.2014, -14.382777778], [-177.461, -14.382777778]]]}},
-        {"type": "Feature", "id": "P2_DCP", "properties": {"name": "P2 DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-172.7297, -14.427], [-172.7297, -13.3478],
-        [-169.3242, -13.3478], [-169.3242, -14.427], [-172.7297, -14.427]]]}}, {"type":
-        "Feature", "id": "P3_DCP", "properties": {"name": "P3 DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[144.557, 13.1853], [144.557, 15.2667], [145.85,
-        15.2667], [145.85, 13.1853], [144.557, 13.1853]]]}}, {"type": "Feature", "id":
-        "P4_DCP", "properties": {"name": "P4 DCP"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[134.1536, 3.7333], [134.1536, 19.391], [167.834, 19.391],
-        [167.834, 3.7333], [134.1536, 3.7333]]]}}, {"type": "Feature", "id": "PA__ASOS",
-        "properties": {"name": "Panama ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-80.2297, 8.28], [-80.2297, 9.4566], [-79.7674, 9.4566], [-79.7674, 8.28],
-        [-80.2297, 8.28]]]}}, {"type": "Feature", "id": "PA_ASOS", "properties": {"name":
-        "Pennsylvania ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-80.5133719,
-        39.634], [-80.5133719, 42.18], [-74.91335, 42.18], [-74.91335, 39.634], [-80.5133719,
-        39.634]]]}}, {"type": "Feature", "id": "PACLIMATE", "properties": {"name":
-        "Pennsylvania Long Term Climate Sites"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-80.566666667, 39.699444444], [-80.566666667, 42.18], [-74.617222222, 42.18],
-        [-74.617222222, 39.699444444], [-80.566666667, 39.699444444]]]}}, {"type":
-        "Feature", "id": "PA_COOP", "properties": {"name": "Pennsylvania COOP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-80.5667, 39.6281], [-80.5667, 42.385],
-        [-74.7897, 42.385], [-74.7897, 39.6281], [-80.5667, 39.6281]]]}}, {"type":
-        "Feature", "id": "PA_DCP", "properties": {"name": "Pennsylvania DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-80.5839, 39.6164], [-80.5839, 42.272],
-        [-74.5978, 42.272], [-74.5978, 39.6164], [-80.5839, 39.6164]]]}}, {"type":
-        "Feature", "id": "PE__ASOS", "properties": {"name": "Peru ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-81.35414, -18.15333], [-81.35414, -3.45253],
-        [-69.12861, -3.45253], [-69.12861, -18.15333], [-81.35414, -18.15333]]]}},
-        {"type": "Feature", "id": "PF__ASOS", "properties": {"name": "French Polynesia
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-151.8513, -23.4654],
-        [-151.8513, -16.3444], [-140.8459, -16.3444], [-140.8459, -23.4654], [-151.8513,
-        -23.4654]]]}}, {"type": "Feature", "id": "PG__ASOS", "properties": {"name":
-        "Papua New Guinea ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[141.21667,
-        -10.4115], [141.21667, -1.96189], [152.28333, -1.96189], [152.28333, -10.4115],
-        [141.21667, -10.4115]]]}}, {"type": "Feature", "id": "PH__ASOS", "properties":
-        {"name": "Philippines ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[118.659, 5.933333333], [118.659, 20.55132], [126.416666667, 20.55132],
-        [126.416666667, 5.933333333], [118.659, 5.933333333]]]}}, {"type": "Feature",
-        "id": "PK__ASOS", "properties": {"name": "Pakistan ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[61.7054, 24.79356], [61.7054, 36.01879], [74.63333,
-        36.01879], [74.63333, 24.79356], [61.7054, 24.79356]]]}}, {"type": "Feature",
-        "id": "PL__ASOS", "properties": {"name": "Poland ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[14.52278, 49.98028], [14.52278, 54.67969], [22.12,
-        54.67969], [22.12, 49.98028], [14.52278, 49.98028]]]}}, {"type": "Feature",
-        "id": "PN__ASOS", "properties": {"name": "Pitcairn ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-82.61681, 7.41778], [-82.61681, 9.55864], [-77.3167,
-        9.55864], [-77.3167, 7.41778], [-82.61681, 7.41778]]]}}, {"type": "Feature",
-        "id": "PR__ASOS", "properties": {"name": "Puerto Rico ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-67.24847, 17.90831], [-67.24847, 18.59486],
-        [-65.53861, 18.59486], [-65.53861, 17.90831], [-67.24847, 17.90831]]]}}, {"type":
-        "Feature", "id": "PR_COOP", "properties": {"name": "Puerto Rico COOP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-67.3494, 17.8436], [-67.3494, 18.6086],
-        [-65.1903, 18.6086], [-65.1903, 17.8436], [-67.3494, 17.8436]]]}}, {"type":
-        "Feature", "id": "PR_DCP", "properties": {"name": "Puerto Rico DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-68.039, 17.8436], [-68.039, 18.6086],
-        [-65.202, 18.6086], [-65.202, 17.8436], [-68.039, 17.8436]]]}}, {"type": "Feature",
-        "id": "PT__ASOS", "properties": {"name": "Portugal ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-31.23136, 32.58333], [-31.23136, 41.95612],
-        [-6.60599, 41.95612], [-6.60599, 32.58333], [-31.23136, 32.58333]]]}}, {"type":
-        "Feature", "id": "PY__ASOS", "properties": {"name": "Paraguay ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-62.016666667, -27.4], [-62.016666667,
-        -20.1167], [-54.25, -20.1167], [-54.25, -27.4], [-62.016666667, -27.4]]]}},
-        {"type": "Feature", "id": "QA__ASOS", "properties": {"name": "Qatar ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[51.215, 25.016666667], [51.215,
-        25.3746], [51.7084, 25.3746], [51.7084, 25.016666667], [51.215, 25.016666667]]]}},
-        {"type": "Feature", "id": "RAOB", "properties": {"name": "RAOB / Sounding
-        Upper Air Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-174.2109,
-        9.88], [-174.2109, 82.62], [-52.6, 82.62], [-52.6, 9.88], [-174.2109, 9.88]]]}},
-        {"type": "Feature", "id": "RI_ASOS", "properties": {"name": "Rhode Island
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-71.8989, 41.07],
-        [-71.8989, 42.02076], [-71.18154, 42.02076], [-71.18154, 41.07], [-71.8989,
-        41.07]]]}}, {"type": "Feature", "id": "RICLIMATE", "properties": {"name":
-        "Rhode Island Long Term Climate Sites"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-71.833333333, 41.390555556], [-71.833333333, 42.0844], [-71.25, 42.0844],
-        [-71.25, 41.390555556], [-71.833333333, 41.390555556]]]}}, {"type": "Feature",
-        "id": "RI_COOP", "properties": {"name": "Rhode Island COOP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-71.8333, 41.058], [-71.8333, 42.0844],
-        [-71.1097, 42.0844], [-71.1097, 41.058], [-71.8333, 41.058]]]}}, {"type":
-        "Feature", "id": "RI_DCP", "properties": {"name": "Rhode Island DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-71.9583, 41.2106], [-71.9583, 42.1069],
-        [-71.204, 42.1069], [-71.204, 41.2106], [-71.9583, 41.2106]]]}}, {"type":
-        "Feature", "id": "RO__ASOS", "properties": {"name": "Romania ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[21.15817, 44.21028], [21.15817, 47.82139],
-        [28.816666667, 47.82139], [28.816666667, 44.21028], [21.15817, 44.21028]]]}},
-        {"type": "Feature", "id": "RS__ASOS", "properties": {"name": "Serbia and Montenegro
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[17.7, 41.016666667],
-        [17.7, 45.24689], [22, 45.24689], [22, 41.016666667], [17.7, 41.016666667]]]}},
-        {"type": "Feature", "id": "RU__ASOS", "properties": {"name": "Russian Federation
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-179.473, 8.82806],
-        [-179.473, 72.07722], [179.393, 72.07722], [179.393, 8.82806], [-179.473,
-        8.82806]]]}}, {"type": "Feature", "id": "RW__ASOS", "properties": {"name":
-        "Rwanda ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[28.80795,
-        -2.69583], [28.80795, -1.3994], [30.23278, -1.3994], [30.23278, -2.69583],
-        [28.80795, -2.69583]]]}}, {"type": "Feature", "id": "SA__ASOS", "properties":
-        {"name": "Saudi Arabia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[29.683, -28.841], [29.683, 31.79268], [50.25203, 31.79268], [50.25203,
-        -28.841], [29.683, -28.841]]]}}, {"type": "Feature", "id": "SB__ASOS", "properties":
-        {"name": "Solomon Islands ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[156.2962, -11.6339], [156.2962, -6.612], [165.8933, -6.612], [165.8933,
-        -11.6339], [156.2962, -11.6339]]]}}, {"type": "Feature", "id": "SCAN", "properties":
-        {"name": "Soil Climate Analysis Network"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-96.71, 36.68], [-96.71, 45.52], [-89.8, 45.52], [-89.8,
-        36.68], [-96.71, 36.68]]]}}, {"type": "Feature", "id": "SC__ASOS", "properties":
-        {"name": "Seychelles ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[55.42184, -4.77434], [55.42184, -4.2193], [55.7914, -4.2193], [55.7914,
-        -4.77434], [55.42184, -4.77434]]]}}, {"type": "Feature", "id": "SC_ASOS",
-        "properties": {"name": "South Carolina ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-82.98681, 32.12436], [-82.98681, 35.08783], [-78.62394,
-        35.08783], [-78.62394, 32.12436], [-82.98681, 32.12436]]]}}, {"type": "Feature",
-        "id": "SCCLIMATE", "properties": {"name": "South Carolina Long Term Climate
-        Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-83.3675, 32.116666667],
-        [-83.3675, 35.207222222], [-78.7825, 35.207222222], [-78.7825, 32.116666667],
-        [-83.3675, 32.116666667]]]}}, {"type": "Feature", "id": "SC_COOP", "properties":
-        {"name": "South Carolina COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-83.3675, 32], [-83.3675, 35.2456], [-78.7219, 35.2456], [-78.7219, 32],
-        [-83.3675, 32]]]}}, {"type": "Feature", "id": "SC_DCP", "properties": {"name":
-        "South Carolina DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-83.2278,
-        32], [-83.2278, 35.281388889], [-78.5561, 35.281388889], [-78.5561, 32], [-83.2278,
-        32]]]}}, {"type": "Feature", "id": "SD__ASOS", "properties": {"name": "Sudan
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[22.35, 4.316666667],
-        [22.35, 21.9167], [37.3341, 21.9167], [37.3341, 4.316666667], [22.35, 4.316666667]]]}},
-        {"type": "Feature", "id": "SD_ASOS", "properties": {"name": "South Dakota
-        ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-103.96199, 42.81669],
-        [-103.96199, 46.0187], [-96.65361, 46.0187], [-96.65361, 42.81669], [-103.96199,
-        42.81669]]]}}, {"type": "Feature", "id": "SDCLIMATE", "properties": {"name":
-        "South Dakota Long Term Climate Sites"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-104.066666667, 42.65], [-104.066666667, 46.033333333], [-96.483333333,
-        46.033333333], [-96.483333333, 42.65], [-104.066666667, 42.65]]]}}, {"type":
-        "Feature", "id": "SD_COOP", "properties": {"name": "South Dakota COOP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-104.14, 42.6625], [-104.14, 46.0397],
-        [-96.4, 46.0397], [-96.4, 42.6625], [-104.14, 42.6625]]]}}, {"type": "Feature",
-        "id": "SD_DCP", "properties": {"name": "South Dakota DCP"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-104.1556, 42.5263], [-104.1556, 46.1233], [-96.3803,
-        46.1233], [-96.3803, 42.5263], [-104.1556, 42.5263]]]}}, {"type": "Feature",
-        "id": "SD_RWIS", "properties": {"name": "South Dakota RWIS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-104.1373897, 42.47027015], [-104.1373897,
-        46.03485476], [-96.43011693, 46.03485476], [-96.43011693, 42.47027015], [-104.1373897,
-        42.47027015]]]}}, {"type": "Feature", "id": "SE__ASOS", "properties": {"name":
-        "Sweden ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[11.77037,
-        55.42306], [11.77037, 67.92278], [23.1689, 67.92278], [23.1689, 55.42306],
-        [11.77037, 55.42306]]]}}, {"type": "Feature", "id": "SG__ASOS", "properties":
-        {"name": "Singapore ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[103.60872, 1.26042], [103.60872, 1.516666667], [104.08333, 1.516666667],
-        [104.08333, 1.26042], [103.60872, 1.26042]]]}}, {"type": "Feature", "id":
-        "SH__ASOS", "properties": {"name": "Saint Helena ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-14.5056, -8.07], [-14.5056, -7.87], [-14.3056,
-        -7.87], [-14.3056, -8.07], [-14.5056, -8.07]]]}}, {"type": "Feature", "id":
-        "SI__ASOS", "properties": {"name": "Slovenia ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[13.51583, 45.37528], [13.51583, 46.72975], [16.27509,
-        46.72975], [16.27509, 45.37528], [13.51583, 45.37528]]]}}, {"type": "Feature",
-        "id": "SK__ASOS", "properties": {"name": "Slovakia ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[17.05, 48.3], [17.05, 49.1297], [22.0943, 49.1297],
-        [22.0943, 48.3], [17.05, 48.3]]]}}, {"type": "Feature", "id": "SL__ASOS",
-        "properties": {"name": "Sierra Leone ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-13.29549, 7.43306], [-13.29549, 49.33153], [21.34001, 49.33153],
-        [21.34001, 7.43306], [-13.29549, 7.43306]]]}}, {"type": "Feature", "id": "SN__ASOS",
-        "properties": {"name": "Senegal ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-17.59022, 12.3102], [-17.59022, 16.74972], [-12.12033, 16.74972], [-12.12033,
-        12.3102], [-17.59022, 12.3102]]]}}, {"type": "Feature", "id": "SO__ASOS",
-        "properties": {"name": "Somalia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[42.2, 1.9333], [42.2, 12.05], [50.83333, 12.05], [50.83333, 1.9333], [42.2,
-        1.9333]]]}}, {"type": "Feature", "id": "SR__ASOS", "properties": {"name":
-        "Suriname ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-57.1394,
-        1.93333], [-57.1394, 6.05556], [-54.31667, 6.05556], [-54.31667, 1.93333],
-        [-57.1394, 1.93333]]]}}, {"type": "Feature", "id": "ST__ASOS", "properties":
-        {"name": "Sao Tome and Principe ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[6.61215, 0.27817], [6.61215, 1.7629], [7.5117, 1.7629], [7.5117, 0.27817],
-        [6.61215, 0.27817]]]}}, {"type": "Feature", "id": "SV__ASOS", "properties":
-        {"name": "El Salvador ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-89.93333, 13.232], [-89.93333, 14.0825], [-87.782, 14.0825], [-87.782,
-        13.232], [-89.93333, 13.232]]]}}, {"type": "Feature", "id": "SV__DCP", "properties":
-        {"name": "El Salvador DCP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-90.954722222, 13.233333333], [-90.954722222, 14.46917], [-87.6825, 14.46917],
-        [-87.6825, 13.233333333], [-90.954722222, 13.233333333]]]}}, {"type": "Feature",
-        "id": "SY__ASOS", "properties": {"name": "Syria ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[35.66667, 33.31152], [35.66667, 37.15], [41.31667,
-        37.15], [41.31667, 33.31152], [35.66667, 33.31152]]]}}, {"type": "Feature",
-        "id": "SZ__ASOS", "properties": {"name": "Swaziland ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[30.8121, -27.366666667], [30.8121, -25.7844],
-        [32.0841, -25.7844], [32.0841, -27.366666667], [30.8121, -27.366666667]]]}},
-        {"type": "Feature", "id": "TD__ASOS", "properties": {"name": "Chad ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[14.6394, 8.52441], [14.6394,
-        21.55], [20.94433, 21.55], [20.94433, 8.52441], [14.6394, 8.52441]]]}}, {"type":
-        "Feature", "id": "TG__ASOS", "properties": {"name": "Togo ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[0.15, 6.06561], [0.15, 10.9], [1.6,
-        10.9], [1.6, 6.06561], [0.15, 6.06561]]]}}, {"type": "Feature", "id": "TH__ASOS",
-        "properties": {"name": "Thailand ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[97.83361, 6.32667], [97.83361, 20.06139], [104.97023, 20.06139], [104.97023,
-        6.32667], [97.83361, 6.32667]]]}}, {"type": "Feature", "id": "TJ__ASOS", "properties":
-        {"name": "Tajikistan ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[68.68333, 37.7667], [68.68333, 40.3154], [69.905, 40.3154], [69.905, 37.7667],
-        [68.68333, 37.7667]]]}}, {"type": "Feature", "id": "TM__ASOS", "properties":
-        {"name": "Turkmenistan ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[52.90722, 37.5194], [52.90722, 41.86111], [67.93333, 41.86111], [67.93333,
-        37.5194], [52.90722, 37.5194]]]}}, {"type": "Feature", "id": "TN__ASOS", "properties":
-        {"name": "Tunisia ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[8.01056,
-        31.58333], [8.01056, 37.34545], [11.18333, 37.34545], [11.18333, 31.58333],
-        [8.01056, 31.58333]]]}}, {"type": "Feature", "id": "TN_ASOS", "properties":
-        {"name": "Tennessee ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-90.085, 34.93528], [-90.085, 36.72188], [-82.0734167, 36.72188], [-82.0734167,
-        34.93528], [-90.085, 34.93528]]]}}, {"type": "Feature", "id": "TNCLIMATE",
-        "properties": {"name": "Tennessee Long Term Climate Sites"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-90.086388889, 34.893888889], [-90.086388889,
-        36.6875], [-81.703333333, 36.6875], [-81.703333333, 34.893888889], [-90.086388889,
-        34.893888889]]]}}, {"type": "Feature", "id": "TN_COOP", "properties": {"name":
-        "Tennessee COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-89.9039,
-        34.8925], [-89.9039, 36.7256], [-81.6917, 36.7256], [-81.6917, 34.8925], [-89.9039,
-        34.8925]]]}}, {"type": "Feature", "id": "TN_DCP", "properties": {"name": "Tennessee
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-90.1791, 34.8914],
-        [-90.1791, 36.8306], [-81.6333, 36.8306], [-81.6333, 34.8914], [-90.1791,
-        34.8914]]]}}, {"type": "Feature", "id": "TO__ASOS", "properties": {"name":
-        "Tonga ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-175.733,
-        -21.3412], [-175.733, -15.4708], [-173.691, -15.4708], [-173.691, -21.3412],
-        [-175.733, -21.3412]]]}}, {"type": "Feature", "id": "TR__ASOS", "properties":
-        {"name": "Turkey ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[25.8,
-        36.1987], [25.8, 42.13333], [43.966, 42.13333], [43.966, 36.1987], [25.8,
-        36.1987]]]}}, {"type": "Feature", "id": "TT__ASOS", "properties": {"name":
-        "Trinidad and Tobago ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-60.936, 11.0493], [-60.936, 11.2493], [-60.736, 11.2493], [-60.736, 11.0493],
-        [-60.936, 11.0493]]]}}, {"type": "Feature", "id": "TW__ASOS", "properties":
-        {"name": "Taiwan ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[116.616666667,
-        20.566666667], [116.616666667, 26.32415], [121.866666667, 26.32415], [121.866666667,
-        20.566666667], [116.616666667, 20.566666667]]]}}, {"type": "Feature", "id":
-        "TX_ASOS", "properties": {"name": "Texas ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-106.4800389, 25.81461], [-106.4800389, 36.514], [-88.341,
-        36.514], [-88.341, 25.81461], [-106.4800389, 25.81461]]]}}, {"type": "Feature",
-        "id": "TXCLIMATE", "properties": {"name": "Texas Long Term Climate Sites"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-106.6975, 25.814166667],
-        [-106.6975, 36.532777778], [-93.465277778, 36.532777778], [-93.465277778,
-        25.814166667], [-106.6975, 25.814166667]]]}}, {"type": "Feature", "id": "TX_COOP",
-        "properties": {"name": "Texas COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-106.7, 25.8162], [-106.7, 36.5536], [-93.6333, 36.5536], [-93.6333, 25.8162],
-        [-106.7, 25.8162]]]}}, {"type": "Feature", "id": "TX_DCP", "properties": {"name":
-        "Texas DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-106.7014,
-        25.7763], [-106.7014, 36.4897], [-66.1464, 36.4897], [-66.1464, 25.7763],
-        [-106.7014, 25.7763]]]}}, {"type": "Feature", "id": "TZ__ASOS", "properties":
-        {"name": "Tanzania ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[29.53333, -10.78333], [29.53333, -1.23333], [40.2833, -1.23333], [40.2833,
-        -10.78333], [29.53333, -10.78333]]]}}, {"type": "Feature", "id": "UA__ASOS",
-        "properties": {"name": "Ukraine ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[22.16129, 44.933333333], [22.16129, 50.7035], [39.4741, 50.7035], [39.4741,
-        44.933333333], [22.16129, 44.933333333]]]}}, {"type": "Feature", "id": "UG__ASOS",
-        "properties": {"name": "Uganda ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[29.88333, -1.35], [29.88333, 3.15], [34.75, 3.15], [34.75, -1.35], [29.88333,
-        -1.35]]]}}, {"type": "Feature", "id": "UN__ASOS", "properties": {"name": "Unknown
-        / Classified Military ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[21.9, 21.9], [21.9, 44.64], [45.004, 44.64], [45.004, 21.9], [21.9, 21.9]]]}},
-        {"type": "Feature", "id": "USCRN", "properties": {"name": "US Climate Reference
-        Network (USCRN)"}, "geometry": {"type": "Polygon", "coordinates": [[[-170.31,
-        19.43], [-170.31, 71.68], [129.01, 71.68], [129.01, 19.43], [-170.31, 19.43]]]}},
-        {"type": "Feature", "id": "UT_ASOS", "properties": {"name": "Utah ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-114.13089, 36.9363889],
-        [-114.13089, 41.89128], [-109.36667, 41.89128], [-109.36667, 36.9363889],
-        [-114.13089, 36.9363889]]]}}, {"type": "Feature", "id": "UTCLIMATE", "properties":
-        {"name": "Utah Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-114.135833333, 36.916666667], [-114.135833333, 42.006388889],
-        [-108.975, 42.006388889], [-108.975, 36.916666667], [-114.135833333, 36.916666667]]]}},
-        {"type": "Feature", "id": "UT_COOP", "properties": {"name": "Utah COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-114.138, 36.9111], [-114.138,
-        42.0194], [-108.975, 42.0194], [-108.975, 36.9111], [-114.138, 36.9111]]]}},
-        {"type": "Feature", "id": "UT_DCP", "properties": {"name": "Utah DCP"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-114.1333, 36.9], [-114.1333, 42.06769],
-        [-109.02745, 42.06769], [-109.02745, 36.9], [-114.1333, 36.9]]]}}, {"type":
-        "Feature", "id": "UY__ASOS", "properties": {"name": "Uruguay ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-58.1683, -35.01306], [-58.1683, -30.29833],
-        [-54.11822, -30.29833], [-54.11822, -35.01306], [-58.1683, -35.01306]]]}},
-        {"type": "Feature", "id": "UZ__ASOS", "properties": {"name": "Uzbekistan ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-73.51694, 37.18667], [-73.51694,
-        42.58833], [72.433333333, 42.58833], [72.433333333, 37.18667], [-73.51694,
-        37.18667]]]}}, {"type": "Feature", "id": "VA_ASOS", "properties": {"name":
-        "Virginia ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-83.3178,
-        36.47286], [-83.3178, 39.24353], [-75.36306, 39.24353], [-75.36306, 36.47286],
-        [-83.3178, 36.47286]]]}}, {"type": "Feature", "id": "VACLIMATE", "properties":
-        {"name": "Virginia Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-83.096666667, 36.47286], [-83.096666667, 39.288055556],
-        [-75.36306, 39.288055556], [-75.36306, 36.47286], [-83.096666667, 36.47286]]]}},
-        {"type": "Feature", "id": "VA_COOP", "properties": {"name": "Virginia COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-82.9, 36.4869], [-82.9,
-        39.2833], [-75.2833, 39.2833], [-75.2833, 36.4869], [-82.9, 36.4869]]]}},
-        {"type": "Feature", "id": "VA_DCP", "properties": {"name": "Virginia DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-83.2, 36.4489], [-83.2,
-        39.500554657], [-75.277777778, 39.500554657], [-75.277777778, 36.4489], [-83.2,
-        36.4489]]]}}, {"type": "Feature", "id": "VA_RWIS", "properties": {"name":
-        "Virginia RWIS"}, "geometry": {"type": "Polygon", "coordinates": [[[-82.7732,
-        36.4474], [-82.7732, 39.3563], [-75.4313, 39.3563], [-75.4313, 36.4474], [-82.7732,
-        36.4474]]]}}, {"type": "Feature", "id": "VC__ASOS", "properties": {"name":
-        "Saint Vincent and the Grenadines ASOS"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-61.516666667, 12.5], [-61.516666667, 13.25], [-61.06028,
-        13.25], [-61.06028, 12.5], [-61.516666667, 12.5]]]}}, {"type": "Feature",
-        "id": "VE__ASOS", "properties": {"name": "Venezuela ASOS"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-72.53974, 4.5], [-72.53974, 11.90882], [-61.01667,
-        11.90882], [-61.01667, 4.5], [-72.53974, 4.5]]]}}, {"type": "Feature", "id":
-        "VG__ASOS", "properties": {"name": "British Virgin Islands ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-64.643, 18.3448], [-64.643, 18.5448],
-        [-64.443, 18.5448], [-64.443, 18.3448], [-64.643, 18.3448]]]}}, {"type": "Feature",
-        "id": "VI__ASOS", "properties": {"name": "Virgin Islands ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-65.0733611, 17.6], [-65.0733611, 18.4373056],
-        [-64.704722222, 18.4373056], [-64.704722222, 17.6], [-65.0733611, 17.6]]]}},
-        {"type": "Feature", "id": "VI_DCP", "properties": {"name": "Virgin Islands
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-65.0522, 17.595],
-        [-65.0522, 18.435], [-64.5244, 18.435], [-64.5244, 17.595], [-65.0522, 17.595]]]}},
-        {"type": "Feature", "id": "VN__ASOS", "properties": {"name": "Viet Nam ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[92.77263, 10.266666667],
-        [92.77263, 21.13333], [109.31667, 21.13333], [109.31667, 10.266666667], [92.77263,
-        10.266666667]]]}}, {"type": "Feature", "id": "VT_ASOS", "properties": {"name":
-        "Vermont ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-73.34608,
-        42.79119], [-73.34608, 45.0402808], [-71.9179789, 45.0402808], [-71.9179789,
-        42.79119], [-73.34608, 42.79119]]]}}, {"type": "Feature", "id": "VTCLIMATE",
-        "properties": {"name": "Vermont Long Term Climate Sites"}, "geometry": {"type":
-        "Polygon", "coordinates": [[[-73.403055556, 42.65], [-73.403055556, 45.048888889],
-        [-71.883333333, 45.048888889], [-71.883333333, 42.65], [-73.403055556, 42.65]]]}},
-        {"type": "Feature", "id": "VT_COOP", "properties": {"name": "Vermont COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-73.403, 42.6833], [-73.403,
-        45.10576], [-71.4392, 45.10576], [-71.4392, 42.6833], [-73.403, 42.6833]]]}},
-        {"type": "Feature", "id": "VT_DCP", "properties": {"name": "Vermont DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-73.5167, 42.65], [-73.5167,
-        45.1086], [-71.6016, 45.1086], [-71.6016, 42.65], [-73.5167, 42.65]]]}}, {"type":
-        "Feature", "id": "VT_RWIS", "properties": {"name": "Vermont RWIS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-73.3929, 42.7127], [-73.3929, 45.0751],
-        [-71.9216, 45.0751], [-71.9216, 42.7127], [-73.3929, 42.7127]]]}}, {"type":
-        "Feature", "id": "VTWAC", "properties": {"name": "Vermont Weather Analytics
-        Center"}, "geometry": {"type": "Polygon", "coordinates": [[[-73.4334, 42.7624],
-        [-73.4334, 45.105], [-71.4284, 45.105], [-71.4284, 42.7624], [-73.4334, 42.7624]]]}},
-        {"type": "Feature", "id": "VU__ASOS", "properties": {"name": "Vanuatu ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[167.11974, -20.3492], [167.11974,
-        -13.7517], [169.871, -13.7517], [169.871, -20.3492], [167.11974, -20.3492]]]}},
-        {"type": "Feature", "id": "WA_ASOS", "properties": {"name": "Washington ASOS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-124.66263, 45.52045], [-124.66263,
-        48.89269], [-117.00958, 48.89269], [-117.00958, 45.52045], [-124.66263, 45.52045]]]}},
-        {"type": "Feature", "id": "WACLIMATE", "properties": {"name": "Washington
-        Long Term Climate Sites"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-124.66263, 45.518611111], [-124.66263, 49.090833333], [-116.947222222,
-        49.090833333], [-116.947222222, 45.518611111], [-124.66263, 45.518611111]]]}},
-        {"type": "Feature", "id": "WA_COOP", "properties": {"name": "Washington COOP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-124.4539, 45.0508], [-124.4539,
-        49.1006], [-116.9158, 49.1006], [-116.9158, 45.0508], [-124.4539, 45.0508]]]}},
-        {"type": "Feature", "id": "WA_DCP", "properties": {"name": "Washington DCP"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-124.737, 45.4839], [-124.737,
-        49.1008], [-116.8767, 49.1008], [-116.8767, 45.4839], [-124.737, 45.4839]]]}},
-        {"type": "Feature", "id": "WFO", "properties": {"name": "NWS Weather Forecast
-        Office"}, "geometry": {"type": "Polygon", "coordinates": [[[-157.91, 13.37],
-        [-157.91, 64.95], [144.9, 64.95], [144.9, 13.37], [-157.91, 13.37]]]}}, {"type":
-        "Feature", "id": "WI_ASOS", "properties": {"name": "Wisconsin ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-92.79, 42.495], [-92.79, 46.8887],
-        [-86.824, 46.8887], [-86.824, 42.495], [-92.79, 42.495]]]}}, {"type": "Feature",
-        "id": "WICLIMATE", "properties": {"name": "Wisconsin Long Term Climate Sites"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-92.783333333, 42.4], [-92.783333333,
-        46.866666667], [-86.783333333, 46.866666667], [-86.783333333, 42.4], [-92.783333333,
-        42.4]]]}}, {"type": "Feature", "id": "WI_COOP", "properties": {"name": "Wisconsin
-        COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-92.895555556, 42.4],
-        [-92.895555556, 47.039], [-86.7911, 47.039], [-86.7911, 42.4], [-92.895555556,
-        42.4]]]}}, {"type": "Feature", "id": "WI_DCP", "properties": {"name": "Wisconsin
-        DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-92.9044, 42.3979],
-        [-92.9044, 47.103], [-86.8778, 47.103], [-86.8778, 42.3979], [-92.9044, 42.3979]]]}},
-        {"type": "Feature", "id": "WI_RWIS", "properties": {"name": "Wisconsin RWIS"},
-        "geometry": {"type": "Polygon", "coordinates": [[[-92.858392334, 42.310171509],
-        [-92.858392334, 46.6761], [-87.665632629, 46.6761], [-87.665632629, 42.310171509],
-        [-92.858392334, 42.310171509]]]}}, {"type": "Feature", "id": "WS__ASOS", "properties":
-        {"name": "Samoa ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-176.29389,
-        -22.53407], [-176.29389, -8.90606], [-136.33971, -8.90606], [-136.33971, -22.53407],
-        [-176.29389, -22.53407]]]}}, {"type": "Feature", "id": "WSO", "properties":
-        {"name": "NWS Service Offices (not WFO)"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-170.82, -14.43], [-170.82, 71.389902], [171.49, 71.389902],
-        [171.49, -14.43], [-170.82, -14.43]]]}}, {"type": "Feature", "id": "WTM",
-        "properties": {"name": "West Texas Mesonet"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-108.15175, 29.56039], [-108.15175, 37.338329], [-99.08623,
-        37.338329], [-99.08623, 29.56039], [-108.15175, 29.56039]]]}}, {"type": "Feature",
-        "id": "WV_ASOS", "properties": {"name": "West Virginia ASOS"}, "geometry":
-        {"type": "Polygon", "coordinates": [[[-82.655, 37.1958], [-82.655, 40.275],
-        [-77.88467, 40.275], [-77.88467, 37.1958], [-82.655, 37.1958]]]}}, {"type":
-        "Feature", "id": "WVCLIMATE", "properties": {"name": "West Virginia Long Term
-        Climate Sites"}, "geometry": {"type": "Polygon", "coordinates": [[[-82.655,
-        37.1958], [-82.655, 40.626111111], [-77.783333333, 40.626111111], [-77.783333333,
-        37.1958], [-82.655, 37.1958]]]}}, {"type": "Feature", "id": "WV_COOP", "properties":
-        {"name": "West Virginia COOP"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-82.61, 37.1555], [-82.61, 40.6425], [-77.8781, 40.6425], [-77.8781, 37.1555],
-        [-82.61, 37.1555]]]}}, {"type": "Feature", "id": "WV_DCP", "properties": {"name":
-        "West Virginia DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-82.6167,
-        37.1439], [-82.6167, 40.7169], [-77.6289, 40.7169], [-77.6289, 37.1439], [-82.6167,
-        37.1439]]]}}, {"type": "Feature", "id": "WV_RWIS", "properties": {"name":
-        "West Virginia RWIS"}, "geometry": {"type": "Polygon", "coordinates": [[[-82.6597,
-        37.2296], [-82.6597, 40.1667], [-77.8898, 40.1667], [-77.8898, 37.2296], [-82.6597,
-        37.2296]]]}}, {"type": "Feature", "id": "WY_ASOS", "properties": {"name":
-        "Wyoming ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-111.1424,
-        40.9374444], [-111.1424, 45.0117], [-104.0302, 45.0117], [-104.0302, 40.9374444],
-        [-111.1424, 40.9374444]]]}}, {"type": "Feature", "id": "WYCLIMATE", "properties":
-        {"name": "Wyoming Long Term Climate Sites"}, "geometry": {"type": "Polygon",
-        "coordinates": [[[-111.145555556, 40.938888889], [-111.145555556, 45.076666667],
-        [-104.001666667, 45.076666667], [-104.001666667, 40.938888889], [-111.145555556,
-        40.938888889]]]}}, {"type": "Feature", "id": "WY_COOP", "properties": {"name":
-        "Wyoming COOP"}, "geometry": {"type": "Polygon", "coordinates": [[[-111.1467,
-        40.9279], [-111.1467, 45.0772], [-103.9633, 45.0772], [-103.9633, 40.9279],
-        [-111.1467, 40.9279]]]}}, {"type": "Feature", "id": "WY_DCP", "properties":
-        {"name": "Wyoming DCP"}, "geometry": {"type": "Polygon", "coordinates": [[[-111.1531,
-        40.8889], [-111.1531, 45.0906], [-103.9317, 45.0906], [-103.9317, 40.8889],
-        [-111.1531, 40.8889]]]}}, {"type": "Feature", "id": "WY_RWIS", "properties":
-        {"name": "Wyoming RWIS"}, "geometry": {"type": "Polygon", "coordinates": [[[-111.076,
-        40.9475], [-111.076, 45.0998], [-103.981, 45.0998], [-103.981, 40.9475], [-111.076,
-        40.9475]]]}}, {"type": "Feature", "id": "YE__ASOS", "properties": {"name":
-        "Yemen ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[42.4833,
-        12.5307], [42.4833, 17.06667], [54.0058, 17.06667], [54.0058, 12.5307], [42.4833,
-        12.5307]]]}}, {"type": "Feature", "id": "YT__ASOS", "properties": {"name":
-        "Mayotte ASOS"}, "geometry": {"type": "Polygon", "coordinates": [[[-140.9675,
-        60.01639], [-140.9675, 69.69475], [-128.72194, 69.69475], [-128.72194, 60.01639],
-        [-140.9675, 60.01639]]]}}, {"type": "Feature", "id": "ZA__ASOS", "properties":
-        {"name": "South Africa ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[-12.41667, -46.9831], [-12.41667, 8.366666667], [144.65, 8.366666667],
-        [144.65, -46.9831], [-12.41667, -46.9831]]]}}, {"type": "Feature", "id": "ZM__ASOS",
-        "properties": {"name": "Zambia ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[23.0085, -17.92176], [23.0085, -8.75917], [33.286, -8.75917], [33.286,
-        -17.92176], [23.0085, -17.92176]]]}}, {"type": "Feature", "id": "ZW__ASOS",
-        "properties": {"name": "Zimbabwe ASOS"}, "geometry": {"type": "Polygon", "coordinates":
-        [[[25.73901, -22.316666667], [25.73901, -16.41976], [32.716, -16.41976], [32.716,
-        -22.316666667], [25.73901, -22.316666667]]]}}], "generation_time": "2020-10-12T07:25:18Z",
-        "count": 514}'
-  recorded_at: 2020-10-12 09:01:59 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.6.2
+      string: '{"schema":{"fields":[{"name":"id","type":"string"},{"name":"name","type":"string"},{"name":"tzname","type":"string"}],"pandas_version":"0.20.0"},"data":[{"id":"AE__ASOS","name":"United
+        Arab Emirates ASOS","tzname":"Asia\/Dubai"},{"id":"AF__ASOS","name":"Afghanistan
+        ASOS","tzname":"Asia\/Kabul"},{"id":"AG__ASOS","name":"Antigua and Barbuda
+        ASOS","tzname":"America\/Argentina\/Cordoba"},{"id":"AG__DCP","name":"Antigua
+        and Barbuda DCP","tzname":"America\/Argentina\/Cordoba"},{"id":"AI__ASOS","name":"Anguilla
+        ASOS","tzname":"America\/Anguilla"},{"id":"AK_ASOS","name":"Alaska ASOS","tzname":"America\/Anchorage"},{"id":"AKCLIMATE","name":"Alaska
+        Long Term Climate","tzname":null},{"id":"AK_COOP","name":"Alaska COOP","tzname":"America\/Anchorage"},{"id":"AK_DCP","name":"Alaska
+        DCP","tzname":"America\/Anchorage"},{"id":"AK_RWIS","name":"Alaska RWIS","tzname":"America\/Anchorage"},{"id":"AL__ASOS","name":"Albania
+        ASOS","tzname":"Europe\/Tirane"},{"id":"AL_ASOS","name":"Alabama ASOS","tzname":"America\/Chicago"},{"id":"ALCLIMATE","name":"Alabama
+        Long Term Climate Sites","tzname":"America\/Chicago"},{"id":"AL_COOP","name":"Alabama
+        COOP","tzname":"America\/Chicago"},{"id":"AL_DCP","name":"Alabama DCP","tzname":"America\/Chicago"},{"id":"AM__ASOS","name":"Armenia
+        ASOS","tzname":"Asia\/Yerevan"},{"id":"AN__ASOS","name":"Netherlands Antilles
+        ASOS","tzname":"America\/Curacao"},{"id":"AO__ASOS","name":"Angola ASOS","tzname":"Africa\/Luanda"},{"id":"AQ__ASOS","name":"Antarctica
+        ASOS","tzname":"Antarctica\/Macquarie"},{"id":"AR__ASOS","name":"Argentina
+        ASOS","tzname":"America\/Argentina\/Rio_Gallegos"},{"id":"AR_ASOS","name":"Arkansas
+        ASOS","tzname":"America\/Chicago"},{"id":"ARCLIMATE","name":"Arkansas Long
+        Term Climate Sites","tzname":"America\/Chicago"},{"id":"AR_COOP","name":"Arkansas
+        COOP","tzname":"America\/Chicago"},{"id":"AR_DCP","name":"Arkansas DCP","tzname":"America\/Chicago"},{"id":"AS__ASOS","name":"American
+        Samoa ASOS","tzname":"Pacific\/Apia"},{"id":"AT__ASOS","name":"Austria ASOS","tzname":"Europe\/Vienna"},{"id":"AU__ASOS","name":"Australia
+        ASOS","tzname":"Australia\/Perth"},{"id":"AW__ASOS","name":"Aruba ASOS","tzname":"America\/Aruba"},{"id":"AWOS","name":"Iowa
+        AWOS","tzname":"America\/Chicago"},{"id":"AZ__ASOS","name":"Azerbaijan ASOS","tzname":"Asia\/Baku"},{"id":"AZ_ASOS","name":"Arizona
+        ASOS","tzname":"America\/Phoenix"},{"id":"AZCLIMATE","name":"Arizona Long
+        Term Climate Sites","tzname":"America\/Phoenix"},{"id":"AZ_COOP","name":"Arizona
+        COOP","tzname":"America\/Phoenix"},{"id":"AZ_DCP","name":"Arizona DCP","tzname":"America\/Phoenix"},{"id":"AZ_RWIS","name":"Arizona
+        RWIS","tzname":"America\/Phoenix"},{"id":"BA__ASOS","name":"Bosnia and Herzegovina
+        ASOS","tzname":"Europe\/Sarajevo"},{"id":"BB__ASOS","name":"Barbados ASOS","tzname":"America\/Barbados"},{"id":"BD__ASOS","name":"Bangladesh
+        ASOS","tzname":"Asia\/Dhaka"},{"id":"BE__ASOS","name":"Belgium ASOS","tzname":"Europe\/Brussels"},{"id":"BF__ASOS","name":"Burkina
+        Faso ASOS","tzname":"Africa\/Ouagadougou"},{"id":"BG__ASOS","name":"Bulgaria
+        ASOS","tzname":"Europe\/Sofia"},{"id":"BH__ASOS","name":"Bahrain ASOS","tzname":"Asia\/Bahrain"},{"id":"BI__ASOS","name":"Burundi
+        ASOS","tzname":"Africa\/Bujumbura"},{"id":"BJ__ASOS","name":"Benin ASOS","tzname":"Africa\/Porto-Novo"},{"id":"BM__ASOS","name":"Bermuda
+        ASOS","tzname":"Atlantic\/Bermuda"},{"id":"BM__DCP","name":"Bermuda DCP","tzname":"Atlantic\/Bermuda"},{"id":"BO__ASOS","name":"Bolivia
+        ASOS","tzname":"America\/La_Paz"},{"id":"BR__ASOS","name":"Brazil ASOS","tzname":"America\/Sao_Paulo"},{"id":"BS__ASOS","name":"Bahamas
+        ASOS","tzname":"America\/Nassau"},{"id":"BT__ASOS","name":"Bhutan ASOS","tzname":"Asia\/Thimphu"},{"id":"BW__ASOS","name":"Botswana
+        ASOS","tzname":"Africa\/Gaborone"},{"id":"BY__ASOS","name":"Belarus ASOS","tzname":"Europe\/Minsk"},{"id":"BZ__ASOS","name":"Belize
+        ASOS","tzname":"America\/Belize"},{"id":"CA_AB_ASOS","name":"Alberta CA ASOS","tzname":"America\/Edmonton"},{"id":"CA_AB_DCP","name":"Alberta
+        CA DCP","tzname":"America\/Edmonton"},{"id":"CA_ASOS","name":"California ASOS","tzname":"America\/Los_Angeles"},{"id":"CA_BC_ASOS","name":"British
+        Columbia CA ASOS","tzname":"America\/Vancouver"},{"id":"CA_BC_DCP","name":"British
+        Columbia CA DCP","tzname":"America\/Vancouver"},{"id":"CACLIMATE","name":"California
+        Long Term Climate Sites","tzname":"America\/Los_Angeles"},{"id":"CA_COOP","name":"California
+        COOP","tzname":"America\/Los_Angeles"},{"id":"CA_DCP","name":"California DCP","tzname":"America\/Los_Angeles"},{"id":"CA_MB_ASOS","name":"Manitoba
+        CA ASOS","tzname":"America\/Winnipeg"},{"id":"CA_MB_DCP","name":"Manitoba
+        CA DCP","tzname":"America\/Winnipeg"},{"id":"CA_NB_ASOS","name":"New Brunswick
+        CA ASOS","tzname":"America\/Moncton"},{"id":"CA_NB_DCP","name":"Canada New
+        Brunswick DCP","tzname":"America\/Moncton"},{"id":"CA_NF_ASOS","name":"Newfoundland
+        CA ASOS","tzname":"America\/St_Johns"},{"id":"CA_NS_ASOS","name":"Nova Scotia
+        CA ASOS","tzname":"America\/Halifax"},{"id":"CA_NT_ASOS","name":"Northwest
+        Territories CA ASOS","tzname":"America\/Yellowknife"},{"id":"CA_NU_ASOS","name":"Nunavut
+        Canada ASOS","tzname":"America\/Winnipeg"},{"id":"CA_ON_ASOS","name":"Ontario
+        CA ASOS","tzname":"America\/Toronto"},{"id":"CA_ON_DCP","name":"Ontario CA
+        DCP","tzname":"America\/Toronto"},{"id":"CA_PE_ASOS","name":"Prince Edward
+        Island Canada ASOS","tzname":"America\/Halifax"},{"id":"CA_PQ_DCP","name":"Canada
+        PQ DCP","tzname":"America\/Montreal"},{"id":"CA_QC_ASOS","name":"Quebec CA
+        ASOS","tzname":"America\/Montreal"},{"id":"CA_SK_ASOS","name":"Saskatchewan
+        CA ASOS","tzname":"America\/Regina"},{"id":"CA_SK_DCP","name":"Canada Saskatchewan
+        DCP","tzname":"America\/Regina"},{"id":"CA_YT_ASOS","name":"Yukon Canada ASOS","tzname":"America\/Whitehorse"},{"id":"CA_YT_DCP","name":"Canada
+        Yukon DCP","tzname":"America\/Whitehorse"},{"id":"CD__ASOS","name":"Democratic
+        Republic of the Congo ASOS","tzname":"Africa\/Lubumbashi"},{"id":"CF__ASOS","name":"Central
+        African Republic ASOS","tzname":"Africa\/Bangui"},{"id":"CG__ASOS","name":"Congo
+        ASOS","tzname":"Africa\/Brazzaville"},{"id":"CH__ASOS","name":"Switzerland
+        ASOS","tzname":"Europe\/Zurich"},{"id":"CI__ASOS","name":"Ivory Coast ASOS","tzname":"Africa\/Abidjan"},{"id":"CK__ASOS","name":"Cook
+        Islands ASOS","tzname":"Pacific\/Rarotonga"},{"id":"CL__ASOS","name":"Chile
+        ASOS","tzname":"America\/Santiago"},{"id":"CM__ASOS","name":"Cameroon ASOS","tzname":"America\/Bogota"},{"id":"CN__ASOS","name":"China
+        ASOS","tzname":"Asia\/Shanghai"},{"id":"CO__ASOS","name":"Colombia ASOS","tzname":"America\/Bogota"},{"id":"CO_ASOS","name":"Colorado
+        ASOS","tzname":"America\/Denver"},{"id":"COCLIMATE","name":"Colorado Long
+        Term Climate Sites","tzname":"America\/Denver"},{"id":"CO_COOP","name":"Colorado
+        COOP","tzname":"America\/Denver"},{"id":"CO_DCP","name":"Colorado DCP","tzname":"America\/Denver"},{"id":"CO_RWIS","name":"Colorado
+        RWIS","tzname":"America\/Denver"},{"id":"CR__ASOS","name":"Costa Rica ASOS","tzname":"America\/Costa_Rica"},{"id":"CT_ASOS","name":"Connecticut
+        ASOS","tzname":"America\/New_York"},{"id":"CTCLIMATE","name":"Connecticut
+        Long Term Climate Sites","tzname":"America\/New_York"},{"id":"CT_COOP","name":"Connecticut
+        COOP","tzname":"America\/New_York"},{"id":"CT_DCP","name":"Connecticut DCP","tzname":"America\/New_York"},{"id":"CU__ASOS","name":"Cuba
+        ASOS","tzname":"America\/Havana"},{"id":"CV__ASOS","name":"Cape Verde ASOS","tzname":"Atlantic\/Cape_Verde"},{"id":"CY__ASOS","name":"Cyprus
+        ASOS","tzname":"Asia\/Nicosia"},{"id":"CZ__ASOS","name":"Czech Republic ASOS","tzname":"Europe\/Prague"},{"id":"DC_ASOS","name":"District
+        of Columbia ASOS","tzname":"America\/New_York"},{"id":"DCCLIMATE","name":"District
+        of Columbia Long Term Climate","tzname":"America\/New_York"},{"id":"DC_COOP","name":"District
+        of Columbia COOP","tzname":"America\/New_York"},{"id":"DC_DCP","name":"District
+        of Columbia DCP","tzname":"America\/New_York"},{"id":"DE__ASOS","name":"Germany
+        ASOS","tzname":"Europe\/Berlin"},{"id":"DE_ASOS","name":"Delaware ASOS","tzname":"America\/New_York"},{"id":"DECLIMATE","name":"Delaware
+        Long Term Climate Sites","tzname":"America\/New_York"},{"id":"DE_COOP","name":"Delaware
+        COOP","tzname":"America\/New_York"},{"id":"DE_DCP","name":"Delaware DCP","tzname":"America\/New_York"},{"id":"DE_RWIS","name":"Delaware
+        RWIS","tzname":"America\/New_York"},{"id":"DJ__ASOS","name":"Djibouti ASOS","tzname":"Africa\/Djibouti"},{"id":"DK__ASOS","name":"Denmark
+        ASOS","tzname":"Europe\/Copenhagen"},{"id":"DM__ASOS","name":"Dominica ASOS","tzname":"America\/Dominica"},{"id":"DO__ASOS","name":"Dominican
+        Republic ASOS","tzname":"America\/Santo_Domingo"},{"id":"DZ__ASOS","name":"Algeria
+        ASOS","tzname":"Africa\/Algiers"},{"id":"EC__ASOS","name":"Ecuador ASOS","tzname":"America\/Guayaquil"},{"id":"EE__ASOS","name":"Estonia
+        ASOS","tzname":"Europe\/Tallinn"},{"id":"EG__ASOS","name":"Egypt ASOS","tzname":"Africa\/Cairo"},{"id":"ES__ASOS","name":"Spain
+        ASOS","tzname":"Europe\/Madrid"},{"id":"ET__ASOS","name":"Ethiopia ASOS","tzname":"Africa\/Addis_Ababa"},{"id":"FI__ASOS","name":"Finland
+        ASOS","tzname":"Europe\/Helsinki"},{"id":"FJ__ASOS","name":"Fiji ASOS","tzname":"Pacific\/Fiji"},{"id":"FK__ASOS","name":"Falkland
+        Islands ASOS","tzname":"Atlantic\/Stanley"},{"id":"FL_ASOS","name":"Florida
+        ASOS","tzname":"America\/New_York"},{"id":"FLCLIMATE","name":"Florida Long
+        Term Climate Sites","tzname":"America\/New_York"},{"id":"FL_COOP","name":"Florida
+        COOP","tzname":"America\/New_York"},{"id":"FL_DCP","name":"Florida DCP","tzname":"America\/New_York"},{"id":"FM__ASOS","name":"Federated
+        States of Micronesia ASOS","tzname":"Pacific\/Saipan"},{"id":"FM__DCP","name":"Federated
+        States of Micronesia DCP","tzname":"Pacific\/Saipan"},{"id":"FR__ASOS","name":"France
+        ASOS","tzname":"Europe\/Paris"},{"id":"GA__ASOS","name":"Gabon ASOS","tzname":"Africa\/Libreville"},{"id":"GA_ASOS","name":"Georgia
+        ASOS","tzname":"America\/New_York"},{"id":"GACLIMATE","name":"Georgia Long
+        Term Climate Sites","tzname":"America\/New_York"},{"id":"GA_COOP","name":"Georgia
+        COOP","tzname":"America\/New_York"},{"id":"GA_DCP","name":"Georgia DCP","tzname":"America\/New_York"},{"id":"GA_RWIS","name":"Georgia
+        RWIS","tzname":"America\/New_York"},{"id":"GB__ASOS","name":"Great Britain
+        ASOS","tzname":"Europe\/London"},{"id":"GD__ASOS","name":"Grenada ASOS","tzname":"America\/Grenada"},{"id":"GE__ASOS","name":"Georgia
+        (Country) ASOS","tzname":"Asia\/Tbilisi"},{"id":"GF__ASOS","name":"French
+        Guiana","tzname":"America\/Cayenne"},{"id":"GH__ASOS","name":"Ghana ASOS","tzname":"Africa\/Accra"},{"id":"GI__ASOS","name":"Gibraltar
+        ASOS","tzname":"Europe\/Gibraltar"},{"id":"GL__ASOS","name":"Greenland ASOS","tzname":"America\/Godthab"},{"id":"GLDNWS","name":"Goodland
+        NWS AWOS","tzname":"America\/Chicago"},{"id":"GM__ASOS","name":"Gambia ASOS","tzname":"Africa\/Banjul"},{"id":"GN__ASOS","name":"Guinea
+        ASOS","tzname":"Africa\/Conakry"},{"id":"GQ__ASOS","name":"Equatorial Guinea
+        ASOS","tzname":"Africa\/Malabo"},{"id":"GR__ASOS","name":"Greece ASOS","tzname":"Europe\/Athens"},{"id":"GT__ASOS","name":"Guatemala
+        ASOS","tzname":"America\/Guatemala"},{"id":"GT__DCP","name":"Guatemala DCP","tzname":"America\/Guatemala"},{"id":"GU_ASOS","name":"Guam
+        ASOS","tzname":"Pacific\/Guam"},{"id":"GUCLIMATE","name":"Guam Long Term Climate
+        Sites","tzname":"Pacific\/Guam"},{"id":"GU_DCP","name":"Guam DCP","tzname":"Pacific\/Guam"},{"id":"GW__ASOS","name":"Guinea-Bissau
+        ASOS","tzname":"Africa\/Bissau"},{"id":"GY__ASOS","name":"Guyana ASOS","tzname":"America\/Guyana"},{"id":"HI_ASOS","name":"Hawaii
+        ASOS","tzname":"Pacific\/Honolulu"},{"id":"HICLIMATE","name":"Hawaii Long
+        Term Climate","tzname":null},{"id":"HI_COOP","name":"Hawaii COOP","tzname":"Pacific\/Honolulu"},{"id":"HI_DCP","name":"Hawaii
+        DCP","tzname":"Pacific\/Honolulu"},{"id":"HK__ASOS","name":"Hong Kong ASOS","tzname":"Asia\/Hong_Kong"},{"id":"HN__ASOS","name":"Honduras
+        ASOS","tzname":"America\/Tegucigalpa"},{"id":"HN__DCP","name":"Hondurus DCP","tzname":"America\/Tegucigalpa"},{"id":"HR__ASOS","name":"Croatia
+        ASOS","tzname":"Europe\/Zagreb"},{"id":"HT__ASOS","name":"Haiti ASOS","tzname":"America\/Port-au-Prince"},{"id":"HU__ASOS","name":"Hungary
+        ASOS","tzname":"Europe\/Budapest"},{"id":"IA_ASOS","name":"Iowa ASOS","tzname":"America\/Chicago"},{"id":"IACLIMATE","name":"Iowa
+        Long Term Climate Sites","tzname":"America\/Chicago"},{"id":"IACOCORAHS","name":"Iowa
+        CoCoRaHS","tzname":"America\/Chicago"},{"id":"IA_COOP","name":"Iowa COOP","tzname":"America\/Chicago"},{"id":"IA_DCP","name":"Iowa
+        DCP","tzname":"America\/Chicago"},{"id":"IA_HPD","name":"Iowa HPD Sites","tzname":"America\/Chicago"},{"id":"IA_RWIS","name":"Iowa
+        RWIS","tzname":"America\/Chicago"},{"id":"ID__ASOS","name":"Indonesia ASOS","tzname":"Asia\/Makassar"},{"id":"ID_ASOS","name":"Idaho
+        ASOS","tzname":"America\/Boise"},{"id":"IDCLIMATE","name":"Idaho Long Term
+        Climate Sites","tzname":"America\/Boise"},{"id":"ID_COOP","name":"Idaho COOP","tzname":"America\/Boise"},{"id":"ID_DCP","name":"Idaho
+        DCP","tzname":"America\/Boise"},{"id":"IE__ASOS","name":"Ireland ASOS","tzname":"Europe\/Dublin"},{"id":"IL__ASOS","name":"Israel
+        ASOS","tzname":"Asia\/Jerusalem"},{"id":"IL_ASOS","name":"Illinois ASOS","tzname":"America\/Chicago"},{"id":"ILCLIMATE","name":"Illinois
+        Long Term Climate Sites","tzname":"America\/Chicago"},{"id":"ILCOCORAHS","name":"Illinois
+        CoCoRaHS","tzname":"America\/Chicago"},{"id":"IL_COOP","name":"Illinois COOP","tzname":"America\/Chicago"},{"id":"IL_DCP","name":"Illinois
+        DCP","tzname":"America\/Chicago"},{"id":"IL_IEMRE","name":"Illinois IEM Daily
+        Estimate Locations","tzname":"America\/Chicago"},{"id":"IL_RWIS","name":"Illinois
+        RWIS","tzname":"America\/Chicago"},{"id":"IN__ASOS","name":"India ASOS","tzname":"Asia\/Kolkata"},{"id":"IN_ASOS","name":"Indiana
+        ASOS","tzname":"America\/Indiana\/Indianapolis"},{"id":"INCLIMATE","name":"Indiana
+        Long Term Climate Sites","tzname":"America\/Indiana\/Indianapolis"},{"id":"IN_COOP","name":"Indiana
+        COOP","tzname":"America\/Indiana\/Indianapolis"},{"id":"IN_DCP","name":"Indiana
+        DCP","tzname":"America\/Indiana\/Indianapolis"},{"id":"IN_IEMRE","name":"Indiana
+        IEM Daily Estimate Locations","tzname":"America\/Indiana\/Indianapolis"},{"id":"IN_RWIS","name":"Indiana
+        RWIS","tzname":"America\/Indiana\/Indianapolis"},{"id":"IO__ASOS","name":"British
+        Indian Ocean Territory ASOS","tzname":"Asia\/Jakarta"},{"id":"IQ__ASOS","name":"Iraq
+        ASOS","tzname":"Asia\/Baghdad"},{"id":"IR__ASOS","name":"Iran ASOS","tzname":"Asia\/Tehran"},{"id":"IS__ASOS","name":"Iceland
+        ASOS","tzname":"Atlantic\/Reykjavik"},{"id":"ISUAG","name":"Iowa State Univ
+        Ag Climate","tzname":"America\/Chicago"},{"id":"ISUSM","name":"Iowa State
+        Univ Soil Moisture","tzname":"America\/Chicago"},{"id":"IT__ASOS","name":"Italy
+        ASOS","tzname":"Europe\/Rome"},{"id":"JM__ASOS","name":"Jamaica ASOS","tzname":"America\/Jamaica"},{"id":"JO__ASOS","name":"Jordan
+        ASOS","tzname":"Asia\/Amman"},{"id":"JP__ASOS","name":"Japan ASOS","tzname":"Asia\/Tokyo"},{"id":"KCCI","name":"KCCI-TV
+        SchoolNet","tzname":"America\/Chicago"},{"id":"KE__ASOS","name":"Kenya ASOS","tzname":"Africa\/Nairobi"},{"id":"KELO","name":"KELO-TV
+        WeatherNet","tzname":"America\/Chicago"},{"id":"KH__ASOS","name":"Cambodia
+        ASOS","tzname":"Asia\/Phnom_Penh"},{"id":"KI__ASOS","name":"Kiribati ASOS","tzname":"GMT+13"},{"id":"KIMT","name":"KIMT-TV
+        StormNet","tzname":"America\/Chicago"},{"id":"KM__ASOS","name":"Comoros ASOS","tzname":"Indian\/Antananarivo"},{"id":"KN__ASOS","name":"Saint
+        Kitts and Nevis ASOS","tzname":"America\/St_Kitts"},{"id":"KP__ASOS","name":"North
+        Korea","tzname":"Asia\/Seoul"},{"id":"KR__ASOS","name":"South Korea ASOS","tzname":"Asia\/Seoul"},{"id":"KS_ASOS","name":"Kansas
+        ASOS","tzname":"America\/Chicago"},{"id":"KSCLIMATE","name":"Kansas Long Term
+        Climate Sites","tzname":"America\/Chicago"},{"id":"KS_COOP","name":"Kansas
+        COOP","tzname":"America\/Chicago"},{"id":"KS_DCP","name":"Kansas DCP","tzname":"America\/Chicago"},{"id":"KS_IEMRE","name":"Kansas
+        IEM Daily Estimate Locations","tzname":"America\/Chicago"},{"id":"KS_RWIS","name":"Kansas
+        RWIS","tzname":"America\/Chicago"},{"id":"KW__ASOS","name":"Kuwait ASOS","tzname":"Asia\/Kuwait"},{"id":"KY__ASOS","name":"Grand
+        Cayman ASOS","tzname":"America\/Cayman"},{"id":"KY_ASOS","name":"Kentucky
+        ASOS","tzname":"America\/New_York"},{"id":"KYCLIMATE","name":"Kentucky Long
+        Term Climate Sites","tzname":"America\/New_York"},{"id":"KY_COOP","name":"Kentucky
+        COOP","tzname":"America\/New_York"},{"id":"KY_DCP","name":"Kentucky DCP","tzname":"America\/New_York"},{"id":"KY_IEMRE","name":"Kentucky
+        IEM Daily Estimate Locations","tzname":"America\/New_York"},{"id":"KYMN","name":"Kentucky
+        Mesonet","tzname":"America\/Chicago"},{"id":"KY_RWIS","name":"Kentucky RWIS","tzname":"America\/Chicago"},{"id":"KZ__ASOS","name":"Kazakhstan
+        ASOS","tzname":"Asia\/Almaty"},{"id":"LA__ASOS","name":"Lao ASOS","tzname":"Asia\/Vientiane"},{"id":"LA_ASOS","name":"Louisiana
+        ASOS","tzname":"America\/Chicago"},{"id":"LACLIMATE","name":"Louisiana Long
+        Term Climate Sites","tzname":"America\/Chicago"},{"id":"LA_COOP","name":"Louisiana
+        COOP","tzname":"America\/Chicago"},{"id":"LA_DCP","name":"Louisiana DCP","tzname":"America\/Chicago"},{"id":"LB__ASOS","name":"Lebanon
+        ASOS","tzname":"Europe\/Bucharest"},{"id":"LC__ASOS","name":"Saint Lucia ASOS","tzname":"America\/St_Lucia"},{"id":"LK__ASOS","name":"Sri
+        Lanka ASOS","tzname":"Asia\/Colombo"},{"id":"LR__ASOS","name":"Liberia ASOS","tzname":"Africa\/Monrovia"},{"id":"LS__ASOS","name":"Lesotho
+        ASOS","tzname":"Africa\/Maseru"},{"id":"LT__ASOS","name":"Lithuania ASOS","tzname":"Europe\/Vilnius"},{"id":"LU__ASOS","name":"Luxembourg
+        ASOS","tzname":"Europe\/Luxembourg"},{"id":"LV__ASOS","name":"Latvia ASOS","tzname":"Europe\/Riga"},{"id":"LY__ASOS","name":"Libya
+        ASOS","tzname":"Africa\/Tripoli"},{"id":"MA__ASOS","name":"Morocco ASOS","tzname":"Africa\/Casablanca"},{"id":"MA_ASOS","name":"Massachusetts
+        ASOS","tzname":"America\/New_York"},{"id":"MACLIMATE","name":"Massachusetts
+        Long Term Climate Sites","tzname":"America\/New_York"},{"id":"MA_COOP","name":"Massachusetts
+        COOP","tzname":"America\/New_York"},{"id":"MA_DCP","name":"Massachusetts DCP","tzname":"America\/New_York"},{"id":"MA_RWIS","name":"Massachusetts
+        RWIS","tzname":"America\/New_York"},{"id":"MC__ASOS","name":"Monaco ASOS","tzname":"Africa\/Casablanca"},{"id":"MD__ASOS","name":"Moldova
+        ASOS","tzname":"Europe\/Chisinau"},{"id":"MD_ASOS","name":"Maryland ASOS","tzname":"America\/New_York"},{"id":"MDCLIMATE","name":"Maryland
+        Long Term Climate Sites","tzname":"America\/New_York"},{"id":"MD_COOP","name":"Maryland
+        COOP","tzname":"America\/New_York"},{"id":"MD_DCP","name":"Maryland DCP","tzname":"America\/New_York"},{"id":"MD_RWIS","name":"Maryland
+        RWIS","tzname":"America\/New_York"},{"id":"ME_ASOS","name":"Maine ASOS","tzname":"America\/New_York"},{"id":"MECLIMATE","name":"Maine
+        Long Term Climate Sites","tzname":"America\/New_York"},{"id":"ME_COOP","name":"Maine
+        COOP","tzname":"America\/New_York"},{"id":"ME_DCP","name":"Maine DCP","tzname":"America\/New_York"},{"id":"ME_RWIS","name":"Maine
+        RWIS","tzname":"America\/New_York"},{"id":"MG__ASOS","name":"Madagascar ASOS","tzname":"Indian\/Antananarivo"},{"id":"MH__ASOS","name":"Marshall
+        Islands ASOS","tzname":"Pacific\/Kwajalein"},{"id":"MH__DCP","name":"Marshall
+        Islands DCP","tzname":"Pacific\/Kwajalein"},{"id":"MI_ASOS","name":"Michigan
+        ASOS","tzname":"America\/Detroit"},{"id":"MICLIMATE","name":"Michigan Long
+        Term Climate Sites","tzname":"America\/Detroit"},{"id":"MI_COOP","name":"Michigan
+        COOP","tzname":"America\/Detroit"},{"id":"MI_DCP","name":"Michigan DCP","tzname":"America\/Detroit"},{"id":"MI_IEMRE","name":"Michigan
+        IEM Daily Estimate Locations","tzname":"America\/Detroit"},{"id":"MI_RWIS","name":"Michigan
+        RWIS","tzname":"America\/Detroit"},{"id":"MK__ASOS","name":"Macedonia ASOS","tzname":"Europe\/Skopje"},{"id":"ML__ASOS","name":"Mali
+        ASOS","tzname":"Africa\/Bamako"},{"id":"MM__ASOS","name":"Myanmar ASOS","tzname":"Asia\/Rangoon"},{"id":"MN_ASOS","name":"Minnesota
+        ASOS","tzname":"America\/Chicago"},{"id":"MNCLIMATE","name":"Minnesota Long
+        Term Climate Sites","tzname":"America\/Chicago"},{"id":"MN_COOP","name":"Minnesota
+        COOP","tzname":"America\/Chicago"},{"id":"MN_DCP","name":"Minnesota DCP","tzname":"America\/Chicago"},{"id":"MN_IEMRE","name":"Minnesota
+        IEM Daily Estimate Locations","tzname":"America\/Chicago"},{"id":"MN_RWIS","name":"Minnesota
+        RWIS","tzname":"America\/Chicago"},{"id":"MO_ASOS","name":"Missouri ASOS","tzname":"America\/Chicago"},{"id":"MOCLIMATE","name":"Missouri
+        Long Term Climate Sites","tzname":"America\/Chicago"},{"id":"MO_COOP","name":"Missouri
+        COOP","tzname":"America\/Chicago"},{"id":"MO_DCP","name":"Missouri DCP","tzname":"America\/Chicago"},{"id":"MO_IEMRE","name":"Missouri
+        IEM Daily Estimate Locations","tzname":"America\/Chicago"},{"id":"MO_RWIS","name":"Missouri
+        RWIS","tzname":"America\/Chicago"},{"id":"MP__ASOS","name":"Northern Mariana
+        Islands ASOS","tzname":"Pacific\/Saipan"},{"id":"MR__ASOS","name":"Mauritania
+        ASOS","tzname":"Africa\/Nouakchott"},{"id":"MS_ASOS","name":"Mississippi ASOS","tzname":"America\/Chicago"},{"id":"MSCLIMATE","name":"Mississippi
+        Climate Sites","tzname":"America\/Chicago"},{"id":"MS_COOP","name":"Mississippi
+        COOP","tzname":"America\/Chicago"},{"id":"MS_DCP","name":"Mississippi DCP","tzname":"America\/Chicago"},{"id":"MT_ASOS","name":"Montana
+        ASOS","tzname":"America\/Denver"},{"id":"MTCLIMATE","name":"Montana Long Term
+        Climate Sites","tzname":"America\/Denver"},{"id":"MT_COOP","name":"Montana
+        COOP","tzname":"America\/Denver"},{"id":"MT_DCP","name":"Montana DCP","tzname":"America\/Denver"},{"id":"MU__ASOS","name":"Mauritius
+        ASOS","tzname":"Indian\/Mauritius"},{"id":"MV__ASOS","name":"Maldives ASOS","tzname":"Indian\/Maldives"},{"id":"MW__ASOS","name":"Malawi
+        ASOS","tzname":"Africa\/Blantyre"},{"id":"MX__ASOS","name":"Mexico ASOS","tzname":"America\/Mexico_City"},{"id":"MX_BJ_DCP","name":"Mexico
+        BJ DCP","tzname":"America\/Tijuana"},{"id":"MX_BR_DCP","name":"Mexico BR DCP","tzname":"America\/Mazatlan"},{"id":"MX_CH_DCP","name":"Mexico
+        CH DCP","tzname":"America\/Chihuahua"},{"id":"MX_CL_DCP","name":"Mexico CL
+        DCP","tzname":"America\/Chicago"},{"id":"MX_CM_DCP","name":"Mexico Campeche
+        DCP","tzname":"America\/Merida"},{"id":"MX_CP_DCP","name":"Mexico Chiapas
+        DCP","tzname":"America\/Mexico_City"},{"id":"MX_DF_DCP","name":"Mexico Federal
+        District DCP","tzname":"America\/Mexico_City"},{"id":"MX_DR_DCP","name":"Mexico
+        DR DCP","tzname":"America\/Monterrey"},{"id":"MX_GJ_DCP","name":"Mexico GJ
+        DCP","tzname":"America\/Mexico_City"},{"id":"MX_GR_DCP","name":"Mexico GR
+        DCP","tzname":"America\/Mexico_City"},{"id":"MX_HD_DCP","name":"Mexico HD
+        DCP","tzname":"America\/Mexico_City"},{"id":"MX_JL_DCP","name":"Mexico JL
+        DCP","tzname":"America\/Mexico_City"},{"id":"MX_MC_DCP","name":"Mexico MC
+        DCP","tzname":"America\/Mexico_City"},{"id":"MX_MR_DCP","name":"Mexico MR
+        DCP","tzname":"America\/Mexico_City"},{"id":"MX_MX_DCP","name":"Mexico MX
+        DCP","tzname":"America\/Mexico_City"},{"id":"MX_NL_DCP","name":"Mexico NL
+        DCP","tzname":"America\/Monterrey"},{"id":"MX_NR_DCP","name":"Mexico Morelos
+        DCP","tzname":"America\/Mazatlan"},{"id":"MX_OX_DCP","name":"Mexico OX DCP","tzname":"America\/Mexico_City"},{"id":"MX_PB_DCP","name":"Mexico
+        PB DCP","tzname":"America\/Mexico_City"},{"id":"MX_QO_DCP","name":"Mexico
+        QO DCP","tzname":"America\/Cancun"},{"id":"MX_QR_DCP","name":"Mexico Quintana
+        Roo DCP","tzname":"America\/Mexico_City"},{"id":"MX_SL_DCP","name":"Mexico
+        San Luis Potosi DCP","tzname":"America\/Mexico_City"},{"id":"MX_SN_DCP","name":"Mexico
+        SN DCP","tzname":"America\/Mazatlan"},{"id":"MX_SO_DCP","name":"Mexico SO
+        DCP","tzname":"America\/Phoenix"},{"id":"MX_TL_DCP","name":"Mexico Tiaxcala
+        DCP","tzname":"America\/Mexico_City"},{"id":"MX_TP_DCP","name":"Mexico TP
+        DCP","tzname":"America\/Matamoros"},{"id":"MX_VC_DCP","name":"Mexico Veracruz
+        DCP","tzname":"America\/Mexico_City"},{"id":"MX_YC_DCP","name":"Mexico Yucatan
+        DCP","tzname":"America\/Merida"},{"id":"MY__ASOS","name":"Malaysia ASOS","tzname":"Asia\/Kuala_Lumpur"},{"id":"MZ__ASOS","name":"Mozambique
+        ASOS","tzname":"Africa\/Maputo"},{"id":"NA__ASOS","name":"Namibia ASOS","tzname":"Africa\/Windhoek"},{"id":"NC__ASOS","name":"New
+        Caledonia ASOS","tzname":"Pacific\/Noumea"},{"id":"NC_ASOS","name":"North
+        Carolina ASOS","tzname":"America\/New_York"},{"id":"NCCLIMATE","name":"North
+        Carolina Long Term Climate Sites","tzname":"America\/New_York"},{"id":"NC_COOP","name":"North
+        Carolina COOP","tzname":"America\/New_York"},{"id":"NC_DCP","name":"North
+        Carolina DCP","tzname":"America\/New_York"},{"id":"ND_ASOS","name":"North
+        Dakota ASOS","tzname":"America\/Chicago"},{"id":"NDCLIMATE","name":"North
+        Dakota Long Term Climate Sites","tzname":"America\/Chicago"},{"id":"ND_COOP","name":"North
+        Dakota COOP","tzname":"America\/Chicago"},{"id":"ND_DCP","name":"North Dakota
+        DCP","tzname":"America\/Chicago"},{"id":"ND_IEMRE","name":"North Dakota IEM
+        Daily Estimate Locations","tzname":"America\/Chicago"},{"id":"ND_RWIS","name":"North
+        Dakota RWIS","tzname":"America\/Chicago"},{"id":"NE__ASOS","name":"Niger ASOS","tzname":"Africa\/Niamey"},{"id":"NE_ASOS","name":"Nebraska
+        ASOS","tzname":"America\/Chicago"},{"id":"NECLIMATE","name":"Nebraska Long
+        Term Climate Sites","tzname":"America\/Chicago"},{"id":"NE_COOP","name":"Nebraska
+        COOP","tzname":"America\/Chicago"},{"id":"NE_DCP","name":"Nebraska DCP","tzname":"America\/Chicago"},{"id":"NE_IEMRE","name":"Nebraska
+        IEM Daily Estimate Locations","tzname":"America\/Chicago"},{"id":"NE_RWIS","name":"Nebraska
+        RWIS","tzname":"America\/Chicago"},{"id":"NEXRAD","name":"NWS NEXRAD WSR88D","tzname":"America\/Chicago"},{"id":"NF__ASOS","name":"New
+        Zealand ASOS","tzname":"Pacific\/Auckland"},{"id":"NG__ASOS","name":"Nigeria
+        ASOS","tzname":"Africa\/Lagos"},{"id":"NH_ASOS","name":"New Hampshire ASOS","tzname":"America\/New_York"},{"id":"NHCLIMATE","name":"New
+        Hampshire Long Term Climate Sites","tzname":"America\/New_York"},{"id":"NH_COOP","name":"New
+        Hampshire COOP","tzname":"America\/New_York"},{"id":"NH_DCP","name":"New Hampshire
+        DCP","tzname":"America\/New_York"},{"id":"NH_RWIS","name":"New Hampshire RWIS","tzname":"America\/New_York"},{"id":"NI__ASOS","name":"Nicaragua
+        ASOS","tzname":"America\/Managua"},{"id":"NI__DCP","name":"Nicaraqua DCP","tzname":"America\/Managua"},{"id":"NJ_ASOS","name":"New
+        Jersey ASOS","tzname":"America\/New_York"},{"id":"NJCLIMATE","name":"New Jersey
+        Long Term Climate Sites","tzname":"America\/New_York"},{"id":"NJ_COOP","name":"New
+        Jersey COOP","tzname":"America\/New_York"},{"id":"NJ_DCP","name":"New Jersey
+        DCP","tzname":"America\/New_York"},{"id":"NL__ASOS","name":"Netherlands ASOS","tzname":"Europe\/Amsterdam"},{"id":"NM_ASOS","name":"New
+        Mexico ASOS","tzname":"America\/Denver"},{"id":"NMCLIMATE","name":"New Mexico
+        Long Term Climate Sites","tzname":"America\/Denver"},{"id":"NM_COOP","name":"New
+        Mexico COOP","tzname":"America\/Denver"},{"id":"NM_DCP","name":"New Mexico
+        DCP","tzname":"America\/Denver"},{"id":"NM_RWIS","name":"New Mexico RWIS","tzname":"America\/Denver"},{"id":"NO__ASOS","name":"Norway
+        ASOS","tzname":"Europe\/Oslo"},{"id":"NP__ASOS","name":"Nepal ASOS","tzname":"Asia\/Kathmandu"},{"id":"NSTLFLUX","name":"National
+        Laboratory for Ag and Environment Flux Stations","tzname":"America\/Chicago"},{"id":"NV_ASOS","name":"Nevada
+        ASOS","tzname":"America\/Los_Angeles"},{"id":"NVCLIMATE","name":"Nevada Long
+        Term Climate Sites","tzname":"America\/Los_Angeles"},{"id":"NV_COOP","name":"Nevada
+        COOP","tzname":"America\/Los_Angeles"},{"id":"NV_DCP","name":"Nevada DCP","tzname":"America\/Los_Angeles"},{"id":"NV_RWIS","name":"Nevada
+        RWIS","tzname":"America\/Los_Angeles"},{"id":"NY_ASOS","name":"New York ASOS","tzname":"America\/New_York"},{"id":"NYCLIMATE","name":"New
+        York Long Term Climate Sites","tzname":"America\/New_York"},{"id":"NY_COOP","name":"New
+        York COOP","tzname":"America\/New_York"},{"id":"NY_DCP","name":"New York DCP","tzname":"America\/New_York"},{"id":"OH_ASOS","name":"Ohio
+        ASOS","tzname":"America\/New_York"},{"id":"OHCLIMATE","name":"Ohio Long Term
+        Climate Sites","tzname":"America\/New_York"},{"id":"OH_COOP","name":"Ohio
+        COOP","tzname":"America\/New_York"},{"id":"OH_DCP","name":"Ohio DCP","tzname":"America\/New_York"},{"id":"OH_IEMRE","name":"Ohio
+        IEM Daily Estimate Locations","tzname":"America\/New_York"},{"id":"OH_RWIS","name":"Ohio
+        RWIS","tzname":"America\/New_York"},{"id":"OK_ASOS","name":"Oklahoma ASOS","tzname":"America\/Chicago"},{"id":"OKCLIMATE","name":"Oklahoma
+        Long Term Climate Sites","tzname":"America\/Chicago"},{"id":"OK_COOP","name":"Oklahoma
+        COOP","tzname":"America\/Chicago"},{"id":"OK_DCP","name":"Oklahoma DCP","tzname":"America\/Chicago"},{"id":"OM__ASOS","name":"Oman
+        ASOS","tzname":"Asia\/Muscat"},{"id":"OR_ASOS","name":"Oregon ASOS","tzname":"America\/Los_Angeles"},{"id":"ORCLIMATE","name":"Oregon
+        Long Term Climate Sites","tzname":"America\/Los_Angeles"},{"id":"OR_COOP","name":"Oregon
+        COOP","tzname":"America\/Los_Angeles"},{"id":"OR_DCP","name":"Oregon DCP","tzname":"America\/Los_Angeles"},{"id":"OT","name":"Other
+        \/ Misc","tzname":"America\/Chicago"},{"id":"P1_DCP","name":"P1 DCP","tzname":"Pacific\/Majuro"},{"id":"P2_DCP","name":"P2
+        DCP","tzname":"Pacific\/Apia"},{"id":"P3_DCP","name":"P3 DCP","tzname":"Pacific\/Guam"},{"id":"P4_DCP","name":"P4
+        DCP","tzname":"Pacific\/Chuuk"},{"id":"PA__ASOS","name":"Panama ASOS","tzname":"America\/Panama"},{"id":"PA_ASOS","name":"Pennsylvania
+        ASOS","tzname":"America\/New_York"},{"id":"PACLIMATE","name":"Pennsylvania
+        Long Term Climate Sites","tzname":"America\/New_York"},{"id":"PA_COOP","name":"Pennsylvania
+        COOP","tzname":"America\/New_York"},{"id":"PA_DCP","name":"Pennsylvania DCP","tzname":"America\/New_York"},{"id":"PE__ASOS","name":"Peru
+        ASOS","tzname":"America\/Lima"},{"id":"PF__ASOS","name":"French Polynesia
+        ASOS","tzname":"Pacific\/Tahiti"},{"id":"PG__ASOS","name":"Papua New Guinea
+        ASOS","tzname":"Pacific\/Port_Moresby"},{"id":"PH__ASOS","name":"Philippines
+        ASOS","tzname":"Asia\/Manila"},{"id":"PK__ASOS","name":"Pakistan ASOS","tzname":"Asia\/Karachi"},{"id":"PL__ASOS","name":"Poland
+        ASOS","tzname":"Europe\/Warsaw"},{"id":"PN__ASOS","name":"Pitcairn ASOS","tzname":"America\/Panama"},{"id":"PR_ASOS","name":"Puerto
+        Rico ASOS","tzname":"America\/Puerto_Rico"},{"id":"PRCLIMATE","name":"Puerto
+        Rico Long Term Climate","tzname":null},{"id":"PR_COOP","name":"Puerto Rico
+        COOP","tzname":"America\/Puerto_Rico"},{"id":"PR_DCP","name":"Puerto Rico
+        DCP","tzname":"America\/Puerto_Rico"},{"id":"PT__ASOS","name":"Portugal ASOS","tzname":"Europe\/Lisbon"},{"id":"PY__ASOS","name":"Paraguay
+        ASOS","tzname":"America\/Asuncion"},{"id":"QA__ASOS","name":"Qatar ASOS","tzname":"Asia\/Qatar"},{"id":"RAOB","name":"RAOB
+        \/ Sounding Upper Air Sites","tzname":"America\/Chicago"},{"id":"RI_ASOS","name":"Rhode
+        Island ASOS","tzname":"America\/New_York"},{"id":"RICLIMATE","name":"Rhode
+        Island Long Term Climate Sites","tzname":"America\/New_York"},{"id":"RI_COOP","name":"Rhode
+        Island COOP","tzname":"America\/New_York"},{"id":"RI_DCP","name":"Rhode Island
+        DCP","tzname":"America\/New_York"},{"id":"RO__ASOS","name":"Romania ASOS","tzname":"Europe\/Bucharest"},{"id":"RS__ASOS","name":"Serbia
+        and Montenegro ASOS","tzname":"Europe\/Belgrade"},{"id":"RU__ASOS","name":"Russian
+        Federation ASOS","tzname":"Europe\/Moscow"},{"id":"RW__ASOS","name":"Rwanda
+        ASOS","tzname":"Africa\/Kigali"},{"id":"SA__ASOS","name":"Saudi Arabia ASOS","tzname":"Asia\/Riyadh"},{"id":"SB__ASOS","name":"Solomon
+        Islands ASOS","tzname":"Pacific\/Guadalcanal"},{"id":"SCAN","name":"Soil Climate
+        Analysis Network","tzname":"America\/Chicago"},{"id":"SC__ASOS","name":"Seychelles
+        ASOS","tzname":"Indian\/Mahe"},{"id":"SC_ASOS","name":"South Carolina ASOS","tzname":"America\/New_York"},{"id":"SCCLIMATE","name":"South
+        Carolina Long Term Climate Sites","tzname":"America\/New_York"},{"id":"SC_COOP","name":"South
+        Carolina COOP","tzname":"America\/New_York"},{"id":"SC_DCP","name":"South
+        Carolina DCP","tzname":"America\/New_York"},{"id":"SD__ASOS","name":"Sudan
+        ASOS","tzname":"Africa\/Khartoum"},{"id":"SD_ASOS","name":"South Dakota ASOS","tzname":"America\/Chicago"},{"id":"SDCLIMATE","name":"South
+        Dakota Long Term Climate Sites","tzname":"America\/Chicago"},{"id":"SD_COOP","name":"South
+        Dakota COOP","tzname":"America\/Chicago"},{"id":"SD_DCP","name":"South Dakota
+        DCP","tzname":"America\/Chicago"},{"id":"SD_IEMRE","name":"South Dakota IEM
+        Daily Estimate Locations","tzname":"America\/Chicago"},{"id":"SD_RWIS","name":"South
+        Dakota RWIS","tzname":"America\/Denver"},{"id":"SE__ASOS","name":"Sweden ASOS","tzname":"Europe\/Stockholm"},{"id":"SG__ASOS","name":"Singapore
+        ASOS","tzname":"Asia\/Singapore"},{"id":"SH__ASOS","name":"Saint Helena ASOS","tzname":"Atlantic\/St_Helena"},{"id":"SI__ASOS","name":"Slovenia
+        ASOS","tzname":"Europe\/Ljubljana"},{"id":"SK__ASOS","name":"Slovakia ASOS","tzname":"Europe\/Bratislava"},{"id":"SL__ASOS","name":"Sierra
+        Leone ASOS","tzname":"Europe\/Bratislava"},{"id":"SN__ASOS","name":"Senegal
+        ASOS","tzname":"Africa\/Dakar"},{"id":"SO__ASOS","name":"Somalia ASOS","tzname":"Africa\/Mogadishu"},{"id":"SR__ASOS","name":"Suriname
+        ASOS","tzname":"America\/Paramaribo"},{"id":"ST__ASOS","name":"Sao Tome and
+        Principe ASOS","tzname":"Africa\/Sao_Tome"},{"id":"SV__ASOS","name":"El Salvador
+        ASOS","tzname":"America\/El_Salvador"},{"id":"SV__DCP","name":"El Salvador
+        DCP","tzname":"America\/El_Salvador"},{"id":"SY__ASOS","name":"Syria ASOS","tzname":"Asia\/Damascus"},{"id":"SZ__ASOS","name":"Swaziland
+        ASOS","tzname":"Africa\/Mbabane"},{"id":"TD__ASOS","name":"Chad ASOS","tzname":"Africa\/Ndjamena"},{"id":"TG__ASOS","name":"Togo
+        ASOS","tzname":"Africa\/Lome"},{"id":"TH__ASOS","name":"Thailand ASOS","tzname":"Asia\/Bangkok"},{"id":"TJ__ASOS","name":"Tajikistan
+        ASOS","tzname":"Asia\/Dushanbe"},{"id":"TM__ASOS","name":"Turkmenistan ASOS","tzname":"Asia\/Ashgabat"},{"id":"TN__ASOS","name":"Tunisia
+        ASOS","tzname":"Africa\/Tunis"},{"id":"TN_ASOS","name":"Tennessee ASOS","tzname":"America\/Chicago"},{"id":"TNCLIMATE","name":"Tennessee
+        Long Term Climate Sites","tzname":"America\/Chicago"},{"id":"TN_COOP","name":"Tennessee
+        COOP","tzname":"America\/Chicago"},{"id":"TN_DCP","name":"Tennessee DCP","tzname":"America\/Chicago"},{"id":"TO__ASOS","name":"Tonga
+        ASOS","tzname":"Pacific\/Tongatapu"},{"id":"TR__ASOS","name":"Turkey ASOS","tzname":"Europe\/Istanbul"},{"id":"TT__ASOS","name":"Trinidad
+        and Tobago ASOS","tzname":"America\/Port_of_Spain"},{"id":"TU_ASOS","name":"Tu
+        ASOS","tzname":"Europe\/Istanbul"},{"id":"TW__ASOS","name":"Taiwan ASOS","tzname":"Asia\/Taipei"},{"id":"TX_ASOS","name":"Texas
+        ASOS","tzname":"America\/Chicago"},{"id":"TXCLIMATE","name":"Texas Long Term
+        Climate Sites","tzname":"America\/Chicago"},{"id":"TX_COOP","name":"Texas
+        COOP","tzname":"America\/Chicago"},{"id":"TX_DCP","name":"Texas DCP","tzname":"America\/Chicago"},{"id":"TZ__ASOS","name":"Tanzania
+        ASOS","tzname":"Africa\/Dar_es_Salaam"},{"id":"UA__ASOS","name":"Ukraine ASOS","tzname":"Europe\/Kiev"},{"id":"UG__ASOS","name":"Uganda
+        ASOS","tzname":"Africa\/Kampala"},{"id":"UN__ASOS","name":"Unknown \/ Classified
+        Military ASOS","tzname":"Asia\/Baghdad"},{"id":"USCRN","name":"US Climate
+        Reference Network (USCRN)","tzname":"America\/Chicago"},{"id":"UT_ASOS","name":"Utah
+        ASOS","tzname":"America\/Denver"},{"id":"UTCLIMATE","name":"Utah Long Term
+        Climate Sites","tzname":"America\/Denver"},{"id":"UT_COOP","name":"Utah COOP","tzname":"America\/Denver"},{"id":"UT_DCP","name":"Utah
+        DCP","tzname":"America\/Denver"},{"id":"UY__ASOS","name":"Uruguay ASOS","tzname":"America\/Montevideo"},{"id":"UZ__ASOS","name":"Uzbekistan
+        ASOS","tzname":"Asia\/Tashkent"},{"id":"VA_ASOS","name":"Virginia ASOS","tzname":"America\/New_York"},{"id":"VACLIMATE","name":"Virginia
+        Long Term Climate Sites","tzname":"America\/New_York"},{"id":"VA_COOP","name":"Virginia
+        COOP","tzname":"America\/New_York"},{"id":"VA_DCP","name":"Virginia DCP","tzname":"America\/New_York"},{"id":"VA_RWIS","name":"Virginia
+        RWIS","tzname":"America\/New_York"},{"id":"VC__ASOS","name":"Saint Vincent
+        and the Grenadines ASOS","tzname":"America\/St_Vincent"},{"id":"VE__ASOS","name":"Venezuela
+        ASOS","tzname":"America\/Caracas"},{"id":"VG__ASOS","name":"British Virgin
+        Islands ASOS","tzname":"America\/Tortola"},{"id":"VI_ASOS","name":"Virgin
+        Islands ASOS","tzname":"UTC+4"},{"id":"VICLIMATE","name":"Virgin Islands Long
+        Term Climate","tzname":"America\/St_Thomas"},{"id":"VI_DCP","name":"Virgin
+        Islands DCP","tzname":"America\/St_Thomas"},{"id":"VN__ASOS","name":"Viet
+        Nam ASOS","tzname":"Asia\/Ho_Chi_Minh"},{"id":"VT_ASOS","name":"Vermont ASOS","tzname":"America\/New_York"},{"id":"VTCLIMATE","name":"Vermont
+        Long Term Climate Sites","tzname":"America\/New_York"},{"id":"VT_COOP","name":"Vermont
+        COOP","tzname":"America\/New_York"},{"id":"VT_DCP","name":"Vermont DCP","tzname":"America\/New_York"},{"id":"VT_RWIS","name":"Vermont
+        RWIS","tzname":"America\/New_York"},{"id":"VTWAC","name":"Vermont Weather
+        Analytics Center","tzname":"America\/New_York"},{"id":"VU__ASOS","name":"Vanuatu
+        ASOS","tzname":"Pacific\/Efate"},{"id":"WA_ASOS","name":"Washington ASOS","tzname":"America\/Los_Angeles"},{"id":"WACLIMATE","name":"Washington
+        Long Term Climate Sites","tzname":"America\/Los_Angeles"},{"id":"WA_COOP","name":"Washington
+        COOP","tzname":"America\/Los_Angeles"},{"id":"WA_DCP","name":"Washington DCP","tzname":"America\/Los_Angeles"},{"id":"WFO","name":"NWS
+        Weather Forecast Office","tzname":"America\/Chicago"},{"id":"WI_ASOS","name":"Wisconsin
+        ASOS","tzname":"America\/Chicago"},{"id":"WICLIMATE","name":"Wisconsin Long
+        Term Climate Sites","tzname":"America\/Chicago"},{"id":"WI_COOP","name":"Wisconsin
+        COOP","tzname":"America\/Chicago"},{"id":"WI_DCP","name":"Wisconsin DCP","tzname":"America\/Chicago"},{"id":"WI_IEMRE","name":"Wisconsin
+        IEM Daily Estimate Locations","tzname":"America\/Chicago"},{"id":"WI_RWIS","name":"Wisconsin
+        RWIS","tzname":"America\/Chicago"},{"id":"WS__ASOS","name":"Samoa ASOS","tzname":"Pacific\/Rarotonga"},{"id":"WSO","name":"NWS
+        Service Offices (not WFO)","tzname":"America\/Anchorage"},{"id":"WTM","name":"West
+        Texas Mesonet","tzname":"America\/Chicago"},{"id":"WV_ASOS","name":"West Virginia
+        ASOS","tzname":"America\/New_York"},{"id":"WVCLIMATE","name":"West Virginia
+        Long Term Climate Sites","tzname":"America\/New_York"},{"id":"WV_COOP","name":"West
+        Virginia COOP","tzname":"America\/New_York"},{"id":"WV_DCP","name":"West Virginia
+        DCP","tzname":"America\/New_York"},{"id":"WV_RWIS","name":"West Virginia RWIS","tzname":"America\/New_York"},{"id":"WY_ASOS","name":"Wyoming
+        ASOS","tzname":"America\/Denver"},{"id":"WYCLIMATE","name":"Wyoming Long Term
+        Climate Sites","tzname":"America\/Denver"},{"id":"WY_COOP","name":"Wyoming
+        COOP","tzname":"America\/Denver"},{"id":"WY_DCP","name":"Wyoming DCP","tzname":"America\/Denver"},{"id":"WY_RWIS","name":"Wyoming
+        RWIS","tzname":"America\/Denver"},{"id":"YE__ASOS","name":"Yemen ASOS","tzname":"Asia\/Aden"},{"id":"YT__ASOS","name":"Mayotte
+        ASOS","tzname":"America\/Whitehorse"},{"id":"ZA__ASOS","name":"South Africa
+        ASOS","tzname":"Africa\/Johannesburg"},{"id":"ZM__ASOS","name":"Zambia ASOS","tzname":"Africa\/Lusaka"},{"id":"ZW__ASOS","name":"Zimbabwe
+        ASOS","tzname":"Africa\/Harare"}]}'
+  recorded_at: 2021-02-28 13:42:01 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.7.4

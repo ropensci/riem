@@ -1,3 +1,7 @@
+# riem development version
+
+* Switches to newer IEM metadata web services (#35, @akrherz)
+
 # riem 0.1.1
 
 * Eliminates a few dependencies (dplyr, lazyeval, readr) to make installation easier.

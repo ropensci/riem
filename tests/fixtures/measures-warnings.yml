@@ -14,10 +14,10 @@ http_interactions:
       reason: OK
       message: 'Success: (200) OK'
     headers:
-      date: Mon, 12 Oct 2020 08:59:58 GMT
-      server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1c mod_fcgid/2.3.9
-        mod_wsgi/4.6.8 Python/3.8
-      x-iem-serverid: iemvs100.local
+      date: Sun, 28 Feb 2021 13:41:58 GMT
+      server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1g mod_fcgid/2.3.9
+        mod_wsgi/4.7.1 Python/3.8
+      x-iem-serverid: iemvs101.local
       access-control-allow-origin: '*'
       transfer-encoding: chunked
       content-type: text/plain; charset=UTF-8
@@ -28,5 +28,5 @@ http_interactions:
         3055-12-01 00:00:00+00:00\n#DEBUG: Time Zone     -> Etc/UTC\n#DEBUG: Data
         Contact   -> daryl herzmann akrherz@iastate.edu 515-294-5978\n#DEBUG: Entries
         Found -> -1\nstation\tvalid\tlon\tlat\ttmpf\tdwpf\trelh\tdrct\tsknt\tp01i\talti\tmslp\tvsby\tgust\tskyc1\tskyc2\tskyc3\tskyc4\tskyl1\tskyl2\tskyl3\tskyl4\twxcodes\tice_accretion_1hr\tice_accretion_3hr\tice_accretion_6hr\tpeak_wind_gust\tpeak_wind_drct\tpeak_wind_time\tfeel\tmetar\n"
-  recorded_at: 2020-10-12 08:59:58 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.6.2
+  recorded_at: 2021-02-28 13:41:59 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.7.4
