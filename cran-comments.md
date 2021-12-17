@@ -1,7 +1,7 @@
 ## Test environments
-* local Windows install
-* ubuntu 12.04 (on travis-ci, oldrel, devel and release)
-* win-builder (on appveyor-ci, stable, patch, oldrel and devel)
+* local Ubuntu install
+* win-builder
+* GitHub Actions
 
 ## R CMD check results
 
@@ -10,7 +10,7 @@ R CMD check results
 
 ## Release summary
 
-The package now has less dependencies, but the user interface has not changed.
+Switches to newer IEM metadata web services.
 
 ## Reverse dependencies
 
