@@ -24,7 +24,7 @@ Imports:
     httr2,
     magrittr,
     purrr
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 URL: https://docs.ropensci.org/riem/, https://github.com/ropensci/riem
 BugReports: https://github.com/ropensci/riem/issues
 Suggests: 

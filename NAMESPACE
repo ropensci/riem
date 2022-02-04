@@ -3,4 +3,5 @@
 export(riem_measures)
 export(riem_networks)
 export(riem_stations)
+importFrom(rlang,"%||%")
 importFrom(utils,read.table)
