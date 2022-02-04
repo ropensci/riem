@@ -47,76 +47,82 @@
 #'
 #' @examples
 #' \dontrun{
-#' riem_measures(station = "VOHY", date_start = "2000-01-01", date_end = "2016-04-22")
+#' riem_measures(station = "VOHY", date_start = "2016-01-01", date_end = "2016-04-22")
 #' }
 riem_measures <- function(station = "VOHY",
                           date_start = "2014-01-01",
                           date_end = as.character(Sys.Date())){
 
-  base_link <- "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py/"
-
-
-
-
-  date_start <- suppressWarnings(
-    lubridate::ymd(date_start)
-  )
-
-  if(is.na(date_start)){
-    stop(call. = FALSE,
-         "date_start has to be formatted like \"2014-12-14\", that is year-month-day.") # nolint
-  }
-  date_end <- suppressWarnings(
-    lubridate::ymd(date_end)
-  )
-
-  if(is.na(date_end)){
-    stop(call. = FALSE,
-         "date_end has to be formatted like \"2014-12-14\", that is year-month-day.")# nolint
-  }
-
+  date_start <- format_and_check_date(date_start, "date_start")
+  date_end <- format_and_check_date(date_end, "date_end")
   if(date_end < date_start){
-    stop(call. = FALSE,
-         "date_end has to be bigger than date_start")# nolint
+    rlang::abort("date_end has to be bigger than date_start")
   }
 
+  resp <- "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py/" %>%
+    httr2::request() %>%
+    httr2::req_url_query(
+      station = station,
+      data = "all",
+      year1 = lubridate::year(date_start),
+      month1 = lubridate::month(date_start),
+      day1 = lubridate::day(date_start),
+      year2 = lubridate::year(date_end),
+      month2 = lubridate::month(date_end),
+      day2 = lubridate::day(date_end),
+      format = "tdf",
+      latlon = "yes") %>%
+    httr2::req_user_agent("riem (https://docs.ropensci.org/riem)") %>%
+    httr2::req_retry(max_tries = 3, max_seconds = 120) %>%
+    httr2::req_perform()
 
-  # query
-  page <- httr::GET(url = base_link,
-                    query = list(station = station,
-                                 data = "all",
-                                 year1 = lubridate::year(date_start),
-                                 month1 = lubridate::month(date_start),
-                                 day1 = lubridate::day(date_start),
-                                 year2 = lubridate::year(date_end),
-                                 month2 = lubridate::month(date_end),
-                                 day2 = lubridate::day(date_end),
-                                 format = "tdf",
-                                 latlon = "yes"))
-  content <- httr::content(page)
+  httr2::resp_check_status(resp)
 
-  col.names <- t(suppressWarnings(read.table(text = content,
-                                           skip = 5,
-                                           nrows = 1,
-                                           na.strings = c("", "NA", "M"),
-                                           sep = "\t",
-                                           stringsAsFactors = FALSE)))
-  col.names <- as.character(col.names)
+  content <- httr2::resp_body_string(resp)
 
+  col.names <- read.table(
+      text = content,
+      skip = 5,
+      nrows = 1,
+      na.strings = c("", "NA", "M"),
+      sep = "\t",
+      stringsAsFactors = FALSE
+    ) %>%
+    t() %>%
+    as.character()
   col.names <- gsub(" ", "", col.names)
 
-  result <- suppressWarnings(read.table(text = content,
-                                        skip = 6,
-                                        col.names = col.names,
-                                        na.strings = c("", "NA", "M"),
-                                        sep = "\t",
-                                        stringsAsFactors = FALSE,
-                                        fill = TRUE))
+  result <- read.table(
+    text = content,
+    skip = 6,
+    col.names = col.names,
+    na.strings = c("", "NA", "M"),
+    sep = "\t",
+    stringsAsFactors = FALSE,
+    fill = TRUE
+  )
 
   if(nrow(result) == 0){
-    warning("No results for this query.", call. = FALSE)
-  }else{
+    rlang::warn("No results for this query.")
+    return(NULL)
+  }
+
     result$valid <- lubridate::ymd_hm(result$valid)
+
+   tibble::as_tibble(result)
+}
+
+format_and_check_date <- function(date, name) {
+  converted_date <- suppressWarnings(lubridate::ymd(date))
+
+  if (is.na(converted_date)) {
+    rlang::abort(
+      message = c(
+        x = sprintf("Invalid %s: %s.", name, date),
+        i = "Correct format is YYYY-MM-DD."
+      )
+    )
   }
-  return(tibble::as_tibble(result))
-  }
+
+  converted_date
+}

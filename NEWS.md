@@ -1,6 +1,5 @@
 # riem (development version)
 
-* No longer returns columns called lon and lat, only longitude and latitude.
 * Switches to httr2 and httptest2 under the hood.
 
 # riem 0.2.0

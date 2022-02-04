@@ -31,8 +31,8 @@ riem_stations <- function(network = NULL){
 
 
   results <- results[, !names(results) == "combo"]
-  results$longitude <- as.numeric(results$longitude)
-  results$latitude <- as.numeric(results$latitude)
+  results$lon <- as.numeric(results$longitude)
+  results$lat <- as.numeric(results$latitude)
 
   return(results)
 }

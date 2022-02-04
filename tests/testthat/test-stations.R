@@ -5,8 +5,8 @@ test_that("riem_stations returns the right output",{
   expect_s3_class(output, "tbl_df")
   expect_type(output$id, "character")
   expect_type(output$name, "character")
-  expect_type(output$longitude, "double")
-  expect_type(output$latitude, "double")
+  expect_type(output$lon, "double")
+  expect_type(output$lat, "double")
 })
 
 
