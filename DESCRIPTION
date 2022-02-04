@@ -20,7 +20,9 @@ Imports:
     httr (>= 1.1.0),
     lubridate (>= 1.5.6),
     tibble,
-    jsonlite (>= 0.9.19)
+    jsonlite (>= 0.9.19),
+    httr2,
+    magrittr
 RoxygenNote: 7.1.1
 URL: https://docs.ropensci.org/riem/, https://github.com/ropensci/riem
 BugReports: https://github.com/ropensci/riem/issues
@@ -33,5 +35,6 @@ Suggests:
     xts,
     weathermetrics,
     dplyr,
-    vcr
+    vcr,
+    httptest2
 Encoding: UTF-8
