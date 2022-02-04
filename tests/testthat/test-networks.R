@@ -1,8 +1,17 @@
 test_that("riem_networks returns the right output",{
-  httptest2::with_mock_dir("fixtures", {
+  httptest2::with_mock_dir(file.path("fixtures", "networks"), {
     output <- riem_networks()
   })
-  expect_is(output, "tbl_df")
-  expect_is(output$code, "character")
-  expect_is(output$name, "character")
+  expect_s3_class(output, "tbl_df")
+  expect_type(output$code, "character")
+  expect_type(output$name, "character")
 })
+
+test_that("riem_networks errors if API error",{
+  httptest2::with_mock_dir(file.path("fixtures", "networks-error"), {
+    expect_snapshot_error(riem_networks())
+  },
+    simplify = FALSE
+  )
+})
+

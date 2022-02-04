@@ -22,12 +22,13 @@ Imports:
     tibble,
     jsonlite (>= 0.9.19),
     httr2,
-    magrittr
+    magrittr,
+    purrr
 RoxygenNote: 7.1.1
 URL: https://docs.ropensci.org/riem/, https://github.com/ropensci/riem
 BugReports: https://github.com/ropensci/riem/issues
 Suggests: 
-    testthat,
+    testthat (>= 3.0.0),
     knitr,
     rmarkdown,
     ggplot2,
@@ -38,3 +39,4 @@ Suggests:
     vcr,
     httptest2
 Encoding: UTF-8
+Config/testthat/edition: 3
