@@ -1,6 +1,7 @@
 #' Function for getting weather data from one station
 #'
 #' @importFrom utils read.table
+#' @importFrom magrittr %>%
 #'
 #' @param station station ID, see riem_stations()
 #' @param date_start date of start of the desired data, e.g. "2000-01-01"
