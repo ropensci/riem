@@ -1,21 +1,19 @@
-library("riem")
-context("stations")
 test_that("riem_stations returns the right output",{
-  vcr::use_cassette("stations", {
-  output <- riem_stations(network = "IN__ASOS")
+  httptest2::with_mock_dir(file.path("fixtures", "stations"), {
+    output <- riem_stations(network = "IN__ASOS")
   })
-  expect_is(output, "tbl_df")
-  expect_is(output$id, "character")
-  expect_is(output$name, "character")
-  expect_is(output$lon, "numeric")
-  expect_is(output$lat, "numeric")
+  expect_s3_class(output, "tbl_df")
+  expect_type(output$id, "character")
+  expect_type(output$name, "character")
+  expect_type(output$lon, "double")
+  expect_type(output$lat, "double")
 })
 
 
 test_that("riem_stations returns error if code does not exist",{
-  vcr::use_cassette("stations-wrong-code", {
-    expect_error(riem_stations(network = "IN__ASOS2"),
-                 "IN__ASOS2 is not a valid network code")
+  httptest2::with_mock_dir(file.path("fixtures", "networks"), {
+    expect_snapshot_error(riem_stations(network = NULL))
+    expect_snapshot_error(riem_stations(network = "IN__ASOS2"))
   })
 
 })

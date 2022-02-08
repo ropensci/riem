@@ -3,4 +3,7 @@
 export(riem_measures)
 export(riem_networks)
 export(riem_stations)
+importFrom(magrittr,"%>%")
+importFrom(rlang,"!!!")
+importFrom(rlang,"%||%")
 importFrom(utils,read.table)
