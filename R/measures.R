@@ -103,7 +103,7 @@ riem_measures <- function(station = "VOHY",
     fill = TRUE
   )
 
-  if(nrow(result) == 0){
+  if (nrow(result) == 0){
     rlang::warn("No results for this query.")
     return(NULL)
   }
