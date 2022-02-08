@@ -1,5 +1,7 @@
 # riem (development version)
 
+# riem 0.3.0
+
 * Switches to httr2 and httptest2 under the hood.
 * Improves error messages.
 
