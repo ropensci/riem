@@ -8,10 +8,10 @@ test_that("riem_networks returns the right output",{
 })
 
 test_that("riem_networks errors if API error",{
-  httptest2::with_mock_dir(file.path("fixtures", "networks-error"), {
-    expect_snapshot_error(riem_networks())
-  },
-    simplify = FALSE
-  )
+  my_mock <- function(req) {
+    httr2::response(status_code = 502)
+  }
+  httr2::local_mock(my_mock)
+  expect_snapshot_error(riem_networks())
 })
 
