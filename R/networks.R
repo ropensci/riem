@@ -8,11 +8,7 @@
 #' riem_networks()
 #' }
 riem_networks <- function(){
-  resp <- "http://mesonet.agron.iastate.edu/api/1/networks.json" %>%
-    httr2::request() %>%
-    httr2::req_user_agent("riem (https://docs.ropensci.org/riem)") %>%
-    httr2::req_retry(max_tries = 3, max_seconds = 120) %>%
-    httr2::req_perform()
+  resp <- perform_riem_request(path = "api/1/networks.json")
 
   httr2::resp_check_status(resp)
 

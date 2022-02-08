@@ -1,7 +1,5 @@
 #' Function for getting weather data from one station
 #'
-#' @importFrom utils read.table
-#' @importFrom magrittr %>%
 #'
 #' @param station station ID, see riem_stations()
 #' @param date_start date of start of the desired data, e.g. "2000-01-01"
@@ -51,8 +49,8 @@
 #' riem_measures(station = "VOHY", date_start = "2016-01-01", date_end = "2016-04-22")
 #' }
 riem_measures <- function(station = "VOHY",
-                          date_start = "2014-01-01",
-                          date_end = as.character(Sys.Date())){
+  date_start = "2014-01-01",
+  date_end = as.character(Sys.Date())){
 
   date_start <- format_and_check_date(date_start, "date_start")
   date_end <- format_and_check_date(date_end, "date_end")
@@ -60,9 +58,9 @@ riem_measures <- function(station = "VOHY",
     rlang::abort("date_end has to be bigger than date_start")
   }
 
-  resp <- "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py/" %>%
-    httr2::request() %>%
-    httr2::req_url_query(
+  resp <- perform_riem_request(
+    path = "cgi-bin/request/asos.py/",
+    query = list(
       station = station,
       data = "all",
       year1 = lubridate::year(date_start),
@@ -72,23 +70,22 @@ riem_measures <- function(station = "VOHY",
       month2 = lubridate::month(date_end),
       day2 = lubridate::day(date_end),
       format = "tdf",
-      latlon = "yes") %>%
-    httr2::req_user_agent("riem (https://docs.ropensci.org/riem)") %>%
-    httr2::req_retry(max_tries = 3, max_seconds = 120) %>%
-    httr2::req_perform()
+      latlon = "yes"
+    )
+  )
 
   httr2::resp_check_status(resp)
 
   content <- httr2::resp_body_string(resp)
 
   col.names <- read.table(
-      text = content,
-      skip = 5,
-      nrows = 1,
-      na.strings = c("", "NA", "M"),
-      sep = "\t",
-      stringsAsFactors = FALSE
-    ) %>%
+    text = content,
+    skip = 5,
+    nrows = 1,
+    na.strings = c("", "NA", "M"),
+    sep = "\t",
+    stringsAsFactors = FALSE
+  ) %>%
     t() %>%
     as.character()
   col.names <- gsub(" ", "", col.names)
@@ -108,9 +105,9 @@ riem_measures <- function(station = "VOHY",
     return(NULL)
   }
 
-    result$valid <- lubridate::ymd_hm(result$valid)
+  result$valid <- lubridate::ymd_hm(result$valid)
 
-   tibble::as_tibble(result)
+  tibble::as_tibble(result)
 }
 
 format_and_check_date <- function(date, name) {

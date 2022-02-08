@@ -16,11 +16,9 @@ riem_stations <- function(network = NULL){
   valid_network_code <- !is.null(network) && (network %in% riem_networks()$code)
   if(!valid_network_code) error_invalid_network(network)
 
-  resp <- sprintf("http://mesonet.agron.iastate.edu/api/1/network/%s.json", network) %>%
-    httr2::request() %>%
-    httr2::req_user_agent("riem (https://docs.ropensci.org/riem)") %>%
-    httr2::req_retry(max_tries = 3, max_seconds = 120) %>%
-    httr2::req_perform()
+  resp <- perform_riem_request(
+    path = sprintf("api/1/network/%s.json", network)
+  )
 
   httr2::resp_check_status(resp)
 
