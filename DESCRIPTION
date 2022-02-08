@@ -1,7 +1,7 @@
 Type: Package
 Package: riem
 Title: Accesses Weather Data from the Iowa Environment Mesonet
-Version: 0.3.0
+Version: 0.3.0.9000
 Authors@R: c(
     person("Maëlle", "Salmon", , "maelle.salmon@yahoo.se", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-2815-0399")),
