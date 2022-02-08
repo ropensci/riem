@@ -1,5 +1,5 @@
-Package: riem
 Type: Package
+Package: riem
 Title: Accesses Weather Data from the Iowa Environment Mesonet
 Version: 0.2.0.9000
 Authors@R: c(
@@ -13,30 +13,31 @@ Authors@R: c(
            comment = "https://ropensci.org/"),
     person("Daryl", "Herzmann", , "akrherz@gmail.com", role = "ctb")
   )
-Description: Allows to get weather data from Automated Surface Observing System (ASOS) stations (airports) in the
-    whole world thanks to the Iowa Environment Mesonet website.
+Description: Allows to get weather data from Automated Surface Observing
+    System (ASOS) stations (airports) in the whole world thanks to the
+    Iowa Environment Mesonet website.
 License: GPL (>= 2)
-Imports:
-    lubridate (>= 1.5.6),
-    tibble,
-    jsonlite (>= 0.9.19),
-    httr2,
-    magrittr,
-    purrr,
-    rlang
-RoxygenNote: 7.1.2
 URL: https://docs.ropensci.org/riem/, https://github.com/ropensci/riem
 BugReports: https://github.com/ropensci/riem/issues
+Imports:
+    httr2,
+    jsonlite (>= 0.9.19),
+    lubridate (>= 1.5.6),
+    magrittr,
+    purrr,
+    rlang,
+    tibble
 Suggests: 
-    testthat (>= 3.0.0),
+    dplyr,
+    forecast,
+    ggplot2,
+    httptest2,
     knitr,
     rmarkdown,
-    ggplot2,
-    forecast,
-    xts,
-    weathermetrics,
-    dplyr,
+    testthat (>= 3.0.0),
     vcr,
-    httptest2
-Encoding: UTF-8
+    weathermetrics,
+    xts
 Config/testthat/edition: 3
+Encoding: UTF-8
+RoxygenNote: 7.1.2
