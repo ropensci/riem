@@ -1,4 +1,4 @@
-#' Function for getting stations of an ASOS network
+#' Get stations of an ASOS network
 #'
 #' @importFrom rlang %||%
 #'

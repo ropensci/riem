@@ -2,7 +2,7 @@
 % Please edit documentation in R/stations.R
 \name{riem_stations}
 \alias{riem_stations}
-\title{Function for getting stations of an ASOS network}
+\title{Get stations of an ASOS network}
 \usage{
 riem_stations(network = NULL)
 }
@@ -13,7 +13,7 @@ riem_stations(network = NULL)
 a data.frame (tibble tibble) with the id, name, longitude (lon) and latitude (lat) of each station in the network.
 }
 \description{
-Function for getting stations of an ASOS network
+Get stations of an ASOS network
 }
 \details{
 You can see a map of stations in a network at \url{https://mesonet.agron.iastate.edu/request/download.phtml}.

@@ -1,4 +1,4 @@
-#' Function for getting weather data from one station
+#' Get weather data from one station
 #'
 #'
 #' @param station station ID, see riem_stations()

@@ -1,4 +1,4 @@
-#' Function for getting ASOS and AWOS networks
+#' Get ASOS and AWOS networks
 #'
 #' @return a data.frame (tibble tibble) with the names and codes of available networks.
 #' @export

@@ -2,7 +2,7 @@
 % Please edit documentation in R/measures.R
 \name{riem_measures}
 \alias{riem_measures}
-\title{Function for getting weather data from one station}
+\title{Get weather data from one station}
 \usage{
 riem_measures(
   station = "VOHY",
@@ -55,7 +55,7 @@ but possible variables are
 }
 }
 \description{
-Function for getting weather data from one station
+Get weather data from one station
 }
 \details{
 The data is queried through \url{https://mesonet.agron.iastate.edu/request/download.phtml}.

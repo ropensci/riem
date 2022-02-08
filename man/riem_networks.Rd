@@ -2,7 +2,7 @@
 % Please edit documentation in R/networks.R
 \name{riem_networks}
 \alias{riem_networks}
-\title{Function for getting ASOS and AWOS networks}
+\title{Get ASOS and AWOS networks}
 \usage{
 riem_networks()
 }
@@ -10,7 +10,7 @@ riem_networks()
 a data.frame (tibble tibble) with the names and codes of available networks.
 }
 \description{
-Function for getting ASOS and AWOS networks
+Get ASOS and AWOS networks
 }
 \examples{
 \dontrun{
