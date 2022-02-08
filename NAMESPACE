@@ -3,6 +3,7 @@
 export(riem_measures)
 export(riem_networks)
 export(riem_stations)
+importFrom(jsonlite,read_json)
 importFrom(magrittr,"%>%")
 importFrom(rlang,"!!!")
 importFrom(rlang,"%||%")

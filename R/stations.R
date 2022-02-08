@@ -1,6 +1,5 @@
 #' Get stations of an ASOS network
 #'
-#' @importFrom rlang %||%
 #'
 #' @param network A single network code, see riem_networks() for finding the code corresponding to a name.
 #' @return a data.frame (tibble tibble) with the id, name, longitude (lon) and latitude (lat) of each station in the network.

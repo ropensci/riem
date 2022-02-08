@@ -1,6 +1,8 @@
 #' @importFrom utils read.table
 #' @importFrom magrittr %>%
 #' @importFrom rlang !!!
+#' @importFrom rlang %||%
+#' @importFrom jsonlite read_json
 
 perform_riem_request <- function(path, query = NULL) {
   "https://mesonet.agron.iastate.edu/" %>%

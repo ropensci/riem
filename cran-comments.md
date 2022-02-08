@@ -2,6 +2,7 @@
 * local Ubuntu install
 * win-builder
 * GitHub Actions
+* R-hub macOS, Ubuntu
 
 ## R CMD check results
 
@@ -10,7 +11,8 @@ R CMD check results
 
 ## Release summary
 
-Switches to newer IEM metadata web services.
+* Switches to httr2 and httptest2 under the hood.
+* Improves error messages.
 
 ## Reverse dependencies
 
