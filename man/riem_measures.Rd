@@ -58,7 +58,7 @@ but possible variables are
 Get weather data from one station
 }
 \details{
-The data is queried through \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
+The data is queried via \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
 }
 \examples{
 \dontrun{
