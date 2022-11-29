@@ -1,5 +1,9 @@
 # riem (development version)
 
+# riem 0.3.1
+
+* Fixes timestamp parsing bug in riem_measures() caused by a lubridate 1.9.0 bug (#40, @BenoitFayolle)
+
 # riem 0.3.0
 
 * Switches to httr2 and httptest2 under the hood.
