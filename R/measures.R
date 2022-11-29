@@ -105,7 +105,7 @@ riem_measures <- function(station = "VOHY",
     return(NULL)
   }
 
-  result$valid <- lubridate::ymd_hm(result$valid)
+  result$valid <- lubridate::as_datetime(result$valid,format="%F %H:%M")
 
   tibble::as_tibble(result)
 }
