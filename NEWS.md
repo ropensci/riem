@@ -2,7 +2,7 @@
 
 # riem 0.3.1
 
-* Fix timestamp parsing bug in riem_measures() (#40, @BenoitFayolle)
+* Fixes timestamp parsing bug in riem_measures() caused by a lubridate 1.9.0 bug (#40, @BenoitFayolle)
 
 # riem 0.3.0
 
