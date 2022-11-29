@@ -22,7 +22,7 @@ BugReports: https://github.com/ropensci/riem/issues
 Imports:
     httr2,
     jsonlite (>= 0.9.19),
-    lubridate (>= 1.5.6),
+    lubridate (>= 1.9.0.9000),
     magrittr,
     purrr,
     rlang,
@@ -41,3 +41,5 @@ Suggests:
 Config/testthat/edition: 3
 Encoding: UTF-8
 RoxygenNote: 7.1.2
+Remotes:  
+    tidyverse/lubridate
