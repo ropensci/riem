@@ -70,7 +70,8 @@ riem_measures <- function(station = "VOHY",
       month2 = lubridate::month(date_end),
       day2 = lubridate::day(date_end),
       format = "tdf",
-      latlon = "yes"
+      latlon = "yes",
+      tz = "UTC"
     )
   )
 
