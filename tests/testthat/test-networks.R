@@ -11,7 +11,7 @@ test_that("riem_networks errors if API error",{
   my_mock <- function(req) {
     httr2::response(status_code = 502)
   }
-  httr2::local_mock(my_mock)
+  httr2::local_mocked_responses(my_mock)
   expect_snapshot_error(riem_networks())
 })
 
