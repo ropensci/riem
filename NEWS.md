@@ -1,6 +1,6 @@
-# riem (development version)
-
 # riem 0.3.1
+
+* set tz=UTC on request to ensure tz result (#43, @akrherz)
 
 * Fixes timestamp parsing bug in riem_measures() caused by a lubridate 1.9.0 bug (#40, @BenoitFayolle)
 
