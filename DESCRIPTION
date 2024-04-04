@@ -20,6 +20,7 @@ License: GPL (>= 2)
 URL: https://docs.ropensci.org/riem/, https://github.com/ropensci/riem
 BugReports: https://github.com/ropensci/riem/issues
 Imports:
+    cli,
     httr2,
     jsonlite (>= 0.9.19),
     lubridate (>= 1.9.0.9000),
@@ -41,5 +42,5 @@ Suggests:
 Config/testthat/edition: 3
 Encoding: UTF-8
 RoxygenNote: 7.1.2
-Remotes:  
+Remotes: 
     tidyverse/lubridate

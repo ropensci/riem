@@ -55,7 +55,7 @@ riem_measures <- function(
   date_start <- format_and_check_date(date_start, "date_start")
   date_end <- format_and_check_date(date_end, "date_end")
   if (date_end < date_start) {
-    rlang::abort("date_end has to be bigger than date_start")
+    cli::cli_abort("{.arg date_end} must be bigger than {.arg date_start}.")
   }
 
   resp <- perform_riem_request(
@@ -102,7 +102,7 @@ riem_measures <- function(
   )
 
   if (nrow(result) == 0) {
-    rlang::warn("No results for this query.")
+    cli::cli_warn("No results for this query.")
     return(NULL)
   }
 
@@ -115,9 +115,9 @@ format_and_check_date <- function(date, name) {
   converted_date <- suppressWarnings(lubridate::ymd(date))
 
   if (is.na(converted_date)) {
-    rlang::abort(
+    cli::cli_abort(
       message = c(
-        x = sprintf("Invalid %s: %s.", name, date),
+        x = sprintf("Invalid {.arg %s}: {.value %s}.", name, date),
         i = "Correct format is YYYY-MM-DD."
       )
     )
