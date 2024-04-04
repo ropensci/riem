@@ -117,7 +117,7 @@ format_and_check_date <- function(date, name) {
   if (is.na(converted_date)) {
     cli::cli_abort(
       message = c(
-        x = sprintf("Invalid {.arg %s}: {.value %s}.", name, date),
+        x = "Invalid {.arg {name}}: {.value {date}}.",
         i = "Correct format is YYYY-MM-DD."
       )
     )
