@@ -1,18 +1,13 @@
-## Test environments
-* local Ubuntu install
-* win-builder
-* GitHub Actions
-* R-hub macOS, Ubuntu
+## Release summary
+
+* Set tz=UTC on request to ensure tz result
+
+* Fixes timestamp parsing bug in riem_measures() caused by a lubridate 1.9.0 bug
+
 
 ## R CMD check results
 
-R CMD check results
 0 errors | 0 warnings | 0 notes
-
-## Release summary
-
-* Switches to httr2 and httptest2 under the hood.
-* Improves error messages.
 
 ## Reverse dependencies
 
