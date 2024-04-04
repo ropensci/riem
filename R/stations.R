@@ -10,10 +10,9 @@
 #' \dontrun{
 #' riem_stations(network = "IN__ASOS")
 #' }
-riem_stations <- function(network = NULL){
-
+riem_stations <- function(network = NULL) {
   valid_network_code <- !is.null(network) && (network %in% riem_networks()$code)
-  if(!valid_network_code) error_invalid_network(network)
+  if (!valid_network_code) error_invalid_network(network)
 
   resp <- perform_riem_request(
     path = sprintf("api/1/network/%s.json", network)

@@ -1,4 +1,4 @@
-test_that("riem_stations returns the right output",{
+test_that("riem_stations returns the right output", {
   httptest2::with_mock_dir(file.path("fixtures", "stations"), {
     output <- riem_stations(network = "IN__ASOS")
   })
@@ -10,10 +10,9 @@ test_that("riem_stations returns the right output",{
 })
 
 
-test_that("riem_stations returns error if code does not exist",{
+test_that("riem_stations returns error if code does not exist", {
   httptest2::with_mock_dir(file.path("fixtures", "networks"), {
     expect_snapshot_error(riem_stations(network = NULL))
     expect_snapshot_error(riem_stations(network = "IN__ASOS2"))
   })
-
 })

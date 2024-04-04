@@ -1,4 +1,4 @@
-test_that("riem_measures returns the right output",{
+test_that("riem_measures returns the right output", {
   httptest2::with_mock_dir(file.path("fixtures", "measures"), {
     output <- riem_measures(
       station = "VOHY",
@@ -34,18 +34,19 @@ test_that("riem_measures returns the right output",{
 })
 
 
-test_that("riem_measures outputs warning if no results",{
+test_that("riem_measures outputs warning if no results", {
   vcr::use_cassette("measures-warnings", {
     expect_warning(
       riem_measures(
         date_start = "3050-12-01",
-        date_end = "3055-12-01"),
+        date_end = "3055-12-01"
+      ),
       "No results for this query."
     )
   })
 })
 
-test_that("riem_measures checks dates",{
+test_that("riem_measures checks dates", {
   expect_snapshot_error(riem_measures(date_start = "somethingelse"))
 
   expect_snapshot_error(riem_measures(date_end = "somethingelse"))
@@ -61,4 +62,3 @@ test_that("riem_measures checks dates",{
     )
   )
 })
-

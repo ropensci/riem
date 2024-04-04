@@ -1,4 +1,4 @@
-test_that("riem_networks returns the right output",{
+test_that("riem_networks returns the right output", {
   httptest2::with_mock_dir(file.path("fixtures", "networks"), {
     output <- riem_networks()
   })
@@ -7,11 +7,10 @@ test_that("riem_networks returns the right output",{
   expect_type(output$name, "character")
 })
 
-test_that("riem_networks errors if API error",{
+test_that("riem_networks errors if API error", {
   my_mock <- function(req) {
     httr2::response(status_code = 502)
   }
   httr2::local_mocked_responses(my_mock)
   expect_snapshot_error(riem_networks())
 })
-

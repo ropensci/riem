@@ -15,7 +15,6 @@ library("dplyr")
 france_airports <- riem_stations(network = "FR__ASOS")
 marseilles_airport <- filter(france_airports, grepl("MARSEILLE", name) | grepl("Marseille", name))
 marseilles_airport
-
 ```
 
 # Get time series of temperature for Marseille airport
@@ -24,8 +23,10 @@ We'll transform it to daily average, and convert Fahrenheit to Celsius thanks to
 
 
 ```{r, cache = FALSE, fig.width=8, fig.height=6, message = FALSE, warning = FALSE}
-marseille <- riem_measures(station = marseilles_airport$id,
-                           date_start = "2010 01 01")
+marseille <- riem_measures(
+  station = marseilles_airport$id,
+  date_start = "2010 01 01"
+)
 
 marseille <- group_by(marseille, day = as.Date(valid))
 marseille <- summarize(marseille, temperature = mean(tmpf))
@@ -34,11 +35,10 @@ library("ggplot2")
 
 
 library("forecast")
-marseille_ts = ts(as.vector(tsclean(marseille$temperature)), freq=365.25, start=c(2010, 1))
+marseille_ts <- ts(as.vector(tsclean(marseille$temperature)), freq = 365.25, start = c(2010, 1))
 autoplot(marseille_ts) +
   ylab("Daily average temperature in Marseille airport (ºC)") +
   xlab("Time (days)")
-
 ```
 
 # Forecast for Marseille
@@ -46,7 +46,6 @@ autoplot(marseille_ts) +
 For this we use the `forecast` package. We use the `stlm` because our time series obviously present yearly seasonality.
 
 ```{r, cache = FALSE, fig.width=8, fig.height=6}
-
 fit <- stlm(marseille_ts)
 pred <- forecast(fit, h = 7)
 # plot
@@ -55,20 +54,20 @@ autoplot(pred) +
   ylab("Daily average temperature in Marseille airport (ºC)") +
   xlab("Time (days)") +
   ggtitle("How cold will I be during the holidays?",
-          subtitle = "Data accessed via the rOpenSci riem package and forecasted with forecast")
-
+    subtitle = "Data accessed via the rOpenSci riem package and forecasted with forecast"
+  )
 ```
 
 Mmh I don't see anything, but `autoplot.forecast` has an `include` parameters, so I'll only plot the last 31 values.
 
 
 ```{r, cache = FALSE, fig.width=8, fig.height=6}
-
 autoplot(pred, include = 31) +
   ylab("Daily average temperature in Marseille airport (ºC)") +
   xlab("Time (days)") +
   ggtitle("How cold will I be during the holidays?",
-          subtitle = "Data accessed via the rOpenSci riem package and forecasted with forecast")
+    subtitle = "Data accessed via the rOpenSci riem package and forecasted with forecast"
+  )
 ```
 
 # What if I went somewhere else?
@@ -76,23 +75,24 @@ autoplot(pred, include = 31) +
 Ok, what if I had travelled to, say, Hyderabad in India?
 
 ```{r, echo = FALSE, cache = FALSE, fig.width=8, fig.height=6}
-
-hyderabad <- riem_measures(station = "VOHY",
-                           date_start = "2010 01 01")
+hyderabad <- riem_measures(
+  station = "VOHY",
+  date_start = "2010 01 01"
+)
 
 hyderabad <- group_by(hyderabad, day = as.Date(valid))
 hyderabad <- summarize(hyderabad, temperature = mean(tmpf))
 hyderabad <- mutate(hyderabad, temperature = weathermetrics::fahrenheit.to.celsius(temperature))
 
-hyderabad_ts = ts(as.vector(tsclean(hyderabad$temperature)), freq=365.25, start=c(2010, 1))
+hyderabad_ts <- ts(as.vector(tsclean(hyderabad$temperature)), freq = 365.25, start = c(2010, 1))
 fit <- stlm(hyderabad_ts)
 pred <- forecast(fit, h = 7)
 autoplot(pred, include = 31) +
   ylab("Daily average temperature in Hyderabad airport (ºC)") +
   xlab("Time (days)") +
   ggtitle("Hyderabad forecasted temperatures in December 2016",
-          subtitle = "Data accessed via the rOpenSci riem package and forecasted with forecast")
-
+    subtitle = "Data accessed via the rOpenSci riem package and forecasted with forecast"
+  )
 ```
 
 Without surprise, we forecast I'd have enjoyed warmer weather. 
