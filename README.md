@@ -5,7 +5,7 @@ riem
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/riem)](https://cran.r-project.org/package=riem)
-[![codecov](https://app.codecov.io/gh/ropensci/riem/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ropensci/riem)
+[![codecov](https://codecov.io/gh/ropensci/riem/graph/badge.svg)](https://codecov.io/gh/ropensci/riem)
 [![](https://badges.ropensci.org/39_status.svg)](https://github.com/ropensci/software-review/issues/39)
   [![R-CMD-check](https://github.com/ropensci/riem/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/riem/actions)
   <!-- badges: end -->
