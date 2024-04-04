@@ -13,3 +13,4 @@
 ^codemeta\.json$
 ^vignettes/articles$
 ^\.github$
+^CRAN-SUBMISSION$
