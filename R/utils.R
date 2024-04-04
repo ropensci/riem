@@ -10,6 +10,6 @@ perform_riem_request <- function(path, query = NULL) {
     httr2::req_url_path_append(path) %>%
     httr2::req_url_query(!!!query) %>%
     httr2::req_user_agent("riem (https://docs.ropensci.org/riem)") %>%
-    httr2::req_retry(max_tries = 3, max_seconds = 120) %>%
+    httr2::req_retry(max_tries = 3L, max_seconds = 120L) %>%
     httr2::req_perform()
 }

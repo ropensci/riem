@@ -7,16 +7,19 @@
 riem_stations(network)
 }
 \arguments{
-\item{network}{A single network code, see riem_networks() for finding the code corresponding to a name.}
+\item{network}{A single network code, see riem_networks() for finding
+the code corresponding to a name.}
 }
 \value{
-a data.frame (tibble tibble) with the id, name, longitude (lon) and latitude (lat) of each station in the network.
+a data.frame (tibble tibble) with the id, name, longitude (lon) and
+latitude (lat) of each station in the network.
 }
 \description{
 Get stations of an ASOS network
 }
 \details{
-You can see a map of stations in a network at \url{https://mesonet.agron.iastate.edu/request/download.phtml}.
+You can see a map of stations in a network at
+\url{https://mesonet.agron.iastate.edu/request/download.phtml}.
 }
 \examples{
 \dontrun{
