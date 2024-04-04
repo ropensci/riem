@@ -1,6 +1,6 @@
 #DEBUG: Format Typ    -> tdf
 #DEBUG: Time Period   -> 2014-03-01 00:00:00+00:00 2014-04-05 00:00:00+00:00
-#DEBUG: Time Zone     -> Etc/UTC
+#DEBUG: Time Zone     -> UTC
 #DEBUG: Data Contact   -> daryl herzmann akrherz@iastate.edu 515-294-5978
 #DEBUG: Entries Found -> -1
 station	valid	lon	lat	tmpf	dwpf	relh	drct	sknt	p01i	alti	mslp	vsby	gust	skyc1	skyc2	skyc3	skyc4	skyl1	skyl2	skyl3	skyl4	wxcodes	ice_accretion_1hr	ice_accretion_3hr	ice_accretion_6hr	peak_wind_gust	peak_wind_drct	peak_wind_time	feel	metar	snowdepth
