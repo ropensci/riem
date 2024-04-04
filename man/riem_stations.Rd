@@ -4,7 +4,7 @@
 \alias{riem_stations}
 \title{Get stations of an ASOS network}
 \usage{
-riem_stations(network = NULL)
+riem_stations(network)
 }
 \arguments{
 \item{network}{A single network code, see riem_networks() for finding the code corresponding to a name.}

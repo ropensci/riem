@@ -10,8 +10,8 @@
 #' \dontrun{
 #' riem_stations(network = "IN__ASOS")
 #' }
-riem_stations <- function(network = NULL) {
-  valid_network_code <- !is.null(network) && (network %in% riem_networks()$code)
+riem_stations <- function(network) {
+  valid_network_code <- (network %in% riem_networks()$code)
   if (!valid_network_code) error_invalid_network(network)
 
   resp <- perform_riem_request(
@@ -34,10 +34,10 @@ riem_stations <- function(network = NULL) {
 }
 
 error_invalid_network <- function(network) {
-  rlang::abort(
+  cli::cli_abort(
     c(
-      x = sprintf("%s is an invalid network code.", as.character(network %||% "null")),
-      i = "See riem_networks() for valid codes."
+      x = sprintf("{.arg network} ({.value {network}}) is an invalid network code."),
+      i = "See {.fun riem_networks} for valid codes."
     )
   )
 }
