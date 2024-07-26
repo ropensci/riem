@@ -1,4 +1,6 @@
-# riem (development version)
+# riem 0.3.2
+
+* Remove last usage of vcr as the choice was made to use httptest2 instead.
 
 # riem 0.3.1
 
