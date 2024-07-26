@@ -1,8 +1,6 @@
 ## Release summary
 
-* Set tz=UTC on request to ensure tz result
-
-* Fixes timestamp parsing bug in riem_measures() caused by a lubridate 1.9.0 bug
+- Fixed the test error. Thank you!
 
 
 ## R CMD check results
