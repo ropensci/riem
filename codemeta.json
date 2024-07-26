@@ -8,13 +8,13 @@
   "codeRepository": "https://github.com/ropensci/riem",
   "issueTracker": "https://github.com/ropensci/riem/issues",
   "license": "https://spdx.org/licenses/GPL-2.0",
-  "version": "0.3.0.9000",
+  "version": "0.3.1.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.2.0 (2022-04-22)",
+  "runtimePlatform": "R version 4.4.0 (2024-04-24)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -145,18 +145,6 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "vcr",
-      "name": "vcr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=vcr"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "weathermetrics",
       "name": "weathermetrics",
       "provider": {
@@ -183,6 +171,18 @@
   "softwareRequirements": {
     "1": {
       "@type": "SoftwareApplication",
+      "identifier": "cli",
+      "name": "cli",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=cli"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
       "identifier": "httr2",
       "name": "httr2",
       "provider": {
@@ -193,7 +193,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=httr2"
     },
-    "2": {
+    "3": {
       "@type": "SoftwareApplication",
       "identifier": "jsonlite",
       "name": "jsonlite",
@@ -206,7 +206,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=jsonlite"
     },
-    "3": {
+    "4": {
       "@type": "SoftwareApplication",
       "identifier": "lubridate",
       "name": "lubridate",
@@ -217,9 +217,9 @@
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://github.com/tidyverse/lubridate"
+      "sameAs": "https://CRAN.R-project.org/package=lubridate"
     },
-    "4": {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "magrittr",
       "name": "magrittr",
@@ -231,7 +231,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=magrittr"
     },
-    "5": {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "purrr",
       "name": "purrr",
@@ -243,7 +243,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=purrr"
     },
-    "6": {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "rlang",
       "name": "rlang",
@@ -255,7 +255,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=rlang"
     },
-    "7": {
+    "8": {
       "@type": "SoftwareApplication",
       "identifier": "tibble",
       "name": "tibble",
@@ -269,8 +269,8 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "930.521KB",
-  "releaseNotes": "https://github.com/ropensci/riem/blob/main/NEWS.md",
+  "fileSize": "1030.619KB",
+  "releaseNotes": "https://github.com/ropensci/riem/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/riem/blob/main/README.md",
   "contIntegration": ["https://app.codecov.io/gh/ropensci/riem", "https://github.com/ropensci/riem/actions"],
   "developmentStatus": "https://www.repostatus.org/",

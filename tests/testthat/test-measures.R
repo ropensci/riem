@@ -35,7 +35,7 @@ test_that("riem_measures returns the right output", {
 
 
 test_that("riem_measures outputs warning if no results", {
-  vcr::use_cassette("measures-warnings", {
+  httptest2::with_mock_dir(file.path("fixtures", "warnings"), {
     expect_warning(
       riem_measures(
         date_start = "3050-12-01",
