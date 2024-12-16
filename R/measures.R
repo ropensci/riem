@@ -68,7 +68,9 @@ riem_measures <- function(
     elev = "no",
     latlon = "yes",
     date_start = "2014-01-01",
-    date_end = as.character(Sys.Date())) {
+    date_end = as.character(Sys.Date()),
+    # skip HFMETAR by default
+    report_type = "3,4") {
   date_start <- format_and_check_date(date_start, "date_start")
   date_end <- format_and_check_date(date_end, "date_end")
   if (date_end < date_start) {
@@ -89,6 +91,7 @@ riem_measures <- function(
       year2 = lubridate::year(date_end),
       month2 = lubridate::month(date_end),
       day2 = lubridate::day(date_end),
+      report_type = report_type,
       format = "tdf",
       tz = "UTC"
     )
