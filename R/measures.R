@@ -75,6 +75,7 @@ riem_measures <- function(
 
   resp <- perform_riem_request(
     path = "cgi-bin/request/asos.py/", # nolint: nonportable_path_linter
+    # query fields per https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?help # nolint: line_length_linter
     query = list(
       station = station,
       data = data,
