@@ -67,7 +67,7 @@ riem_measures <- function(
     data = "all",
     elev = "no",
     latlon = "yes",
-    date_start = "2014-01-01",
+    date_start = "2024-01-01",
     date_end = as.character(Sys.Date()),
     # skip HFMETAR by default
     report_type = "3,4") {
