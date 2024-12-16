@@ -93,6 +93,7 @@ riem_measures <- function(
       day2 = lubridate::day(date_end),
       report_type = report_type,
       format = "tdf",
+      nometa = "no",
       tz = "UTC"
     )
   )
