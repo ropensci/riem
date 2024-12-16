@@ -2,8 +2,12 @@
 #'
 #'
 #' @param station station ID, see riem_stations()
-#' @param date_start date of start of the desired data, e.g. "2000-01-01"
+#' @param data The data columns to return. The available options are: all, tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, wxcodes, ice_accretion_1hr, ice_accretion_3hr, ice_accretion_6hr, peak_wind_gust, peak_wind_drct, peak_wind_time, feel, metar, snowdepth # nolint: line_length_linter
+#' @param elev If set to 'yes', the elevation (m) of the station will be included in the output. # nolint: line_length_linter
+#' @param latlon If set to 'yes', the latitude and longitude of the station will be included in the output. # nolint: line_length_linter
+#' @param date_start date of start of the desired data, e.g. "2016-01-01"
 #' @param date_end date of end of the desired data, e.g. "2016-04-22"
+#' @param report_type The report type to query. The available options are: 1 (HFMETAR), 3 (Routine), 4 (Specials). # nolint: line_length_linter
 #'
 #' @return a data.frame (tibble tibble) with measures,
 #' the number of columns can vary from station to station,
