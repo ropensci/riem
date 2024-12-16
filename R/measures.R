@@ -65,6 +65,7 @@
 riem_measures <- function(
     station = "VOHY",
     data = "all",
+    elev = "no",
     date_start = "2014-01-01",
     date_end = as.character(Sys.Date())) {
   date_start <- format_and_check_date(date_start, "date_start")
@@ -79,6 +80,7 @@ riem_measures <- function(
     query = list(
       station = station,
       data = data,
+      elev = elev,
       year1 = lubridate::year(date_start),
       month1 = lubridate::month(date_start),
       day1 = lubridate::day(date_start),
