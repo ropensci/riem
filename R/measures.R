@@ -90,7 +90,7 @@ riem_measures <- function(
       station = station,
       data = data,
       elev = ifelse(elev, "yes", "no"),
-      latlon = ifelse(elev, "yes", "no"),
+      latlon = ifelse(latlon, "yes", "no"),
       year1 = lubridate::year(date_start),
       month1 = lubridate::month(date_start),
       day1 = lubridate::day(date_start),
