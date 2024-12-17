@@ -11,7 +11,9 @@ Authors@R: c(
            comment = "The research leading to these results has received funding from the European Research Council under the ERC Grant Agreement number 336167– the CHAI Project"),
     person("rOpenSci", role = "fnd",
            comment = "https://ropensci.org/"),
-    person("Daryl", "Herzmann", , "akrherz@gmail.com", role = "ctb")
+    person("Daryl", "Herzmann", , "akrherz@gmail.com", role = "ctb"),
+    person("Jonathan", "Elchison", email = "JElchison@gmail.com", role = c("aut"),
+           comment = c(ORCID = "0009-0004-0787-3426"))
   )
 Description: Allows to get weather data from Automated Surface Observing
     System (ASOS) stations (airports) in the whole world thanks to the
