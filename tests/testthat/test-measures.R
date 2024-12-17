@@ -38,6 +38,7 @@ test_that("riem_measures outputs warning if no results", {
   httptest2::with_mock_dir(file.path("fixtures", "warnings"), {
     expect_warning(
       riem_measures(
+        station = "VOHY",
         date_start = "3050-12-01",
         date_end = "3055-12-01"
       ),
@@ -57,6 +58,7 @@ test_that("riem_measures checks dates", {
 
   expect_snapshot_error(
     riem_measures(
+      station = "VOHY",
       date_start = "2015-12-01",
       date_end = "2013-12-01"
     )
