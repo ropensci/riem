@@ -48,14 +48,18 @@ test_that("riem_measures outputs warning if no results", {
 })
 
 test_that("riem_measures checks dates", {
-  expect_snapshot_error(riem_measures(date_start = "somethingelse"))
+  expect_snapshot_error(riem_measures(station = "VOHY",
+                                      date_start = "somethingelse"))
 
-  expect_snapshot_error(riem_measures(date_start = "2014-03-01",
+  expect_snapshot_error(riem_measures(station = "VOHY",
+                                      date_start = "2014-03-01",
                                       date_end = "somethingelse"))
 
-  expect_snapshot_error(riem_measures(date_start = "2015 31 01"))
+  expect_snapshot_error(riem_measures(station = "VOHY",
+                                      date_start = "2015 31 01"))
 
-  expect_snapshot_error(riem_measures(date_start = "2014-03-01",
+  expect_snapshot_error(riem_measures(station = "VOHY",
+                                      date_start = "2014-03-01",
                                       date_end = "2015 31 01"))
 
   expect_snapshot_error(
