@@ -77,6 +77,7 @@ riem_measures <- function(
     latlon = TRUE,
     # skip HFMETAR by default
     report_type = "3,4") {
+  rlang::check_dots_empty()
   date_start <- format_and_check_date(date_start, "date_start")
   date_end <- format_and_check_date(date_end, "date_end")
   if (date_end < date_start) {
