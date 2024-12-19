@@ -77,7 +77,7 @@ riem_measures <- function(
     latlon = TRUE,
     # skip HFMETAR by default
     report_type = "3,4") {
-  if (!is.string(station)) {
+  if (!rlang::is_character(station, n = 1)) {
     cli::cli_abort("{.arg station} must be a string.")
   }
   date_start <- format_and_check_date(date_start, "date_start")
@@ -86,7 +86,7 @@ riem_measures <- function(
   if (date_end < date_start) {
     cli::cli_abort("{.arg date_end} must be bigger than {.arg date_start}.")
   }
-  if (!is.string(data)) {
+  if (!rlang::is_character(data, n = 1)) {
     cli::cli_abort("{.arg data} must be a string.")
   }
   if (!is.logical(elev)) {
@@ -95,7 +95,7 @@ riem_measures <- function(
   if (!is.logical(latlon)) {
     cli::cli_abort("{.arg latlon} must be a logical (TRUE/FALSE)") # nolint: nonportable_path_linter
   }
-  if (!is.string(report_type)) {
+  if (!rlang::is_character(report_type, n = 1)) {
     cli::cli_abort("{.arg report_type} must be a string.")
   }
 
@@ -154,10 +154,6 @@ riem_measures <- function(
   result$valid <- lubridate::ymd_hm(result$valid) # nolint: extraction_operator_linter
 
   tibble::as_tibble(result)
-}
-
-is.string <- function(x) { # nolint: object_name_linter
-  is.character(x) && length(x) == 1 # nolint: implicit_integer_linter
 }
 
 format_and_check_date <- function(date, name) {
