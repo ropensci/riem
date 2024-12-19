@@ -33,6 +33,27 @@ test_that("riem_measures returns the right output", {
   expect_type(output$metar, "character")
 })
 
+test_that("riem_measures params", {
+  httptest2::with_mock_dir(file.path("fixtures", "measures2"), {
+    output <- riem_measures(
+      station = "VOHY",
+      date_start = "2014-03-01",
+      date_end = "2014-04-05",
+      data = "tmpf",
+      elev = TRUE,
+      latlon = FALSE,
+      report_type = "specials"
+    )
+  })
+  expect_s3_class(output, "tbl_df")
+
+  expect_setequal(names(output), c("station", "valid", "elevation", "tmpf"))
+
+  expect_type(output$station, "character")
+  expect_s3_class(output$valid, "POSIXct")
+  expect_type(output$tmpf, "double")
+  expect_type(output$elevation, "double")
+})
 
 test_that("riem_measures outputs warning if no results", {
   httptest2::with_mock_dir(file.path("fixtures", "warnings"), {
