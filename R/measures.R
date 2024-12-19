@@ -77,7 +77,7 @@ riem_measures <- function(
     elev = FALSE,
     latlon = TRUE,
     report_type = NULL) {
-  if (!rlang::is_character(station, n = 1)) {
+  if (!rlang::is_character(station, n = 1L)) {
     cli::cli_abort("{.arg station} must be a string.")
   }
   date_start <- format_and_check_date(date_start, "date_start")
@@ -86,7 +86,7 @@ riem_measures <- function(
   if (date_end < date_start) {
     cli::cli_abort("{.arg date_end} must be bigger than {.arg date_start}.")
   }
-  if (!rlang::is_character(data, n = 1)) {
+  if (!rlang::is_character(data, n = 1L)) {
     cli::cli_abort("{.arg data} must be a string.")
   }
   if (!is.logical(elev)) {
@@ -104,12 +104,8 @@ riem_measures <- function(
     multiple = TRUE
   )
   report_type <- purrr::map_int(
-    report_type, \(x) switch(
-      x, # nolint: fixed_regex_linter
-      hfmetar = 1L,
-      routine = 3L,
-      specials = 4L
-    )
+    report_type,
+    \(x) switch(x, hfmetar = 1L, routine = 3L, specials = 4L) # nolint: unnecessary_lambda_linter
   )
   report_type <- paste(report_type, collapse = ",")
 
