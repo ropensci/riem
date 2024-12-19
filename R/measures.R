@@ -1,5 +1,6 @@
 #' Get weather data from one station
 #'
+#' @importFrom rlang `%||%`
 #'
 #' @param station station ID, see riem_stations()
 #' @param date_start date of start of the desired data, e.g. "2016-01-01"
@@ -8,7 +9,7 @@
 #' @param data The data columns to return. The available options are: all, tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, wxcodes, ice_accretion_1hr, ice_accretion_3hr, ice_accretion_6hr, peak_wind_gust, peak_wind_drct, peak_wind_time, feel, metar, snowdepth # nolint: line_length_linter
 #' @param elev If TRUE, the elevation (m) of the station will be included in the output. # nolint: line_length_linter
 #' @param latlon If TRUE, the latitude and longitude of the station will be included in the output. # nolint: line_length_linter
-#' @param report_type The report type to query. The available options are: 1 (HFMETAR), 3 (Routine), 4 (Specials). # nolint: line_length_linter
+#' @param report_type The report type to query. The available options are "hfmetar" (skipped by default), "routine", "specials". # nolint: line_length_linter
 #'
 #' @return a data.frame (tibble tibble) with measures,
 #' the number of columns can vary from station to station,
@@ -75,8 +76,7 @@ riem_measures <- function(
     data = "all",
     elev = FALSE,
     latlon = TRUE,
-    # skip HFMETAR by default
-    report_type = "3,4") {
+    report_type = NULL) {
   if (!rlang::is_character(station, n = 1)) {
     cli::cli_abort("{.arg station} must be a string.")
   }
@@ -95,9 +95,23 @@ riem_measures <- function(
   if (!is.logical(latlon)) {
     cli::cli_abort("{.arg latlon} must be a logical (TRUE/FALSE)") # nolint: nonportable_path_linter
   }
-  if (!rlang::is_character(report_type, n = 1)) {
-    cli::cli_abort("{.arg report_type} must be a string.")
-  }
+
+  report_type <- report_type %||% c("routine", "specials")
+  report_type <- tolower(report_type) # not case-sensitive
+  report_type <- rlang::arg_match(
+    report_type,
+    values = c("hfmetar", "routine", "specials"),
+    multiple = TRUE
+  )
+  report_type <- purrr::map_int(
+    report_type, \(x) switch(
+      x, # nolint: fixed_regex_linter
+      hfmetar = 1L,
+      routine = 3L,
+      specials = 4L
+    )
+  )
+  report_type <- paste(report_type, collapse = ",")
 
   resp <- perform_riem_request(
     path = "cgi-bin/request/asos.py/", # nolint: nonportable_path_linter

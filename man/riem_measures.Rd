@@ -12,7 +12,7 @@ riem_measures(
   data = "all",
   elev = FALSE,
   latlon = TRUE,
-  report_type = "3,4"
+  report_type = NULL
 )
 }
 \arguments{
@@ -30,7 +30,7 @@ riem_measures(
 
 \item{latlon}{If TRUE, the latitude and longitude of the station will be included in the output. # nolint: line_length_linter}
 
-\item{report_type}{The report type to query. The available options are: 1 (HFMETAR), 3 (Routine), 4 (Specials). # nolint: line_length_linter}
+\item{report_type}{The report type to query. The available options are "hfmetar" (skipped by default), "routine", "specials". # nolint: line_length_linter}
 }
 \value{
 a data.frame (tibble tibble) with measures,
