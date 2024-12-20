@@ -2,7 +2,7 @@
 
 * Breaking change: `date_start` and `station` no longer have default values.
 
-* New arguments `data`, `report_type`, `elev` (#49, @JElchison).
+* New arguments `data`, `latlon`, `report_type`, `elev` (#49, @JElchison).
 
 # riem 0.3.2
 
