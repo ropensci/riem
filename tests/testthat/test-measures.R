@@ -47,8 +47,6 @@ test_that("riem_measures validates dates", {
                                       date_end = "2013-12-01"))
 })
 
-# TODO validate 'data' against [all, tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, wxcodes, ice_accretion_1hr, ice_accretion_3hr, ice_accretion_6hr, peak_wind_gust, peak_wind_drct, peak_wind_time, feel, metar, snowdepth] # nolint: line_length_linter
-
 test_that("riem_measures validates 'elev' param", {
   # wrong type
   expect_snapshot_error(riem_measures(station = "VOHY",
