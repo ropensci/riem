@@ -1,6 +1,5 @@
 #' Get weather data from one station
 #'
-#' @importFrom rlang `%||%`
 #'
 #' @param station station ID, see riem_stations()
 #' @param date_start date of start of the desired data, e.g. "2016-01-01"
