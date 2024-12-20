@@ -30,7 +30,10 @@ riem_measures(
 
 \item{latlon}{If TRUE, the latitude and longitude of the station will be included in the output. # nolint: line_length_linter}
 
-\item{report_type}{A vector of strings, representing report types to query. The available options are `"hfmetar"`, `"routine"`, `"specials"`. Default value is `c("routine", "specials")`. # nolint: line_length_linter}
+\item{report_type}{A vector of strings, representing report types to query.
+The available options are `"hfmetar"`, `"routine"`, `"specials"`.
+Default value is `c("routine", "specials")`.
+The report is then in the `metar` column of the output.}
 }
 \value{
 a data.frame (tibble tibble) with measures,
