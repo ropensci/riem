@@ -22,19 +22,21 @@ riem_measures(
 
 \item{...}{These dots are for future extensions and must be empty.}
 
-\item{date_end}{date of end of the desired data, e.g. "2016-04-22"}
+\item{date_end}{date of end of the desired data, e.g. "2016-04-22". Default value is today.}
 
 \item{data}{A vector of strings, representing the data columns to return.
-The available options are: all, tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, wxcodes, ice_accretion_1hr, ice_accretion_3hr, ice_accretion_6hr, peak_wind_gust, peak_wind_drct, peak_wind_time, feel, metar, snowdepth # nolint: line_length_linter}
+The available options are: all, tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, wxcodes, ice_accretion_1hr, ice_accretion_3hr, ice_accretion_6hr, peak_wind_gust, peak_wind_drct, peak_wind_time, feel, metar, snowdepth # nolint: line_length_linter
+Default value is `all`.}
 
-\item{elev}{If TRUE, the elevation (m) of the station will be included in the output. # nolint: line_length_linter}
+\item{elev}{If TRUE, the elevation (m) of the station will be included in the output, in an `elevation` column. # nolint: line_length_linter
+Default value is `FALSE`.}
 
-\item{latlon}{If TRUE, the latitude and longitude of the station will be included in the output. # nolint: line_length_linter}
+\item{latlon}{If TRUE, the latitude and longitude of the station will be included in the output, in `lat` and `lon` columns. # nolint: line_length_linter
+Default value is `TRUE`.}
 
 \item{report_type}{A vector of strings, representing report types to query.
 The available options are `"hfmetar"`, `"routine"`, `"specials"`.
-Default value is `c("routine", "specials")`.
-The report is then in the `metar` column of the output.}
+Default value is `c("routine", "specials")`.}
 }
 \value{
 a data.frame (tibble tibble) with measures,
