@@ -80,36 +80,49 @@ riem_measures <- function(
     elev = FALSE,
     latlon = TRUE,
     report_type = NULL) {
+  # validate 'station' arg
   if (!rlang::is_character(station, n = 1L)) {
     cli::cli_abort("{.arg station} must be a string.")
   }
+
+  # validate 'date_start' arg
   date_start <- format_and_check_date(date_start, "date_start")
+
+  # validate dots
   rlang::check_dots_empty()
+
+  # validate 'date_end' arg
   date_end <- format_and_check_date(date_end, "date_end")
   if (date_end < date_start) {
     cli::cli_abort("{.arg date_end} must be bigger than {.arg date_start}.")
   }
-  if (!rlang::is_character(data, n = 1L)) {
-    cli::cli_abort("{.arg data} must be a string.")
-  }
-  if (!is.logical(elev)) {
-    cli::cli_abort("{.arg elev} must be a logical (TRUE/FALSE)") # nolint: nonportable_path_linter
-  }
-  if (!is.logical(latlon)) {
-    cli::cli_abort("{.arg latlon} must be a logical (TRUE/FALSE)") # nolint: nonportable_path_linter
-  }
 
+  # validate 'data' arg
+  data <- tolower(data) # not case-sensitive
   data <- rlang::arg_match(
     data,
-    c(
+    values = c(
       "all", "tmpf", "dwpf", "relh", "drct", "sknt", "p01i", "alti", "mslp",
       "vsby", "gust", "skyc1", "skyc2", "skyc3", "skyc4", "skyl1", "skyl2",
       "skyl3", "skyl4", "wxcodes", "ice_accretion_1hr", "ice_accretion_3hr",
       "ice_accretion_6hr", "peak_wind_gust", "peak_wind_drct", "peak_wind_time",
       "feel", "metar", "snowdepth"
-    )
+    ),
+    multiple = TRUE
   )
+  data <- paste(data, collapse = ",")
 
+  # validate 'elev' arg
+  if (!is.logical(elev)) {
+    cli::cli_abort("{.arg elev} must be a logical (TRUE/FALSE)") # nolint: nonportable_path_linter
+  }
+
+  # validate 'latlon' arg
+  if (!is.logical(latlon)) {
+    cli::cli_abort("{.arg latlon} must be a logical (TRUE/FALSE)") # nolint: nonportable_path_linter
+  }
+
+  # validate 'report_type' arg
   report_type <- report_type %||% c("routine", "specials")
   report_type <- tolower(report_type) # not case-sensitive
   report_type <- rlang::arg_match(
@@ -125,6 +138,8 @@ riem_measures <- function(
     specials = 4L
   )
   report_type <- paste(report_type, collapse = ",")
+
+  # args have been validated.
 
   resp <- perform_riem_request(
     path = "cgi-bin/request/asos.py/", # nolint: nonportable_path_linter

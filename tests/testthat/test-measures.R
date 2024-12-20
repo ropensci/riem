@@ -86,7 +86,7 @@ test_that("riem_measures validates 'report_type' param", {
 
 
 ###################
-# nominal benavior
+# nominal behavior
 ###################
 
 test_that("riem_measures returns the right output for a default query", {
@@ -147,10 +147,31 @@ test_that("riem_measures parses all params", {
   expect_s3_class(output[["valid"]], "POSIXct")
   expect_type(output[["tmpf"]], "double")
   expect_type(output[["elevation"]], "double")
+
+  httptest2::with_mock_dir(file.path("fixtures", "measures2"), {
+    output <- riem_measures(
+      station = "VOHY",
+      date_start = "2014-03-01",
+      date_end = "2014-04-05", # keep it bounded and deterministic
+      data = c("tmpf", "dwpf"), # multiple fields
+      elev = TRUE, # opposite default value
+      latlon = FALSE, # opposite default value
+      report_type = "specials"
+    )
+  })
+  expect_s3_class(output, "tbl_df")
+
+  expect_setequal(names(output), c("station", "valid", "elevation", "tmpf", "dwpf"))
+
+  expect_type(output[["station"]], "character")
+  expect_s3_class(output[["valid"]], "POSIXct")
+  expect_type(output[["tmpf"]], "double")
+  expect_type(output[["dwpf"]], "double")
+  expect_type(output[["elevation"]], "double")
 })
 
 test_that("riem_measures provides proper report types (6 combinations)", {
-  # hfmetar
+  # report_type = hfmetar
   httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
@@ -168,7 +189,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_s3_class(output[["valid"]], "POSIXct")
   expect_type(output[["metar"]], "character")
 
-  # routine
+  # report_type = routine
   httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
@@ -186,7 +207,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_s3_class(output[["valid"]], "POSIXct")
   expect_type(output[["metar"]], "character")
 
-  # specials
+  # report_type = specials
   httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
@@ -204,7 +225,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_s3_class(output[["valid"]], "POSIXct")
   expect_type(output[["metar"]], "character")
 
-  # hfmetar, routine
+  # report_type = hfmetar, routine
   httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
@@ -222,7 +243,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_s3_class(output[["valid"]], "POSIXct")
   expect_type(output[["metar"]], "character")
 
-  # hfmetar, specials
+  # report_type = hfmetar, specials
   httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
@@ -240,7 +261,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_s3_class(output[["valid"]], "POSIXct")
   expect_type(output[["metar"]], "character")
 
-  # hfmetar, routine, specials
+  # report_type = hfmetar, routine, specials
   httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
