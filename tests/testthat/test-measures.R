@@ -161,7 +161,7 @@ test_that("riem_measures parses all params", {
   })
   expect_s3_class(output, "tbl_df")
 
-  expect_setequal(names(output), c("station", "valid", "elevation", "tmpf", "dwpf"))
+  expect_setequal(names(output), c("station", "valid", "elevation", "tmpf", "dwpf")) # nolint: line_length_linter
 
   expect_type(output[["station"]], "character")
   expect_s3_class(output[["valid"]], "POSIXct")
@@ -171,7 +171,7 @@ test_that("riem_measures parses all params", {
 })
 
 test_that("riem_measures provides proper report types (6 combinations)", {
-  # report_type = hfmetar
+  # report_type = hfmetar   # nolint: commented_code_linter
   httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
@@ -189,7 +189,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_s3_class(output[["valid"]], "POSIXct")
   expect_type(output[["metar"]], "character")
 
-  # report_type = routine
+  # report_type = routine   # nolint: commented_code_linter
   httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
@@ -207,7 +207,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_s3_class(output[["valid"]], "POSIXct")
   expect_type(output[["metar"]], "character")
 
-  # report_type = specials
+  # report_type = specials   # nolint: commented_code_linter
   httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
