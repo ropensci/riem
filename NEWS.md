@@ -1,6 +1,6 @@
 # riem (development version)
 
-* Breaking change: date_start and station no longer have default values.
+* Breaking change: `date_start` and `station` no longer have default values.
 
 * New arguments `data`, `report_type`, `elev` (#49, @JElchison).
 
