@@ -104,7 +104,10 @@ riem_measures <- function(
   )
   report_type <- purrr::map_int(
     report_type,
-    \(x) switch(x, hfmetar = 1L, routine = 3L, specials = 4L) # nolint: unnecessary_lambda_linter
+    switch,
+    hfmetar = 1L,
+    routine = 3L,
+    specials = 4L
   )
   report_type <- paste(report_type, collapse = ",")
 
