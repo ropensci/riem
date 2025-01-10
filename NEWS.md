@@ -1,5 +1,9 @@
 # riem (development version)
 
+* Breaking change: `date_start` and `station` no longer have default values.
+
+* New arguments `data`, `latlon`, `report_type`, `elev` (#49, @JElchison).
+
 # riem 0.3.2
 
 * Remove last usage of vcr as the choice was made to use httptest2 instead.

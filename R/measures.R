@@ -2,8 +2,19 @@
 #'
 #'
 #' @param station station ID, see riem_stations()
-#' @param date_start date of start of the desired data, e.g. "2000-01-01"
-#' @param date_end date of end of the desired data, e.g. "2016-04-22"
+#' @param date_start date of start of the desired data, e.g. "2016-01-01"
+#' @inheritParams rlang::args_dots_empty
+#' @param date_end date of end of the desired data, e.g. "2016-04-22". Default value is today. # nolint: line_length_linter
+#' @param data A vector of strings, representing the data columns to return.
+#' The available options are: all, tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, wxcodes, ice_accretion_1hr, ice_accretion_3hr, ice_accretion_6hr, peak_wind_gust, peak_wind_drct, peak_wind_time, feel, metar, snowdepth # nolint: line_length_linter
+#' Default value is `all`.
+#' @param elev If TRUE, the elevation (m) of the station will be included in the output, in an `elevation` column. # nolint: line_length_linter
+#' Default value is `FALSE`.
+#' @param latlon If TRUE, the latitude and longitude of the station will be included in the output, in `lat` and `lon` columns. # nolint: line_length_linter
+#' Default value is `TRUE`.
+#' @param report_type A vector of strings, representing report types to query.
+#' The available options are `"hfmetar"`, `"routine"`, `"specials"`.
+#' Default value is `c("routine", "specials")`.
 #'
 #' @return a data.frame (tibble tibble) with measures,
 #' the number of columns can vary from station to station,
@@ -63,28 +74,92 @@
 #' )
 #' }
 riem_measures <- function(
-    station = "VOHY",
-    date_start = "2014-01-01",
-    date_end = as.character(Sys.Date())) {
+    station,
+    date_start,
+    ...,
+    date_end = as.character(Sys.Date()),
+    data = "all",
+    elev = FALSE,
+    latlon = TRUE,
+    report_type = NULL) {
+  # validate 'station' arg
+  if (!rlang::is_character(station, n = 1L)) {
+    cli::cli_abort("{.arg station} must be a string.")
+  }
+
+  # validate 'date_start' arg
   date_start <- format_and_check_date(date_start, "date_start")
+
+  # validate dots
+  rlang::check_dots_empty()
+
+  # validate 'date_end' arg
   date_end <- format_and_check_date(date_end, "date_end")
   if (date_end < date_start) {
     cli::cli_abort("{.arg date_end} must be bigger than {.arg date_start}.")
   }
 
+  # validate 'data' arg
+  data <- tolower(data) # not case-sensitive
+  data <- rlang::arg_match(
+    data,
+    values = c(
+      "all", "tmpf", "dwpf", "relh", "drct", "sknt", "p01i", "alti", "mslp",
+      "vsby", "gust", "skyc1", "skyc2", "skyc3", "skyc4", "skyl1", "skyl2",
+      "skyl3", "skyl4", "wxcodes", "ice_accretion_1hr", "ice_accretion_3hr",
+      "ice_accretion_6hr", "peak_wind_gust", "peak_wind_drct", "peak_wind_time",
+      "feel", "metar", "snowdepth"
+    ),
+    multiple = TRUE
+  )
+  data <- paste(data, collapse = ",")
+
+  # validate 'elev' arg
+  if (!is.logical(elev)) {
+    cli::cli_abort("{.arg elev} must be a logical (TRUE/FALSE)") # nolint: nonportable_path_linter
+  }
+
+  # validate 'latlon' arg
+  if (!is.logical(latlon)) {
+    cli::cli_abort("{.arg latlon} must be a logical (TRUE/FALSE)") # nolint: nonportable_path_linter
+  }
+
+  # validate 'report_type' arg
+  report_type <- report_type %||% c("routine", "specials")
+  report_type <- tolower(report_type) # not case-sensitive
+  report_type <- rlang::arg_match(
+    report_type,
+    values = c("hfmetar", "routine", "specials"),
+    multiple = TRUE
+  )
+  report_type <- purrr::map_int(
+    report_type,
+    switch,
+    hfmetar = 1L,
+    routine = 3L,
+    specials = 4L
+  )
+  report_type <- paste(report_type, collapse = ",")
+
+  # args have been validated.
+
   resp <- perform_riem_request(
     path = "cgi-bin/request/asos.py/", # nolint: nonportable_path_linter
+    # query fields per https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?help # nolint: line_length_linter
     query = list(
       station = station,
-      data = "all",
+      data = data,
+      elev = ifelse(elev, "yes", "no"),
+      latlon = ifelse(latlon, "yes", "no"),
       year1 = lubridate::year(date_start),
       month1 = lubridate::month(date_start),
       day1 = lubridate::day(date_start),
       year2 = lubridate::year(date_end),
       month2 = lubridate::month(date_end),
       day2 = lubridate::day(date_end),
+      report_type = report_type,
       format = "tdf",
-      latlon = "yes",
+      nometa = "no",
       tz = "UTC"
     )
   )
