@@ -148,7 +148,7 @@ test_that("riem_measures parses all params", {
   expect_type(output[["tmpf"]], "double")
   expect_type(output[["elevation"]], "double")
 
-  httptest2::with_mock_dir(file.path("fixtures", "measures2"), {
+  httptest2::with_mock_dir(file.path("fixtures", "measures-multiple-data"), {
     output <- riem_measures(
       station = "VOHY",
       date_start = "2014-03-01",
@@ -172,7 +172,7 @@ test_that("riem_measures parses all params", {
 
 test_that("riem_measures provides proper report types (6 combinations)", {
   # report_type = hfmetar   # nolint: commented_code_linter
-  httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
+  httptest2::with_mock_dir(file.path("fixtures", "measures-hfmetar"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
       date_start = "2024-03-01",
@@ -190,7 +190,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_type(output[["metar"]], "character")
 
   # report_type = routine   # nolint: commented_code_linter
-  httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
+  httptest2::with_mock_dir(file.path("fixtures", "measures-routine"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
       date_start = "2024-03-01",
@@ -208,7 +208,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_type(output[["metar"]], "character")
 
   # report_type = specials   # nolint: commented_code_linter
-  httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
+  httptest2::with_mock_dir(file.path("fixtures", "measures-specials"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
       date_start = "2024-03-01",
@@ -226,7 +226,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_type(output[["metar"]], "character")
 
   # report_type = hfmetar, routine
-  httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
+  httptest2::with_mock_dir(file.path("fixtures", "measures-hfmetar-routine"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
       date_start = "2024-03-01",
@@ -244,7 +244,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_type(output[["metar"]], "character")
 
   # report_type = hfmetar, specials
-  httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
+  httptest2::with_mock_dir(file.path("fixtures", "measures-hfmetar-specials"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
       date_start = "2024-03-01",
@@ -262,7 +262,7 @@ test_that("riem_measures provides proper report types (6 combinations)", {
   expect_type(output[["metar"]], "character")
 
   # report_type = hfmetar, routine, specials
-  httptest2::with_mock_dir(file.path("fixtures", "measures3"), {
+  httptest2::with_mock_dir(file.path("fixtures", "measures-all-reports"), {
     output <- riem_measures(
       station = "KCVG", # choose a second station (VOHY used elsewhere)
       date_start = "2024-03-01",
