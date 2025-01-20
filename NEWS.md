@@ -2,7 +2,11 @@
 
 * Breaking change: `date_start` and `station` no longer have default values.
 
-* New arguments `data`, `latlon`, `report_type`, `elev` (#49, @JElchison).
+* New arguments `data`, `latlon`, `report_type`, `elev` (#48, @JElchison).
+
+* Breaking change: `laton` default to `FALSE`: you need to explicitly set it to
+  `TRUE` for the latitude and longitude of the station 
+  to be included in the output.
 
 # riem 0.3.2
 

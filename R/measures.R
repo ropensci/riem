@@ -10,8 +10,10 @@
 #' Default value is `all`.
 #' @param elev If TRUE, the elevation (m) of the station will be included in the output, in an `elevation` column. # nolint: line_length_linter
 #' Default value is `FALSE`.
-#' @param latlon If TRUE, the latitude and longitude of the station will be included in the output, in `lat` and `lon` columns. # nolint: line_length_linter
-#' Default value is `TRUE`.
+#' @param latlon Default to `FALSE` since riem 1.0.0. If `TRUE`,
+#' the latitude and longitude of the station will be included in the output,
+#' in `lat` and `lon` columns. # nolint: line_length_linter
+#' Default value is `FALSE`.
 #' @param report_type A vector of strings, representing report types to query.
 #' The available options are `"hfmetar"`, `"routine"`, `"specials"`.
 #' Default value is `c("routine", "specials")`.
@@ -80,7 +82,7 @@ riem_measures <- function(
     date_end = as.character(Sys.Date()),
     data = "all",
     elev = FALSE,
-    latlon = TRUE,
+    latlon = FALSE,
     report_type = NULL) {
   # validate 'station' arg
   if (!rlang::is_character(station, n = 1L)) {

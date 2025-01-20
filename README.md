@@ -36,6 +36,11 @@ pak::pak("ropensci/riem")
 
 Please refer to the [`pkgdown` website](https://docs.ropensci.org/riem/) to read docs, in particular the [reference](https://docs.ropensci.org/riem/reference/index.html) and the [vignettes](https://docs.ropensci.org/riem/articles/index.html).
 
+# Breaking change in riem 1.0.0
+
+The `laton` argument of `riem_measures()` default to `FALSE`: 
+you need to explicitly set it to `TRUE` for the latitude and longitude of the station to be included in the output.
+
 # Use cases in the wild
 
 Submit your use cases by opening [a new issue](https://github.com/ropensci/riem/issues/new)!
