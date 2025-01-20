@@ -28,8 +28,8 @@ Or install the development version using
 [devtools](https://github.com/r-lib/devtools) with:
 
 ``` r
-library("devtools")
-install_github("ropensci/riem")
+library("pak")
+pak::pak("ropensci/riem")
 ```
 
 # Documentation
