@@ -28,13 +28,20 @@ Or install the development version using
 [devtools](https://github.com/r-lib/devtools) with:
 
 ``` r
-library("devtools")
-install_github("ropensci/riem")
+library("pak")
+pak::pak("ropensci/riem")
 ```
 
 # Documentation
 
 Please refer to the [`pkgdown` website](https://docs.ropensci.org/riem/) to read docs, in particular the [reference](https://docs.ropensci.org/riem/reference/index.html) and the [vignettes](https://docs.ropensci.org/riem/articles/index.html).
+
+# Breaking changes in riem 1.0.0
+
+The `latlon` argument of `riem_measures()` default to `FALSE`: 
+you need to explicitly set it to `TRUE` for the latitude and longitude of the station to be included in the output.
+
+The `date_start` and `station` no longer have default values.
 
 # Use cases in the wild
 

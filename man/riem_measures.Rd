@@ -11,7 +11,7 @@ riem_measures(
   date_end = as.character(Sys.Date()),
   data = "all",
   elev = FALSE,
-  latlon = TRUE,
+  latlon = FALSE,
   report_type = NULL
 )
 }
@@ -22,7 +22,7 @@ riem_measures(
 
 \item{...}{These dots are for future extensions and must be empty.}
 
-\item{date_end}{date of end of the desired data, e.g. "2016-04-22". Default value is today.}
+\item{date_end}{date of end of the desired data, e.g. "2016-04-22". Default value is today. # nolint: line_length_linter}
 
 \item{data}{A vector of strings, representing the data columns to return.
 The available options are: all, tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, wxcodes, ice_accretion_1hr, ice_accretion_3hr, ice_accretion_6hr, peak_wind_gust, peak_wind_drct, peak_wind_time, feel, metar, snowdepth # nolint: line_length_linter
@@ -31,8 +31,10 @@ Default value is `all`.}
 \item{elev}{If TRUE, the elevation (m) of the station will be included in the output, in an `elevation` column. # nolint: line_length_linter
 Default value is `FALSE`.}
 
-\item{latlon}{If TRUE, the latitude and longitude of the station will be included in the output, in `lat` and `lon` columns. # nolint: line_length_linter
-Default value is `TRUE`.}
+\item{latlon}{Default to `FALSE` since riem 1.0.0. If `TRUE`,
+the latitude and longitude of the station will be included in the output,
+in `lat` and `lon` columns. # nolint: line_length_linter
+Default value is `FALSE`.}
 
 \item{report_type}{A vector of strings, representing report types to query.
 The available options are `"hfmetar"`, `"routine"`, `"specials"`.

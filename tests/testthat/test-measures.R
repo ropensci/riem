@@ -99,12 +99,10 @@ test_that("riem_measures returns the right output for a default query", {
   })
   expect_s3_class(output, "tbl_df")
 
-  expect_setequal(names(output), c("station", "valid", "lon", "lat", "tmpf", "dwpf", "relh", "drct", "sknt", "p01i", "alti", "mslp", "vsby", "gust", "skyc1", "skyc2", "skyc3", "skyc4", "skyl1", "skyl2", "skyl3", "skyl4", "wxcodes", "feel", "ice_accretion_1hr", "ice_accretion_3hr", "ice_accretion_6hr", "peak_wind_gust", "peak_wind_drct", "peak_wind_time", "metar", "snowdepth")) # nolint: line_length_linter
+  expect_setequal(names(output), c("station", "valid", "tmpf", "dwpf", "relh", "drct", "sknt", "p01i", "alti", "mslp", "vsby", "gust", "skyc1", "skyc2", "skyc3", "skyc4", "skyl1", "skyl2", "skyl3", "skyl4", "wxcodes", "feel", "ice_accretion_1hr", "ice_accretion_3hr", "ice_accretion_6hr", "peak_wind_gust", "peak_wind_drct", "peak_wind_time", "metar", "snowdepth")) # nolint: line_length_linter
 
   expect_type(output[["station"]], "character")
   expect_s3_class(output[["valid"]], "POSIXct")
-  expect_type(output[["lon"]], "double")
-  expect_type(output[["lat"]], "double")
   expect_type(output[["tmpf"]], "double")
   expect_type(output[["dwpf"]], "double")
   expect_type(output[["relh"]], "double")
@@ -135,16 +133,18 @@ test_that("riem_measures parses all params", {
       date_end = "2014-04-05", # keep it bounded and deterministic
       data = "tmpf", # single field (not 'all')
       elev = TRUE, # opposite default value
-      latlon = FALSE, # opposite default value
+      latlon = TRUE, # opposite default value
       report_type = "specials"
     )
   })
   expect_s3_class(output, "tbl_df")
 
-  expect_setequal(names(output), c("station", "valid", "elevation", "tmpf"))
+  expect_setequal(names(output), c("station", "valid", "lon", "lat", "elevation", "tmpf"))
 
   expect_type(output[["station"]], "character")
   expect_s3_class(output[["valid"]], "POSIXct")
+  expect_type(output[["lon"]], "double")
+  expect_type(output[["lat"]], "double")
   expect_type(output[["tmpf"]], "double")
   expect_type(output[["elevation"]], "double")
 
@@ -155,7 +155,6 @@ test_that("riem_measures parses all params", {
       date_end = "2014-04-05", # keep it bounded and deterministic
       data = c("tmpf", "dwpf"), # multiple fields
       elev = TRUE, # opposite default value
-      latlon = FALSE, # opposite default value
       report_type = "specials"
     )
   })
@@ -179,7 +178,6 @@ test_that("riem_measures provides proper report types (6 combinations)", {
       date_end = "2024-03-02", # keep it bounded and deterministic
       data = "metar", # single field (not 'all')
       elev = FALSE,
-      latlon = FALSE,
       report_type = "hfmetar"
     )
   })
@@ -197,7 +195,6 @@ test_that("riem_measures provides proper report types (6 combinations)", {
       date_end = "2024-03-02", # keep it bounded and deterministic
       data = "metar", # single field (not 'all')
       elev = FALSE,
-      latlon = FALSE,
       report_type = "routine"
     )
   })
@@ -215,7 +212,6 @@ test_that("riem_measures provides proper report types (6 combinations)", {
       date_end = "2024-03-02", # keep it bounded and deterministic
       data = "metar", # single field (not 'all')
       elev = FALSE,
-      latlon = FALSE,
       report_type = "specials"
     )
   })
@@ -233,7 +229,6 @@ test_that("riem_measures provides proper report types (6 combinations)", {
       date_end = "2024-03-02", # keep it bounded and deterministic
       data = "metar", # single field (not 'all')
       elev = FALSE,
-      latlon = FALSE,
       report_type = c("hfmetar", "routine")
     )
   })
@@ -251,7 +246,6 @@ test_that("riem_measures provides proper report types (6 combinations)", {
       date_end = "2024-03-02", # keep it bounded and deterministic
       data = "metar", # single field (not 'all')
       elev = FALSE,
-      latlon = FALSE,
       report_type = c("hfmetar", "specials")
     )
   })
@@ -269,7 +263,6 @@ test_that("riem_measures provides proper report types (6 combinations)", {
       date_end = "2024-03-02", # keep it bounded and deterministic
       data = "metar", # single field (not 'all')
       elev = FALSE,
-      latlon = FALSE,
       report_type = c("hfmetar", "routine", "specials")
     )
   })
