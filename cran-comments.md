@@ -1,7 +1,6 @@
 ## Release summary
 
-- Fixed the test error. Thank you!
-
+Adding new arguments and improving argument defaults. Thank you!
 
 ## R CMD check results
 
@@ -9,4 +8,4 @@
 
 ## Reverse dependencies
 
-There are no reverse dependencies.
+We informed eva3dm's maintainer of the change, that however do not impact their examples.
