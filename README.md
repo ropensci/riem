@@ -45,7 +45,7 @@ The `date_start` and `station` no longer have default values.
 
 # Use cases in the wild
 
-Submit your use cases by opening [a new issue](https://github.com/ropensci/riem/issues/new)!
+Submit your [use cases](https://ropensci.org/usecases/)!
 
 * [@maelle](https://github.com/maelle/)'s [Where to live in the US](https://masalmon.eu/2017/11/16/wheretoliveus/)
 
@@ -54,6 +54,8 @@ Submit your use cases by opening [a new issue](https://github.com/ropensci/riem/
 * [@sharlagelfand](https://github.com/sharlagelfand)'s [Oh, the cold places I've lived](https://sharlagelfand.netlify.app/posts/oh-the-cold-places-ive-lived/)
 
 * In a course: [@byuidatascience](https://github.com/byuidatascience)'s [M335 Task 15: How is the weather?](https://byuistats.github.io/M335/backgrounds.html#task_15:_how_is_the_weather)
+
+* [@jhchou](https://github.com/jhchou) developed an R Shiny app that allows interactive analysis of 20+ years of hourly METAR data of flight conditions by time of day and month at multiple airports.  [Blog post](https://www.incidentalfindings.org/posts/2025-02-19_metar_analysis_2/)
 
 Meta
 ----
