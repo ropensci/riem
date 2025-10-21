@@ -4,6 +4,7 @@ riem
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
+[![R-multiverse status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcommunity.r-multiverse.org%2Fapi%2Fpackages%2Friem&query=%24.Version&label=r-multiverse)](https://community.r-multiverse.org/riem)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/riem)](https://cran.r-project.org/package=riem)
 [![codecov](https://app.codecov.io/gh/ropensci/riem/graph/badge.svg)](https://app.codecov.io/gh/ropensci/riem)
 [![](https://badges.ropensci.org/39_status.svg)](https://github.com/ropensci/software-review/issues/39)
